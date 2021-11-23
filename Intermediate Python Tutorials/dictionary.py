@@ -3,7 +3,10 @@ names = {"name": "elijah",
          "isTrue": False,
          "address": "Ashaiman"
          }
-
+another = names.items()
+print(type(another))
+print(names.items())
+print("================================")
 print(names)
 names["isFat"] = True
 print(names["isFat"])
@@ -14,7 +17,7 @@ names.pop('age')
 print(names)
 print("================================")
 
-# check of a key is inside a dictionary
+# check if a key is inside a dictionary
 if "name" in names:
     print(names["name"])
 else:
@@ -49,6 +52,6 @@ print(myCopy)
 print(names)
 print("================================")
 # update a dictionary
-print(names) # initial keys and values in our dictionary
+print(names)  # initial keys and values in our dictionary
 names.update(myCopy)
-print(names) # current updated keys and values in our dictionary
+print(names)  # current updated keys and values in our dictionary
