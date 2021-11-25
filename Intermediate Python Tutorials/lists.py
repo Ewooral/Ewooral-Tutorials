@@ -2,8 +2,9 @@
 # LIST OR ARRAY OF ITEMS
 myList = [1, 2, 3, "banana", "Orange", [
     11, 4, 1, 9.22, False, True, 3+3j, 0], False, True, 8.34]
-item = myList[0]
+myList[0] = "I recently got interviewed!"
 item1 = myList[-1]
+print(myList.index("banana"))
 
 # CONDITIONS
 if "orange" in myList:
@@ -31,7 +32,7 @@ myList.insert(2, "OleOut!")
 myList.pop()
 
 print(len(myList))
-print(item, item1)
+# print(item, item1)
 print(myList)
 # myList.sort()
 
@@ -66,6 +67,25 @@ b = [1*x for x in lotsOfList]
 print(lotsOfList)
 print(b)
 
+
+# function that log all pairs of array
+
+numb = [1,2,3]
+
+def printOutNumbersandpair(number):
+    for i in number:
+        for j in number:
+            if i < len(number):
+               i = i + 1
+            if j < len(number):
+               j = j + 1
+    return print(number[i], number[j])
+        
+printOutNumbersandpair(numb)
+
+
+
+# lets create a function that finds our name and date of birth in a list
 
 
 

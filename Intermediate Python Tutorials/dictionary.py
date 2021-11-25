@@ -3,6 +3,9 @@ names = {"name": "elijah",
          "isTrue": False,
          "address": "Ashaiman"
          }
+print("Using the get method to fetch a dictionary's key value, we have: ", names.get("names", "Not found"))
+change_a_name_in_names = names["address"] = "Kumasi Ejura Mampong"
+print(" changed name is: ",change_a_name_in_names)
 another = names.items()
 print(type(another))
 print(names.items())
