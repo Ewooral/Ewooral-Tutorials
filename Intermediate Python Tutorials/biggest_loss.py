@@ -10,13 +10,17 @@ edge cases you can think of.'''
 from more_itertools import grouper
 
 
-def find_biggest_loss(prices_list):
+def largest_possible_loss(prices_list):
 
-    biggest_loss = 0
+    largest_loss = 0
 
-    for buy, sell in grouper(prices_list, 2):
-        loss = abs(buy) - abs(sell)
-        if loss > biggest_loss:
-            biggest_loss = loss
+    for purchase, sell in grouper(prices_list, 2):
+        loss = abs(purchase) - abs(sell)
+        if loss > largest_loss:
+           largest_loss = loss
 
-    return biggest_loss
+    return largest_loss
+
+
+# how_big_is_the_loss = largest_possible_loss([234, 32, 3, 44, 64, 1])
+# print(how_big_is_the_loss)

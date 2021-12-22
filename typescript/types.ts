@@ -103,5 +103,11 @@ function myName(obj: { first: string; last?: string }) {
   console.log(obj.last?.toUpperCase());
 }
 
+const numbers = [1, null, 3, 4, 5, null, 9];
+numbers.filter(Boolean).map((x)=>{
+    // show(x)
+show(typeof(x))
+})
+
 
 

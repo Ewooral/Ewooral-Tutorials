@@ -78,3 +78,20 @@ function printName(obj) {
 // Both OK
 printName({ first: "Bob" });
 printName({ first: "Alice", last: "Alisson" });
+function myName(obj) {
+    var _a;
+    // Error - might crash if 'obj.last' wasn't provided!
+    console.log(obj.last.toUpperCase());
+    // Object is possibly 'undefined'.
+    if (obj.last !== undefined) {
+        // OK
+        console.log(obj.last.toUpperCase());
+    }
+    // A safe alternative using modern JavaScript syntax:
+    console.log((_a = obj.last) === null || _a === void 0 ? void 0 : _a.toUpperCase());
+}
+var numbers = [1, null, 3, 4, 5, null, 9];
+numbers.filter(Boolean).map(function (x) {
+    // show(x)
+    show(typeof (x));
+});
