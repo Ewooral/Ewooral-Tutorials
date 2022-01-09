@@ -30,3 +30,17 @@ int main()
         {
             v.push_back({it.first, it.second});
         }
+         sort(v.begin(),v.end(),[&](pair<int,int> a,pair<int,int> b){
+            if (a.second != b.second)
+            {
+                return a.second > b.second;
+            }
+            else if (a.second == b.second)
+            {
+                if (a.first < b.first)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
