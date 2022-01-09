@@ -30,7 +30,8 @@ int main()
         {
             v.push_back({it.first, it.second});
         }
-         sort(v.begin(),v.end(),[&](pair<int,int> a,pair<int,int> b){
+        sort(v.begin(), v.end(), [&](pair<int, int> a, pair<int, int> b)
+             {
             if (a.second != b.second)
             {
                 return a.second > b.second;
@@ -44,3 +45,11 @@ int main()
                 else
                 {
                     return false;
+                    }
+	       } });
+        for (auto it : v)
+        {
+            while (it.second--)
+            {
+                cout << it.first << " ";
+            }
