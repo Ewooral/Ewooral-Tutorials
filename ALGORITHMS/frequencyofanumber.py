@@ -9,6 +9,22 @@ for i in range(0, len(arr)):
         # print(j)
         if arr[i] == arr[j]:
             count += 1
+            # to avoid counting the same element again,
+            fr[j] = visited
+        if fr[i] != visited:
+            fr[i] = count
+
+#Displays the frequency of each element present in array  
+print("---------------------");  
+print(" Element | Frequency");  
+print("---------------------");  
+for i in range(0, len(arr)):
+    if fr[i] != visited:
+        print(arr[i], " | ", fr[i]);
+
+print("---------------------");
+    
+
 
 # The frequency of an element can be counted using two loops.
 #One loop will be used to select an element from an array,
