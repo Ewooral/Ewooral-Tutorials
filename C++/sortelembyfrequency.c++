@@ -53,3 +53,8 @@ int main()
             {
                 cout << it.first << " ";
             }
+        }
+        cout << endl;
+    }
+    return 0;
+}
