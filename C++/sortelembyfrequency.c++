@@ -20,3 +20,13 @@ int main()
         {
             cin >> arr[i];
         }
+        unordered_map<int, int> mp;
+        for (int i = 0; i < n; i++)
+        {
+            mp[arr[i]]++;
+        }
+        vector<pair<int, int>> v;
+        for (auto it : mp)
+        {
+            v.push_back({it.first, it.second});
+        }
