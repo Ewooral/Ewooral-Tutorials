@@ -13,8 +13,8 @@ int main()
     bool isValid = true;
     cout << isValid << endl;
     string myFirstName = "Elijah";
-    cout << myFirstName.length() << endl;
-    cout << myFirstName[0] << endl;
+    cout << myFirstName << endl;
+
     cout <<"........................."<<endl;
     cout <<"Hello "<< 29 << true << 133.222 << "." << endl;
 }
