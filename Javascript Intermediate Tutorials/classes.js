@@ -26,17 +26,31 @@ console.log(myBuilding.getFloors());
 // of the methods which eats up space and ignores the relevance of the relevance
 // of a function.
 
-function GetNames(firstname){
+function GetNames(firstname, lastname, age) {
     this.firstname = firstname;
     this.lastname = lastname;
     this.age = age;
 }
+var myNames = new GetNames('John', 'Doe', 30);
 
-GetNames.prototype.getLastName = () => {
+GetNames.prototype.getLastName = function() {
     return this.lastname;
 }
+// when you use an arrow function in your prototype, you will
+// not be able to use the this keyword. Instead, you should use
+// the variable that creates the instance of the object.
+GetNames.prototype.getFirstName = () => {
+    return myNames.firstname;
+}
+// this will not work because we used the THIS keyword in an arrow function
+// 
+GetNames.prototype.getAge = () => {
+    return this.age;
+}
 
-var myNames = new GetNames('John', 'Doe', 30);
 console.log(myNames);
+console.log(myNames.getLastName());
+console.log(myNames.getFirstName());
+console.log(myNames.getAge());
 
 
