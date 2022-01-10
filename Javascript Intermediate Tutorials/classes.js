@@ -48,9 +48,31 @@ GetNames.prototype.getAge = () => {
     return this.age;
 }
 
-console.log(myNames);
+
 console.log(myNames.getLastName());
 console.log(myNames.getFirstName());
 console.log(myNames.getAge());
 
 
+class Food {
+    constructor(rice, beans, gari) {
+        this.rice = rice;
+        this.beans = beans;
+        this.gari = gari;
+    }
+    getRice() {
+        return this.rice;
+    }
+
+    getBeans() {
+        return Food.beans;
+    }
+  
+    getGari() {
+        return this.gari;
+    }
+}
+console.log("............................")
+
+var favoriteFood = new Food('rice', 'beans', 'gari');
+console.log(favoriteFood.getRice());
