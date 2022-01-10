@@ -59,57 +59,57 @@
 //     return 0;
 // }
 
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-static bool comp(pair<int, int> a, pair<int, int> b)
-{
-    if (a.second == b.second)
-    {
-        return a.first > b.first;
-    }
-    return a.second < b.second;
-}
-void solve(vector<int> &a)
-{
+// static bool comp(pair<int, int> a, pair<int, int> b)
+// {
+//     if (a.second == b.second)
+//     {
+//         return a.first > b.first;
+//     }
+//     return a.second < b.second;
+// }
+// void solve(vector<int> &a)
+// {
 
-    int n = a.size();
-    vector<pair<int, int>> v;
-    multiset<int> ms;
-    for (int i = 0; i < n; i++)
-    {
-        ms.insert(a[i]);
-    }
-    for (int i = 0; i < n; i++)
-    {
-        v.push_back({a[i], ms.count(a[i])});
-    }
-    sort(v.begin(), v.end(), comp);
-    reverse(v.begin(), v.end());
-    for (int i = 0; i < n; i++)
-    {
-        cout << v[i].first << " ";
-    }
-    cout << endl;
-    return;
-}
-int main()
-{
-    // code
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        int n;
-        cin >> n;
-        vector<int> a(n, 0);
-        for (int i = 0; i < n; i++)
-        {
-            int ele;
-            cin >> ele;
-            a[i] = ele;
-        }
-        solve(a);
-    }
-    return 0;
-}
+//     int n = a.size();
+//     vector<pair<int, int>> v;
+//     multiset<int> ms;
+//     for (int i = 0; i < n; i++)
+//     {
+//         ms.insert(a[i]);
+//     }
+//     for (int i = 0; i < n; i++)
+//     {
+//         v.push_back({a[i], ms.count(a[i])});
+//     }
+//     sort(v.begin(), v.end(), comp);
+//     reverse(v.begin(), v.end());
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << v[i].first << " ";
+//     }
+//     cout << endl;
+//     return;
+// }
+// int main()
+// {
+//     // code
+//     int t;
+//     cin >> t;
+//     while (t--)
+//     {
+//         int n;
+//         cin >> n;
+//         vector<int> a(n, 0);
+//         for (int i = 0; i < n; i++)
+//         {
+//             int ele;
+//             cin >> ele;
+//             a[i] = ele;
+//         }
+//         solve(a);
+//     }
+//     return 0;
+// }
