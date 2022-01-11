@@ -1,8 +1,11 @@
 #include <iostream>
 using namespace std;
 
+
 int main()
 {
+    cout << guessAValue() << endl;
+    
     // The do while loop executes the code before
     // the condition is checked.
     int index = 6;
