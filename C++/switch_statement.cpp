@@ -7,7 +7,9 @@ string getDayOfWeek(int dayNumber);
 // MAIN FUNCTION
 int main()
 {
-    cout << getDayOfWeek(5);
+    string dayOfTheWeek;
+    dayOfTheWeek = getDayOfWeek(5);
+    cout << dayOfTheWeek << endl;
     return 0;
 }
 
@@ -17,25 +19,25 @@ string getDayOfWeek(int dayNumber)
     switch(dayNumber)
     {
         case 0: 
-            dayName = "Sunday";
+            dayName = "It is Sunday";
             break;
         case 1:
-            dayName = "Monday";
+            dayName = "It is Monday";
             break;
         case 2:
-            dayName = "Tuesday";
+            dayName = "It is Tuesday";
             break;
         case 3:
-            dayName = "Wednesday";
+            dayName = "It is Wednesday";
             break;
         case 4:
-            dayName = "Thursday";
+            dayName = "It is Thursday";
             break;
         case 5:
-            dayName = "Friday";
+            dayName = "It is Friday";
             break;
         case 6:
-            dayName = "Saturday";
+            dayName = "It is Saturday";
             break;
         default:
             dayName = "Invalid Day of the Week";
