@@ -5,19 +5,21 @@ using namespace std;
 int main()
 {
     bool isMale = true;
-    bool isFemale = true;
-    if(isMale)
+    bool isFemale = false;
+    bool isTall = true;
+
+    if(isMale && isTall)
     {
-      cout << "You are a Male" << endl;
+      cout << "You are a Tall Male" << endl;
     }
 
-    if(!isFemale)
+    if(isFemale || isTall)
     {
-        cout << "You are a Female";
+        cout << "You are a Tall Female";
     }
     else
     {
-        cout << " You are not a Female";
+        cout << " You are not a Tall Female";
     }
 
 
