@@ -2,6 +2,9 @@
 using namespace std;
 int main()
 {
-    int Nums[] = {1, 5, 2, 6, 8, 2, 55, 1, 33};
-    cout << Nums;
+    int Nums[30]; // specified the number of items the array should hold
+    Nums[2] = 15; // at position 2, insert 15
+    cout << Nums[2] << endl; // print out the number 15 at position 2
+    Nums[23] = 455;
+    cout << Nums[23] << endl;
 }
