@@ -41,5 +41,5 @@ void sayHi(string name, int age)
 double cube(double x)
 {
  double result = x * x * x;
-  return result; 
+  return result;   // the return function exits function execution. Anything after return won't execute.
 }
