@@ -4,22 +4,30 @@ using namespace std;
 
 int main()
 {
-    bool isMale = true;
+    bool isMale = false;
     bool isFemale = false;
-    bool isTall = true;
+    bool isTall = false;
 
     if(isMale && isTall)
     {
       cout << "You are a Tall Male" << endl;
     }
 
-    if(isFemale || isTall)
+    if(isFemale && isTall)
     {
         cout << "You are a Tall Female";
     }
+    else if(isMale && !isTall)
+    {
+         cout << " You are a Male but Short";
+    }
+    else if (isFemale && !isTall)
+    {
+        cout << " You are a Female but Short";
+    }
     else
     {
-        cout << " You are not a Tall Female";
+        cout << " You are not a Female or a Male and you are short";
     }
 
 
