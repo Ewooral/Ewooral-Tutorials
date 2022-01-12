@@ -8,5 +8,7 @@ int main()
     double gpa = 3.5;
     string name = "Elijah";
 
+    cout << &number << endl; // prints the memory address of number
+
     return 0;
 }
