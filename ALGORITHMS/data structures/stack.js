@@ -3,15 +3,18 @@ var stack = function (){
 };
 
 stack.prototype.push = function(val){
- this.push(val);
+this.storage = this.storage.concat("***", val);
 };
-
 stack.prototype.pop = function(){
-
+var str = this.storage.slice(this.storage.
+    lastIndexOf("***") + 3);
+    this.storage = this.storage.
+    substring(0, this.storage.lastIndexOf("***"));
+    return str;
 };
+
 
 stack.prototype.size = function(){
-
 };
 
 var myWeeklyMenu = new stack();
