@@ -7,13 +7,15 @@ using namespace std;
 
 int main()
 {
-    int numberGrid[3][2] =
+    int numberGrid[5][3] =
     {
-        {1, 2},
-        {4, 5},
-        {7, 8}
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9},
+        {4, 5, 6},
+        {7, 8, 12}
     };
-    cout << numberGrid[]
+    cout << numberGrid[4][2] << endl;
 
     return 0;
 }
