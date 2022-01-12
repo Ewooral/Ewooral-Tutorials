@@ -12,28 +12,33 @@ int main()
     int *pointerFigure = &figure;
     int *pointerAnotherFigure = &anotherFigure;
     string *pointerLetter = &letter;
-
+    
+    cout << "............Pointers............" << endl;
     // printing the value of the pointer
     cout << "The value of the pointer is: " << pointerFigure << endl; 
     cout << "The value of the pointer is: " << pointerAnotherFigure << endl;
-    cout << "The value of the pointer is: " << pointerLetter << endl;
-    
+    cout << "The value of the pointer is: " << pointerLetter << "\n" << endl;
 
+    cout << "............The values of a dereferenced pointer............" << endl;
     // dereferencing the pointer
     cout << "The value of the pointer is: " << *pointerFigure << endl;
     cout << "The value of the pointer is: " << *pointerAnotherFigure << endl;
     cout << "The value of the pointer is: " << *pointerLetter << endl;
 
-    
+
     return 0;
 }
+/*
+............Pointers............
+The value of the pointer is: 0x46dcdffc00
+The value of the pointer is: 0x46dcdffbfc
+The value of the pointer is: 0x46dcdffbd0
 
-
-
-
-
-
-
+............The values of a dereferenced pointer............
+The value of the pointer is: 2
+The value of the pointer is: 4
+The value of the pointer is:  ABCDEFGHIJKLMNOPQRSTUVWXYZabc
+*/
 
 /*
 int number = 5;
