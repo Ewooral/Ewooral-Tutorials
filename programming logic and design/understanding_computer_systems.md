@@ -53,13 +53,23 @@
 
     ## Suppose you instruct someone to make a cake as follows:
 
-    * Get a bowl
-    * Stir
-    * Add two eggs
-    * Add a gallon of gasoline
-    * Bake at 350 degrees for 45 minutes
-    * Add three cups of flour
+    ```
+        * Get a bowl
+        * Stir
+        * Add two eggs
+        * Add a gallon of gasoline
+        * Bake at 350 degrees for 45 minutes
+        * Add three cups of flour
+    ```
 
-    **NB** Even though the cake-baking instructions use English language syntax correctly, the
-    instructions are out of sequence, some are missing, and some instructions belong to
+    **NB** Even though the cake-baking instructions use English language *syntax* correctly, the
+    *instructions are out of sequence*, some are missing, and some instructions belong to
     procedures other than baking a cake.
+
+12. # A variable 
+  is a named memory location whose value can vary.
+
+13. The instruction set *myAnswer = myNumber * 2* is an example of a processing operation.
+  In most programming languages, an *asterisk* is used to indicate *multiplication*, so this
+  instruction means “Change the value of the memory location myAnswer to equal the value
+  at the memory location myNumber times two.”
