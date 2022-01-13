@@ -19,6 +19,16 @@ enum color
     orange
 };
 
+enum superCars {
+    Ferrari = 450,
+    Lamborghini = 500,
+    Porsche = 600,
+    Audi = 700,
+    BMW = 800,
+    Mercedes = 900,
+    Tesla = 1000
+};
+
 int main()
 {
 
@@ -33,6 +43,25 @@ int main()
     else
     {
         cout << "ewoo is not green" << endl;
+    }
+
+    superCars speed1 = Lamborghini;
+    superCars speed2 = Ferrari;
+
+    switch()
+    {
+        case speed1 == speed2:
+            cout << "speed1 is equal to speed2" << endl;
+            break;
+        case speed1 > speed2:
+            cout << "speed1 is greater than speed2" << endl;
+            break;
+        case speed1 < speed2:
+            cout << "speed1 is less than speed2" << endl;
+            break;
+        default:
+            cout << "speed1 is not equal to speed2" << endl;
+            break;
     }
 
 
