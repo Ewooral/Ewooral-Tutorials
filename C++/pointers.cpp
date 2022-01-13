@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+
 int main()
 {
     int figure = 2;
@@ -12,12 +13,13 @@ int main()
     int *pointerFigure = &figure;
     int *pointerAnotherFigure = &anotherFigure;
     string *pointerLetter = &letter;
-    
+
     cout << "............Pointers............" << endl;
     // printing the value of the pointer
-    cout << "The value of the pointer is: " << pointerFigure << endl; 
+    cout << "The value of the pointer is: " << pointerFigure << endl;
     cout << "The value of the pointer is: " << pointerAnotherFigure << endl;
-    cout << "The value of the pointer is: " << pointerLetter << "\n" << endl;
+    cout << "The value of the pointer is: " << pointerLetter << "\n"
+         << endl;
 
     cout << "............The values of a dereferenced pointer............" << endl;
     // dereferencing the pointer
@@ -28,6 +30,9 @@ int main()
 
     return 0;
 }
+
+
+
 /*
 ............Pointers............
 The value of the pointer is: 0x46dcdffc00
