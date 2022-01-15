@@ -1,15 +1,7 @@
 const anExampleVariable = "Hello World"
 const show = console.log;
-console.log(anExampleVariable)
+console.log(anExampleVariable);
 
-// To learn more about the language, click above in "Examples" or "What's New".
-// Otherwise, get started by removing these comments and the world is your playground.
-let arr :number[] = [1,2,3,4,5] ;
-let arrr: Array<number> = [4,5,6,7,2] 
-show(arr);
-show(arrr)
-show(typeof(arr))
-show(typeof(arrr))
 
 /**
  * ANY type
@@ -25,13 +17,13 @@ show(obj.baz = 'hello world');
 show(obj = 'Hey');
 const n: number = obj;
 
-show(obj.x, )
+show(obj.x, );
 /*
 Type Annotations on Variables
 When you declare a variable using const, var, or let, you can optionally add a
 type annotation to explicitly specify the type of the variable*/ 
-let fufu = " African Dish"
-show(fufu)
+let fufu = " African Dish";
+show(fufu);
 
 /**When you don’t specify a type, and TypeScript can’t
  * infer it from context, the compiler will typically default to any. */
@@ -42,7 +34,7 @@ show(fufu)
 // what types of parameters the function accepts. Parameter type annotations go after the parameter name:
 function greet(name: string):string {
     return "Hello, " + name.toUpperCase() + "!";
-}
+};
 show(greet("world"));
 show(greet("TypeScript")); 
 
@@ -50,10 +42,10 @@ show(greet("TypeScript"));
 const names = ['Alice', 'Bob', 'Eve'];
 
 //Contextual typing for function
-show("=============")
+show("=============");
 names.forEach(function(s){
     show(s.toUpperCase());
-});
+})
 
 // Object Types
 show("============")
