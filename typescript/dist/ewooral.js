@@ -1,4 +1,5 @@
 "use strict";
-let Name = "Ewooral";
-Name = "Boahen";
-console.log(Name);
+function add(a, b) {
+    return a + b;
+}
+console.log(add(3, 5));
