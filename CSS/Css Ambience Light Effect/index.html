@@ -9,7 +9,39 @@
     <link rel="stylesheet" href="./index.css" type="text/css">
     <script src="./index.js" type="module"></script>
 </head>
-<body id="body">
+<style>
+    h1{
+        color:red;
     
+    }
+    .title{
+        color:green;
+    }
+    .header{
+        display: flex;
+    }
+    #headerTitle {
+        color:blue;
+    }
+    .header>.title{
+        color: purple;
+    }
+    .header h1{
+        color:pink !important;
+    }
+    span.badge{
+        display: flex;
+        align-items:center;
+        margin-left: 11rem;;
+    }
+</style>
+<body id="body">
+    <div class = "header">
+        <h1 class="title" id="headerTitle">Title</h1>
+        <span class="badge">
+            Badge 
+        </span>
+    </div>
+
 </body>
 </html>

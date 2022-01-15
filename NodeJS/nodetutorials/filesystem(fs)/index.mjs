@@ -1,4 +1,4 @@
- import {readFile} from 'fs/promises';
+ import {readFile, writeFile} from 'fs/promises';
 
 
  let template = await readFile(new URL('template.html', import.meta.url), 'utf8'); 
@@ -9,8 +9,13 @@ const data = {
      title: 'My Page',
     body: 'This is my page'
 }
-console.log(Object.entries(data));
+// console.log(Object.entries(data));
 for(const [k, v] of Object.entries(data)) {
     template = template.replace(`{${k}}`, v);
 }
-console.log(template);
+
+// console.log(template);
+
+// Write back the template to disk
+await writeFile(new URL("index.html", import.meta.url), template);
+
