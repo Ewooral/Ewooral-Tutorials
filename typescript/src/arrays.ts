@@ -19,8 +19,4 @@ console.log(arrr);
 console.log(typeof(arr));
 console.log(typeof(arrr));
 
-const numPair: [number, number] = [11, 12];
-numPair.forEach((x)=>{
-    console.log(x+20);
-})
 

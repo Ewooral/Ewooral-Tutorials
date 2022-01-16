@@ -9,7 +9,16 @@ let myCar: [number, string, string, boolean] =
 true
 ];
 
-const [year, make, model, isExpensive] = myCar;
+const [year, make, model, isExpensive] = myCar; // destructuring
 
 console.log(isExpensive);
 console.log(myCar);
+
+const numPair: [number, number] = [11, 12];
+numPair.forEach((x)=>{
+    console.log(x+20);
+})
+numPair.push(400);
+numPair.concat(200);
+
+console.log(numPair);
