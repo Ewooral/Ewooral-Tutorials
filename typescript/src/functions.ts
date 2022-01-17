@@ -8,10 +8,52 @@ console.log( add(3, 5))
 const nemo: string[] = ["Nemo"];
 
 function findNemo(array: string[]){
-    for(let i = 0; i < array.length; i++){
-        if(array[i] == "Nemo"){
-            console.log("Found Nemo");
-        }
-    }
+    const arr = [4, 3, 2, 1];
+
+let value:number 
+for (value of arr) {
+  console.log(value);
+}
 }
 findNemo(nemo);
+
+function verify(text: string) {
+  const stack = [];
+  for (const c of text) {
+    if (c === '(') stack.unshift(')')
+    else if (c === '[') stack.unshift(']')
+    else if (c === '<') stack.unshift('>')
+    else if (c === stack[0]) stack.shift()
+    else if (c === ')' || c === ']' || c === '>') return 0
+  }
+  return 1
+}
+
+
+const test_inputs = [
+    "---(++++)----",
+    "",
+    "before ( middle []) after ",
+    ") (",
+    "<( >)",
+    "( [ <> () ] <> )",
+    " ( [)"
+]
+for (const s of test_inputs) {
+  console.log(verify(s), s)
+}
+
+// Given an array of integers, find the sum of its elements.
+function simpleArraySum(ar: number[]):number {
+    // Write your code here
+    let sum = 0;
+
+    let value: number;
+    for ( value of ar) {
+        sum += value;
+    }
+    return sum 
+}
+
+console.log(simpleArraySum([1, 2, 3, 4, 10, 11]));
+
