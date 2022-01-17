@@ -2,14 +2,6 @@
 const anExampleVariable = "Hello World";
 const show = console.log;
 console.log(anExampleVariable);
-// To learn more about the language, click above in "Examples" or "What's New".
-// Otherwise, get started by removing these comments and the world is your playground.
-let arr = [1, 2, 3, 4, 5];
-let arrr = [4, 5, 6, 7, 2];
-show(arr);
-show(arrr);
-show(typeof (arr));
-show(typeof (arrr));
 /**
  * ANY type
 TypeScript also has a special type, any, that you can use whenever you don’t want a particular value to cause typechecking errors.
@@ -39,6 +31,7 @@ show(fufu);
 function greet(name) {
     return "Hello, " + name.toUpperCase() + "!";
 }
+;
 show(greet("world"));
 show(greet("TypeScript"));
 // No type annotations here, but TypeScript can spot the bug
