@@ -1,6 +1,5 @@
 #include <iostream>
-#include <array>
-using namespace std;
+// using namespace std;
 
 int sumOfArray(int arr[], int n)
 {
@@ -10,8 +9,10 @@ int sumOfArray(int arr[], int n)
     return sum;
 }
 int main(){
+    int Jesus;
+    std::cout << Jesus << std::endl;
     int arr[] = {12, 3, 4, 15};
     int n = sizeof(arr) / sizeof(arr[0]);
-    cout << "Sum of given array is " << sumOfArray(arr, n);
+    std::cout << "Sum of given array is " << sumOfArray(arr, n);
     return 0;
 }
