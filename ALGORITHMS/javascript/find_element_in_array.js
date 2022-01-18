@@ -8,4 +8,4 @@ function findElement(element, arrayStack) {
     
 }
 
-findElement("ruby", ["ruby", "javascript", "python", "ruby"]);
+console.log(findElement("daddy", ["ruby", "javascript", "python", "ruby"]));
