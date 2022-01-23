@@ -37,9 +37,4 @@ function difference(arr,n)
 			[4 , 5, 6],
 			[10, 8, -12]
 		];
-	cd 
-		document.write(difference(arr, n));
-	
-// This code is contributed Bobby
-
-
+	console.log(difference(arr, n))
