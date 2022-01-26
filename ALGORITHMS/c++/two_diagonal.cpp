@@ -20,6 +20,7 @@ int difference(int arr[][MAX], int n)
             // finding sum of secondary diagonal
             if (i == n - j - 1)
                 d2 += arr[i][j];
+            
         }
     }
 
@@ -28,7 +29,7 @@ int difference(int arr[][MAX], int n)
     return abs(d1 - d2);
 }
 
-// Driven Program
+   // Driven Program
 int main()
 {
     int n = 3;
@@ -37,7 +38,8 @@ int main()
         {
             {11, 2, 4},
             {4, 5, 6},
-            {10, 8, -12}};
+            {10, 8, -12}
+        };
 
     cout << difference(arr, n);
     return 0;
