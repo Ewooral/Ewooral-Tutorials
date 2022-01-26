@@ -17,3 +17,6 @@
 ## What separates pseudocode from “real” code is that in
     pseudocode, we employ whatever expressive method is most clear and concise to
     specify a given algorithm
+## pseudocode is not typically concerned with issues of software engineering.
+    Issues of data abstraction, modularity, and error handling are often ignored in order
+    to convey the essence of the algorithm more concisely.
