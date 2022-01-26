@@ -1,7 +1,7 @@
 # Insertion sort
-   Our first algorithm, insertion sort, solves the sorting problem introduced in Chapter 1:
-   Input: A sequence of n numbers ha1; a2;:::;ani.
-   Output: A permutation (reordering) ha0
+    Our first algorithm, insertion sort, solves the sorting problem introduced in Chapter 1:
+    Input: A sequence of n numbers (a1; a2;:::;an).
+    Output: A permutation (reordering) ha0
     1; a0
     2;:::;a0
     ni of the input sequence such
@@ -14,3 +14,6 @@
     In this book, we shall typically describe algorithms as programs written in a
     pseudocode that is similar in many respects to C, C++, Java, Python, or Pascal. If
     you have been introduced to any of these languages, you should have little trouble
+## What separates pseudocode from “real” code is that in
+    pseudocode, we employ whatever expressive method is most clear and concise to
+    specify a given algorithm
