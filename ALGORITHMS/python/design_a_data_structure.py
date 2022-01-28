@@ -57,4 +57,7 @@ Design Search Autocomplete System.
 2. Bitwise Trie. Design a structure to dynamically add binary strings and compute maximum/minimum XOR/AND/etc, for example
 
 Maximum XOR of Two Number in an Array.
+
+
+Why Trie and not HashMap
 '''
