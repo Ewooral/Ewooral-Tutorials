@@ -38,4 +38,11 @@ This article introduces the data structure trie.
 It could be pronounced in two different ways: as 
 "tree" or "try". Trie which is also called a digital
  tree or a prefix tree is a kind of search ordered tree data structure mostly used for the efficient dynamic add/search operations with the strings.
+
+Trie is widely used in real life: autocomplete search, spell checker, T9 predictive text, IP routing (longest prefix matching), some GCC containers.
+
+'''
+
+'''
+There are two main types of trie interview questions:
 '''
