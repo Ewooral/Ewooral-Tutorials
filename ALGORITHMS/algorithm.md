@@ -20,8 +20,10 @@
 ## pseudocode is not typically concerned with issues of software engineering.
     Issues of data abstraction, modularity, and error handling are often ignored in order
     to convey the essence of the algorithm more concisely.
-
-# INSERTION-SORT.A/
+# insertion sort
+    is an efficient algorithm for sorting a small number of elements. 
+    This sorting algorithm works the way people sort a hand of playing cards
+### INSERTION-SORT.A/
     ```python
     1 for j D 2 to A:length
     2 key D AŒj 
