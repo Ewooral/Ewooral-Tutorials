@@ -25,4 +25,11 @@ wordDictionary.search("pad"); // return False
 wordDictionary.search("bad"); // return True
 wordDictionary.search(".ad"); // return True
 wordDictionary.search("b.."); // return True
+
+Constraints:
+
+1 <= word.length <= 500
+word in addWord consists lower-case English letters.
+word in search consist of  '.' or lower-case English letters.
+At most 50000 calls will be made to addWord and search.
 '''
