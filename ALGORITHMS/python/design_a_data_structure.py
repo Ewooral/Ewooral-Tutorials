@@ -32,4 +32,10 @@ Constraints:
 word in addWord consists lower-case English letters.
 word in search consist of  '.' or lower-case English letters.
 At most 50000 calls will be made to addWord and search.
+
+Data Structure Trie
+This article introduces the data structure trie. 
+It could be pronounced in two different ways: as 
+"tree" or "try". Trie which is also called a digital
+ tree or a prefix tree is a kind of search ordered tree data structure mostly used for the efficient dynamic add/search operations with the strings.
 '''
