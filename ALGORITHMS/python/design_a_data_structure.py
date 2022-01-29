@@ -112,3 +112,7 @@ time complexity could degrade to O(N2.M), where NN is the number of the inserted
 
 class WordDictionaries:
     def __init__(self):
+         """
+        Initialize your data structure here.
+        """
+         self.trie = {}
