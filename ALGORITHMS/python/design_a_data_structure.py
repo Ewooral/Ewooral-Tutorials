@@ -116,3 +116,7 @@ class WordDictionaries:
         Initialize your data structure here.
         """
          self.trie = {}
+    def add_word(self, word: str) -> None:
+        """
+        Adds a word into the data structure.
+        """
