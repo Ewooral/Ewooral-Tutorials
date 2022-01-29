@@ -86,8 +86,8 @@ class WordDictionary:
             i = 0
             while i < m and (dict_word[i] == word[i] or word[i] == '.'):
                 i += 1
-            if i == m: if i == m:
-                
+            if i == m:
+                return True
         
 
 
