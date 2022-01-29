@@ -60,4 +60,6 @@ Maximum XOR of Two Number in an Array.
 
 
 Why Trie and not HashMap
+
+It's quite easy to write the solution using such data structures as hashmap or balanced tree.
 '''
