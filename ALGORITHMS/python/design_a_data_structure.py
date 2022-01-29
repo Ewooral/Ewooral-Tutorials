@@ -90,7 +90,14 @@ class WordDictionary:
             if i == m:
                 return True
         return False
-        
+
+
+''' This solution passes all leetcode test cases, and formally has 
+O(M⋅N) time complexity for the search, where M
+is a length of the word to find, and N is the number of words. Although
+this solution is not efficient for the most important practical use cases:
+
+'''
 
 
 
