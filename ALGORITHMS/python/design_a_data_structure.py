@@ -1,11 +1,15 @@
 '''
-Design a data structure that supports adding new words and finding if a string matches any previously added string.
+Design a data structure that supports adding new words and finding if 
+a string matches any previously added string.
 
 Implement the WordDictionary class:
 
 WordDictionary() Initializes the object.
-void addWord(word) Adds word to the data structure, it can be matched later.
-bool search(word) Returns true if there is any string in the data structure that matches word or false otherwise. word may contain dots '.' where dots can be matched with any letter.
+void addWord(word) Adds word to the data structure, it can be matched 
+later.
+bool search(word) Returns true if there is any string in the data
+structure that matches word or false otherwise. word may contain
+dots '.' where dots can be matched with any letter.
 
 
 Example:
@@ -37,16 +41,21 @@ Data Structure Trie
 This article introduces the data structure trie. 
 It could be pronounced in two different ways: as 
 "tree" or "try". Trie which is also called a digital
- tree or a prefix tree is a kind of search ordered tree data structure mostly used for the efficient dynamic add/search operations with the strings.
+ tree or a prefix tree is a kind of search ordered tree data structure 
+ mostly used for the efficient dynamic add/search operations with the 
+ strings.
 
-Trie is widely used in real life: autocomplete search, spell checker, T9 predictive text, IP routing (longest prefix matching), some GCC containers.
+Trie is widely used in real life: autocomplete search, spell checker, 
+T9 predictive text, IP routing (longest prefix matching), some GCC 
+containers.
 
 '''
 
 '''
 There are two main types of trie interview questions:
 
-S1. tandard Trie. Design a structure to dynamically add and search strings, for example
+S1. tandard Trie. Design a structure to dynamically add and search 
+strings, for example
 
 Add and Search Word.
 
@@ -54,12 +63,19 @@ Word Search II.
 
 Design Search Autocomplete System.
 
-2. Bitwise Trie. Design a structure to dynamically add binary strings and compute maximum/minimum XOR/AND/etc, for example
+2. Bitwise Trie. Design a structure to dynamically add binary strings 
+and compute maximum/minimum XOR/AND/etc, for example
 
 Maximum XOR of Two Number in an Array.
 
 
 Why Trie and not HashMap
 
-It's quite easy to write the solution using such data structures as hashmap or balanced tree.
+It's quite easy to write the solution using such data structures as 
+hashmap or balanced tree.
 '''
+class WordDictionary:
+
+
+
+   
