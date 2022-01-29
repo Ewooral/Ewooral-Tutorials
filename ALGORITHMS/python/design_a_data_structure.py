@@ -110,4 +110,5 @@ time complexity could degrade to O(N2.M), where NN is the number of the inserted
 # where M is the key length, and NN is the number of keys.
 
 
-   
+class WordDictionaries:
+    def __init__(self):
