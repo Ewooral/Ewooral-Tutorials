@@ -80,6 +80,8 @@ class WordDictionary:
 
     def addWord(self, word: str) -> None:
         self.d[len(word)].add(word)
+    def search(self, word: str) -> bool:
+    m = len(word)
 
 
 
