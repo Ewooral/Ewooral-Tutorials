@@ -120,3 +120,4 @@ class WordDictionaries:
         """
         Adds a word into the data structure.
         """
+        node = self.trie
