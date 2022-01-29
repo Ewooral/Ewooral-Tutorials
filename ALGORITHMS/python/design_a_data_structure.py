@@ -99,6 +99,9 @@ this solution is not efficient for the most important practical use cases:
 
 1. Finding all keys with a common prefix.
 2. Enumerating a dataset of strings in lexicographical order.
+3. Scaling for the large datasets. 
+Once the hash table increases in size, there are a lot of hash collisions and the search 
+time complexity could degrade to O(N2.M), where NN is the number of the inserted keys.
 '''
 
 
