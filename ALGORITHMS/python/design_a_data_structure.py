@@ -98,6 +98,7 @@ is a length of the word to find, and N is the number of words. Although
 this solution is not efficient for the most important practical use cases:
 
 1. Finding all keys with a common prefix.
+2. Enumerating a dataset of strings in lexicographical order.
 '''
 
 
