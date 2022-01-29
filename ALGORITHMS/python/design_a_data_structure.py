@@ -121,3 +121,6 @@ class WordDictionaries:
         Adds a word into the data structure.
         """
         node = self.trie
+        for ch in word:
+            if not ch in node:
+                node[ch] = {}
