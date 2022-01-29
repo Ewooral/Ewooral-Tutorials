@@ -76,6 +76,7 @@ hashmap or balanced tree.
 '''
 class WordDictionary:
     def __init__(self):
+        self.d = defaultdict(set)
 
 
 
