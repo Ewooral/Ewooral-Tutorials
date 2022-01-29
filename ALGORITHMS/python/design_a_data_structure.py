@@ -78,7 +78,8 @@ class WordDictionary:
     def __init__(self):
         self.d = defaultdict(set)
 
-     def addWord(self, word: str) -> None:
+    def addWord(self, word: str) -> None:
+        self.d[len(word)].add(word)
 
 
 
