@@ -82,6 +82,7 @@ class WordDictionary:
         self.d[len(word)].add(word)
     def search(self, word: str) -> bool:
         m = len(word)
+        for dict_word in self.d[m]:
         
 
 
