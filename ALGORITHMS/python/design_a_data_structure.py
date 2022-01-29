@@ -75,6 +75,7 @@ It's quite easy to write the solution using such data structures as
 hashmap or balanced tree.
 '''
 class WordDictionary:
+    def __init__(self):
 
 
 
