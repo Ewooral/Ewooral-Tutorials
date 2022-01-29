@@ -104,7 +104,10 @@ Once the hash table increases in size, there are a lot of hash collisions and th
 time complexity could degrade to O(N2.M), where NN is the number of the inserted keys.
 '''
 
-
+# Trie could use less space compared to hashmap when storing 
+# many keys with the same prefix. In this case, using trie has
+#  only O(M⋅N) time complexity, 
+# where M is the key length, and NN is the number of keys.
 
 
    
