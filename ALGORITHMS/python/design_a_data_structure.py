@@ -84,6 +84,7 @@ class WordDictionary:
         m = len(word)
         for dict_word in self.d[m]:
             i = 0
+            while i < m and (dict_word[i] == word[i] or word[i] == '.'):
         
 
 
