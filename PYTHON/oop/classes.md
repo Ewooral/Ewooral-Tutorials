@@ -3,3 +3,21 @@
 
 ## **Classes vs Instances**
     The Object-oriented Programming paradigm is structured around Classes and Instances. You can think of a class as a “type” of something, like “Car.” You can think of an instance as a specific thing, such as “my Subaru,” which is a type of “Car.” Both classes and instances can have variables and methods. Changing a class variable will change what is returned when you get that variable from an instance, however changing an instance variable only applies to that one instance. We’ll come back to this in a second.
+
+    ``` python
+    # chapter_6.py
+
+class Car:
+    runs = True
+
+    def start(self):
+        if self.runs:
+            print("Car is started. Vroom vroom!")
+        else:
+            print("Car is broken :(")
+
+my_car = Car()
+print(f"My car runs: {my_car.runs}")
+my_car.start()
+
+    ```
