@@ -131,7 +131,9 @@ class WordDictionaries:
 
 new_wordA = WordDictionaries()
 new_wordB = WordDictionary()
-print(new_wordA.add_word('bad'))
+A = new_wordB.add_word("samaritan")
+
+print(A)
 print(new_wordA.add_word('dad'))
 print(new_wordB.add_word('.ad'))
 print(new_wordB.add_word('b..') )
