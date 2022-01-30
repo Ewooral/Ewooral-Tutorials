@@ -124,3 +124,8 @@ class WordDictionaries:
         for ch in word:
             if not ch in node:
                 node[ch] = {}
+            node = node[ch]
+        node['$'] = True
+
+b = WordDictionary()
+print(b.add_word('bad'))
