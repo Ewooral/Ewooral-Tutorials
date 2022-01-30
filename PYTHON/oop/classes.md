@@ -22,3 +22,5 @@ my_car.runs = False
 my_car.start()
 
     ```
+
+# When we run the start() function, the **self keyword ** points to the *bound instance* of Car - so when we call start() on my_car, self points to my_car and sees an instance variable runs that is False, but when we call my_other_car.start(), it returns True
