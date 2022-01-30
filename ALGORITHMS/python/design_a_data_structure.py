@@ -74,12 +74,15 @@ Why Trie and not HashMap
 It's quite easy to write the solution using such data structures as 
 hashmap or balanced tree.
 '''
+
+from collections import defaultdict
 class WordDictionary:
     def __init__(self):
         self.d = defaultdict(set)
 
     def add_word(self, word: str) -> None:
         self.d[len(word)].add(word)
+        return word
 
     def search(self, word: str) -> bool:
         m = len(word)
@@ -109,7 +112,6 @@ time complexity could degrade to O(N2.M), where NN is the number of the inserted
 #  only O(M⋅N) time complexity, 
 # where M is the key length, and NN is the number of keys.
 
-
 class WordDictionaries:
     def __init__(self):
          """
@@ -128,4 +130,9 @@ class WordDictionaries:
         node['$'] = True
 
 b = WordDictionary()
-print(b.add_word('bad'))
+new_word = b.add_word("bad")
+print(new_word)
+print("algorithm")
+print(b.search("bad"))
+print(b.search("dad"))
+
