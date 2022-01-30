@@ -129,10 +129,14 @@ class WordDictionaries:
             node = node[ch]
         node['$'] = True
 
-b = WordDictionary()
-new_word = b.add_word("bad")
-print(new_word)
-print("algorithm")
-print(b.search("bad"))
-print(b.search("dad"))
+new_wordA = WordDictionaries()
+new_wordB = WordDictionary()
+print(new_wordA.add_word('bad'))
+print(new_wordA.add_word('dad'))
+print(new_wordB.add_word('.ad'))
+print(new_wordB.add_word('b..') )
+
+print(new_wordA.trie)
+print(new_wordB.d)
+
 
