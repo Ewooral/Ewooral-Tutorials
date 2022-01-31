@@ -23,4 +23,12 @@ my_car.start()
 
     ```
 
-# When we run the start() function, the **self keyword ** points to the *bound instance* of Car - so when we call start() on my_car, self points to my_car and sees an instance variable runs that is False, but when we call my_other_car.start(), it returns True
+# When we run the start() function, 
+  * the **self keyword** points to the *bound instance* of Car - so when we call start() on my_car, self points to my_car and sees an instance variable runs that  is False, but when we call my_other_car.start(), it returns True
+
+## self refers to an instance
+    Back to what we were saying in the last section, runs is a class variable on the Car class, meaning that it exists for all instances of type Car. When we set runs to False, we created an instance variable on my_car, and when we called start(), self told the interpreter to look for an instance variable in my_car called runs.
+ 
+    When we called my_other_car.start(), the interpreter looked for an instance variable called runs, but didn’t find it, so it looked at the next level up, the class, and found the class variable Car.runs, which returned True.
+
+    You may have noticed, but all instance methods within classes take self as their first argument, such as def start(self): above.
