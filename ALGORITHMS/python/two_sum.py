@@ -11,14 +11,19 @@ targetSum = 10
 
 '''
 
+from operator import ne
+
+
 def two_number_sum(array, target_sum):
     # Write your code here.
     # O(n^2) time complexity
     # O(1) space complexity
     for i in range(len(array)):
+        current = array[i]
         for j in range(i+1, len(array)):
-            if array[i] + array[j] == target_sum:
-                return [array[i], array[j]]
+            next_value = array[j]
+            if current + next_value == target_sum:
+                return [current, next_value]
     return []
 
 

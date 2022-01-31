@@ -7,9 +7,11 @@ function twoNumberSum(array, targetSum) {
 	let i
 	let j
 	for (i = 0; i < array.length; i++) {
+        let currentValue = array[i]
 		 for(j = i+1; j < array.length; j++) {
-			 if(array[i] + array[j] == targetSum){
-				 return [array[i], array[j]]
+             let nextValue = array[j]
+			 if(currentValue + nextValue == targetSum){
+				 return [currentValue, nextValue]
 			 }
 			 
 		 }
