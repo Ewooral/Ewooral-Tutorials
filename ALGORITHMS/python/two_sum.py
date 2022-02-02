@@ -15,7 +15,7 @@ from operator import ne
 
 
 def two_number_sum(array, target_sum):
-    # Write your code here.
+    # Write your code here. 
     # O(n^2) time complexity
     # O(1) space complexity
     for i in range(len(array)):
