@@ -46,5 +46,6 @@ class Solution(object):
         res = []
         for i in range(len(search_word)): 
             products = [p for p in products if p[:i+1] == search_word[:i+1]]
+            res.append(products[:min(3, len(products))])
     
         return res
