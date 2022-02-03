@@ -41,7 +41,9 @@ products[i] consists of lowercase English letters.
 searchWord consists of lowercase English letters.
 '''
 class Solution(object):
-    def suggestedProducts(self, products, searchWord):
+    def suggestedProducts(self, products, search_word):
         products.sort()
         res = []
+        for i in range(len(search_word)): 
+    
         return res
