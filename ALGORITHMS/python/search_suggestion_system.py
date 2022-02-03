@@ -43,4 +43,5 @@ searchWord consists of lowercase English letters.
 class Solution(object):
     def suggestedProducts(self, products, searchWord):
         products.sort()
+        res = []
         return res
