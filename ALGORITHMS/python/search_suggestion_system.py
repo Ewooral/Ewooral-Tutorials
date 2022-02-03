@@ -49,3 +49,7 @@ class Solution(object):
             res.append(products[:min(3, len(products))])
     
         return res
+
+# TEST
+sol = Solution()
+print(sol.suggested_products(["mobile","mouse","moneypot","monitor","mousepad"], "mouse"))
