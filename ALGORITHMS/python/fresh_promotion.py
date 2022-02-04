@@ -321,7 +321,18 @@ def fresh_promotion(code_list, shopping_cart):
                 continue
             cart_index += 1
             code_index = 1
-        while code_index < len(code) and cart_index < len(shopping_cart):
-            if code[code_index] != shopping_cart[cart_index] \
-                    and code[code_index] != 'anything':
+            while code_index < len(code) and cart_index < len(shopping_cart):
+                if code[code_index] != shopping_cart[cart_index] \
+                        and code[code_index] != 'anything':
+                    break
+                code_index += 1
+                cart_index += 1
+            if code_index == len(code):
+                found = True
                 break
+        if found:
+            matched += 1
+        if cart_index == len(shopping_cart):
+            break
+    return matched == len(code_list)
+            
