@@ -43,4 +43,8 @@ The second group contains 'anything' so any fruit can be ordered in place of
 'anything' in the shoppingCart. The customer is a winner as the customer
 has added fruits in the order of fruits in the groups and the order 
 of groups in the codeList is also maintained in the shoppingCart.
+
+Example 2:
+Input: codeList = [[apple, apple], [banana, anything, banana]]
+shoppingCart = [banana, orange, banana, apple, apple]
 """
