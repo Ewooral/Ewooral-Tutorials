@@ -104,4 +104,20 @@ contain all fruits of group 1.
         }
         return true;
     }
+
+
+=======Python regex solution:===========
+
+def freshPromotion(shoppingCart, codeList) -> int:
+    s = ' '.join(shoppingCart)
+    print(s)
+    reg = ''
+    for code in codeList:
+        c = ' '.join(code)
+        c = ' ' + c
+        c = c.replace('anything', '\w+')
+        reg += c + '[\w\s]*'
+    r = re.compile(reg)
+    res = r.findall(s)
+    return min(1, len(res))
 """
