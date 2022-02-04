@@ -208,4 +208,39 @@ public class FreshPromotion {
 	  }
 
 	}
+
+
+
+==========JAVASCRIPT ===============
+
+function foo(codeList, shoppingCart) {
+    // Write your code here
+    let listIndex = 0;
+    let ret = 0;
+    let itemInListIndex = 0;
+    const numberOfCodeLists = codeList.length;
+    shoppingCart.forEach(shoppingCartItem => {
+        const currList = codeList[listIndex].split(' ');
+        const secretListCurrItem = currList[itemInListIndex];
+        if (secretListCurrItem === shoppingCartItem ||
+            secretListCurrItem === 'anything') 
+        {
+            itemInListIndex++;
+
+            if (itemInListIndex === currList.length) {
+                itemInListIndex = 0;
+                listIndex++;
+                if (listIndex === numberOfCodeLists) {
+                    ret = 1;
+                    return;
+                }
+            }
+        }
+        else {
+            itemInListIndex = 0;
+        }
+    });
+
+    return ret;
+}
 """
