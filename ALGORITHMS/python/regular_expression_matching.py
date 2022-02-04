@@ -32,3 +32,17 @@ s contains only lowercase English letters.
 p contains only lowercase English letters, '.', and '*'.
 It is guaranteed for each appearance of the character '*', there will be a previous valid character to match.
 """
+
+"""Solution
+Approach 1: Recursion
+Intuition
+
+If there were no Kleene stars (the * wildcard character for regular expressions), the problem would be easier - we simply check from left to right if each character of the text matches the pattern.
+
+When a star is present, we may need to check many different suffixes of the text and see if they match the rest of the pattern. A recursive solution is a straightforward way to represent this relationship.
+
+Algorithm
+
+Without a Kleene star, our solution would look like this:
+
+"""
