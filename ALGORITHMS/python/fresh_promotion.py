@@ -368,10 +368,12 @@ def is_winner(secret, order):
         while j < len(group):
             if k == len(order):
                 return False
-        	if group[j] == 'anything' or group[j] == order[k]:
+            if group[j] == 'anything' or group[j] == order[k]:
                 k += 1
-       		    j += 1
+                j += 1
             else:
                 # pushing k back to (assumed start position of group ) + 1
                 k -= j - 1
                 j = 0
+        i += 1
+    return True
