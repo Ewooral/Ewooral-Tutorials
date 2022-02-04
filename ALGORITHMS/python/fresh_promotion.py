@@ -14,4 +14,11 @@ Based on the above secret code list, a customer who made either of the
 following purchases would win the prize:
 orange, apple, apple, banana, orange, banana
 apple, apple, orange, orange, banana, apple, banana, banana
+
+Write an algorithm to output 1 if the customer is a winner else output 0.
+
+Input
+The input to the function/method consists of two arguments:
+codeList, a list of lists of strings representing the order and grouping of specific fruits that must be purchased in order to win the prize for the day.
+shoppingCart, a list of strings representing the order in which a customer purchases fruit.
 """
