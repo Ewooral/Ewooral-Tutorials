@@ -366,3 +366,6 @@ def is_winner(secret, order):
         group = secret[i]
         j = 0
         while j < len(group):
+            if k == len(order):
+                return False
+        	if group[j] == 'anything' or group[j] == order[k]:
