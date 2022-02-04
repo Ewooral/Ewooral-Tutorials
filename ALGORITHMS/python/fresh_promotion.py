@@ -47,4 +47,10 @@ of groups in the codeList is also maintained in the shoppingCart.
 Example 2:
 Input: codeList = [[apple, apple], [banana, anything, banana]]
 shoppingCart = [banana, orange, banana, apple, apple]
+
+Output: 0
+Explanation:
+The customer is not a winner as the customer has added 
+the fruits in order of groups but group [banana, orange, banana] 
+is not following the group [apple, apple] in the codeList.
 """
