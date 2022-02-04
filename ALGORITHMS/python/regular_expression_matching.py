@@ -47,9 +47,16 @@ Without a Kleene star, our solution would look like this:
 
 """
 
+class Solution:
+    def match(self, text, pattern):
+        if not pattern:
+            return not text
+        first_match = bool(text) and pattern[0] in {text[0], '.'}
+        return first_match and match(text[1:], pattern[1:])
 
-def match(text, pattern):
-    if not pattern:
-        return not text
-    first_match = bool(text) and pattern[0] in {text[0], '.'}
-    return first_match and match(text[1:], pattern[1:])
+
+"""If a star is present in the pattern, 
+it will be in the second position \text{pattern[1]}pattern[1]. 
+Then, we may ignore this part of the pattern, or delete a matching
+ character in the text. If we have a match on the remaining strings
+  after any of these operations, then the initial inputs matched. """
