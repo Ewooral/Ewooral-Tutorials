@@ -63,4 +63,14 @@ Explanation:
 The customer is not a winner as the customer has added the 
 fruits in an order which is not following the order of fruit
 names in the first group.
+
+Example 4:
+
+Input: codeList = [[apple, apple], [apple, apple, banana]] 
+shoppingCart = [apple, apple, apple, banana]
+Output: 0
+Explanation:
+The customer is not a winner as the first 2 fruits form group 1, 
+all three fruits would form group 2, but can't because it would 
+contain all fruits of group 1.
 """
