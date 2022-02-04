@@ -335,4 +335,22 @@ def fresh_promotion(code_list, shopping_cart):
         if cart_index == len(shopping_cart):
             break
     return matched == len(code_list)
+
+
+if __name__ == '__main__':
+    assert fresh_promotion([['apple', 'apple'], ['banana', 'anything', 'banana']],
+                          ['orange', 'apple', 'apple', 'banana', 'orange', 'banana']) \
+        == True
+    assert fresh_promotion([['apple', 'apple'], ['banana', 'anything', 'banana']],
+                          ['apple', 'orange', 'apple', 'apple', 'banana', 'orange', 'banana']) \
+        == True
+    assert fresh_promotion([['orange', 'apple'], ['banana', 'anything', 'banana']],
+                          ['orange', 'apple', 'apple', 'banana', 'orange', 'banana']) \
+        == True
+    assert fresh_promotion([['orange', 'apple', 'apple'], ['banana', 'anything', 'banana']],
+                          ['orange', 'apple', 'apple', 'banana', 'orange', 'banana']) \
+
             
+print( fresh_promotion([['apple', 'apple'], ['banana', 'anything', 'banana']],
+                             ['orange', 'apple', 'apple', 'banana', 'orange', 'banana'])
+      == True)
