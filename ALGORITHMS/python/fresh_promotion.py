@@ -308,3 +308,16 @@ if __name__ == '__main__':
                           ['apple', 'apple', 'apple', 'banana']) \
            == False
 """
+
+
+def fresh_promotion(code_list, shopping_cart):
+    matched = 0
+    cart_index = 0
+    for code in code_list:
+        found = False
+        while cart_index < len(shopping_cart):
+            if shopping_cart[cart_index] != code[0] and shopping_cart[cart_index]!= 'anything':
+                cart_index += 1
+                continue
+            cart_index += 1
+            codeIndex = 1
