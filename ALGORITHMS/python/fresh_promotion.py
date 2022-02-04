@@ -364,3 +364,5 @@ def is_winner(secret, order):
     i = k = 0
     while i < len(secret):
         group = secret[i]
+        j = 0
+        while j < len(group):
