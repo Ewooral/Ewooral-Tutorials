@@ -361,3 +361,4 @@ print( fresh_promotion([['apple', 'apple'], ['banana', 'anything', 'banana']],
 def is_winner(secret, order):
     if not secret:
         return True
+    i = k = 0
