@@ -53,3 +53,4 @@ class Solution(object):
 # TEST
 sol = Solution()
 print(sol.suggested_products(["mobile","mouse","moneypot","monitor","mousepad"], "mouse"))
+print(sol.suggested_products(["havana"], "havana"))
