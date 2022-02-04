@@ -354,3 +354,10 @@ if __name__ == '__main__':
 print( fresh_promotion([['apple', 'apple'], ['banana', 'anything', 'banana']],
                              ['orange', 'apple', 'apple', 'banana', 'orange', 'banana'])
       == True)
+
+
+
+# ANOTHER SOLUTION
+def is_winner(secret, order):
+    if not secret:
+        return True
