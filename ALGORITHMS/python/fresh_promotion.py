@@ -31,4 +31,16 @@ Note
 ordered in place of 'anything' in the group. 'anything' has to be something, 
 it cannot be "nothing." 'anything' must represent one and only one fruit.
 If secret code list is empty then it is assumed that the customer is a winner.
+
+Example 1:
+
+Input: codeList = [[apple, apple], [banana, anything, banana]] 
+shoppingCart = [orange, apple, apple, banana, orange, banana]
+Output: 1
+Explanation:
+codeList contains two groups - [apple, apple] and [banana, anything, banana].
+The second group contains 'anything' so any fruit can be ordered in place of
+'anything' in the shoppingCart. The customer is a winner as the customer
+has added fruits in the order of fruits in the groups and the order 
+of groups in the codeList is also maintained in the shoppingCart.
 """
