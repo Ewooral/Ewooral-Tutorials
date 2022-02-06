@@ -11,7 +11,7 @@ targetSum = 10
 
 '''
 
-from operator import ne
+
 
 
 def two_number_sum(array, target_sum):
@@ -54,3 +54,4 @@ class two_number_sum:
 two_sum = two_number_sum()
 print(two_sum.two_number_sum_hash([3, 5, -4, 8, 11, 1, -1, 6], 10))
 print(two_sum.two_number_sum_hash([4,6,1,-3], 3))
+print(two_sum.two_number_sum_hash([0,2,4,6,8,10], 12))
