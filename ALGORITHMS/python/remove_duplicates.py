@@ -94,3 +94,10 @@ simply return the length of this array.
 
 """
 
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
