@@ -43,4 +43,17 @@ Constraints:
 1 <= nums.length <= 3 * 104
 -104 <= nums[i] <= 104
 nums is sorted in non-decreasing order.
+
+Solution
+Approach 1: Popping Unwanted Duplicates
+Intuition
+
+The input array is already sorted and hence, all the duplicates 
+appear next to each other. The problem statement mentions that we a
+re not allowed to use any additional space and we have to modify the
+ array in-place. The easiest approach for in-place modifications would
+  be to get rid of all the unwanted duplicates. For every number in the
+   array, if we detect > 2 duplicates, we simply remove them from the 
+   list of elements and we do this for all the elements in the array.
 """
+
