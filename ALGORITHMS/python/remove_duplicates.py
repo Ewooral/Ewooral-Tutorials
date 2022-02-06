@@ -167,3 +167,7 @@ class Solution(object):
         """
         # Initialize the counter and the second pointer.
         j, count = 1, 1
+
+        # Start from the second element of the array and process
+        # elements one by one.
+        for i in range(1, len(nums)):
