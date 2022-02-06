@@ -60,13 +60,31 @@ re not allowed to use any additional space and we have to modify the
 
 Algorithm
 
-The implementation is slightly tricky so to say since we will be
+1. The implementation is slightly tricky so to say since we will be
  removing elements from the array and iterating over it at the same
   time. So, we need to keep updating the array's indexes as and when 
   we pop an element else we'll be accessing invalid indexes.
-Say we have two variables, i which is the array pointer and count 
+2. Say we have two variables, i which is the array pointer and count 
 which keeps track of the count of a particular element in the array
 . Note that the minimum count would always be 1.
+
+3. We start with index 1 and process one element at a time in the array.
+
+4.If we find that the current element is the same as the previous element 
+i.e. nums[i] == nums[i - 1], then we increment the count. If the value 
+of count > 2, then we have encountered an unwanted duplicate element
+and we can remove it from the array. Since we know the index of this 
+element, we can use the del or pop or remove operation (or whatever operation 
+corresponding operation is supported in your language of choice) to 
+delete the element at index i from the array. Since we popped an 
+element, we decrement the index by 1 as well.
+
+5. If we encounter that the current element is not the same as
+ the previous element i.e. nums[i] != nums[i - 1], then it means 
+ we have a new element at hand and so accordingly, we update count = 1.
+
+
+6
 
 
 """
