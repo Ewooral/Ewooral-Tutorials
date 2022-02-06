@@ -156,3 +156,12 @@ class Solution:
                 nums[i] = n
                 i += 1
         return i
+
+
+# APPROACH THREE
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
