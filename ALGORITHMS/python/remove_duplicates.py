@@ -84,7 +84,12 @@ element, we decrement the index by 1 as well.
  we have a new element at hand and so accordingly, we update count = 1.
 
 
-6
+6. Since we are removing all the unwanted duplicates from the 
+original array, the final array that remains after process all 
+the elements will only contain the valid elements and hence we 
+simply return the length of this array.
+
+
 
 
 """
