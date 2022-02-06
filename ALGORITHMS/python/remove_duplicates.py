@@ -175,3 +175,8 @@ class Solution(object):
             # increment the count.
             if nums[i] == nums[i - 1]:
                 count += 1
+            else:
+                # Reset the count since we encountered a different element
+                # than the previous one
+                count = 1
+
