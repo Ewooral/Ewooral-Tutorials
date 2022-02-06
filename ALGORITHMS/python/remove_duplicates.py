@@ -121,3 +121,8 @@ class Solution(object):
                     # array index value to keep it consistent
                     # with the size of the array.
                     i -= 1
+            else:
+
+                # Reset the count since we encountered a different element
+                # than the previous one
+                count = 1
