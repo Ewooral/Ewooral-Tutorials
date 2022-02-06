@@ -116,3 +116,8 @@ class Solution(object):
                 # remove it from the array.
                 if count > 2:
                     nums.pop(i)
+
+                    # Note that we have to decrement the
+                    # array index value to keep it consistent
+                    # with the size of the array.
+                    i -= 1
