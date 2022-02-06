@@ -55,5 +55,19 @@ re not allowed to use any additional space and we have to modify the
   be to get rid of all the unwanted duplicates. For every number in the
    array, if we detect > 2 duplicates, we simply remove them from the 
    list of elements and we do this for all the elements in the array.
+
+
+
+Algorithm
+
+The implementation is slightly tricky so to say since we will be
+ removing elements from the array and iterating over it at the same
+  time. So, we need to keep updating the array's indexes as and when 
+  we pop an element else we'll be accessing invalid indexes.
+Say we have two variables, i which is the array pointer and count 
+which keeps track of the count of a particular element in the array
+. Note that the minimum count would always be 1.
+
+
 """
 
