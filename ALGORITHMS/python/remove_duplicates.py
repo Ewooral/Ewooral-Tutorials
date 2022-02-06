@@ -96,7 +96,7 @@ simply return the length of this array.
 
 
 class Solution(object):
-    def removeDuplicates(self, nums):
+    def remove_duplicates(self, nums):
         """
         :type nums: List[int]
         :rtype: int
@@ -126,3 +126,7 @@ class Solution(object):
                 # Reset the count since we encountered a different element
                 # than the previous one
                 count = 1
+            # Move on to the next element in the array
+            i += 1
+
+        return len(nums)
