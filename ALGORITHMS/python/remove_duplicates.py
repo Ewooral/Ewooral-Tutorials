@@ -147,7 +147,7 @@ Space Complexity: O(1)O(1) since we are modifying the array in-place.
 
 
 class Solution:
-    def remove_duplicates(self, nums: List[int]) -> int:
+    def remove_duplicates(self, nums):
         if not nums:
             return 0
         i = 0
