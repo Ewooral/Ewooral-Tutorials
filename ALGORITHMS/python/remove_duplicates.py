@@ -96,7 +96,7 @@ simply return the length of this array.
 
 
 class Solution(object):
-    def remove_duplicates(self, nums):
+    def remove_duplicates_1(self, nums):
         """
         :type nums: List[int]
         :rtype: int
@@ -147,7 +147,7 @@ Space Complexity: O(1)O(1) since we are modifying the array in-place.
 
 
 class Solution:
-    def remove_duplicates(self, nums):
+    def remove_duplicates_2(self, nums):
         if not nums:
             return 0
         i = 0
@@ -160,7 +160,7 @@ class Solution:
 
 # APPROACH THREE
 class Solution(object):
-    def removeDuplicates(self, nums):
+    def remove_duplicates_3(self, nums):
         """
         :type nums: List[int]
         :rtype: int
