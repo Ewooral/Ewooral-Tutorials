@@ -185,5 +185,6 @@ class Solution(object):
             if count <= 2:
                 nums[j] = nums[i]
                 j += 1
+        return j
 
 
