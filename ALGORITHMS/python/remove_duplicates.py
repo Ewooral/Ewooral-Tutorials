@@ -101,3 +101,5 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        # Initialize the counter and the array index.
+        i, count = 1, 1
