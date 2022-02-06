@@ -165,3 +165,5 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        # Initialize the counter and the second pointer.
+        j, count = 1, 1
