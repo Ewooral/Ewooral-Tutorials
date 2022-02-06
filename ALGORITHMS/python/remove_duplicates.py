@@ -179,4 +179,7 @@ class Solution(object):
                 # Reset the count since we encountered a different element
                 # than the previous one
                 count = 1
+            
+            # For a count <= 2, we copy the element over thus
+            # overwriting the element at index "j" in the array
 
