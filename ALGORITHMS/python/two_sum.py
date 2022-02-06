@@ -32,3 +32,25 @@ print(two_number_sum([4,6,1,-3], 3))
 print(two_number_sum([0,2,4,6,8,10], 12))
 print(two_number_sum([3, 5, -4, 8, 11, 1, -1, 6], 15))
 
+# APPROACH TWO - Two sum using hash table
+# x + y = target_sum
+# x = target_sum - y
+# y = current
+
+class two_number_sum:
+    def two_number_sum_hash(array, target_sum):
+        # Write your code here. 
+        # O(n) time complexity
+        # O(n) space complexity
+        hash_table = {}
+        for i in range(len(array)):
+            current = array[i]
+            if target_sum - current in hash_table:
+                return [current, target_sum - current]
+            else:
+                hash_table[current] = True
+        return []
+# instance of the class 
+two_sum = two_number_sum()
+print(two_sum.two_number_sum_hash([3, 5, -4, 8, 11, 1, -1, 6], 10))
+print(two_sum.two_number_sum_hash([4,6,1,-3], 3))
