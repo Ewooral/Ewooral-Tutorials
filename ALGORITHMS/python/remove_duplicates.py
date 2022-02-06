@@ -171,3 +171,7 @@ class Solution(object):
         # Start from the second element of the array and process
         # elements one by one.
         for i in range(1, len(nums)):
+            # If the current element is a duplicate,
+            # increment the count.
+            if nums[i] == nums[i - 1]:
+                count += 1
