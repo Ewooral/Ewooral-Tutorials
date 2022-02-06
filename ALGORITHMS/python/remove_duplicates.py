@@ -184,5 +184,6 @@ class Solution(object):
             # overwriting the element at index "j" in the array
             if count <= 2:
                 nums[j] = nums[i]
+                j += 1
 
 
