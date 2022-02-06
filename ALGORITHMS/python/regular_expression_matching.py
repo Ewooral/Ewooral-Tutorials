@@ -60,3 +60,6 @@ it will be in the second position \text{pattern[1]}pattern[1].
 Then, we may ignore this part of the pattern, or delete a matching
  character in the text. If we have a match on the remaining strings
   after any of these operations, then the initial inputs matched. """
+
+
+
