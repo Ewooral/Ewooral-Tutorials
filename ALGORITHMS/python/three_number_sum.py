@@ -78,29 +78,14 @@ class Solution:
                     lo += 1
 
 
+""" 
+Complexity Analysis
 
-# class Solution:
-#     def threeSum(self, nums):
-#         res = []
-#         nums.sort()
-#         for i in range(len(nums)):
-#             if nums[i] > 0:
-#                 break
-#             if i == 0 or nums[i - 1] != nums[i]:
-#                 self.twoSumII(nums, i, res)
-#         return res
+Time Complexity: O(n^2). twoSumII is O(n), and we call it n times.
+Sorting the array takes O(nlogn), so overall complexity is 
+O(nlogn+n2). This is asymptotically equivalent to O(n2).
 
-#     def twoSumII(self, nums, i, res):
-#         lo, hi = i + 1, len(nums) - 1
-#         while (lo < hi):
-#             sum = nums[i] + nums[lo] + nums[hi]
-#             if sum < 0:
-#                 lo += 1
-#             elif sum > 0:
-#                 hi -= 1
-#             else:
-#                 res.append([nums[i], nums[lo], nums[hi]])
-#                 lo += 1
-#                 hi -= 1
-#                 while lo < hi and nums[lo] == nums[lo - 1]:
-#                     lo += 1
+Space Complexity: from O(logn) to O(n), depending on the 
+implementation of the sorting algorithm. For the purpose of 
+complexity analysis, we ignore the memory required for the output.
+"""
