@@ -58,25 +58,35 @@ print(two_sum.two_number_sum_hash([0,2,4,6,8,10], 12))
 print(two_sum.two_number_sum_hash([3, -2, 1, 9, -1], 0))
 
 
-# using two Pointers
-class two_sum_pointer:
-    # T = nlog n 
-    # S = n(1)
+# pointer method
+class two_sum_pointer():
     def two_sums(self, array, target_sum):
-        array.sort()  # n log n
-        left = 0
-        right = len(array) - 1
-        while left < right:
-            current_sum = left + right 
+        left = 0;
+        right = len(array)-1
+        while left < right: # while both variables haven't overlapped
+            current_sum = array[left] + array[right]
             if current_sum == target_sum:
                 return [array[left], array[right]]
+            elif current_sum > target_sum:
+                right += 1 
             elif current_sum < target_sum:
                 left += 1
-            elif current_sum > target_sum:
-                right -= 1
         return []
 
-pointer = two_sum_pointer()
-print(".....................")
-print(pointer.two_sums([3, -2, 1, 9, -1], 0))
 
+
+
+pointer = two_sum_pointer() # instance of the class 
+print(pointer.two_sums([1, 4, 3, -1, 11, 8], 0))
+print(pointer.two_sums([1, 4, 3, -1, 11, 8], 0))
+
+
+
+
+# array = [1, 4, 3, -1, 11, 8]
+# sort the array. [-1, 1, 3, 4, 8, 11]
+
+# target_sum = 0
+
+#currentSum = left + right
+# currentSum must be equal to targetSum ( currentSum == targetSum )
