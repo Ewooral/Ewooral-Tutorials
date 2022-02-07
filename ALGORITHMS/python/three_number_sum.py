@@ -70,6 +70,7 @@ class Solution:
                 lo += 1
             elif sum > 0:
                 hi -= 1
+            else:
 
 
 # class Solution:
