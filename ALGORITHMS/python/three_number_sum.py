@@ -66,6 +66,7 @@ class Solution:
         lo, hi = i + 1, len(nums) - 1
         while (lo < hi):
             sum = nums[i] + nums[lo] + nums[hi]
+            if sum < 0:
 
 
 # class Solution:
