@@ -67,6 +67,7 @@ class Solution:
         while (lo < hi):
             sum = nums[i] + nums[lo] + nums[hi]
             if sum < 0:
+                lo += 1
 
 
 # class Solution:
