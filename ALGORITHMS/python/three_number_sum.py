@@ -6,7 +6,7 @@ class three_sum_number:
                  next_num = array[j]
                  for k in range(j + 1, len(array)):
                      last_num = array[k]
-                     if current_num + next_num + last_num  == target_sum:
+                     if current_num + next_num + last_num == target_sum:
                          return [current_num, next_num, last_num]
          return []
 
@@ -40,7 +40,7 @@ def threeNumberSum(array, targetSum):
          return []
 
 
-print(threeNumberSum(12, 3, 1, 2, -6, 5, -8, 6),0)
+print(threeNumberSum(12, 3, 1, 2, -6, 5, -8, 6), 0)
 
 # array [12, 3, 1, 2, -6, 5, -8,  6]
 # sorted array [-8, -6, 1, 2, 3, 5, 6, 12] 2
@@ -49,8 +49,7 @@ print(threeNumberSum(12, 3, 1, 2, -6, 5, -8, 6),0)
 #
 
 
-
-# APPROACH THREE 
+# APPROACH THREE
 class Solution:
     def threeSum(self, nums):
         res = []
@@ -58,6 +57,7 @@ class Solution:
         for i in range(len(nums)):
             if nums[i] > 0:
                 break
+            if i == 0 or nums[i - 1] != nums[i]:
 
 
 # class Solution:
