@@ -55,3 +55,27 @@ two_sum = two_number_sum()
 print(two_sum.two_number_sum_hash([3, 5, -4, 8, 11, 1, -1, 6], 10))
 print(two_sum.two_number_sum_hash([4,6,1,-3], 3))
 print(two_sum.two_number_sum_hash([0,2,4,6,8,10], 12))
+
+
+# using two Pointers
+class two_sum_pointer:
+    # T = nlog n 
+    # S = n(1)
+    def two_sums(self, array, target_sum):
+        array.sort()  # n log n
+        left = 0
+        right = len(array) - 1
+        while left < right:
+            current_sum = left + right 
+            if current_sum == target_sum:
+                return [array[left], array[right]]
+            elif current_sum < target_sum:
+                left += 1
+            elif current_sum > target_sum:
+                right -= 1
+        return []
+
+pointer = two_sum_pointer()
+pointer.two_sums([3, -2, 1, 9, -1], 0)
+
+
