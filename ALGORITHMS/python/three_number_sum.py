@@ -68,6 +68,7 @@ class Solution:
             sum = nums[i] + nums[lo] + nums[hi]
             if sum < 0:
                 lo += 1
+            elif sum > 0:
 
 
 # class Solution:
