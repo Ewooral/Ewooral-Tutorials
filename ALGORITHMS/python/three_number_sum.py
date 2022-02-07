@@ -61,6 +61,9 @@ class Solution:
                 self.twoSumII(nums, i, res)
             return res
 
+            
+    def twoSumII(self, nums, i, res):
+
 
 # class Solution:
 #     def threeSum(self, nums):
