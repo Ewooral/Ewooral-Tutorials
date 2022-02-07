@@ -55,6 +55,7 @@ two_sum = two_number_sum()
 print(two_sum.two_number_sum_hash([3, 5, -4, 8, 11, 1, -1, 6], 10))
 print(two_sum.two_number_sum_hash([4,6,1,-3], 3))
 print(two_sum.two_number_sum_hash([0,2,4,6,8,10], 12))
+print(two_sum.two_number_sum_hash([3, -2, 1, 9, -1], 0))
 
 
 # using two Pointers
@@ -76,6 +77,6 @@ class two_sum_pointer:
         return []
 
 pointer = two_sum_pointer()
-pointer.two_sums([3, -2, 1, 9, -1], 0)
-
+print(".....................")
+print(pointer.two_sums([3, -2, 1, 9, -1], 0))
 
