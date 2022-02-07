@@ -64,6 +64,7 @@ class Solution:
 
     def twoSumII(self, nums, i, res):
         lo, hi = i + 1, len(nums) - 1
+        while (lo < hi):
 
 
 # class Solution:
