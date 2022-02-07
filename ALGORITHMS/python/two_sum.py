@@ -38,7 +38,7 @@ print(two_number_sum([3, 5, -4, 8, 11, 1, -1, 6], 15))
 # y = current
 
 class two_number_sum:
-    def two_number_sum_hash(array, target_sum):
+    def two_number_sum_hash(self, array, target_sum):
         # Write your code here. 
         # O(n) time complexity
         # O(n) space complexity
