@@ -59,6 +59,7 @@ class Solution:
                 break
             if i == 0 or nums[i - 1] != nums[i]:
                 self.twoSumII(nums, i, res)
+            return res
 
 
 # class Solution:
