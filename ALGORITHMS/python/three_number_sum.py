@@ -134,7 +134,7 @@ class Solution:
                 lo += 1
             elif sum > 0:
                 hi -= 1
-    #         else:
+            else:
     #             res.append([nums[i], nums[lo], nums[hi]])
     #             lo += 1
     #             hi -= 1
