@@ -135,6 +135,6 @@ class Solution:
             elif sum > 0:
                 hi -= 1
             else:
-    #             res.append([nums[i], nums[lo], nums[hi]])
+                res.append([nums[i], nums[lo], nums[hi]])
     #             lo += 1
     #             hi -= 1
