@@ -136,5 +136,5 @@ class Solution:
                 hi -= 1
             else:
                 res.append([nums[i], nums[lo], nums[hi]])
-    #             lo += 1
+                lo += 1
     #             hi -= 1
