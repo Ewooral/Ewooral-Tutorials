@@ -124,7 +124,7 @@ class Solution:
                 break
             if i == 0 or nums[i - 1] != nums[i]:
                 self.twoSumII(nums, i, res)
-    #     return res
+        return res
 
     # def twoSumII(self, nums, i, res):
     #     lo, hi = i + 1, len(nums) - 1
