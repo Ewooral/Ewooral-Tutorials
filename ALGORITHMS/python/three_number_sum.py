@@ -138,3 +138,5 @@ class Solution:
                 res.append([nums[i], nums[lo], nums[hi]])
                 lo += 1
                 hi -= 1
+                while lo < hi and nums[lo] == nums[lo - 1]:
+                    lo += 1
