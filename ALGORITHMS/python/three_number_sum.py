@@ -118,7 +118,7 @@ complexity analysis, we ignore the memory required for the output.
 class Solution:
     def threeSum(self, nums):
         res = []
-    #     nums.sort()
+        nums.sort()
     #     for i in range(len(nums)):
     #         if nums[i] > 0:
     #             break
