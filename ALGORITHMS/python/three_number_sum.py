@@ -130,7 +130,7 @@ class Solution:
         lo, hi = i + 1, len(nums) - 1
         while (lo < hi):
             sum = nums[i] + nums[lo] + nums[hi]
-    #         if sum < 0:
+            if sum < 0:
     #             lo += 1
     #         elif sum > 0:
     #             hi -= 1
