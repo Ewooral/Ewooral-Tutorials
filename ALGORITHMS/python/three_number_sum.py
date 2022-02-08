@@ -123,7 +123,7 @@ class Solution:
             if nums[i] > 0:
                 break
             if i == 0 or nums[i - 1] != nums[i]:
-    #             self.twoSumII(nums, i, res)
+                self.twoSumII(nums, i, res)
     #     return res
 
     # def twoSumII(self, nums, i, res):
