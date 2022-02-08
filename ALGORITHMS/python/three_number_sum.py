@@ -128,7 +128,7 @@ class Solution:
 
     def twoSumII(self, nums, i, res):
         lo, hi = i + 1, len(nums) - 1
-    #     while (lo < hi):
+        while (lo < hi):
     #         sum = nums[i] + nums[lo] + nums[hi]
     #         if sum < 0:
     #             lo += 1
