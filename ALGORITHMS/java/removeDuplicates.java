@@ -22,5 +22,23 @@ class Solution {
         // Start from the second element of the array and process
         // elements one by one.
         //
+        while (i < length) {
+            
+            //
+            // If the current element is a duplicate, 
+            // increment the count.
+            //
+            if (nums[i] == nums[i - 1]) {
+                
+                count++;
+
+                 
+                //    
+                // If the count is more than 2, this is an unwanted duplicate element
+                // and hence we remove it from the array.
+                //    
+                if (count > 2) {
+                    
+                    this.remElement(nums, i);
         
 }
