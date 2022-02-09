@@ -4,9 +4,10 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        nums.sort()
         # Initialize the counter and the array index.
         i, count = 1, 1
-        container = []
+        
         # Start from the second element of the array and process
         # elements one by one.
         while i < len(nums):
@@ -22,7 +23,8 @@ class Solution(object):
 
                 if count > 2:
                     nums.pop(i)
-                    container.append(i)
+                    
+                    
 
                     # Note that we have to decrement the
                     # array index value to keep it consistent
@@ -37,3 +39,7 @@ class Solution(object):
 
             # Move on to the next element in the array
             i += 1
+        return nums
+
+new_solution = Solution()
+print(new_solution.remove_duplicates([1, 3, 6, 3, 2, 6, 1, 2, 3, 1, 4, 5,  6, 2, 0]))
