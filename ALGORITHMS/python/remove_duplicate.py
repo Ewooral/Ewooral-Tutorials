@@ -23,3 +23,8 @@ class Solution(object):
                 if count > 2:
                     nums.pop(i)
                     container.append(i)
+
+                    # Note that we have to decrement the
+                    # array index value to keep it consistent
+                    # with the size of the array.
+                    i -= 1
