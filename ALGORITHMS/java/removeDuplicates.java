@@ -189,3 +189,10 @@ class SecondSolution {
         return j;
     }
 }
+
+/**
+ * Complexity Analysis
+ * 
+ * Time Complexity: O(N)O(N) since we process each element exactly once.
+ * Space Complexity: O(1)O(1).
+ */
