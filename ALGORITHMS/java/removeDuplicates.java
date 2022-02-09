@@ -108,3 +108,13 @@ class SecondSolution {
             // If the current element is a duplicate, increment the count.
             //
             if (nums[i] == nums[i - 1]) {
+                 count++;
+                
+            } else {
+                
+                //
+                // Reset the count since we encountered a different element
+                // than the previous one.
+                //
+                count = 1;
+            }
