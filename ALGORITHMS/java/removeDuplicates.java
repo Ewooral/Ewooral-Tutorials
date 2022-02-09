@@ -103,3 +103,4 @@ class SecondSolution {
         // Start from the second element of the array and process
         // elements one by one.
         //
+        for (int i = 1; i < nums.length; i++) {
