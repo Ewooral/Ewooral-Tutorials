@@ -10,3 +10,13 @@ class Solution {
         for (int i = index + 1; i < arr.length; i++) {
             arr[i - 1] = arr[i];
         }
+
+        return arr;
+    }
+    
+    public int removeDuplicates(int[] nums) {
+        
+        // Initialize the counter and the array index.
+        int i = 1, count = 1, length = nums.length;
+        
+}
