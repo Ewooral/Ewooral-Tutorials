@@ -104,3 +104,7 @@ class SecondSolution {
         // elements one by one.
         //
         for (int i = 1; i < nums.length; i++) {
+             //
+            // If the current element is a duplicate, increment the count.
+            //
+            if (nums[i] == nums[i - 1]) {
