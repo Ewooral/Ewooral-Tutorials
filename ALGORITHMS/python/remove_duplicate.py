@@ -12,4 +12,4 @@ class Solution(object):
             # If the current element is a duplicate,
             # increment the count.
             if nums[i] == nums[i - 1]:
-                # count += 1
+                count += 1
