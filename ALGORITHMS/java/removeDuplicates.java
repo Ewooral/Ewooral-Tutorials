@@ -98,3 +98,8 @@ class SecondSolution {
     // Initialize the counter and the second pointer.
     //
         int j = 1, count = 1;
+
+         //
+        // Start from the second element of the array and process
+        // elements one by one.
+        //
