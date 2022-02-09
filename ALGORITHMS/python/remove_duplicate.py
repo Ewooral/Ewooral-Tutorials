@@ -13,3 +13,5 @@ class Solution(object):
             # increment the count.
             if nums[i] == nums[i - 1]:
                 count += 1
+                # If the count is more than 2, this is an
+                # unwanted duplicate element and hence we
