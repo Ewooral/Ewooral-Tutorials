@@ -123,3 +123,7 @@ class SecondSolution {
             // For a count <= 2, we copy the element over thus
             // overwriting the element at index "j" in the array
             //
+
+            if (count <= 2) {
+                nums[j++] = nums[i];
+            }
