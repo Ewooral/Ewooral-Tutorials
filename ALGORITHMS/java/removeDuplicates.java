@@ -54,6 +54,13 @@ class Solution {
                     //
                     length--;
                 }
+            } else {
+            
+            //
+            // Reset the count since we encountered a different element
+            // than the previous one.
+            //
+            count = 1;
                 
         
 }
