@@ -46,6 +46,14 @@ class Solution {
                     // keep it consistent with the size of the array.
                     //    
                     i--;
+
+                    //
+                    // Since we have a fixed size array and we can't actually
+                    // remove an element, we reduce the length of the array as
+                    // well.
+                    //
+                    length--;
+                }
                 
         
 }
