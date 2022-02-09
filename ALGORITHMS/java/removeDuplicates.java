@@ -40,5 +40,12 @@ class Solution {
                 if (count > 2) {
                     
                     this.remElement(nums, i);
+
+                    //
+                    // Note that we have to decrement the array index value to
+                    // keep it consistent with the size of the array.
+                    //    
+                    i--;
+                
         
 }
