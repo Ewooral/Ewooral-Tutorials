@@ -18,5 +18,9 @@ class Solution {
         
         // Initialize the counter and the array index.
         int i = 1, count = 1, length = nums.length;
+         //
+        // Start from the second element of the array and process
+        // elements one by one.
+        //
         
 }
