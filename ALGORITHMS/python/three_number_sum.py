@@ -115,8 +115,8 @@ complexity analysis, we ignore the memory required for the output.
 """
 
 
-class Solution:
-    def threeSum(self, nums):
+class Solution1:
+    def three_sum(self, nums):
         res = []
         nums.sort()
         for i in range(len(nums)):
@@ -126,7 +126,7 @@ class Solution:
                 self.twoSumII(nums, i, res)
         return res
 
-    def twoSumII(self, nums, i, res):
+    def two_sum(self, nums, i, res):
         lo, hi = i + 1, len(nums) - 1
         while (lo < hi):
             sum = nums[i] + nums[lo] + nums[hi]
