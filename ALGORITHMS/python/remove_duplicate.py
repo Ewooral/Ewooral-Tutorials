@@ -8,3 +8,6 @@ class Solution(object):
         i, count = 1, 1
         # Start from the second element of the array and process
         # elements one by one.
+        while i < len(nums):
+            # If the current element is a duplicate,
+            # increment the count.
