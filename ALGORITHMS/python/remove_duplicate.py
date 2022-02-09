@@ -15,3 +15,4 @@ class Solution(object):
                 count += 1
                 # If the count is more than 2, this is an
                 # unwanted duplicate element and hence we
+                # remove it from the array.
