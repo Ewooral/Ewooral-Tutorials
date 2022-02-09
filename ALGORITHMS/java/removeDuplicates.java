@@ -90,9 +90,11 @@ class Solution {
 
 //  second Approach
 
-class Solution {
+class SecondSolution {
 
     public int removeDuplicates(int[] nums) {
 
     //
     // Initialize the counter and the second pointer.
+    //
+        int j = 1, count = 1;
