@@ -127,3 +127,7 @@ class SecondSolution {
             if (count <= 2) {
                 nums[j++] = nums[i];
             }
+        }
+        return j;
+    }
+}
