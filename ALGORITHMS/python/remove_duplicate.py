@@ -11,3 +11,5 @@ class Solution(object):
         while i < len(nums):
             # If the current element is a duplicate,
             # increment the count.
+            if nums[i] == nums[i - 1]:
+                # count += 1
