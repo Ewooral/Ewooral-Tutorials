@@ -61,6 +61,38 @@ class Solution {
             // than the previous one.
             //
             count = 1;
+         }
+                
+            // Move on to the next element in the array
+            i++;
+        }
+            
+        return length;
+
+    }
                 
         
 }
+/**
+ * Complexity Analysis
+ * 
+ * Time Complexity: Let's see what the costly operations in our array are:
+ * We have to iterate over all the elements in the array. Suppose that the
+ * original array contains N elements, the time taken here would be O(N)O(N).
+ * Next, for every unwanted duplicate element, we will have to perform a delete
+ * operation and deletions in arrays are also O(N)O(N).
+ * The worst case would be when all the elements in the array are the same. In
+ * that case, we would be performing N - 2N−2 deletions thus giving us O(N^2)O(N2) complexity for deletions
+ * Overall complexity = O(N) + O(N^2) \equiv O(N^2)O(N)+O(N2)≡O(N2)
+ * Space Complexity: O(1)O(1) since we are modifying the array in-place.
+ */
+
+
+//  second Approach
+
+class Solution {
+
+    public int removeDuplicates(int[] nums) {
+
+    //
+    // Initialize the counter and the second pointer.
