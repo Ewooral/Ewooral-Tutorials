@@ -118,3 +118,8 @@ class SecondSolution {
                 //
                 count = 1;
             }
+
+            //
+            // For a count <= 2, we copy the element over thus
+            // overwriting the element at index "j" in the array
+            //
