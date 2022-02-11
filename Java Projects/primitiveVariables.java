@@ -12,8 +12,9 @@ public class primitiveVariables {
         System.out.println("Integer:" + i);
         System.out.println("Float:" + f);
         System.out.println("Double:" + d);
+        System.out.println("Long:" + l);
 
-        double doubleValue = 134.4d;
+        double doubleValue = 114.4d;
         Double doubleObj =  Double.valueOf(doubleValue); // instance of the Double helper class
 
         byte byteValue = doubleObj.byteValue(); 
@@ -23,9 +24,13 @@ public class primitiveVariables {
         long longValue = doubleObj.longValue();
         String stringValue = doubleObj.toString();
 
-        System.out.println(byteValue);
-        System.out.println(shortValue);
-        System.out.println(stringValue);
-        System.out.println(intValue);
+        if(doubleValue < Byte.MAX_VALUE){
+            System.out.println("byte value:" + byteValue++);
+        }
+
+        System.out.println("byte value:" + byteValue);
+        System.out.println("short value:" + shortValue);
+        System.out.println("string value:" + stringValue);
+        System.out.println("integer value:" + intValue);
         }
 }
