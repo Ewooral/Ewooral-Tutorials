@@ -8,6 +8,7 @@ public class GuessingGame
         int guessCount = 0;
         int guessLimit = 3;
         boolean outOfGuesses = false;
+
         while(guess != num && !outOfGuesses)
         {
             System.out.println("Guess a number between 0 and 9: ");
