@@ -26,6 +26,13 @@
          int         Integer
          long        Long
          float       Float
+         Double      Double
+    
+    Each helper class is a member of a java package called **Java.lang**
+    ``` Java
+    double doubleValue = 134.4d;
+    Double doubleObj = new Double(doubleValue); // instance of the Double helper class
+
         
   
   
