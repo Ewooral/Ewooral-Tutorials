@@ -50,7 +50,16 @@
 
     ```
 
-        
+  Sometimes, there are inconsistencies in adding double values. For example
+  ```Java 
+  public static void main(String[] args){
+      double value = 0.012;
+      double pSum = value * value * value;
+      System.out.println(pSum); // returns 0.036000000000000004
+  }  
+  ```
+
+ **BigDecimals** is used to solve this inconsistency problem
   
   
   * Objects ()
