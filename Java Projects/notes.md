@@ -44,6 +44,12 @@
 
     primitive numeric variables default to 0.
 
+    ```Java 
+    int myInt;
+    System.out.println(myInt); // returns 0
+
+    ```
+
         
   
   
