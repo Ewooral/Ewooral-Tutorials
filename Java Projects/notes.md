@@ -2,7 +2,7 @@
   * Primitive types ( Numbers, Characters, boolean values ) 
     They are stored in the fastest available memory for quick access
     data types names are all in lowercase
-    Note that a string is a complex object, not a primitive
+       - Note that a string is a complex object, not a primitive
 
     ``` java 
     int myVar = 5;
@@ -32,6 +32,17 @@
     ``` Java
     double doubleValue = 134.4d;
     Double doubleObj = new Double(doubleValue); // instance of the Double helper class
+
+    byte byteValue = doubleObj.byteValue(); 
+    int intValue = doubleObj.intValue();
+    float floatValue = doubleObj.floatValue();
+    short shortValue = doubleObj.shortValue();
+    long longValue = doubleObj.longValue();
+    String stringValue = doubleObj.toString();
+
+    ```
+
+    primitive numeric variables default to 0.
 
         
   
