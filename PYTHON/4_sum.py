@@ -134,5 +134,7 @@ class Solution_II:
 
         def count_complements(i, complement):
             if i == len(lists) // 2:
+                return m[complement]
+            cnt = 0
 
         
