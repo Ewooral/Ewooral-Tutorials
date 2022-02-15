@@ -83,4 +83,6 @@ class Solution:
                 m[a + b] += 1
         
         for c in C:
+            for d in D:
+                # cnt += m[-c - d]
 
