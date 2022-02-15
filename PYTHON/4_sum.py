@@ -128,4 +128,7 @@ class Solution_II:
         def add_to_hash(i, total):
             if i == len(lists) // 2:
                 m[total] += 1
+            else:
+                for a in lists[i]:
+                    add_to_hash(i + 1, total + a)
         
