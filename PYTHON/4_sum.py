@@ -85,5 +85,5 @@ class Solution:
         
         for c in C:
             for d in D:
-                cnt += m[-c - d]
+                cnt += m[-c + d]
 
