@@ -138,5 +138,6 @@ class Solution_II:
             cnt = 0
             for a in lists[i]:
                 cnt += count_complements(i + 1, complement - a)
+            return cnt
 
         
