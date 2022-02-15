@@ -119,4 +119,5 @@ The second function, countComplements, will process the other group, accumulatin
 class Solution_II:
     def four_sum_count(self, A, B, C, D):
         m = collections.defaultdict(int)
+        lists = [A, B, C, D]
         
