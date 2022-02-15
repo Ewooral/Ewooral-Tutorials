@@ -79,4 +79,5 @@ class Solution:
         cnt = 0
         m = collections.defaultdict(int)
         for a in A:
+            for b in B:
 
