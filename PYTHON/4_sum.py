@@ -120,4 +120,6 @@ class Solution_II:
     def four_sum_count(self, A, B, C, D):
         m = collections.defaultdict(int)
         lists = [A, B, C, D]
+
+        def nSumCount() -> int:
         
