@@ -27,4 +27,18 @@ n == nums3.length
 n == nums4.length
 1 <= n <= 200
 -228 <= nums1[i], nums2[i], nums3[i], nums4[i] <= 228
+
+=========================================================================
+
+
+This problem is a variation of 4Sum, and we recommend checking that problem first. The main difference is that here we pick each element from a different array, while in 4Sum all elements come from the same array. For that reason, we cannot use the Two Pointers approach, where elements must be in the same sorted array.
+
+On the bright side, we do not need to worry about using the same element twice - we pick one element at a time from each array. As you will see later, this help reduce the time complexity.
+
+Finally, we do not need to return actual values and ensure they are unique; we just count each combination of four elements that sums to zero.
+
+
+===============================================================================
+
+
 """
