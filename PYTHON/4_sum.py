@@ -91,4 +91,4 @@ class Solution:
 
 _four_sum = Solution()
 print(_four_sum.four_sum_count([1, 2], [-2, -1], [-1, 2], [0, 2]))
-# print(_four_sum.four_sum_count([0], [0], [0], [0]))
+print(_four_sum.four_sum_count([0], [0], [0], [0]))
