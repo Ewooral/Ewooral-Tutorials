@@ -143,7 +143,7 @@ class SolutionII:
         return n_sum_count()
 
 """ 
-omplexity Analysis
+Complexity Analysis
 
 Time Complexity: O(n^1/2) or O(n^2) for 4Sum II. We have k/2 nested loops to count
 sums, and another k/2 nested loop to find complements.
@@ -151,6 +151,9 @@ sums, and another k/2 nested loop to find complements.
 If the number of arrays is odd, the time complexity will be O(n^[k+1]/2).
 We will pass k/2 arrays to addToHash, and k+2/2 arrays to kSumCount to keep
 the space complexity O(n^k/2).
+
+Space Complexity: O(n^k/2) for the hashmap. The space needed for the recursion will not 
+exceed k/2.
 """
 
         
