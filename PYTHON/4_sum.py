@@ -147,7 +147,10 @@ omplexity Analysis
 
 Time Complexity: O(n^1/2) or O(n^2) for 4Sum II. We have k/2 nested loops to count
 sums, and another k/2 nested loop to find complements.
- .
+
+If the number of arrays is odd, the time complexity will be O(n^[k+1]/2).
+We will pass k/2 arrays to addToHash, and k+2/2 arrays to kSumCount to keep
+the space complexity O(n^k/2).
 """
 
         
