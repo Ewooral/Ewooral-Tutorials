@@ -78,4 +78,5 @@ class Solution:
     def four_sum_count(self, A: List[int], B: List[int], C: List[int], D: List[int]) -> int:
         cnt = 0
         m = collections.defaultdict(int)
+        for a in A:
 
