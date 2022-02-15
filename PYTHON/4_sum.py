@@ -154,6 +154,20 @@ the space complexity O(n^k/2).
 
 Space Complexity: O(n^k/2) for the hashmap. The space needed for the recursion will not 
 exceed k/2.
+
+======================================================================================
+
+Further Thoughts
+For an interview, keep in mind the generalized implementation. 
+Even if your interviewer is OK with a simpler code, you'll get some 
+extra points by describing how your solution can handle more than 4 arrays.
+
+It's also important to discuss trade-offs with your interviewer. 
+If we are tight on memory, we can move some arrays from the first group
+to the second. This, of course, will increase the time complexity.
+In other words, the time complexity can range from O(n^k) to O(n^k/2), and
+the memory complexity ranges from O(1) to O(n^k/2) accordingly.
+
 """
 
         
