@@ -126,4 +126,6 @@ class Solution_II:
             return countComplements(len(lists) // 2, 0)
 
         def add_to_hash(i, total):
+            if i == len(lists) // 2:
+                m[total] += 1
         
