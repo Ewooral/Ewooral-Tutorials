@@ -72,10 +72,10 @@ Lookup key -(c + d) in the hashmap m.
 Add its value to the count cnt.
 Return the count cnt.
 """
-
+import collections
 
 class Solution:
-    def four_sum_count(self, A: List[int], B: List[int], C: List[int], D: List[int]) -> int:
+    def four_sum_count(self, A, B, C, D) -> int:
         cnt = 0
         m = collections.defaultdict(int)
         print(m)
@@ -86,6 +86,9 @@ class Solution:
         for c in C:
             for d in D:
                 cnt += m[-c + d]
-        
+        print(m)
         return cnt
 
+_four_sum = Solution()
+print(_four_sum.four_sum_count([1, 2], [-2, -1], [-1, 2], [0, 2]))
+# print(_four_sum.four_sum_count([0], [0], [0], [0]))
