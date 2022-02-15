@@ -121,6 +121,9 @@ class Solution_II:
         m = collections.defaultdict(int)
         lists = [A, B, C, D]
 
-        def nSumCount() -> int:
+        def n_sum_count() -> int:
             addToHash(0, 0)
+            return countComplements(len(lists) // 2, 0)
+
+        
         
