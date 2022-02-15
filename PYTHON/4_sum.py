@@ -122,4 +122,5 @@ class Solution_II:
         lists = [A, B, C, D]
 
         def nSumCount() -> int:
+            addToHash(0, 0)
         
