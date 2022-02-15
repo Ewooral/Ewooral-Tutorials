@@ -122,8 +122,8 @@ class Solution_II:
         lists = [A, B, C, D]
 
         def n_sum_count() -> int:
-            addToHash(0, 0)
+            add_to_hash(0, 0)
             return countComplements(len(lists) // 2, 0)
 
-        
+        def add_to_hash(i, total):
         
