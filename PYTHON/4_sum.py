@@ -80,4 +80,5 @@ class Solution:
         m = collections.defaultdict(int)
         for a in A:
             for b in B:
+                m[a + b] += 1
 
