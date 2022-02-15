@@ -92,3 +92,15 @@ class Solution:
 _four_sum = Solution()
 print(_four_sum.four_sum_count([1, 2], [-2, -1], [-1, 2], [0, 2]))
 print(_four_sum.four_sum_count([0], [0], [0], [0]))
+
+
+"""
+Approach 2: kSum II
+After you solve 4Sum II, an interviewer can follow-up with 5Sum II, 6Sum II, and so on. What they 
+are really expecting is a generalized solution for k input arrays. Fortunately, the hashmap 
+approach can be easily extended to handle more than 4 arrays.
+
+Above, we divided 4 arrays into two equal groups, and processed each group independently. 
+Same way, we will divide k arrays into two groups. For the first group, we will have k/2
+nested loops to count sums. Another k/2 nested loops will enumerate arrays in the second group and search for complements.
+"""
