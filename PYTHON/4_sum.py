@@ -100,7 +100,21 @@ After you solve 4Sum II, an interviewer can follow-up with 5Sum II, 6Sum II, and
 are really expecting is a generalized solution for k input arrays. Fortunately, the hashmap 
 approach can be easily extended to handle more than 4 arrays.
 
+===========================================================================================================================
+
 Above, we divided 4 arrays into two equal groups, and processed each group independently. 
 Same way, we will divide k arrays into two groups. For the first group, we will have k/2
 nested loops to count sums. Another k/2 nested loops will enumerate arrays in the second group and search for complements.
+
+==============================================================================================================================
+
+Algorithm
+
+We can implement k/2 nested loops using a recursion, passing the index i of the current list as the parameter.
+The first group will be processed by addToHash recursive function, which accumulates sum and terminates when adding the final sum to a hashmap m.
+
+The second function, countComplements, will process the other group, accumulating the complement value.
+ In the end, it searches for the final complement value in the hashmap and adds its count to the result.
 """
+class Solution_II:
+    
