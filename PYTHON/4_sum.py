@@ -86,4 +86,6 @@ class Solution:
         for c in C:
             for d in D:
                 cnt += m[-c + d]
+        
+        return cnt
 
