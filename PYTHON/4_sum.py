@@ -75,7 +75,7 @@ Return the count cnt.
 import collections
 
 class Solution:
-    def four_sum_count(self, A, B, C, D) -> int:
+    def four_sum_count(self, A, B, C, D):
         cnt = 0
         m = collections.defaultdict(int)
         print(m)
@@ -117,4 +117,5 @@ The second function, countComplements, will process the other group, accumulatin
  In the end, it searches for the final complement value in the hashmap and adds its count to the result.
 """
 class Solution_II:
-    
+    def four_sum_count(self, A, B, C, D):
+
