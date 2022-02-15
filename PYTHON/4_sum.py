@@ -72,3 +72,6 @@ Lookup key -(c + d) in the hashmap m.
 Add its value to the count cnt.
 Return the count cnt.
 """
+
+
+class Solution:
