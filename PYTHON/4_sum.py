@@ -136,5 +136,6 @@ class Solution_II:
             if i == len(lists) // 2:
                 return m[complement]
             cnt = 0
+            for a in lists[i]:
 
         
