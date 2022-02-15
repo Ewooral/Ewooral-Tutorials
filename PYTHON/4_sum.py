@@ -133,5 +133,6 @@ class Solution_II:
                     add_to_hash(i + 1, total + a)
 
         def count_complements(i, complement):
-            
+            if i == len(lists) // 2:
+
         
