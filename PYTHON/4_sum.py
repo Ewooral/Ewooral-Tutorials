@@ -116,7 +116,7 @@ The first group will be processed by addToHash recursive function, which accumul
 The second function, countComplements, will process the other group, accumulating the complement value.
  In the end, it searches for the final complement value in the hashmap and adds its count to the result.
 """
-class Solution_II:
+class SolutionII:
     def four_sum_count(self, A, B, C, D):
         m = collections.defaultdict(int)
         lists = [A, B, C, D]
@@ -139,5 +139,15 @@ class Solution_II:
             for a in lists[i]:
                 cnt += count_complements(i + 1, complement - a)
             return cnt
+
+        return n_sum_count()
+
+""" 
+omplexity Analysis
+
+Time Complexity: O(n^1/2) or O(n^2) for 4Sum II. We have k/2 nested loops to count
+sums, and another k/2 nested loop to find complements.
+ .
+"""
 
         
