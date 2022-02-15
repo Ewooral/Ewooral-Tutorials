@@ -121,9 +121,9 @@ class Solution_II:
         m = collections.defaultdict(int)
         lists = [A, B, C, D]
 
-        def n_sum_count() -> int:
+        def n_sum_count():
             add_to_hash(0, 0)
-            return countComplements(len(lists) // 2, 0)
+            return count_complements(len(lists) // 2, 0)
 
         def add_to_hash(i, total):
             if i == len(lists) // 2:
@@ -131,4 +131,7 @@ class Solution_II:
             else:
                 for a in lists[i]:
                     add_to_hash(i + 1, total + a)
+
+        def count_complements(i, complement):
+            
         
