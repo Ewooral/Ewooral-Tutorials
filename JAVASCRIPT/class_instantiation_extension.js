@@ -1,7 +1,9 @@
 class Player{
-    constructor(name, type) {
+    constructor(name, type, weight, height) {
         this.name = name;
         this.type = type;
+        this.weight = weight;
+        this.height = height;
     }
 }
 
