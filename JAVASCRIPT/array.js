@@ -133,6 +133,12 @@ for(var i=0;i<keys.length;i++){
  if(duplicate){ console.log("dupe value is there.."); break; }
 }
 
+/**
+ * Destructuring assignment
+The destructuring assignment syntax is a JavaScript 
+expression that makes it possible to unpack values from 
+arrays, or properties from objects, into distinct variables.
+ */
 let a, b, rest;
 [a, b] = [10, 20];
 console.log(a); // 10
