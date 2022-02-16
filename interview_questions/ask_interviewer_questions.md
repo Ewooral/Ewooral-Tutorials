@@ -16,3 +16,8 @@
 16.  What happened to the predecessor in this role? Should tell you if you're entering a burning building, inheriting a healthy program, etc.
 
 17.  What is the average tenure of your senior leaders? In addition to giving a hint about the culture, some answers may imply friction vs. opportunity.
+18. Is there any reason you wouldn't hire me?
+19. Do you LIKE me, personally?
+20. Am I STILL a good fit for this position, and how do I compare to your other candidates?
+21. Were you to offer me the job today, how much would you pay?
+22. What is YOUR ideal work environment? Describe, please.
