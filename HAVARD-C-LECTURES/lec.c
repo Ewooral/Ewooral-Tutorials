@@ -1,8 +1,6 @@
 #include <stdio.h>
-#include <cs50.h> 
 
-int main(void)
+int main()
 {
-
-    printf("Hello, %s\n");
+    printf("Hello World\n");
 }
