@@ -1,0 +1,14 @@
+# What technical topics should you be prepared to address?
+    
+    Before you dig into the technical topics you may be asked about during your interview, connect with your recruiting point of contact to understand the subjects/skills you’ll most likely be discussing and demonstrating. In general, our technical interviews typically require you to perform coding and system design white boarding exercises. Also keep in mind that invention is in our DNA, and technology is the fundamental tool we wield to evolve and improve every aspect of the experience we provide our customers. When reviewing the below topics, keep the customer top of mind.
+
+     An important part of Amazon’s Software Development Engineer hiring process is the completion of an online assessment which includes a coding test. We invite you to prepare for the experience by taking this sample coding challenge. You can become comfortable with the environment and experience practice questions which are similar to the actual assessment. You can click through this as many times as you’d like!
+    
+### Programming language
+    We do not require that you know any specific programming language before interviewing for a tech position. However, familiarity with a prominent language is generally a prerequisite for success. You should be familiar with the syntax of languages such as C, C++, C++14, C#, Go, Java7, Java8, JavaScript, Kotlin, Objective-C, PyPy2, PyPy3, Python2, Python3, Ruby, Scala and Swift. You should also know some of the languages’ nuances, such as how memory management works, or the most commonly used collections, libraries, etc.
+
+### Data structures
+    Most of the work we do involves storing and providing access to data in efficient ways. This requires a strong background in data structures. You’ll need to understand the inner workings of common data structures and be able to compare and contrast their usage in various applications. You will be expected to know the runtimes for common operations as well as how they use memory.
+
+### Algorithms
+    Your interview will not be focused on rote memorization of algorithms. However, having a good understanding of the most common algorithms will likely make solving some of the questions a lot easier. Consider reviewing common algorithms such as traversals, divide and conquer, breadth-first search vs. depth-first search and understand the tradeoffs for each. Knowing the runtimes, theoretical limitations, and basic implementation strategies of different classes of algorithms is more important than memorizing the specific details of any given algorithm.
