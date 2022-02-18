@@ -13,8 +13,8 @@
 # Are Right, A Lot
     Leaders are right a lot. They have strong judgment and good instincts. They seek diverse perspectives and work to disconfirm their beliefs.
 
-Learn and Be Curious
-Leaders are never done learning and always seek to improve themselves. They are curious about new possibilities and act to explore them.
+# Learn and Be Curious
+    Leaders are never done learning and always seek to improve themselves. They are curious about new possibilities and act to explore them.
 
 Hire and Develop the Best
 Leaders raise the performance bar with every hire and promotion. They recognize exceptional talent, and willingly move them throughout the organization. Leaders develop leaders and take seriously their role in coaching others. We work on behalf of our people to invent mechanisms for development like Career Choice.
