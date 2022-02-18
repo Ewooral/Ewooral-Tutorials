@@ -10,8 +10,8 @@
 # Invent and Simplify
     Leaders expect and require innovation and invention from their teams and always find ways to simplify. They are externally aware, look for new ideas from everywhere, and are not limited by “not invented here." As we do new things, we accept that we may be misunderstood for long periods of time.
 
-Are Right, A Lot
-Leaders are right a lot. They have strong judgment and good instincts. They seek diverse perspectives and work to disconfirm their beliefs.
+# Are Right, A Lot
+    Leaders are right a lot. They have strong judgment and good instincts. They seek diverse perspectives and work to disconfirm their beliefs.
 
 Learn and Be Curious
 Leaders are never done learning and always seek to improve themselves. They are curious about new possibilities and act to explore them.
