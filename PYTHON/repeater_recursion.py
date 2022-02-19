@@ -8,10 +8,14 @@ Input: {String} char
 Output: {String}
 """
 
-string = ""
+
 def repeater(char):
-    if len(string) == 5: return string
-    string += char
-    return repeater(char)
+    string = ""
+    if len(string) == 0: 
+        return string
+    string = string + char
+    return repeater(string)
+   
 
 print(repeater("Elijah"))
+

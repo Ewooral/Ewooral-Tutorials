@@ -1,13 +1,11 @@
-counter = 0
-def recurse():
-    global counter # this is the global variable that counts the number of times the function is called 
-    if counter == 888: return "done!"
-    counter += 1
-    print(counter)
-    return recurse()
+def recurse(counter = 0):
+    if counter == 88: 
+        return "done!"
+    new_counter = counter + 1
+    return recurse(new_counter)
 
 
 print(recurse())
-print(counter)
+# print(counter)
 # A base case in recursion stops the  loop at some point.
 # The global keyword is used to access the global variable. 
