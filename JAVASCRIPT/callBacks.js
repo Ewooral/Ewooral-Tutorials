@@ -30,7 +30,7 @@ function update(callback) {
   const output = [];
 
   for( up of array) {
-//       const updated = callback(up);
+      const updated = callback(up);
 //     output.push(updated);
    
 
