@@ -46,7 +46,7 @@ function add10(num) {
 
 function multiplyBy20(num) {
   return num * 20;
-// }
+}
 
 // function stringify(num) {
 //   return num.toString();
