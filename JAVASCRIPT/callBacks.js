@@ -27,7 +27,7 @@ a function that takes at least one function as input and/or returns a function a
 const array = [1, 2, 3];
 
 function update(callback) {
-//   const output = [];
+  const output = [];
 
 //   for( up of array) {
 //       const updated = callback(up);
