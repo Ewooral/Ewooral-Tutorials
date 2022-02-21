@@ -24,7 +24,7 @@ A HIGHER ORDER FUNCTION
 a function that takes at least one function as input and/or returns a function as output
  */
 
-// const array = [1, 2, 3];
+const array = [1, 2, 3];
 
 // function update(callback) {
 //   const output = [];
