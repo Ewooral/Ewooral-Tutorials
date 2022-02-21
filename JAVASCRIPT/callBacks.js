@@ -29,7 +29,7 @@ const array = [1, 2, 3];
 function update(callback) {
   const output = [];
 
-//   for( up of array) {
+  for( up of array) {
 //       const updated = callback(up);
 //     output.push(updated);
    
