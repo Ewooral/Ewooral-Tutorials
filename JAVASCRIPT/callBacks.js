@@ -40,7 +40,7 @@ function update(callback) {
 
 
 // // Callback functions
-// function add10(num) {
+function add10(num) {
 //   return num + 10;
 // }
 
