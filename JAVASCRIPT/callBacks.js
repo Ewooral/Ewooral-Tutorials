@@ -42,7 +42,7 @@ function update(callback) {
 // // Callback functions
 function add10(num) {
   return num + 10;
-// }
+}
 
 // function multiplyBy20(num) {
 //   return num * 20;
