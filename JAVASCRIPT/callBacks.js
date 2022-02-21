@@ -31,7 +31,7 @@ function update(callback) {
 
   for( up of array) {
       const updated = callback(up);
-//     output.push(updated);
+    output.push(updated);
    
 
 //   }
