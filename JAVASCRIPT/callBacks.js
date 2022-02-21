@@ -50,7 +50,7 @@ function multiplyBy20(num) {
 
 function stringify(num) {
   return num.toString();
-// }
+}
 
 // // Call update with each callback function
 // update(add10) // returns [11, 12, 13]
