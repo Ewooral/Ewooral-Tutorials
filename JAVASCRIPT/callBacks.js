@@ -72,4 +72,26 @@ It calls its input function when it is called.
 
 
 Hence, the term "callback" as one function call leads to another.
+
+==============================================================================================
+
+Wrapping Up
+Let’s summarize what we’ve discussed in this article.
+
+1. Callbacks are functions that are passed as input to other functions.
+
+2. Higher-order functions take at least one function as input (and/or return
+a function, although we haven’t dug into that aspect of them in this
+article. You can learn more about that in our post on Closures!)
+
+3. Functions give us the power to use the same code without copy/pasting it.
+We insert parameters where we’d like control over changing values.
+
+4. Higher-order functions provide an additional layer of abstraction,
+using callbacks as parameters to control functionality instead of
+simple values. 
+
+NOTE: The built-in map function is one example of an 
+incredibly useful higher-order function that transforms arrays with 
+callbacks.
  */
