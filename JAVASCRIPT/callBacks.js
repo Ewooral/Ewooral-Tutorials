@@ -53,6 +53,6 @@ function stringify(num) {
 }
 
 // Call update with each callback function
-// update(add10) // returns [11, 12, 13]
+update(add10) // returns [11, 12, 13]
 // update(multiplyBy20) // returns [20, 40, 60]
 // console.log(update(stringify) )// returns [‘1’, ‘2’, ‘3’]
