@@ -34,7 +34,7 @@ function update(callback) {
     output.push(updated);
    
 
-//   }
+  }
 //     return output;
 //   }
 
