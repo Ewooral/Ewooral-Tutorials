@@ -29,8 +29,8 @@ const array = [1, 2, 3];
 function update(callback) {
   const output = [];
 
-  for( up of array) {
-      const updated = callback(up);
+  for( i of array) {
+      const updated = callback(i);
     output.push(updated);
    
 
@@ -56,3 +56,20 @@ function stringify(num) {
 console.log(update(add10)) // returns [11, 12, 13]
 console.log(update(multiplyBy20) )// returns [20, 40, 60]
 console.log(update(stringify) )// returns [‘1’, ‘2’, ‘3’]
+
+/**
+ * Why is add10 the callback? It satisfies these two conditions -
+
+It is used as input in another function call.
+It is called inside of the other function.
+
+................................................................................................
+
+Why is 'update' the higher-order function? It satisfies these two conditions -
+
+It takes a function as an argument.
+It calls its input function when it is called. 
+
+
+Hence, the term "callback" as one function call leads to another.
+ */
