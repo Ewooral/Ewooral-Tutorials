@@ -36,7 +36,7 @@ function update(callback) {
 
   }
     return output;
-//   }
+  }
 
 
 // // Callback functions
