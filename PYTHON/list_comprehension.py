@@ -21,3 +21,6 @@ letter = [x for x in letters if x != 'c']
 print(letter)
 sum = [x + x for x in lists]
 print(sum)
+
+s = "fool"
+print([x for x in s if x.startswith("o")])
