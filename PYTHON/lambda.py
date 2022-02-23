@@ -61,11 +61,19 @@ A sequence (any iterator like lists, tuples, etc.)
 """
 sequences = [10, 2, 8, 7, 5, 4, 11, 0, 1] 
 
+
 filtered_sequences = filter(lambda x: x % 2 == 0, sequences)
 filtered_sequences_I = filter(lambda x: x > 4, sequences)
 print(list(filtered_sequences))
 print(list(filtered_sequences_I))
 
 
+students = ["Elijah", "Mary", "John", "Ishmael", "Hannah"]
+# filter out names of talkertives 
+
+names_of_talkertives = filter(lambda x: x in students[2:4], students)
+print(list(names_of_talkertives))
 
 
+name = [x for x in students if x=="Mary"]
+print("These are ",name)
