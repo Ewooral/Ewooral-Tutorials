@@ -24,3 +24,5 @@ print(sum)
 
 s = "fool"
 print([x for x in s if x.startswith("o")])
+
+
