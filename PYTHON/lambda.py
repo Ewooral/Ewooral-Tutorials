@@ -76,4 +76,14 @@ print(list(names_of_talkertives))
 
 
 name = [x for x in students if x=="Mary"]
-print("These are ",name)
+print("These are the lists of talkertives: " ,name)
+
+
+""" 
+lambdas in map()
+the map function is used to apply a particular operation to every element 
+in a sequence. Like filter(), it also takes 2 parameters:
+
+A function that defines the op to perform on the elements
+One or more sequences
+"""
