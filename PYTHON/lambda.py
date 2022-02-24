@@ -86,4 +86,18 @@ in a sequence. Like filter(), it also takes 2 parameters:
 
 A function that defines the op to perform on the elements
 One or more sequences
+
+"""
+urinators_scores = [10, 2, 8, 7, 5, 4, 3, 11, 0, 1]
+doubled_urinators_scores = map(lambda x: x*x, urinators_scores)
+print("Urinators scores doubled: " , list(doubled_urinators_scores))
+
+""" 
+Code Explanation:
+
+Here, we define a list called sequences which contains some numbers.
+We declare a variable called filtered_result which will store the mapped values
+A lambda function which runs on each element of the list and returns the square of that number.
+Print the result returned by the map function. 
+
 """
