@@ -1,4 +1,5 @@
 # First method to create a 1 D array
+import numpy as np
 N = 5
 arr = [0]*N
 print(arr)
@@ -31,7 +32,11 @@ for i in range(rows):
     arr3.append(col)
 print("col: ",arr3)
 
-# arr3[0][1] = 23
-# for row in arr3[0]:
-#     print(row)
+arr3[0][1] = 23
+for row in arr3:
+    print(row)
 
+
+np.empty([4, 3],
+         dtype=np.int32,
+         order = 'f')
