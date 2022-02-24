@@ -7,3 +7,5 @@ print(arr)
 N = 5 
 arr  = [0 for i in range(N)]
 print(arr)
+
+# Using the above first method to create a 2 D array
