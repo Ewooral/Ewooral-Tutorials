@@ -4,18 +4,31 @@
 class MyArray{
     constructor(){
         this.length = 0;
-        this.data = {};
+        this.data = {1:"key1",2:"key2",3:"key3"};
     }
 
     get(index){
         return this.data[index];
     }
+
+    push(item){
+        console.log(this)
+        this.data[this.length+1] = item;
+        this.length++;
+        return this.length;
+    }
+    pop(){
+        const lastItem = this.data[this.length-1];
+        delete this.data[this.length-1]; 
+    }
 }
 
 
 
-const newArray = new MyAray();
-console.log(newArray.get(0));
+const newArray = new MyArray();
+newArray.push("key4");
+console.log(newArray);
+console.log(newArray);
 
 
 
