@@ -6,11 +6,16 @@ class MyArray{
         this.length = 0;
         this.data = {};
     }
+
+    get(index){
+        return this.data[index];
+    }
 }
 
 
 
-
+const newArray = new MyAray();
+console.log(newArray.get(0));
 
 
 
