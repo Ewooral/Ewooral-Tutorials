@@ -4,7 +4,7 @@ In JavaScript, functions are first-class citizens. This means that
 functions can be passed as input to other functions (as well as returned
 from other functions, modified, and assigned to variables). This gives 
 developers the ability to use functions as parameters, which we refer 
-to as callbacks.
+to as callbacks. 
 
 So how could we perform more complex calculations in our stock prices 
 example? Well, if a number parameter allows us to use any number 

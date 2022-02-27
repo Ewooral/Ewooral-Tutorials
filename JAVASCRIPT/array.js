@@ -1,3 +1,35 @@
+
+
+
+class MyArray{
+    constructor(){
+        this.length = 0;
+        this.data = {};
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const collection = ["Piggy", 5, true];
 collection[1] = "Doggy";
 console.log(collection);
