@@ -12,7 +12,7 @@ class MyArray{
     }
 
     push(item){
-        console.log(this)
+        console.log("Here: ",this)
         this.data[this.length+1] = item;
         this.length++;
         return this.length;
@@ -20,6 +20,8 @@ class MyArray{
     pop(){
         const lastItem = this.data[this.length-1];
         delete this.data[this.length-1]; 
+        this.length--;
+        return lastItem;
     }
 }
 
@@ -27,8 +29,10 @@ class MyArray{
 
 const newArray = new MyArray();
 newArray.push("key4");
+newArray.pop();
 console.log(newArray);
-console.log(newArray);
+console.log(newArray.get(1));
+
 
 
 
