@@ -4,7 +4,7 @@
 class MyArray{
     constructor(){
         this.length = 0;
-        this.data = {1:"key1",2:"key2",3:"key3"};
+        this.data = {};
     }
 
     get(index){
@@ -12,7 +12,7 @@ class MyArray{
     }
 
     push(item){
-        console.log("Here: ",this)
+        // console.log("Here: ",this)
         this.data[this.length+1] = item;
         this.length++;
         return this.length;
@@ -23,15 +23,25 @@ class MyArray{
         this.length--;
         return lastItem;
     }
+    delete(index){
+        const item = this.data[index];
+        this.shiftItems(index);
+    }
+    shiftItems(index){
+
+    }
 }
 
 
 
 const newArray = new MyArray();
 newArray.push("key4");
+newArray.push("!");
+console.log(newArray);
+
 newArray.pop();
 console.log(newArray);
-console.log(newArray.get(1));
+// console.log(newArray.get(1));
 
 
 
@@ -91,7 +101,7 @@ console.log(newCollection);
 // split(separator, limit)
 const string = "Hello, World!";
 const splitString = string.split("");
-console.log(splitString);
+console.log('splitted string:',splitString);
 // INDEXOF METHOD returns the index of the first occurrence of a specified value in an array
 // indexOf(searchElement, fromIndex)
 const index = collection.indexOf("Doggy");
