@@ -2,13 +2,14 @@
 
 // DECLARATIONS
 long addNumber(long first, long second); 
-int multiply(int big int small);
+int multiply(int huge, int small);
 
 // MAIN FUNCTION 
 int main()
 {
     std:: cout << "Hello, world" << std:: endl;
     std::cout << addNumber(3 ^ 3, 10 ^ 4) << std::endl;
+    std:: cout << "The Product of two numbers is: "<< multiply(40, 20) << std::endl;
 
     int firstNum {100};
     int secondNum {39};
@@ -17,7 +18,13 @@ int main()
 
     std::cout <<"sum: " << sum << std::endl;
 
-    return 0;
+
+    std:: cerr << "Something happened! " << std::endl;
+    std:: clog << "Log message: Please try again. " << std::endl;
+
+
+
+    return 0; 
 }
 
 /*This is how to write c++ comments*/
@@ -39,9 +46,12 @@ int main()
 // FUNCTION 
 long addNumber(long first, long second){
  long sum = first + second; 
+
  return sum;
 }
 
-int multiply(int big int small){
-    
+int multiply(int huge, int small){
+    int product = huge * small;
+
+    return product;
 }
