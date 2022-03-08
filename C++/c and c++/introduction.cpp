@@ -2,14 +2,20 @@
 
 // DECLARATIONS
 long addNumber(long first, long second); 
+int multiply(int big int small);
 
 // MAIN FUNCTION 
 int main()
 {
     std:: cout << "Hello, world" << std:: endl;
     std::cout << addNumber(3 ^ 3, 10 ^ 4) << std::endl;
-    
-   
+
+    int firstNum {100};
+    int secondNum {39};
+
+    int sum = firstNum + secondNum;
+
+    std::cout <<"sum: " << sum << std::endl;
 
     return 0;
 }
@@ -36,3 +42,6 @@ long addNumber(long first, long second){
  return sum;
 }
 
+int multiply(int big int small){
+    
+}
