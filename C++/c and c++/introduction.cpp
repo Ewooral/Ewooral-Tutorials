@@ -63,15 +63,31 @@ int multiply(int huge, int small){
     return product;
 }
 
+// GETTING DATA INPUT FROM A USER 
 int GetData(){
-    int age;
-    std:: string name;
-std::cout << "Please type your name: " << std:: endl;
-std::cin >> name;
-std::cout<<"Please type your age: " << std::endl;
-std::cin >> age;
-std::cout << "Your name is: " << name <<" and you are "<< age <<" years old!" << std::endl;
 
-return 0;
+    // GRABBING DATA WITH NO SPACES
+    // int age;
+    // std:: string name;
+    // std::cout << "Please type your name: " << std:: endl;
+    // std::cin >> name;
+    // std::cout<<"Please type your age: " << std::endl;
+    // std::cin >> age;
+    // std::cout << "Your name is: " << name <<" and you are "<< age <<" years old!" << std::endl;
+
+    // GRABBING DATA WITH SPACES                             
+    std:: string vehicleData;
+    int numberplate;
+    std::cout << "Please type your vehicle information: " << std::endl;
+    std::getline(std::cin, vehicleData);
+
+
+    std::cout << "Please type your number-plate: " << std::endl;
+    std::cin >> numberplate;
+
+    std::cout << "Your vehicle's data are: " << vehicleData << 
+    " and your vehicle's number plate is: " << numberplate << std::endl;
+
+    return 0;
 
 }
