@@ -1,22 +1,29 @@
 #include <iostream>
 
-// DECLARATIONS
+// DECLARATIONAL FUNCTIONS
 long addNumber(long first, long second); 
 int multiply(int huge, int small);
+int GetData();
 
-// MAIN FUNCTION 
-int main()
+    // MAIN FUNCTION
+    int main()
 {
+
+    int firstNum{100};
+    int secondNum{39};
+    
+
+    int sum = firstNum + secondNum;
+
+    std::cout << "sum: " << sum << std::endl;
+
+    GetData();
+
     std:: cout << "Hello, world" << std:: endl;
     std::cout << addNumber(3 ^ 3, 10 ^ 4) << std::endl;
     std:: cout << "The Product of two numbers is: "<< multiply(40, 20) << std::endl;
 
-    int firstNum {100};
-    int secondNum {39};
-
-    int sum = firstNum + secondNum;
-
-    std::cout <<"sum: " << sum << std::endl;
+   
 
 
     std:: cerr << "Something happened! " << std::endl;
@@ -27,7 +34,7 @@ int main()
     return 0; 
 }
 
-/*This is how to write c++ comments*/
+/*This is how to write c++ comments */
 // Another way of writing a one line comment.
 
 // ERRORS AND WARNINGS IN C++
@@ -54,4 +61,17 @@ int multiply(int huge, int small){
     int product = huge * small;
 
     return product;
+}
+
+int GetData(){
+    int age;
+    std:: string name;
+std::cout << "Please type your name: " << std:: endl;
+std::cin >> name;
+std::cout<<"Please type your age: " << std::endl;
+std::cin >> age;
+std::cout << "Your name is: " << name <<" and you are "<< age <<" years old!" << std::endl;
+
+return 0;
+
 }
