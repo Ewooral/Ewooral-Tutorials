@@ -11,11 +11,15 @@ int main()
     for(int i = 0; i < 10; i++){
         if( i == A[i]){
             printf("\n");
-            printf("%d", A[i]);
-            printf("%d", 2[A]);
-            printf("%d", *(A+2));
+            printf("%d - ", A[i]);
+            printf("%d - ", 2[A]);
+            printf("%d - ", *(A+2));
+            printf("%u \n ", &A[i]);
             printf("\n");
         }
     }
+
+
+    
 }
  
