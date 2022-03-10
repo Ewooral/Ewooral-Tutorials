@@ -1,4 +1,4 @@
-<!-- # Array Methods
+# Array Methods
     Python has a set of built-in methods that you can use on lists/arrays.
 
   * Method Description
@@ -17,7 +17,7 @@
 
 
 
- -->
+
 
 
 
