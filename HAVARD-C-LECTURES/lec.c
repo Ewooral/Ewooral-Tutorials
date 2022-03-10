@@ -12,7 +12,10 @@ int main()
         if( i == A[i]){
             printf("\n");
             printf("%d", A[i]);
+            printf("%d", 2[A]);
+            printf("%d", *(A+2));
             printf("\n");
         }
     }
 }
+ 
