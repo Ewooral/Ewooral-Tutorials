@@ -106,3 +106,4 @@ int GetData()
     std::cout << "Your name is: " << name << " and you are " << age << " years old!" << std::endl;
     return 0;
 }
+

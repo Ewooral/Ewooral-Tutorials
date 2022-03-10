@@ -30,12 +30,21 @@ the following:
 # THIS 
 def sum(a, b):
     return a + b
-print(sum(4, 4))
+print(sum(2, 3))
 
 # OR
 (lambda a, b: print(a + b))(2, 3)
 
 print((lambda x: x + x)(2))
+
+def increment_by_II(x):
+    for i in range(10):
+        x = x + i
+
+
+increment_by_i = [lambda x: x + i for i in range(10)]
+print("increamented value: ", increment_by_i[3](4))
+
 
 string = 'some kind of a useless lambda'
 (lambda y: print(y))(string)
