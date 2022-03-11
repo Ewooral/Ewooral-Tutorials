@@ -32,4 +32,5 @@ print(Character[2:4])
 # THE STEP SIZE IN SLICING 
 # slicing notation is denoted by [start: end : step]
 
-print(Character[0:5:2]) # uie
+print(Character[:5:2]) # uie
+print(Character[2::2]) # uies
