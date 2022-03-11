@@ -174,3 +174,8 @@ print(x[2::2])
 
 word = list("galaxy")
 print(word[4:50])
+
+# Example 7
+
+lst = list(range(10))
+print(lst[1:5:2] + lst[1:5:1])
