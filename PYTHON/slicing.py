@@ -32,8 +32,18 @@ print(Character[2:4])
 # THE STEP SIZE IN SLICING 
 # slicing notation is denoted by [start: end : step]
 
+
 print(Character[:5:2]) # uie
 print(Character[2::2]) # ies
 
-# OVERSHOOTING INDICES IN SLICING 
 
+# OVERSHOOTING INDICES IN SLICING
+
+"""
+Slicing is robust even if the end index shoots over the
+maximal sequence index. Just remember that nothing
+unexpected happens if slicing overshoots sequence indices. 
+Eg is found below
+
+""" 
+print(Character[4:50]) # erse
