@@ -18,6 +18,9 @@ in index "j" (excluded)
 
 
 """
+from tkinter import S
+
+
 Character = "universe"
 
 for i in Character:
@@ -60,5 +63,6 @@ print(s[1:5:2] + s[1:5:1])
 s[::2]  # start = 0, end = len(s), step = 2 => snhn
 print(s[::2])
 print(s[0:len(s):1]) # sunshine
+print(s[::]) # sunshine
 
 
