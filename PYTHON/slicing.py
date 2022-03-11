@@ -179,3 +179,11 @@ print(word[4:50])
 
 lst = list(range(10))
 print(lst[1:5:2] + lst[1:5:1])
+
+
+# Example 8
+
+lsti = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+print(lsti[::])
+# print(lst[::1])
+# print(lst[:])
