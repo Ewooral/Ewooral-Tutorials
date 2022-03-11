@@ -47,4 +47,16 @@ Eg is found below
 
 """ 
 print("Overshooting value: ", Character[8:50]) # nothing
-print("Overshooting value: ", Character[4:50]) # ies
+print("Overshooting value: ", Character[4:50]) # erse
+
+
+# Examples 
+s = 'sunshine'
+print(s[1:5:2] + s[1:5:1])
+
+# SLICING DEFAULT VALUES 
+# "start = 0, stop = len(s), and step = 1."
+
+s[::2]  # start = 0, end = len(s), step = 2
+
+
