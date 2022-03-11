@@ -77,4 +77,4 @@ A negative step size indicates that we are not slicing from left to right,
 but from right to left.
 E.g. s[5:1:-1] prints out 
 """
-print(s[5:1:-1])
+print(s[5:1:-1]) # ihsn
