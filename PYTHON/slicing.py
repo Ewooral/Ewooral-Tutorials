@@ -155,3 +155,10 @@ Python cannot replace any part of the original
 string. Therefore, it throws an error when you attempt
 to do slice assignments for strings
 """
+
+# Example 4 
+                  
+s = "All that glitters is not gold"
+print(s[9:-9])
+print(s[::10])
+print(s[:-4:-1])
