@@ -145,7 +145,6 @@ print(l) # [42, 41, 41, 5]
 
 # CAN YOU USE SLICE ASSIGNMENTS FOR STRINGS?
 """
-
 No! 
 In contrast to lists, strings are immutable data types.
 In other words, strings cannot be changed after they are
@@ -162,3 +161,16 @@ s = "All that glitters is not gold"
 print(s[9:-9])
 print(s[::10])
 print(s[:-4:-1])
+
+# Example 5
+
+x = list('universe')
+print(x)
+print(x[2:4])
+print(x[2::2])
+
+
+# Example 6 
+
+word = list("galaxy")
+print(word[4:50])
