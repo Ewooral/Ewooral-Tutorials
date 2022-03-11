@@ -96,6 +96,12 @@ print(word[9:1:-1][::-1]) # brother
 # lastly, word[9:1:-1][::-1] gives the rever se of "rehtorb" which is "brother"
 
 s = 'sunshine'
+#    01234567
+
 print(s[len(s) - 1::]) # e 
-print("result: ", s[len(s) - 1 : -len(s) - 1 : -1])
+print("result: ", s[len(s) - 1 : -len(s) - 1 : -1]) # this is the same as s[::-1]
 print("result: ", s[7 : -9 : -1])
+
+l = [1, 2, 3, 4]
+print(l[2:])
+print(l[::-2])
