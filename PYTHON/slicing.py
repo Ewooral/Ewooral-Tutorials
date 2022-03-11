@@ -187,3 +187,8 @@ lsti = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 print(lsti[::])
 print(lsti[::1])
 print(lsti[:])
+
+# Example 9
+
+word = list(range(10))
+print(word[9:1:-1][::-1])
