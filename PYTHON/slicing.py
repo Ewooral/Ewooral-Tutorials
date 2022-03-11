@@ -130,3 +130,25 @@ print(p2)  # ['Obama']
 l = [1, 2, 3, 4, 5]
 l[:3] = [42, 41]
 print(l) # [42, 41, 4, 5]
+
+
+
+
+
+
+
+
+
+
+# CAN YOU USE SLICE ASSIGNMENTS FOR STRINGS?
+"""
+
+No! 
+In contrast to lists, strings are immutable data types.
+In other words, strings cannot be changed after they are
+created. But the semantics of slice assignments is to replace 
+a slice of the original sequence. Due to the immutability, 
+Python cannot replace any part of the original
+string. Therefore, it throws an error when you attempt
+to do slice assignments for strings
+"""
