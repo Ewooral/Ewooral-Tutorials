@@ -120,6 +120,6 @@ presidents = ['Obama',
               'Washington']
 p2 = presidents[:2]
 p2.remove('Trump')
-print(presidents) # Obama
-
+print(presidents)  # ['Obama','Trump','Washington']
+print(p2) # Obama
 
