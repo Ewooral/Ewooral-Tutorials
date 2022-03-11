@@ -54,10 +54,11 @@ print("Overshooting value: ", Character[4:50]) # erse
 s = 'sunshine'
 print(s[1:5:2] + s[1:5:1])
 
-# SLICING DEFAULT VALUES 
-# "start = 0, stop = len(s), and step = 1."
+# DEFAULT VALUES IN SLICING
+# [start = 0, stop = len(s), step = 1]
 
 s[::2]  # start = 0, end = len(s), step = 2 => snhn
 print(s[::2])
+print(s[0:len(s):1]) # sunshine
 
 
