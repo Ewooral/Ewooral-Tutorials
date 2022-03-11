@@ -186,4 +186,4 @@ print(lst[1:5:2] + lst[1:5:1])
 lsti = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 print(lsti[::])
 print(lsti[::1])
-# print(lsti[:])
+print(lsti[:])
