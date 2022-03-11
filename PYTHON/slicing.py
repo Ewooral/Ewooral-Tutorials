@@ -75,6 +75,14 @@ print(word[:])
 """
 A negative step size indicates that we are not slicing from left to right,
 but from right to left.
-E.g. s[5:1:-1] prints out 
+E.g. s[5:1:-1] prints out
+
 """
+
+s = 'sunshine'
 print(s[5:1:-1]) # ihsn
+
+word = "O brother where art thou?"
+print(word[9:1:-1][::-1]) # brother
+# firstly, word[9:1:-1] gives the reverse of "brother" which is "rehtorb".
+# lastly, word[9:1:-1][::-1] gives the reverse of "rehtorb" which is "brother"
