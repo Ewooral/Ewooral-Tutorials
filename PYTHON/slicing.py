@@ -20,6 +20,7 @@ in index "j" (excluded)
 
 Character = "universe" 
 print(Character[2:3])
+print(Character[2:4])
 
 # for i in Character:
 #     print(i,"=",Character.index(i))
