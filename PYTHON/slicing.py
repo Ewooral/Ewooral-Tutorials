@@ -57,6 +57,7 @@ print(s[1:5:2] + s[1:5:1])
 # SLICING DEFAULT VALUES 
 # "start = 0, stop = len(s), and step = 1."
 
-s[::2]  # start = 0, end = len(s), step = 2
+s[::2]  # start = 0, end = len(s), step = 2 => snhn
+print(s[::2])
 
 
