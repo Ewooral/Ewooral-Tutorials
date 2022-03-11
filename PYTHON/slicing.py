@@ -18,8 +18,6 @@ in index "j" (excluded)
 
 
 """
-from tkinter import S
-
 
 Character = "universe"
 
@@ -58,7 +56,7 @@ s = 'sunshine'
 print(s[1:5:2] + s[1:5:1])
 
 # DEFAULT VALUES IN SLICING
-# [start = 0, stop = len(s), step = 1]
+""" [start = 0, stop = len(s), step = 1] """
 
 s[::2]  # start = 0, end = len(s), step = 2 => snhn
 print(s[::2])
@@ -66,3 +64,17 @@ print(s[0:len(s):1]) # sunshine
 print(s[::]) # sunshine
 
 
+word = "galaxy"
+print(word[:-2])
+print(word[:-2] + word[4:])
+print(word[:])
+
+
+# NEGETIVE STEP SIZE
+ 
+"""
+A negative step size indicates that we are not slicing from left to right,
+but from right to left.
+E.g. s[5:1:-1] prints out 
+"""
+print(s[5:1:-1])
