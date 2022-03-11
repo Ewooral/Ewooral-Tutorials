@@ -6,7 +6,11 @@ The ith element of a sequence has index i - 1.
 The indices of any sequence "elem" starts at position "0"
 and end at position "len(elem) - 1"
 
+Index     0 1 2 3 4 5 6 7
+Character u n i v e r s e
+
 """
 
-elem = " 2, 3, d, a, 0, 3, 9 ";
-       # 0  1  2  3  4  5  6
+Character = "universe" 
+for i in Character:
+    print(i,"=>",Character.index(i), end=" ")
