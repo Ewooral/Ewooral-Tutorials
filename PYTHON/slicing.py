@@ -118,8 +118,15 @@ print(db_name) # ube
 presidents = ['Obama',
               'Trump',
               'Washington']
-p2 = presidents[:2].copy()
+
+p2 = presidents[:2]
 p2.remove('Trump')
 print(presidents)  # ['Obama','Trump','Washington']
 print(p2)  # ['Obama']
 
+
+
+# SLICE ASSIGNMENT 
+l = [1, 2, 3, 4, 5]
+l[:3] = [42, 41]
+print(l) # [42, 41, 4, 5]
