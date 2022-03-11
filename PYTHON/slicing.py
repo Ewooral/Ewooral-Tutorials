@@ -128,10 +128,13 @@ print(p2)  # ['Obama']
 
 # SLICE ASSIGNMENT 
 l = [1, 2, 3, 4, 5]
+print("aftermath: ", l[::2])
 l[:3] = [42, 41]
 print(l) # [42, 41, 4, 5]
 
 
+l[::2] = [42, 41]
+print(l) # [42, 41, 41, 5]
 
 
 
