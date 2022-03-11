@@ -33,4 +33,7 @@ print(Character[2:4])
 # slicing notation is denoted by [start: end : step]
 
 print(Character[:5:2]) # uie
-print(Character[2::2]) # uies
+print(Character[2::2]) # ies
+
+# OVERSHOOTING INDICES IN SLICING 
+
