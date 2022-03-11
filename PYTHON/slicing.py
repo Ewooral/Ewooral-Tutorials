@@ -17,10 +17,13 @@ the substring starting from index "i" (included) and ending
 in index "j" (excluded)
 
 """
+Character = "universe"
 
-Character = "universe" 
+for i in Character:
+    print(i, "=", Character.index(i))
+
+
 print(Character[2:3])
 print(Character[2:4])
 
-# for i in Character:
-#     print(i,"=",Character.index(i))
+
