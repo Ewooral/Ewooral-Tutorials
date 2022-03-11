@@ -102,6 +102,24 @@ print(s[len(s) - 1::]) # e
 print("result: ", s[len(s) - 1 : -len(s) - 1 : -1]) # this is the same as s[::-1]
 print("result: ", s[7 : -9 : -1])
 
+# Example 1
 l = [1, 2, 3, 4]
 print(l[2:])
 print(l[::-2])
+
+# Example 2
+customer_name = 'Hubert'
+k = 3  # maximal size of database entry
+x = 1  # offset
+db_name = customer_name[x:x+k]
+print(db_name) # ube
+
+# Examples 3 
+presidents = ['Obama',
+              'Trump',
+              'Washington']
+p2 = presidents[:2]
+p2.remove('Trump')
+print(presidents) # Obama
+
+
