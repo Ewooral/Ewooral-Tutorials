@@ -79,6 +79,14 @@ E.g. s[5:1:-1] prints out
 
 """
 
+# DEFAULT INDICES WHEN USING A NEGETIVE STEP SIZE
+ 
+"""
+start = len(s) - 1,
+end = -len(s) - 1 , and
+step = 1
+"""
+
 s = 'sunshine'
 print(s[5:1:-1]) # ihsn
 
@@ -86,3 +94,8 @@ word = "O brother where art thou?"
 print(word[9:1:-1][::-1]) # brother
 # firstly, word[9:1:-1] gives the reverse of "brother" which is "rehtorb".
 # lastly, word[9:1:-1][::-1] gives the reverse of "rehtorb" which is "brother"
+
+s = 'sunshine'
+print(s[len(s) - 1::]) # e 
+print(s[:-len(s) - 1])
+print(s[:-9])
