@@ -46,4 +46,4 @@ unexpected happens if slicing overshoots sequence indices.
 Eg is found below
 
 """ 
-print(Character[4:50]) # erse
+print("Overshooting value: ", Character[8:50]) # erse
