@@ -9,8 +9,17 @@ and end at position "len(elem) - 1"
 Index     0 1 2 3 4 5 6 7
 Character u n i v e r s e
 
+first element = 2 
+second element = 1  
+
+In slicing, "word[i:j]" returns
+the substring starting from index "i" (included) and ending
+in index "j" (excluded)
+
 """
 
 Character = "universe" 
-for i in Character:
-    print(i,"=>",Character.index(i), end=" ")
+print(Character[2:3])
+
+# for i in Character:
+#     print(i,"=",Character.index(i))
