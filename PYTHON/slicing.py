@@ -118,8 +118,8 @@ print(db_name) # ube
 presidents = ['Obama',
               'Trump',
               'Washington']
-p2 = presidents[:2]
+p2 = presidents[:2].copy()
 p2.remove('Trump')
 print(presidents)  # ['Obama','Trump','Washington']
-print(p2) # Obama
+print(p2)  # ['Obama']
 
