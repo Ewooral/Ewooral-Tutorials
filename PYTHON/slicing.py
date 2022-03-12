@@ -196,6 +196,8 @@ print(lsti[:])
 word = list(range(10))
 print(word[9:1:-1][::-1])
 
+
+
 # Example 10 
 
 Input = "12: 12: 20 AM"
@@ -204,3 +206,6 @@ if Input[-2:] == "AM" and Input[:2] == "12":
     print("00" + Input[2:-2])
 if Input[-2:] == "AM":
     print(Input[:-2])
+
+print("output ", int(Input[:2]) + 12)
+print(Input[:2])
