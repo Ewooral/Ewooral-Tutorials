@@ -6,11 +6,13 @@ int a = 10;
 int *p; // pointer
 int q;
 
-p = &a; // stores the memory address of variable "a"
-q = a; // store s the value 10 assigned to variable "a"
+int s = new int[12]; 
 
-std::cout << p << std::endl;
-std::cout << q << std::endl;
+p = &a; // stores the memory address of variable "a"
+
+std::cout <<"Memeory address of variable 'a' is: " << p << std::endl;
+std::cout <<"Variable value: " << *p << std::endl;  // dereferencing
+std::cout <<"Variable 's' value: " << s << std::endl;  
 
     return 0;
-}
+}  
