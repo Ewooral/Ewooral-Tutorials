@@ -30,8 +30,8 @@ struct Student
 int main()  
 {
     struct Rectangle k; // declaration
-    struct Rectangle r{10, 2};  // declaration and initialization
-
+    struct Rectangle r{10, 2};  // Declaration and initialization
+   
     r.length = 15;
     r.breadth = 3;
 
@@ -40,10 +40,10 @@ int main()
     std::cout << "The area of a rectangle is " 
               << r.length * r.breadth << std::endl;
 
-    char string[15] =  'Elijah Owusu';
-    Student s;
-    strcpy(s.name, string);
-    std:: cout << s.name << std::endl;
+   struct Student fullname;
+   fullname = {"Elijah"};
+
+    std:: cout <<"Student's name is " << fullname.name << std::endl;
     
 
     return 0;
