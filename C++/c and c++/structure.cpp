@@ -14,18 +14,39 @@
 struct Rectangle    // definition
 {
     int length;
-    std:: breadth;
+    int breadth;
 };
+
+struct Student 
+{
+    int roll;
+    char name[25];
+    char department[25];
+    char address[50];
+
+}; 
  
-int main()
+int main()  
 {
     struct Rectangle k; // declaration
-    struct Rectangle r{10, 5};  // declaration and initialization
+    struct Rectangle r{10, 2};  // declaration and initialization
 
     r.length = 15;
-    r.breadth = "Hey"
+    r.breadth = 3;
 
-    std::cout << r.length << std::endl;
+
+    struct Student S; // declaration
+    S.roll = 10;  // initialization
+    S.name = "Elijah Owusu";
+    S.department = "Computer Science";
+    S.address = "Ashaiman COP";
+
+   
+   
+    std::cout << r.length  << S.name << std::endl;
     std::cout << r.breadth << std::endl;
-    std::cout << "The area of a rectangle is " << r.area * r.width << std::endl;
+    std::cout << "The area of a rectangle is " 
+              << r.length * r.breadth << std::endl;
 }
+
+  
