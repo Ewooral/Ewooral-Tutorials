@@ -1,4 +1,5 @@
 # include <iostream>
+# include <cstring>
 /*
  STRUCTURE
 
@@ -20,12 +21,12 @@ struct Rectangle    // definition
 struct Student 
 {
     int roll;
-    char name[25];
+    char name[15];
     char department[25];
-    char address[50];
+    char address[25];
 
 }; 
- 
+   
 int main()  
 {
     struct Rectangle k; // declaration
@@ -34,19 +35,18 @@ int main()
     r.length = 15;
     r.breadth = 3;
 
-
-    struct Student S; // declaration
-    S.roll = 10;  // initialization
-    S.name = "Elijah Owusu";
-    S.department = "Computer Science";
-    S.address = "Ashaiman COP";
-
-   
-   
-    std::cout << r.length  << S.name << std::endl;
+    std::cout << r.length << std::endl;
     std::cout << r.breadth << std::endl;
     std::cout << "The area of a rectangle is " 
               << r.length * r.breadth << std::endl;
+
+    char string[15] =  'Elijah Owusu';
+    Student s;
+    strcpy(s.name, string);
+    std:: cout << s.name << std::endl;
+    
+
+    return 0;
 }
 
   
