@@ -12,7 +12,7 @@ print(reverse("Manchester United"))
 
 
 def reverse2(str):
-    return str.split(" ")
+    return str.split(" ").reverse()
 
 
 
