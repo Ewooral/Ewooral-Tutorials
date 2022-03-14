@@ -6,10 +6,11 @@ class My_Array:
         self.name = "Elijah Boahen"
 
     def __repr__(self):
-        return "This is an object"
-
-    def __str__(self):
         return self.name
+
+        # OR
+    # def __str__(self):
+    #     return self.name
 
     def get(self, index):
         return self.data[index];
@@ -25,7 +26,8 @@ class My_Array:
 newArray = My_Array();
 newArray.push("Me")
 newArray.push("Anwa Moo")
-newArray.__dict__
+
+print(newArray.__dict__)
 print(newArray)
 print(newArray.length)
 print(newArray.get(0));
