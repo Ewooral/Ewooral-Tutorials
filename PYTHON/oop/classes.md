@@ -10,6 +10,9 @@
 class Car:
     runs = True
 
+    def __init__(self, name): 
+        self.name = name
+
     def start(self):
         if self.runs:
             print("Car is started. Vroom vroom!")
