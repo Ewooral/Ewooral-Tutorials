@@ -26,17 +26,34 @@ class My_Array:
         del self.data[self.length - 1];
         self.length -= 1;
         return lastItem;
+
+    def eliminate(self, index):
+        deletedItem = self.data[index];
+        self.shiftItems(index);
+        return deletedItem;
+
+    def shiftItems(self, index):
+        for index in range(index, self.length - 1):
+            self.data[index] = self.data[index + 1];
+        del self.data[self.length - 1];
+        self.length -= 1;
+
+
     
     
 
 
 newArray = My_Array();
-newArray.push("Me");
-newArray.push("Anwa Moo");
-newArray.push("Monday");
-newArray.push("new");
-newArray.popMe()
-print(newArray.get(0));
 print(newArray.__dict__);
+newArray.push("Elijah Boahen");
+newArray.push("23rd March, 2022");
+newArray.push("Tema to Bloomberg as a software Engineer");
+newArray.popMe();
+newArray.eliminate(1)
+print(newArray.get(0))
+print(newArray.__dict__);
+
+ 
+
 
 
