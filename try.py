@@ -1,4 +1,4 @@
-# def moveZeroes(arr):
+def moveZeroes(arr):
 #     count_nonzero_elements = 0
 #     for element in range(len(arr)):
 #         if element != 0:
