@@ -193,9 +193,8 @@ print(lsti[:])
 
 # Example 9
 
-word = list(range(10))
-print(word[9:1:-1][::-1])
-
+word = list(range(10)) # 0123456789
+print("word: ",word[9:1:-1][::-1])
 
 
 # Example 10 
@@ -209,3 +208,11 @@ if Input[-2:] == "AM":
 
 print("output ", int(Input[:2]) + 12)
 print(Input[:2])
+
+
+# Example 11  
+
+word = [0, 3, 7, 10, 13]
+word[5:0:-1]  
+print(word[len(word):0:-1] == word[::-1])
+print(word[len(word)-1:-len(word)-1:-1] == word[::-1])
