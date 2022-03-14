@@ -5,10 +5,10 @@ def moveZeroes(arr):
             arr[count_nonzero_elements] = element
             count_nonzero_elements += 1
 
-#     for j in 
+    for j in 
 
 
-# """ Example:      0 1 0 3 12 
+""" Example:      0 1 0 3 12 
 
 #  Expected Output: 1 3 12 0 0
 
