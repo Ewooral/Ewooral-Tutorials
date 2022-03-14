@@ -4,7 +4,7 @@ def reverse(str):
     reverse_words = [];
     last = len(str) - 1
     for i in range(last, -1, -1):
-#         reverse_words.append(str[i])
+        reverse_words.append(str[i])
         
 #     return "".join(reverse_words)
 
