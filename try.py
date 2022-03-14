@@ -1,5 +1,5 @@
 def reverse(str):
-#     if not str or len(str) < 2 or type(str) != 'string': 
+    if not str or len(str) < 2 or type(str) != 'string': 
 #         return "hmm... that's not a string";
 #     reverse_words = [];
 #     last = len(str) - 1
