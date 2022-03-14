@@ -1,13 +1,12 @@
 def moveZeroes(arr):
     count_nonzero_elements = 0
-    n = len(arr)
     for element in arr:
         if element != 0:
             arr[count_nonzero_elements] = element
             count_nonzero_elements += 1
 
-    for j in range( n):
-        arr[j] = 0
+    for index_of_zero_elements in range(count_nonzero_elements,len(arr)):
+        arr[index_of_zero_elements] = 0
 
     return arr
 
