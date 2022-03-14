@@ -6,7 +6,7 @@ def reverse(str):
     for i in range(last, -1, -1):
         reverse_words.append(str[i])
         
-#     return "".join(reverse_words)
+    return "".join(reverse_words)
 
 # print(reverse("Manchester United"))
 
