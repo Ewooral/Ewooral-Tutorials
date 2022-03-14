@@ -15,10 +15,14 @@ class My_Array:
 
     def get(self, index):
         return self.data[index];
+        
+    
+    def size(self):
+        return self.length;
+
 
     def is_empty(self):
-        
-        return self.data == {};
+        return self.data == [];
 
 
     def push(self, item):
@@ -55,9 +59,12 @@ newArray.push("23rd March, 2022");
 newArray.push("Tema to Bloomberg as a software Engineer");
 newArray.popMe();
 newArray.eliminate(1);
-print(newArray.is_empty())
+
 print(newArray.get(0));
 print(newArray.__dict__);
+newArray.eliminate(0)
+print(newArray.is_empty())
+print(newArray.size());
 
  
 

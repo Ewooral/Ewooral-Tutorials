@@ -6,7 +6,7 @@ struct Rectangle // definition
 {
     int length;
     int breadth;
-    char name[256];
+    char name[256] = {'A', 'B', 'C', 'D', 'E', 'F'};
 };
 
 int add(int a, int b);
@@ -15,6 +15,8 @@ int main(){
     struct Rectangle r; // declaration
     // struct Rectangle r{10, 2}; // declaration and initialization
 
+    
+    r.name 
     r.length = 15;
     r.breadth = 3;
     printf("%d", add(3, 4));
