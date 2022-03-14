@@ -3,12 +3,13 @@ class My_Array:
     def __init__(self):
         self.length = 0;
         self.data = {};
-        self.name = "Elijah Boahen"
+        
 
-    def __repr__(self):
-        return self.name
+    # def __repr__(self):
+    #     return self.data
 
         # OR
+
     # def __str__(self):
     #     return self.name
 
@@ -18,16 +19,22 @@ class My_Array:
     def push(self, item):
         self.data[self.length]=item;
         self.length += 1; 
-        return self.length
+        return self.length;
+
+    def pop(self):
+        lastItem = self.data[self.length - 1];
+        del self.data[self.length - 1];
+        self.length -= 1;
+        return lastItem;
     
     
 
 
 newArray = My_Array();
-newArray.push("Me")
-newArray.push("Anwa Moo")
-
-print(newArray.__dict__)
-print(newArray)
-print(newArray.length)
+newArray.push("Me");
+newArray.push("Anwa Moo");
+newArray.push("Monday");
 print(newArray.get(0));
+print(newArray.__dict__);
+
+
