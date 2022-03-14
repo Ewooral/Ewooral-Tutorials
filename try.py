@@ -8,7 +8,7 @@ def reverse(str):
         
     return "".join(reverse_words)
 
-# print(reverse("Manchester United"))
+print(reverse("Manchester United"))
 
 
 
