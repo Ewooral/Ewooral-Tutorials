@@ -1,6 +1,6 @@
 """ 
 Problem Statement
-You’re developing a one-player game for people to pass the time with. The player is given a grid of tiles from 0 to 9 like this:
+You're developing a one-player game for people to pass the time with. The player is given a grid of tiles from 0 to 9 like this:
 
 4 4 4 4
 5 5 5 4
@@ -27,4 +27,10 @@ Finally, if no tiles around the selected tile have the same number, only the sel
   4   4   4   4
   5   5   5   4
   2   5  [7]  5
+  
 """
+
+
+
+
+
