@@ -1,5 +1,5 @@
 def moveZeroes(arr):
-#     count_nonzero_elements = 0
+    count_nonzero_elements = 0
 #     for element in range(len(arr)):
 #         if element != 0:
 #             arr[count_nonzero_elements] = element
