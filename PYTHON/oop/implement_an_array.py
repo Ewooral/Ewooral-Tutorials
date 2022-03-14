@@ -21,7 +21,7 @@ class My_Array:
         self.length += 1; 
         return self.length;
 
-    def pop(self):
+    def popMe(self):
         lastItem = self.data[self.length - 1];
         del self.data[self.length - 1];
         self.length -= 1;
@@ -34,6 +34,8 @@ newArray = My_Array();
 newArray.push("Me");
 newArray.push("Anwa Moo");
 newArray.push("Monday");
+newArray.push("new");
+newArray.popMe()
 print(newArray.get(0));
 print(newArray.__dict__);
 
