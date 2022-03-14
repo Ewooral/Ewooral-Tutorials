@@ -1,25 +1,15 @@
-def moveZeroes(arr):
-    count_nonzero_elements = 0
-    for element in arr:
-        if element != 0:
-            arr[count_nonzero_elements] = element
-            count_nonzero_elements += 1
+def reverse(str):
+#     if not str or len(str) < 2 or type(str) != 'string': 
+#         return "hmm... that's not a string";
+#     reverse_words = [];
+#     last = len(str) - 1
+#     for i in range(last, -1, -1):
+#         reverse_words.append(str[i])
+        
+#     return "".join(reverse_words)
 
-    for index_of_zero_elements in range(count_nonzero_elements,len(arr)):
-        arr[index_of_zero_elements] = 0
-
-    return arr
+# print(reverse("Manchester United"))
 
 
-array = [0, 1, 0, 3, 12]
-print(moveZeroes(array))
 
-""" Example:      0 1 0 3 12 
-
-#  Expected Output: 1 3 12 0 0
-
-#  We are to push all zeros to the end of the array and 
-#  maintain the order of the non zero elements in the array
-# """
-
-  
+ 
