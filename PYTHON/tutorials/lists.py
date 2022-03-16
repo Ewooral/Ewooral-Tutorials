@@ -68,22 +68,20 @@ print(lotsOfList)
 print(b)
 
 
-# function that log all pairs of array
+# using enumerate function for a list.
+for i, v in enumerate(lotsOfList):
+    print("index",i , v)
 
-numb = [1,2,3]
+my_string = "cowboy bebop"
+nb_occurences = {letter: 0 for letter in my_string}  
+# >> nb_occurrences {’c’: 0, ’o’: 0, ’w’: 0, ’b’: 0, ’y’: 0, ’ ’: 0, ’e’: 0, ’p’: 0}
 
-def printOutNumbersandpair(number):
-    for i in number:
-        for j in number:
-            if i < len(number):
-               i = i + 1
-            if j < len(number):
-               j = j + 1
-    return print(number[i], number[j])
-        
-printOutNumbersandpair(numb)
+# The second line, a dictionary comprehension, is equivalent to the following:
 
-
+nb_occurrences = {}
+for letter in my_string:
+    nb_occurrences[letter] = 0
+print(nb_occurrences)
 
 # lets create a function that finds our name and date of birth in a list
 

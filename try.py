@@ -1,18 +1,21 @@
-def reverse(str):
-    if not str or len(str) < 2 or type(str) != 'string': 
-        return "hmm... that's not a string";
+def reverse(Str):
+    if not Str or len(Str) < 2 or type(Str) != str:
+        print("hmm... that's not a string")
+    # return Str[::-1]
+   
+    
     reverse_words = [];
-    last = len(str) - 1
+    last = len(Str) - 1
     for i in range(last, -1, -1):
-        reverse_words.append(str[i])
+        reverse_words.append(Str[i])
         
     return "".join(reverse_words)
 
-print(reverse("Manchester United"))
+print(reverse("t"))
 
 
-def reverse2(str):
-    return str.split(" ").reverse().join()
+
+
 
 
 
