@@ -41,7 +41,7 @@ print("array of Products 1:", array_of_product([5, 1, 4, 2]))
 def arrayOfProduct(arr):
     finalProduct,  cp_r, cp_l = [1] * len(arr), [1] * len(arr), [1] * len(arr)
 #    # [5, 1, 4, 2]
-#     cp = 1
+    cp = 1
 #     for index in range(0, len(arr)):
         
 #         cp_l[index] = cp
