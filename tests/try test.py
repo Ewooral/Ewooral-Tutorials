@@ -2,7 +2,7 @@
 def biggestNumber(arr):
     biggestNum = arr[0]
     for index in range(1, len(arr)):
-#         if arr[index] > biggestNum:
+        if arr[index] > biggestNum:
 #             biggestNum = arr[index]
 #     return biggestNum
 
