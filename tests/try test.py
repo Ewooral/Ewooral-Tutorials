@@ -11,7 +11,7 @@ print("Biggest element:", biggestNumber([2, 5, -2, 0, 30]))
 
 
 # # ........................................................
-# def findMaxNumRec(array, n):
+def findMaxNumRec(array, n):
 #     if n == 1:
 #         return array[0]
 #     return max(array[n-1], findMaxNumRec(array, n-1))
