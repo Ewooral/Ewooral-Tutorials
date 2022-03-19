@@ -59,7 +59,7 @@ def arrayOfProduct(arr):
         product = cp_l[index] * cp_r[index]
         finalProduct[index] = product
 
-#     return finalProduct
+    return finalProduct
 
 
 # print("array of Products 2:", array_of_product([5, 1, 4, 2]))
