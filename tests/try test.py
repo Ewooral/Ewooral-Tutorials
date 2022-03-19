@@ -31,7 +31,7 @@ def array_of_product(array):
                 currentProduct *= array[j]
                 totalProduct[i] = currentProduct
 
-#     return totalProduct
+    return totalProduct
 
 
 # print("array of Products 1:", array_of_product([5, 1, 4, 2]))
