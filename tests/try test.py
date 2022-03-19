@@ -76,7 +76,7 @@ def arrayOfProduct2(arr):
         lp *= arr[index]
 
 #      # [5, 1, 4, 2]
-#     rp = 1
+    rp = 1
 #     for index in range(len(arr)-1, -1, -1):
 #        finalProduct[index] *= rp
 #        rp *= arr[index]
