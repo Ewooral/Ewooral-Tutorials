@@ -38,7 +38,7 @@ print("array of Products 1:", array_of_product([5, 1, 4, 2]))
 
 
 # # O(n) Time | O(n) space
-# def arrayOfProduct(arr):
+def arrayOfProduct(arr):
 #     finalProduct,  cp_r, cp_l = [1] * len(arr), [1] * len(arr), [1] * len(arr)
 #    # [5, 1, 4, 2]
 #     cp = 1
