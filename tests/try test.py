@@ -21,7 +21,7 @@ print("MAX NUMREC:", findMaxNumRec([2, -3, -2, 0, 30], 3))
 
 
 # # ARRAY OF PRODUCTS ........................................................
-# def array_of_product(array):
+def array_of_product(array):
 #     # totalProduct = [1] * len(array)
 #     totalProduct = [1 for _ in range(len(array))]
 #     for i in range(len(array)):
