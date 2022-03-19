@@ -42,7 +42,7 @@ def arrayOfProduct(arr):
     finalProduct,  cp_r, cp_l = [1] * len(arr), [1] * len(arr), [1] * len(arr)
 #    # [5, 1, 4, 2]
     cp = 1
-#     for index in range(0, len(arr)):
+    for index in range(0, len(arr)):
         
 #         cp_l[index] = cp
 #         cp *= arr[index]
