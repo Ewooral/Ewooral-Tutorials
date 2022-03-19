@@ -17,7 +17,7 @@ def findMaxNumRec(array, n):
     return max(array[n-1], findMaxNumRec(array, n-1))
 
 
-# print("MAX NUMREC:", findMaxNumRec([2, -3, -2, 0, 30], 3))
+print("MAX NUMREC:", findMaxNumRec([2, -3, -2, 0, 30], 3))
 
 
 # # ARRAY OF PRODUCTS ........................................................
