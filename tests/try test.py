@@ -62,7 +62,7 @@ def arrayOfProduct(arr):
     return finalProduct
 
 
-# print("array of Products 2:", array_of_product([5, 1, 4, 2]))
+print("array of Products 2:", array_of_product([5, 1, 4, 2]))
 
 
 # # O(n) Time | O(n) space (OPTIMIZED)
