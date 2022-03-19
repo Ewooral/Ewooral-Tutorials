@@ -48,7 +48,7 @@ def arrayOfProduct(arr):
         cp *= arr[index]
 
 #      # [5, 1, 4, 2]
-#     cp = 1
+    cp = 1
 #     for index in range(len(arr)-1, -1, -1):
       
 #         cp_r[index] = cp
