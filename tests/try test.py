@@ -89,7 +89,7 @@ print("array of Products 3:", arrayOfProduct2([12, 10, 8, 6, 5, 2]))
 
 def factorial(n):
     if n < 0: return -1; 
-#     elif n == 0: return 1;
+    elif n == 0: return 1;
 #     else: return n * factorial(n-1)
 
 # print("Factorial: ", factorial(1))
