@@ -67,7 +67,7 @@ print("array of Products 2:", array_of_product([5, 1, 4, 2]))
 
 # # O(n) Time | O(n) space (OPTIMIZED)
 def arrayOfProduct2(arr):
-#     finalProduct = [1] * len(arr)
+    finalProduct = [1] * len(arr)
 
 #     # [5, 1, 4, 2]
 #     lp = 1
