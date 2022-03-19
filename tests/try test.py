@@ -81,7 +81,7 @@ def arrayOfProduct2(arr):
        finalProduct[index] *= rp
        rp *= arr[index]
 
-#     return finalProduct
+    return finalProduct
 # print("array of Products 3:", arrayOfProduct2([5, 1, 4, 2]))
 # print("array of Products 3:", arrayOfProduct2([12, 10, 8, 6, 5, 2]))
 
