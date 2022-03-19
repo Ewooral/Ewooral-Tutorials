@@ -7,7 +7,7 @@ def biggestNumber(arr):
     return biggestNum
 
 
-# print("Biggest element:", biggestNumber([2, 5, -2, 0, 30]))
+print("Biggest element:", biggestNumber([2, 5, -2, 0, 30]))
 
 
 # # ........................................................
