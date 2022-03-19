@@ -25,7 +25,7 @@ def array_of_product(array):
     totalProduct = [1] * len(array)
     totalProduct = [1 for _ in range(len(array))]
     for i in range(len(array)):
-#         currentProduct = 1
+        currentProduct = 1
 #         for j in range(len(array)):
 #             if i != j:
 #                 currentProduct *= array[j]
