@@ -39,3 +39,4 @@ print(f"Hey {name}, there's a {errno:#x} error!")
 
 # 4 – Template Strings
 from string import Template
+t = Template('Hey, $name!')
