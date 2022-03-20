@@ -1,5 +1,6 @@
 
 # 1- STRINGS FORMATTING 
+
 name = 'Elijah';
 errno = 50159747054;
 
@@ -34,3 +35,7 @@ def greet(name, question):
 print(greet('Bob', 'going'))
 
 print(f"Hey {name}, there's a {errno:#x} error!")
+
+
+# 4 – Template Strings
+from string import Template
