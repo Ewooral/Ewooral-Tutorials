@@ -45,3 +45,6 @@ t.substitute(name=name)
 
 templ_string='Hey $name, there is a $error error!'
 print(Template(templ_string).substitute( name=name, error=hex(errno)))
+
+# The Zen of Python, by Tim Peters
+import this 
