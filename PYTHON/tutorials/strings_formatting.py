@@ -41,3 +41,6 @@ print(f"Hey {name}, there's a {errno:#x} error!")
 from string import Template
 t = Template('Hey, $name!')
 t.substitute(name=name)
+
+
+print(templ_string='Hey $name, there is a $error error!')
