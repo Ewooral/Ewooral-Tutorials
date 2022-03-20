@@ -43,4 +43,5 @@ t = Template('Hey, $name!')
 t.substitute(name=name)
 
 
-print(templ_string='Hey $name, there is a $error error!')
+templ_string='Hey $name, there is a $error error!'
+print(Template(templ_string).substitute( name=name, error=hex(errno)))
