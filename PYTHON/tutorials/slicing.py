@@ -213,6 +213,10 @@ print(Input[:2])
 # Example 11  
 
 word = [0, 3, 7, 10, 13]
-word[5:0:-1]  
-print(word[len(word):0:-1] == word[::-1])
+print("word: ", word[5:-6:-1]  )
+print(word[len(word):-6:-1] == word[::-1])
 print(word[len(word)-1:-len(word)-1:-1] == word[::-1])
+
+for i in range(len(word), - len(word)-1, -1):
+    print(word);
+    break;
