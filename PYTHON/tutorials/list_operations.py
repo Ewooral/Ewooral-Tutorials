@@ -21,7 +21,7 @@ if __name__ == '__main__':
     print("Strings: ", liststrings_to_wordstrings);
 
     # Append()
-    # newList = ["Cashew", "Blueberry"];
+    newList = ["Cashew", "Blueberry"];
     newList.append(List);
     print("New List: ", newList);
 
