@@ -1,4 +1,4 @@
-# List = ["Mangoes", "Pawpaw", "Guava", "Apples"];
+List = ["Mangoes", "Pawpaw", "Guava", "Apples"];
 strings = "Sampson is a strong man";
 delimeter = " "
 
