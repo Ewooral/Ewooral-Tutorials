@@ -4,4 +4,4 @@ delimeter = " ";
 
 print(list(strings));
 
-print(strings.split(delimeter));
+# print(strings.split(delimeter));
