@@ -1,5 +1,5 @@
 List = ["Mangoes", "Pawpaw", "Guava", "Apples"];
-# strings = "Sampson is a strong man";
+strings = "Sampson is a strong man";
 delimeter = " "
 
 print(list(strings));
