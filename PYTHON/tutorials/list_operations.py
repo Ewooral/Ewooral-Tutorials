@@ -1,8 +1,13 @@
 List = ["Mangoes", "Pawpaw", "Guava", "Apples"];
+numList = [9, 8, 10, 11, 0, 1]
 strings = "Sampson^is^a^strong^man";
 delimeter = "^";
 
 if __name__ == '__main__':
+
+    # sort()
+    numList.sort();
+    print(numList);
 
     # convert a char string to a list of strings using the list method
     print(list(strings));
@@ -15,13 +20,24 @@ if __name__ == '__main__':
     liststrings_to_wordstrings = delimeter.join(wordstrings_to_liststrings);
     print("Strings: ", liststrings_to_wordstrings);
 
-    # Append
-    newList = ["Cashew", "Blueberry"];
+    # Append()
+    # newList = ["Cashew", "Blueberry"];
     newList.append(List);
     print("New List: ", newList);
 
-    # extend 
-    newList.extend(List);
-    print("New List: ", newList)
+    # extend() and sorted()
+    newList.extend(sorted(List));
+    numList.extend(List);
+    print("num List: ", numList);
+    print("New List: ", newList);
+
+
+
+
+
+    
+
+
+
 
 
