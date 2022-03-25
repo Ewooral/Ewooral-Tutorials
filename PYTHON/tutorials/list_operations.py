@@ -26,7 +26,7 @@ if __name__ == '__main__':
     print("New List: ", newList);
 
     # extend() and sorted()
-    newList.extend(sorted(List));
+    # newList.extend(sorted(List));
     numList.extend(List);
     print("num List: ", numList);
     print("New List: ", newList);
