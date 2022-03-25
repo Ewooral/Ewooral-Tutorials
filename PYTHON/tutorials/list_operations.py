@@ -23,7 +23,7 @@ if __name__ == '__main__':
     # Append()
     newList = ["Cashew", "Blueberry"];
     newList.append(List);
-    print("New List: ", newList);
+    # print("New List: ", newList);
 
     # extend() and sorted()
     newList.extend(sorted(List));
