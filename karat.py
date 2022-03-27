@@ -93,4 +93,4 @@ def countdown(i):
     print(i)
     countdown(i-1)
 
-# countdown(10);
+countdown(10);
