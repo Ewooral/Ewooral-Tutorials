@@ -73,7 +73,7 @@ print(productOfArray([3, 2, 1, 4, 2, 5, 6, 0, 9]));
 print(productOfArray([5, 1, 4, 2]));
 
 
-def product_of_pairs(array):
+# def product_of_pairs(array):
   maxProduct = 0;
   for i in range(len(array)):
     for j in range(i+1, len(array)):
