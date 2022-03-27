@@ -61,7 +61,7 @@ def productOfArray(array): # Product of array where i is not equal to j
   # array.sort()
   product = [1] * len(array); 
   for i in range(len(array)): 
-    currentProduct = 1;
+    # currentProduct = 1;
     for j in range(len(array)):
       if i != j :
         currentProduct *= array[j]
