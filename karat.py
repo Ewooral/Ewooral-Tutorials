@@ -88,7 +88,7 @@ print(product_of_pairs([5, 1, 4, 2]));
 print(product_of_pairs([3, 2, 1, 4, 2, 5, 6, 0, 9]));
 
 
-def countdown(i):
+# def countdown(i):
   if i >= 0:
     print(i)
     countdown(i-1)
