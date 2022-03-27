@@ -64,7 +64,7 @@ def productOfArray(array): # Product of array where i is not equal to j
     currentProduct = 1;
     for j in range(len(array)):
       if i != j :
-        # currentProduct *= array[j]
+        currentProduct *= array[j]
     product[i] = currentProduct;
   return product;
 
