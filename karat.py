@@ -69,7 +69,7 @@ def productOfArray(array): # Product of array where i is not equal to j
   return product;
 
 
-# print(productOfArray([3, 2, 1, 4, 2, 5, 6, 0, 9]));
+print(productOfArray([3, 2, 1, 4, 2, 5, 6, 0, 9]));
 print(productOfArray([5, 1, 4, 2]));
 
 
