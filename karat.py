@@ -91,6 +91,6 @@ print(product_of_pairs([3, 2, 1, 4, 2, 5, 6, 0, 9]));
 def countdown(i):
   if i >= 0:
     print(i)
-    # countdown(i-1)
+    countdown(i-1)
 
 countdown(10);
