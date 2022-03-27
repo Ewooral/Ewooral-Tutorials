@@ -74,7 +74,7 @@ print(productOfArray([5, 1, 4, 2]));
 
 
 def product_of_pairs(array):
-  maxProduct = 0;
+  # maxProduct = 0;
   for i in range(len(array)):
     for j in range(i+1, len(array)):
       if array[i] * array[j] > maxProduct:
