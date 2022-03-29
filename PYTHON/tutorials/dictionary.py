@@ -3,12 +3,18 @@ names = {"name": "elijah",
          "isTrue": False,
          "address": "Ashaiman"
          }
-print("Using the get method to fetch a dictionary's key value, we have: ", names.get("names", "Not found"))
-change_a_name_in_names = names["address"] = "Kumasi Ejura Mampong"
-print(" changed name is: ",change_a_name_in_names)
+# print the names dic object
+print(names)
+# Accessing a value
+print(names.get("name", "Not found"))
+
+# Update
+updateMe= names["address"] = "Mampong"
+print(" changed name is: ", updateMe)
+
 another = names.items()
 print(type(another))
-print(names.items())
+print("copied items: ", another)
 print("================================")
 print(names)
 names["isFat"] = True
@@ -33,13 +39,16 @@ except:
 # loop over keys
 for key in names:
     print(key)  # Or
+
 print("================================")
 for key in names.keys():
     print(key)
+
 print("================================")
 # loop over values
 for value in names.values():
     print(value)
+
 print("================================")
 # loop through both keys and values
 for key, value in names.items():
@@ -58,3 +67,52 @@ print("================================")
 print(names)  # initial keys and values in our dictionary
 names.update(myCopy)
 print(names)  # current updated keys and values in our dictionary
+
+# fromkeys() takes two parameters, keys and a value
+newDict = {0:"mary", 1:1, 2:2}
+newCopy = {}.fromkeys([1, 2, 3], 0)  # {1: 0, 2: 0, 3: 0};
+newCopy1 = {}.fromkeys([1, 2, 3], )  # {1: None, 2: None, 3: None}
+print(newCopy)  
+print(newCopy1)  
+
+# keys()
+print(newDict.keys());
+
+# values()
+print(newDict.values())
+
+# popitem()
+print(newDict.popitem())
+
+# setdefault(), takes two para. key and default.
+print(newDict.setdefault(0, "Emmanuel"))
+print(newDict)
+
+# update()
+newDict.update(newCopy);
+print(newDict) 
+
+# OPERATIONS  
+#the in operator takes time complexity of O(1)
+print('mary' in newDict.values()) # prints out value
+print('mary' in newDict) # prints out only key
+
+isAvailable = 'mary' in newDict.values()
+print("available: ", isAvailable);
+
+# traverse
+for key in newDict:
+    print(key, newDict[key]) # O(N)
+
+# all() 
+print(all(newDict)) # False
+
+# any() 
+print(any(newDict)) # True  
+
+# sorted()
+strDict = {'animosity': 1, 'ani': 2, 'Ghana': 3, 'Nigeria': 4}
+print("Sorted: ", sorted(newDict, reverse=True))
+print(sorted(strDict, key=len))
+
+
