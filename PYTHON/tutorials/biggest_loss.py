@@ -22,5 +22,5 @@ def largest_possible_loss(prices_list):
     return largest_loss
 
 
-# how_big_is_the_loss = largest_possible_loss([234, 32, 3, 44, 64, 1])
-# print(how_big_is_the_loss)
+how_big_is_the_loss = largest_possible_loss([234, 32, 3, 44, 64, 1])
+print(how_big_is_the_loss)
