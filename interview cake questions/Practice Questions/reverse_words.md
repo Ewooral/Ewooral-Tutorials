@@ -47,7 +47,7 @@ Well, we could swap the first character with the last character, then the second
             message[right_index], message[left_index]
         left_index  += 1
         right_index -= 1
-
+```
 We're using a cute one-liner to do the swap. In other languages you might need to do the swap by hand, recording one of the values in a temp variable.
 
 Ok, looks good. Does this help us?
