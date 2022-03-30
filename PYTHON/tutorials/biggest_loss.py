@@ -9,7 +9,14 @@ edge cases you can think of.'''
 
 from more_itertools import grouper
 
+"""
+def grouper(iterable, n, fillvalue=None):
+    Collect data into fixed-length chunks or blocks.
 
+    >>> list(grouper('ABCDEFG', 3, 'x'))
+    [('A', 'B', 'C'), ('D', 'E', 'F'), ('G', 'x', 'x')]
+
+"""
 def largest_possible_loss(prices_list):
 
     largest_loss = 0
