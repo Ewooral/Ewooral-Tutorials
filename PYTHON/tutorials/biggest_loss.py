@@ -3,7 +3,9 @@ largest possible loss a client could have made with only a buy transaction follo
 transaction. The largest loss is calculated as pricesLst[index2] - pricesLst[index1] where
 index1 < index2.
 Please then write tests for this function to ensure it works as expected guarding against all
-edge cases you can think of.'''
+edge cases you can think of.
+
+'''
 
 
 
