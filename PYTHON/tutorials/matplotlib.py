@@ -1,5 +1,7 @@
 # Import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
+# Import numpy as np
+import numpy as np
 
 
 """
@@ -36,7 +38,7 @@ pop = [2.53, 2.57, 2.62, 2.67, 2.71, 2.76, 2.81, 2.86, 2.92, 2.97, 3.03, 3.08, 3
 plt.plot(year, pop)
 print("length of year and pop respectively :", len(year), len(pop));
 # Display the plot with plt.show()
-plt.show()
+# plt.show()
 
 
 gdp_cap = [974.5803384, 5937.029525999999, 6223.367465, 4797.231267, 12779.37964, 34435.367439999995, 36126.4927, 29796.04834, 1391.253792, 33692.60508, 1441.284873, 3822.137084, 7446.298803, 12569.85177, 9065.800825, 10680.79282, 1217.032994, 430.0706916, 1713.778686, 2042.09524, 36319.23501, 706.016537, 1704.063724, 13171.63885, 4959.114854, 7006.580419, 986.1478792, 277.5518587, 3632.557798, 9645.06142, 1544.750112, 14619.222719999998, 8948.102923, 22833.30851, 35278.41874, 2082.4815670000003, 6025.374752000001, 6873.262326000001, 5581.180998, 5728.353514, 12154.08975, 641.3695236000001, 690.8055759, 33207.0844, 30470.0167, 13206.48452, 752.7497265, 32170.37442, 1327.60891, 27538.41188, 5186.050003, 942.6542111, 579.2317429999999, 1201.637154, 3548.3308460000003, 39724.97867, 18008.94444, 36180.78919, 2452.210407, 3540.651564, 11605.71449, 4471.061906, 40675.99635, 25523.2771, 28569.7197, 7320.880262000001, 31656.06806, 4519.461171, 1463.249282, 1593.06548, 23348.139730000003,
@@ -73,7 +75,7 @@ print(life_exp[len(life_exp)-1])
 plt.plot(gdp_cap, life_exp)
 
 # Display the plot
-plt.show()
+# plt.show()
 
 """
 Scatter Plot (1)
@@ -103,7 +105,7 @@ print("length of gdp_cap and life_exp respectively: ", len(gdp_cap), len(life_ex
 plt.xscale('log')
 
 # Show plot
-plt.show()
+# plt.show()
 
 
 """
@@ -146,7 +148,7 @@ Instructions
 life_exp = [43.828, 76.423, 72.301, 42.731, 75.32, 81.235, 79.829, 75.635, 64.062, 79.441, 56.728, 65.554, 74.852, 50.728, 72.39, 73.005, 52.295, 49.58, 59.723, 50.43, 80.653, 44.74100000000001, 50.651, 78.553, 72.961, 72.889, 65.152, 46.462, 55.322, 78.782, 48.328, 75.748, 78.273, 76.486, 78.332, 54.791, 72.235, 74.994, 71.33800000000001, 71.878, 51.57899999999999, 58.04, 52.947, 79.313, 80.657, 56.735, 59.448, 79.406, 60.022, 79.483, 70.259, 56.007, 46.388000000000005, 60.916, 70.19800000000001, 82.208, 73.33800000000001, 81.757, 64.69800000000001, 70.65, 70.964, 59.545, 78.885, 80.745, 80.546, 72.567, 82.603, 72.535, 54.11, 67.297, 78.623, 77.58800000000001, 71.993, 42.592, 45.678, 73.952, 59.443000000000005, 48.303, 74.241, 54.467, 64.164, 72.801, 76.195, 66.803, 74.543, 71.164, 42.082, 62.069, 52.906000000000006, 63.785, 79.762, 80.204, 72.899, 56.867, 46.859, 80.196, 75.64, 65.483, 75.53699999999999, 71.752, 71.421, 71.688, 75.563, 78.098, 78.74600000000001, 76.442, 72.476, 46.242, 65.528, 72.777, 63.062, 74.002, 42.568000000000005, 79.972, 74.663, 77.926, 48.159, 49.339, 80.941, 72.396, 58.556, 39.613, 80.884, 81.70100000000001, 74.143, 78.4, 52.517, 70.616, 58.42, 69.819, 73.923, 71.777, 51.542, 79.425, 78.242, 76.384, 73.747, 74.249, 73.422, 62.698, 42.38399999999999, 43.487]
 
 plt.hist(life_exp);
-plt.show()
+# plt.show()
 
 
 """
@@ -177,8 +179,8 @@ plt.clf()
 plt.hist(life_exp, bins=20)
 
 # Show and clean up again
-plt.show()
-plt.clf()
+# plt.show()
+# plt.clf()
 
 """
 Build a histogram (3): compare
@@ -211,7 +213,7 @@ print(life_exp1950)
 
 # Show and clear plot again
 plt.show()
-plt.clf()
+# plt.clf()
 
 """
 Labels
@@ -248,7 +250,7 @@ plt.ylabel(ylab)
 plt.title(title)
 
 # After customizing, display the plot
-plt.show()
+# plt.show()
 
 """
 Ticks
@@ -286,4 +288,96 @@ tick_lab = ['1k', '10k', '100k']
 plt.xticks(tick_val, tick_lab);
 
 # After customizing, display the plot
-plt.show()
+# plt.show()
+
+"""
+Sizes
+
+Right now, the scatter plot is just a cloud of blue dots, indistinguishable from each other. Let's change this. Wouldn't it be nice if the size of the dots corresponds to the population?
+
+To accomplish this, there is a list pop loaded in your workspace. It contains population numbers for each country expressed in millions. You can see that this list is added to the scatter method, as the argument s, for size.
+Instructions
+100 XP
+
+    Run the script to see how the plot changes.
+    Looks good, but increasing the size of the bubbles will make things stand out more.
+        Import the numpy package as np.
+        Use np.array() to create a numpy array from the list pop. Call this NumPy array np_pop.
+        Double the values in np_pop setting the value of np_pop equal to np_pop * 2. Because np_pop is a NumPy array, each array element will be doubled.
+        Change the s argument inside plt.scatter() to be np_pop instead of pop.
+
+"""
+
+
+# # Store pop as a numpy array: np_pop
+np_pop = np.array(pop)
+
+# # Double np_pop
+# np_pop *= 2
+
+# # Update: set s argument to np_pop
+# plt.scatter(gdp_cap, life_exp, s = np_pop)
+
+# # Previous customizations
+# plt.xscale('log')
+# plt.xlabel('GDP per Capita [in USD]')
+# plt.ylabel('Life Expectancy [in years]')
+# plt.title('World Development in 2007')
+# plt.xticks([1000, 10000, 100000], ['1k', '10k', '100k'])
+
+# Display the plot
+# plt.show()
+
+"""
+Colors
+
+The code you've written up to now is available in the script.
+
+The next step is making the plot more colorful! To do this, a list col has been created for you. It's a list with a color for each corresponding country, depending on the continent the country is part of.
+
+How did we make the list col you ask? The Gapminder data contains a list continent with the continent each country belongs to. A dictionary is constructed that maps continents onto colors:
+
+dict = {
+    'Asia':'red',
+    'Europe':'green',
+    'Africa':'blue',
+    'Americas':'yellow',
+    'Oceania':'black'
+}
+
+Nothing to worry about now; you will learn about dictionaries in the next chapter.
+Instructions
+100 XP
+
+    Add c = col to the arguments of the plt.scatter() function.
+    Change the opacity of the bubbles by setting the alpha argument to 0.8 inside plt.scatter(). Alpha can be set from zero to one, where zero is totally transparent, and one is not at all transparent.
+
+
+""" 
+
+# Specify c and alpha inside plt.scatter()
+plt.scatter(x=gdp_cap, y=life_exp, s=np.array(pop) * 2, c=col, alpha=0.8)
+
+# Previous customizations
+plt.xscale('log')
+plt.xlabel('GDP per Capita [in USD]')
+plt.ylabel('Life Expectancy [in years]')
+plt.title('World Development in 2007')
+plt.xticks([1000, 10000, 100000], ['1k', '10k', '100k'])
+
+# Show the plot
+# plt.show()
+
+"""
+Additional Customizations
+
+If you have another look at the script, under # Additional Customizations, you'll see that there are two plt.text() functions now. They add the words "India" and "China" in the plot.
+Instructions
+100 XP
+
+    Add plt.grid(True) after the plt.text() calls so that gridlines are drawn on the plot.
+
+"""
+
+# Add grid() call
+plt.grid(True)

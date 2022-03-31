@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 numpy = "*"
+more-itertools = "*"
+matplotlib = "*"
+perspective-python = "*"
 
 [dev-packages]
 
