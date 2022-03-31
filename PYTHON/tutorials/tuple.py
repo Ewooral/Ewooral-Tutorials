@@ -1,20 +1,39 @@
 # A tuple is an ordered, immutable list of data. it allows duplicate elements
 # you can choose to ignore the braces or brackets
+
+# creating a Tuple has O(1) T & O(N) S
+from re import I
+
+
 mytuple = 12, "thirsty", False, .893
+for i in mytuple([3, -5, -1]):
+     print(i)
+
+    
 print(mytuple)
 anotherway = tuple(["max", "Jimmy", 200, .90])
+newTuple = tuple("eli")
 print(anotherway)
-
+print(newTuple)
 print("================================")
 mytupe = ("max",)  # mytupe qualifies to be a tuple only if a comma is added
 print(mytupe)
 print(type(mytupe))
 # tuples are immutable
 # mytuple[0]= "Mary Gadadu"
+
+
+# Tuples in Memory
+# tuples behave like lists in python.
+
+
+
+
+
 print("================================")
 # fetch data from a tuple
-mynew = mytuple[2]
-print(mynew)
+mynew = mytuple[-3:]
+print("my new tuple: ", mynew)
 print("================================")
 # iterate over a tuple
 for w in mytuple:
