@@ -1,3 +1,8 @@
+# Import pandas as pd
+# pipenv install pandas
+
+import pandas as pd
+
 """
 Dictionary to DataFrame (1)
 
@@ -25,4 +30,46 @@ Instructions
     Use pd.DataFrame() to turn your dict into a DataFrame called cars.
     Print out cars and see how beautiful it is.
 
+
+Dictionary to DataFrame (2)
+
+The Python code that solves the previous exercise is included in the script. Have you noticed that the row labels (i.e. the labels for the different observations) were automatically set to integers from 0 up to 6?
+
+To solve this a list row_labels has been created. You can use it to specify the row labels of the cars DataFrame. You do this by setting the index attribute of cars, that you can access as cars.index.
+Instructions
+100 XP
+
+    Hit Run Code to see that, indeed, the row labels are not correctly set.
+    Specify the row labels by setting cars.index equal to row_labels.
+    Print out cars again and check if the row labels are correct this time.
+
+
 """
+
+
+# Pre-defined lists
+names = ['United States', 'Australia', 'Japan',
+         'India', 'Russia', 'Morocco', 'Egypt']
+dr = [True, False, False, False, True, True, True]
+cpc = [809, 731, 588, 18, 200, 70, 45]
+
+
+
+# Create dictionary my_dict with three key:value pairs: my_dict
+my_dict = {
+    "country": names,
+    "drives_right": dr,
+    "cars_per_cap": cpc
+}
+
+# Build a DataFrame cars from my_dict: cars
+cars = pd.DataFrame(my_dict)
+
+# Definition of row_labels
+row_labels = ['US', 'AUS', 'JPN', 'IN', 'RU', 'MOR', 'EG']
+
+# Specify row labels of cars
+cars.index = row_labels
+
+# Print cars
+print(cars)
