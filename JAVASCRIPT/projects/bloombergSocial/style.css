@@ -1,6 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap');
 
+:root{
+    --color-dark: hsl(252, 30%, 17%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-white: hsl(252, 30%, 100%);
+    --color-black: hsl(252, 30%, 10%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
 
+    --bordr-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: .6rem 2rem;
+    --search-padding: .6rem 1rem;
+    --card-padding: 1rem;
+}
 
 *, *::before, *::after {
   margin: 0;
@@ -13,5 +29,75 @@
 }
 
 body{
-    font-family: Poppins ;
+    font-family: Poppins, sans-serif;
+    color: var(--color-dark);
+    background: var(--color-light);
+    overflow: hidden;
+}
+
+
+/* GENERAL STYLING */
+.container{
+    width:80%;
+    margin:0 auto;
+}
+
+.profile-photo{
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+.btn{
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight:500;
+    border-radius:var(--bordr-radius);
+    cursor: pointer;
+    transition: all .3s ease;
+    font-size: .9rem;
+}
+
+.btn:hover{
+    opacity: .8;
+}
+
+.btn-primary{
+    background: var(--color-primary);
+    color: white;
+} 
+
+.text-bold{
+    font-weight: 500;
+}
+
+.text-muted{
+    color: var(--color-gray);
+}
+
+nav{
+    width: 100%;
+    background: var(--color-white);
+    padding: .7rem 0;
+    position:fixed;
+    z-index: 10;
+}
+
+nav .container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+nav .search-bar{
+    background: var(--color-light);
+    border-radius: var(--bordr-radius);
+    padding: var(--search-padding);
 }
