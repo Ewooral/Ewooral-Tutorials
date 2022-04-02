@@ -282,3 +282,19 @@ Instructions
     Print out both the cars_per_cap and drives_right column as a DataFrame using loc or iloc.
 
 """
+
+print(".......................................................")
+
+# Print out drives_right column as Series
+series = cars.iloc[:, [2]]
+print(series)
+
+print(".......................................................")
+# Print out drives_right column as DataFrame
+DataFrame = cars.iloc[:, 2]
+print(DataFrame)
+
+print(".......................................................")
+# Print out cars_per_cap and drives_right as DataFrame
+DataFrame = cars.iloc[:, [1, 2]]
+print(DataFrame)
