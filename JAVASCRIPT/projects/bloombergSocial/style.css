@@ -93,7 +93,7 @@ nav .container{
     display:flex;
     align-items:center;
     justify-content:space-between;
-
+ 
 }
 
 nav .search-bar{
@@ -112,7 +112,7 @@ nav .search-bar input[type="search"] {
 }
 
 nav .search-bar input[type="search"]::placeholder{
-    color: var(--color-gray);
+    color: var(--color-gr ay);
 }
 nav .create{
     display:flex;
