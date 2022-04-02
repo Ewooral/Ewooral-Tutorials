@@ -221,3 +221,11 @@ Instructions
     Use loc or iloc to select the observations for Australia and Egypt as a DataFrame. You can find out about the labels/indexes of these rows by inspecting cars in the IPython Shell. Make sure to print the resulting DataFrame.
 
 """
+
+print(".......................................................")
+# Print out observation for Japan
+print(cars.iloc[2])
+
+print(".......................................................")
+# Print out observations for Australia and Egypt
+print(cars.iloc[[1, 6]])
