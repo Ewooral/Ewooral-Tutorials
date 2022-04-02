@@ -162,9 +162,11 @@ print(".......................................................")
 # Print out country column as Pandas Series
 print(cars['country'])
 
+print(".......................................................")
 # Print out country column as Pandas DataFrame
 print(cars[['country']])
 
+print(".......................................................")
 # Print out DataFrame with country and drives_right columns
 print(cars[['country', 'drives_right']])
 
@@ -189,7 +191,8 @@ Instructions
 """
 print(".......................................................")
 # Print out first 3 observations
-print(cars[:4])
+print(cars[:3])
 
+print(".......................................................")
 # Print out fourth, fifth and sixth observation
 print(cars[4:7])
