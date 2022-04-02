@@ -8,6 +8,7 @@ numpy = "*"
 more-itertools = "*"
 matplotlib = "*"
 perspective-python = "*"
+pandas = "*"
 
 [dev-packages]
 
