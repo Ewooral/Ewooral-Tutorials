@@ -381,3 +381,8 @@ Instructions
 
 # Add grid() call
 plt.grid(True)
+
+
+fig, axs = plt.subplots(3, 3)
+axs[0, 0].set_facecolor("# ddddff")
+axs[2, 2].set_facecolor(" # ffffdd")
