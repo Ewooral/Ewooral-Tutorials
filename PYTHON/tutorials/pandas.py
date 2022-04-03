@@ -427,7 +427,6 @@ print("...........................................")
 my_kitchen = 18.0
 your_kitchen = 14.0
 
-print("...........................................")
 # my_kitchen bigger than 10 and smaller than 18?
 print(my_kitchen > 10 and my_kitchen < 18)
 
@@ -490,3 +489,15 @@ Instructions
 """
 print("...........................................")
 
+
+
+# Extract drives_right column as Series: dr
+dr = cars["drives_right"]
+# print(dr)
+
+# Use dr to subset cars: sel
+sel = cars[dr]
+
+
+# Print sel
+print(sel)
