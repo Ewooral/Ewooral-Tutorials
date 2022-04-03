@@ -501,3 +501,11 @@ sel = cars[dr]
 
 # Print sel
 print(sel)
+
+print("...........................................")
+# Convert the code to a one-liner that calculates the variable sel as before.
+# Convert code to a one-liner
+sel = cars[cars['drives_right']]
+
+# Print sel
+print(sel)
