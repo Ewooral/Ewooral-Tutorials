@@ -444,7 +444,11 @@ Boolean operators with NumPy
 
 Before, the operational operators like < and >= worked with NumPy arrays out of the box. Unfortunately, this is not true for the boolean operators and, or, and not.
 
-To use these operators with NumPy, you will need np.logical_and(), np.logical_or() and np.logical_not(). Here's an example on the my_house and your_house arrays from before to give you an idea:
+To use these operators with NumPy, you will need 
+np.logical_and(), 
+np.logical_or() and 
+np.logical_not(). 
+Here's an example on the my_house and your_house arrays from before to give you an idea:
 
 np.logical_and(my_house > 13, 
                your_house < 15)
