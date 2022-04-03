@@ -661,7 +661,47 @@ Instructions
 
 
 """
-areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
 print("...........................................")
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 for index, area in enumerate(areas):
     print("room " + str(index) + ": " + str(area))
+
+"""
+Indexes and values (2)
+
+For non-programmer folks, room 0: 11.25 is strange. Wouldn't it be better if the count started at 1?
+Instructions
+70 XP
+
+Adapt the print() function in the for loop so that the first printout becomes "room 1: 11.25", the second one "room 2: 18.0" and so on.
+"""
+# Code the for loop
+print("...........................................")
+for index, area in enumerate(areas):
+    print("room " + str(index + 1) + ": " + str(area))
+
+
+"""
+Loop over list of lists
+
+Remember the house variable from the Intro to Python course? Have a look at its definition in the script. It's basically a list of lists, where each sublist contains the name and area of a room in your house.
+
+It's up to you to build a for loop from scratch this time!
+Instructions
+0 XP
+
+Write a for loop that goes through each sublist of house and prints out the x is y sqm, where x is the name of the room and y is the area of the room.
+
+"""
+print("...........................................")
+# house list of lists
+house = [["hallway", 11.25],
+         ["kitchen", 18.0],
+         ["living room", 20.0],
+         ["bedroom", 10.75],
+         ["bathroom", 9.50]]
+
+# Build a for loop from scratch
+for x in house:
+    print("the " + x[0] + " is " + str(x[1]) + " sqm")
