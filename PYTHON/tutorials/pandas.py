@@ -557,3 +557,13 @@ Instructions
 
 """
 print("...........................................")
+
+# Create medium: observations with cars_per_cap between 100 and 500
+print(cars["cars_per_cap"])
+
+cpc = cars['cars_per_cap']
+between = np.logical_and(cpc > 100, cpc < 500)
+medium = cars[between]
+print("...........................................")
+# Print medium
+print(medium)
