@@ -705,3 +705,281 @@ house = [["hallway", 11.25],
 # Build a for loop from scratch
 for x in house:
     print("the " + x[0] + " is " + str(x[1]) + " sqm")
+
+
+"""
+Loop over dictionary
+
+In Python 3, you need the items() method to loop over a dictionary:
+
+world = { "afghanistan":30.55, 
+          "albania":2.77,
+          "algeria":39.21 }
+
+for key, value in world.items() :
+    print(key + " -- " + str(value))
+
+Remember the europe dictionary that contained the names of some European countries as key and their capitals as corresponding value? Go ahead and write a loop to iterate over it!
+Instructions
+100 XP
+
+Write a for loop that goes through each key:value pair of europe. On each iteration, "the capital of x is y" should be printed out, where x is the key and y is the value of the pair.
+"""
+print("...........................................")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
+SOLUTIONS TO THE ABOVE CODES
+.......................................................
+         country  drives_right  cars_per_cap
+0  United States          True           809
+1      Australia         False           731
+2          Japan         False           588
+3          India         False            18
+4         Russia          True           200
+5        Morocco          True            70
+6          Egypt          True            45
+
+
+.......................................................
+           country  drives_right  cars_per_cap
+US   United States          True           809
+AUS      Australia         False           731
+JPN          Japan         False           588
+IN           India         False            18
+RU          Russia          True           200
+MOR        Morocco          True            70
+EG           Egypt          True            45
+.......................................................
+           country  drives_right  cars_per_cap
+US   United States          True           809
+AUS      Australia         False           731
+JPN          Japan         False           588
+IN           India         False            18
+RU          Russia          True           200
+MOR        Morocco          True            70
+EG           Egypt          True            45
+.......................................................
+           country  drives_right  cars_per_cap
+US   United States          True           809
+AUS      Australia         False           731
+JPN          Japan         False           588
+IN           India         False            18
+RU          Russia          True           200
+MOR        Morocco          True            70
+EG           Egypt          True            45
+.......................................................
+US     United States
+AUS        Australia
+JPN            Japan
+IN             India
+RU            Russia
+MOR          Morocco
+EG             Egypt
+Name: country, dtype: object
+.......................................................
+           country
+US   United States
+AUS      Australia
+JPN          Japan
+IN           India
+RU          Russia
+MOR        Morocco
+EG           Egypt
+.......................................................
+           country  drives_right
+US   United States          True
+AUS      Australia         False
+JPN          Japan         False
+IN           India         False
+RU          Russia          True
+MOR        Morocco          True
+EG           Egypt          True
+.......................................................
+           country  drives_right  cars_per_cap
+US   United States          True           809
+AUS      Australia         False           731
+JPN          Japan         False           588
+.......................................................
+     country  drives_right  cars_per_cap
+IN     India         False            18
+RU    Russia          True           200
+MOR  Morocco          True            70
+.......................................................
+country         Japan
+drives_right    False
+cars_per_cap      588
+Name: JPN, dtype: object
+.......................................................
+       country  drives_right  cars_per_cap
+AUS  Australia         False           731
+EG       Egypt          True            45
+.......................................................
+True
+.......................................................
+     country  drives_right
+RU    Russia          True
+MOR  Morocco          True
+.......................................................
+     cars_per_cap
+US            809
+AUS           731
+JPN           588
+IN             18
+RU            200
+MOR            70
+EG             45
+.......................................................
+US     809
+AUS    731
+JPN    588
+IN      18
+RU     200
+MOR     70
+EG      45
+Name: cars_per_cap, dtype: int64
+.......................................................
+     drives_right  cars_per_cap
+US           True           809
+AUS         False           731
+JPN         False           588
+IN          False            18
+RU           True           200
+MOR          True            70
+EG           True            45
+...........................................
+False
+...........................................
+True
+...........................................
+False
+...........................................
+True
+...........................................
+False
+True
+True
+...........................................
+...........................................
+...........................................
+[ True  True False False]
+...........................................
+[False  True  True False]
+...........................................
+False
+...........................................
+True
+...........................................
+True
+...........................................
+...........................................
+[False  True False  True]
+...........................................
+[False False False  True]
+...........................................
+           country  drives_right  cars_per_cap
+US   United States          True           809
+RU          Russia          True           200
+MOR        Morocco          True            70
+EG           Egypt          True            45
+...........................................
+           country  drives_right  cars_per_cap
+US   United States          True           809
+RU          Russia          True           200
+MOR        Morocco          True            70
+EG           Egypt          True            45
+...........................................
+           country  drives_right  cars_per_cap
+US   United States          True           809
+AUS      Australia         False           731
+JPN          Japan         False           588
+...........................................
+US     809
+AUS    731
+JPN    588
+IN      18
+RU     200
+MOR     70
+EG      45
+Name: cars_per_cap, dtype: int64
+...........................................
+   country  drives_right  cars_per_cap
+RU  Russia          True           200
+...........................................
+correcting...
+7
+correcting...
+6
+correcting...
+5
+correcting...
+4
+correcting...
+3
+correcting...
+2
+correcting...
+1
+correcting...
+0
+...........................................
+correcting...
+-5
+correcting...
+-4
+correcting...
+-3
+correcting...
+-2
+correcting...
+-1
+correcting...
+0
+...........................................
+room 0: 11.25
+room 1: 18.0
+room 2: 20.0
+room 3: 10.75
+room 4: 9.5
+...........................................
+room 1: 11.25
+room 2: 18.0
+room 3: 20.0
+room 4: 10.75
+room 5: 9.5
+...........................................
+the hallway is 11.25 sqm
+the kitchen is 18.0 sqm
+the living room is 20.0 sqm
+the bedroom is 10.75 sqm
+the bathroom is 9.5 sqm
+"""
