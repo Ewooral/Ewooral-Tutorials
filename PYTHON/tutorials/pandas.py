@@ -298,3 +298,76 @@ print(".......................................................")
 # Print out cars_per_cap and drives_right as DataFrame
 DataFrame = cars.iloc[:, [1, 2]]
 print(DataFrame)
+
+"""
+Equality
+
+To check if two Python values, or variables, are equal you can use ==. To check for inequality, you need !=. As a refresher, have a look at the following examples that all result in True. Feel free to try them out in the IPython Shell.
+
+2 == (1 + 1)
+"intermediate" != "python"
+True != False
+"Python" != "python"
+
+When you write these comparisons in a script, you will need to wrap a print() function around them to see the output.
+Instructions
+100 XP
+
+    In the editor on the right, write code to see if True equals False.
+    Write Python code to check if -5 * 15 is not equal to 75.
+    Ask Python whether the strings "pyscript" and "PyScript" are equal.
+    What happens if you compare booleans and integers? Write code to see if True and 1 are equal.
+
+"""
+print("...........................................")
+# Comparison of booleans
+print(True == False)
+
+print("...........................................")
+# Comparison of integers
+print((-5 * 15) != 75)
+
+print("...........................................")
+# Comparison of strings
+print("pyscript" == "PyScript")
+
+print("...........................................")
+# Compare a boolean with an integer
+print(True == 1)
+
+
+
+"""
+Greater and less than
+
+In the video, Hugo also talked about the less than and greater than signs, < and > in Python. You can combine them with an equals sign: <= and >=. Pay attention: <= is valid syntax, but =< is not.
+
+All Python expressions in the following code chunk evaluate to True:
+
+3 < 4
+3 <= 4
+"alpha" <= "beta"
+
+Remember that for string comparison, Python determines the relationship based on alphabetical order.
+Instructions
+100 XP
+
+    Write Python expressions, wrapped in a print() function, to check whether:
+        x is greater than or equal to -10. x has already been defined for you.
+        "test" is less than or equal to y. y has already been defined for you.
+        True is greater than False.
+
+"""
+print("...........................................")
+
+# Comparison of integers
+x = -3 * 6
+print(x >= -10)
+
+# Comparison of strings
+y = "test"
+print("test" <= y)
+
+
+# Comparison of booleans
+print(True > False)
