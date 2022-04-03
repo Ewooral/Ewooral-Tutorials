@@ -1,4 +1,5 @@
 # Import pandas as pd
+from itertools import count
 import pandas as pd
 
 # pipenv install pandas
@@ -750,6 +751,11 @@ Instructions
 Write a for loop that iterates over the rows of cars and on each iteration perform two print() calls: one to print out the row label and one to print out all of the rows contents.
 
 """
+for country, row in cars.iterrows():
+    print(country)
+    print(row)
+
+
 
 
 
