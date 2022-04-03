@@ -1,7 +1,10 @@
 # Import pandas as pd
+import pandas as pd
+
 # pipenv install pandas
 
-import pandas as pd
+# import numpy as np
+import numpy as np
 
 """
 Dictionary to DataFrame (1)
@@ -390,3 +393,32 @@ Using comparison operators, generate boolean arrays that answer the following qu
 
 """
 print("...........................................")
+
+my_house = np.array([18.0, 20.0, 10.75, 9.50])
+
+print("...........................................")
+your_house = np.array([14.0, 24.0, 14.25, 9.0])
+
+print("...........................................")
+# my_house greater than or equal to 18
+print(my_house >= 18)
+
+print("...........................................")
+# my_house less than your_house
+print(my_house < your_house)
+
+"""
+and, or, not (1)
+
+A boolean is either 1 or 0, True or False. With boolean operators such as and, or and not, you can combine these booleans to perform more advanced queries on your data.
+
+In the sample code, two variables are defined: my_kitchen and your_kitchen, representing areas.
+Instructions
+100 XP
+
+    Write Python expressions, wrapped in a print() function, to check whether:
+        my_kitchen is bigger than 10 and smaller than 18.
+        my_kitchen is smaller than 14 or bigger than 17.
+        double the area of my_kitchen is smaller than triple the area of your_kitchen.
+
+"""
