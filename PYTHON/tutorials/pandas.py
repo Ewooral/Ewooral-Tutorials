@@ -726,9 +726,37 @@ Instructions
 Write a for loop that goes through each key:value pair of europe. On each iteration, "the capital of x is y" should be printed out, where x is the key and y is the value of the pair.
 """
 print("...........................................")
+# Definition of dictionary
+europe = {'spain': 'madrid', 'france': 'paris', 'germany': 'berlin',
+          'norway': 'oslo', 'italy': 'rome', 'poland': 'warsaw', 'austria': 'vienna'}
+
+# Iterate over europe
+for key, value in europe.items():
+    print("the capital of ", key, " is ", value)
 
 
+"""
+Loop over NumPy array
 
+If you're dealing with a 1D NumPy array, looping over all elements can be as simple as:
+
+for x in my_array :
+    ...
+
+If you're dealing with a 2D NumPy array, it's more complicated. A 2D array is built up of multiple 1D arrays. To explicitly iterate over all separate elements of a multi-dimensional array, you'll need this syntax:
+
+for x in np.nditer(my_array) :
+    ...
+
+Two NumPy arrays that you might recognize from the intro course are available in your Python session: np_height, a NumPy array containing the heights of Major League Baseball players, and np_baseball, a 2D NumPy array that contains both the heights (first column) and weights (second column) of those players.
+Instructions
+100 XP
+
+    Import the numpy package under the local alias np.
+    Write a for loop that iterates over all elements in np_height and prints out "x inches" for each element, where x is the value in the array.
+    Write a for loop that visits every element of the np_baseball array and prints it out.
+
+"""
 
 
 
