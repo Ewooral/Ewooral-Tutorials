@@ -751,9 +751,11 @@ Instructions
 Write a for loop that iterates over the rows of cars and on each iteration perform two print() calls: one to print out the row label and one to print out all of the rows contents.
 
 """
+print("............................................")
 for country, row in cars.iterrows():
     print(country)
     print(row)
+    print("............................................")
 
 
 
@@ -774,6 +776,10 @@ Instructions
         You can use str() to convert your integer data to a string so that you can print it in conjunction with the country label.
 
 """
+# print("............................................")
+for lab, row in cars.iterrows():
+    print(lab + ":", row["cars_per_cap"])
+
 
 
 
