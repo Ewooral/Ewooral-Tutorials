@@ -802,9 +802,15 @@ In the body of the for loop, it seems that you're not properly updating
 the "COUNTRY" column of cars. If you use lab, row as iterator variables, 
 you can use cars.loc[lab, "COUNTRY"] = row["country"].upper() to do the proper updates.
 """
+print("............................................")
+
+# Code for loop that adds COUNTRY column
+for country, row in cars.iterrows():
+    cars.loc[country, "COUNTRY"] = row["country"].upper()
 
 
-
+# Print cars
+print(cars)
 
 
 
