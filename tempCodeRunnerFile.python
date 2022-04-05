@@ -1,0 +1,59 @@
+class Node:
+    def __init__(self, value = None) -> None:
+        self.value = value;
+        self.next = None;
+    
+class SinglyLL:
+    def __init__(self) -> None:
+        self.head = None;
+        self.tail = None;
+
+    def __iter__(self):
+        node = self.head;
+        while node:
+            yield node;
+            node = node.next;
+    
+    def insertLL(self, value, location):
+        newNode = Node(value);
+        if self.head is None:
+            self.head = newNode;
+            self.tail = newNode;
+        else:
+            if location == 0:
+                newNode.next = self.head;
+                self.head = newNode;
+            elif location == 1:
+                    newNode.next = None;
+                    self.tail.next = newNode;
+                    self.tail = newNode;
+            else:
+                tempNode = self.head
+                index = 0;
+                while index < location - 1:
+                    tempNode = tempNode.next
+                    index += 1;
+                nextNode = tempNode.next;
+                tempNode.next = newNode;
+                newNode.next = nextNode;
+    def traverseSLL(self):
+        if self.head is None:
+            print("No head.Nothing to traverse!!")
+        else:
+            while self.head is not None:
+                print(self.head.value)
+                self.head = self.head.next
+                
+
+newSinglyLL = SinglyLL();
+newSinglyLL.insertLL(45, 1);
+newSinglyLL.insertLL(50, 1);
+newSinglyLL.insertLL(70, 1);
+newSinglyLL.insertLL(100, 0);
+newSinglyLL.insertLL(10, 3); 
+newSinglyLL.insertLL(2, 2); 
+
+
+print([node.value for node in newSinglyLL])
+
+newSinglyLL.traverseSLL()

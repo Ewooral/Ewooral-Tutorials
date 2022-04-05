@@ -5,12 +5,12 @@ name = "pypi"
 
 [packages]
 numpy = "*"
-more-itertools = "*"
-matplotlib = "*"
-perspective-python = "*"
 pandas = "*"
+ipython = "*"
+matplotlib = "*"
+gunicorn = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.10"

@@ -9241,6 +9241,7 @@ In JavaScript, each object internally references another object, called its prot
 
 Here’s a simple example:
 
+```javascript
 function Animal() { this.eatsVeggies = true; this.eatsMeat = false; }
 
 function Herbivore() {}
