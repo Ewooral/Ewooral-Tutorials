@@ -398,5 +398,6 @@ When deconstructing an object, if a property is not accessed in itself, it will 
 let obj = {self: '123'};
 obj.__proto__.prot = '456';
 const {self, prot} = obj;
+console.log(self, prot)
 // self "123"
 // prot "456" (Access to the prototype chain)

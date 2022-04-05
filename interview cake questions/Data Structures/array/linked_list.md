@@ -1,15 +1,15 @@
- Linked List
+# Linked List
 Data Structure
 Quick reference
 	Worst Case
-space 	O(n)O(n)O(n)
-prepend 	O(1)O(1)O(1)
-append 	O(1)O(1)O(1)
-lookup 	O(n)O(n)O(n)
-insert 	O(n)O(n)O(n)
-delete 	O(n)O(n)O(n)
+    space 	O(n)
+    prepend O(1)
+    append 	O(1)
+    lookup 	O(n)
+    insert 	O(n)
+    delete 	O(n)
 
-A linked list organizes items sequentially, with each item storing a pointer to the next one.
+## A linked list organizes items sequentially, with each item storing a pointer to the next one.
 
 Picture a linked list like a chain of paperclips linked together. It's quick to add another paperclip to the top or bottom. It's even quick to insert one in the middle—just disconnect the chain at the middle link, add the new paperclip, then reconnect the other half.
 
