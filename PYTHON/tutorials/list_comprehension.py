@@ -26,3 +26,21 @@ s = "fool"
 print([x for x in s if x.startswith("o")])
 
 
+"""
+A taste of things to come
+
+In this exercise, you'll explore both the Non-Pythonic and Pythonic ways of looping over a list.
+
+names = ['Jerry', 'Kramer', 'Elaine', 'George', 'Newman']
+
+Suppose you wanted to collect the names in the above list that have six letters or more. In other programming languages, the typical approach is to create an index variable (i), use i to iterate over the list, and use an if statement to collect the names with six letters or more:
+
+i = 0
+new_list= []
+while i < len(names):
+    if len(names[i]) >= 6:
+        new_list.append(names[i])
+    i += 1
+
+Let's explore some more Pythonic ways of doing this.
+"""
