@@ -50,6 +50,6 @@ catch (e){
     logMyErrors(e.message)
   
 }
-// finally{
+finally{
   console.log("Hmmm... Food is very important!!")
 }
