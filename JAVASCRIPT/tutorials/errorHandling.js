@@ -41,7 +41,7 @@ function eaten(d){
 }
 
 try{
-eaten("YeS")
+eaten("Y")
 }
 
 catch (e){
