@@ -4,7 +4,7 @@
 
 function getMonthName(mo) {
   mo = mo - 1 ; // Adjust month number for array index (1 = Jan, 12 = Dec)
-//   let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
+  let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
                 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   if (months[mo]) {
     return months[mo];
