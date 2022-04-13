@@ -51,5 +51,5 @@ catch (e){
   
 }
 finally{
-//   console.log("Hmmm... Food is very important!!")
+  console.log("Hmmm... Food is very important!!")
 }
