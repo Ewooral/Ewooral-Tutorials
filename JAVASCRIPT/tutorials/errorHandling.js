@@ -47,7 +47,7 @@ eaten("YeS")
 catch (e){
     // console.error(e)
     logMyErrors(e.name)
-    // logMyErrors(e.message)
+    logMyErrors(e.message)
   
 }
 finally{
