@@ -8,7 +8,7 @@ function getMonthName(mo) {
                 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   if (months[mo]) {
     return months[mo];
-  } else {
+//   } else {
     throw 'Invalid Month index Keyed in. Try again!!'; // throw keyword is used here
   }
 }
