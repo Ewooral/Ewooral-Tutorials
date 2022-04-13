@@ -24,7 +24,7 @@ catch (e) {
 
 // spits out error
 function logMyErrors(error){
-    // console.error(error)
+    console.error(error)
 }
 
 
