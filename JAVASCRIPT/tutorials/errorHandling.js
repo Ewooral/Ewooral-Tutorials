@@ -29,7 +29,7 @@ function logMyErrors(error){
 
 
 // HAVE YOU EATEN??
-// console.log(".................................")
+console.log(".................................")
 function eaten(d){
     if(d === 'Yes' || d === 'yes' 
     || d === 'YES' || d === 'y' || d === 'Y'){
