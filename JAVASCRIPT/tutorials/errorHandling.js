@@ -35,7 +35,7 @@ function eaten(d){
     || d === 'YES' || d === 'y' || d === 'Y'){
         console.log(true)
     } else
-    // throw (new Error(false))
+    throw (new Error(false))
     
    
 }
