@@ -7,7 +7,7 @@ function getMonthName(mo) {
   let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
                 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   if (months[mo]) {
-    // return months[mo];
+    return months[mo];
   } else {
     throw 'Invalid Month index Keyed in. Try again!!'; // throw keyword is used here
   }
