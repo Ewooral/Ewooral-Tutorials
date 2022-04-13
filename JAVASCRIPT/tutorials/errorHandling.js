@@ -14,7 +14,7 @@ function getMonthName(mo) {
 }
 
 try { // statements to try
-//   monthName = getMonthName('jan'); // function could throw exception
+  monthName = getMonthName('jan'); // function could throw exception
   console.log(monthName)
 }
 catch (e) {
