@@ -17,7 +17,7 @@ try { // statements to try
   monthName = getMonthName('jan'); // function could throw exception
   console.log(monthName)
 }
-// catch (e) {
+catch (e) {
   monthName = 'unknown';
   logMyErrors(e); // pass exception object to error handler (i.e. your own function)
 }
