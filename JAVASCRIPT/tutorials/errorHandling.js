@@ -13,7 +13,7 @@ function getMonthName(mo) {
   }
 }
 
-try { // statements to try
+// try { // statements to try
   monthName = getMonthName('jan'); // function could throw exception
   console.log(monthName)
 }
@@ -31,7 +31,8 @@ function logMyErrors(error){
 // HAVE YOU EATEN??
 console.log(".................................")
 function eaten(d){
-    if(d === 'Yes' || d === 'yes'){
+    if(d === 'Yes' || d === 'yes' 
+    || d === 'YES' || d === 'y' || d === 'Y'){
         console.log(true)
     } else
     throw (new Error(false))
@@ -40,7 +41,7 @@ function eaten(d){
 }
 
 try{
-eaten("Yes")
+eaten("YeS")
 }
 
 catch (e){
