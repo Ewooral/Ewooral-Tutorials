@@ -32,7 +32,7 @@ function logMyErrors(error){
 console.log(".................................")
 function eaten(d){
     if(d === 'Yes' || d === 'yes' 
-    || d === 'YES' || d === 'y' || d === 'Y'){
+    // || d === 'YES' || d === 'y' || d === 'Y'){
         console.log(true)
     } else
     throw (new Error(false))
