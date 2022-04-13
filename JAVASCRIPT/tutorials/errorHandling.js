@@ -9,7 +9,7 @@ function getMonthName(mo) {
   if (months[mo]) {
     return months[mo];
   } else {
-    // throw 'Invalid Month index Keyed in. Try again!!'; // throw keyword is used here
+    throw 'Invalid Month index Keyed in. Try again!!'; // throw keyword is used here
   }
 }
 
