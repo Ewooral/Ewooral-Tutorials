@@ -40,7 +40,7 @@ function eaten(d){
    
 }
 
-try{
+// try{
 eaten("YeS")
 }
 
