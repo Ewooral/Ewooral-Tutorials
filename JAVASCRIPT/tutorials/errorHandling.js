@@ -19,7 +19,7 @@ try { // statements to try
 }
 catch (e) {
   monthName = 'unknown';
-  logMyErrors(e); // pass exception object to error handler (i.e. your own function)
+//   logMyErrors(e); // pass exception object to error handler (i.e. your own function)
 }
 
 // spits out error
