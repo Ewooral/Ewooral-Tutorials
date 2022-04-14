@@ -194,8 +194,6 @@ guest_arrivals = [(names[key], time) for key, time in enumerate(new_times)]
 
 print(guest_arrivals)
 
-# Use list comprehension and enumerate to pair guests to new times
-guest_arrivals = [(names[i], time) for i, time in enumerate(new_times)]
 
 # Map the welcome_guest function to each (guest,time) pair
 
