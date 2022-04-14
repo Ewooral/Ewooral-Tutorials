@@ -29,6 +29,7 @@ Syntax#
 To declare a method as a class method, we use the *decorator **@classmethod**. *cls* is used to refer to the class just like self is used to refer to the object of the class. You can use any other name instead of cls, but cls is used as per convention, and we will continue to use this convention in our course.
 
     Note: Just like instance methods, all class methods have at least one argument, cls.
+
  ```py
 class MyClass:
     classVariable = 'educative'
@@ -58,7 +59,7 @@ print(Player.getTeamName())
 
 ```
 
-In line 51, we have used the *@classmethod* decorator to define getTeamName as a class method and in line 56, we are calling that method, using the class name.
+In line 52, we have used the *@classmethod* decorator to define getTeamName as a class method and in line 57, we are calling that method, using the class name.
 
 ## Static methods#
 
@@ -78,23 +79,41 @@ class MyClass:
         print("I am a static method")
 ```
 Below is a code implementation for static methods:
-```
+
+```js
+class Player:
+    teamName = 'Liverpool'  # class variables
+
+    def __init__(self, name):
+        self.name = name  # creating instance variables
+
+    @staticmethod
+    def demo():
+        print("I am a static method.")
+
+
+p1 = Player('lol')
+p1.demo()
+Player.demo()
+
 
 ```
 
 Static methods do not know anything about the state of the class, i.e., they cannot modify class attributes. The purpose of a static method is to use its parameters and produce a useful result.
 
-Suppose that there is a class, BodyInfo, containing information about the physical attributes of a person. We can make a static method for calculating the BMI of any given weight and height:
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
+Suppose that there is a class, **BodyInfo**, containing information about the physical attributes of a person. We can make a static method for calculating the *BMI* of any given weight and height:
+```js
+class BodyInfo:
+
+    @staticmethod
+    def bmi(weight, height):
+        return weight / (height**2)
+
+
+weight = 75
+height = 1.8
+print(BodyInfo.bmi(weight, height))
+
+```
 
 This was all about class and static methods. In the next lesson, we will learn about access modifiers.
