@@ -12,7 +12,7 @@
             Accessing private attributes in the main code
             Not so protected
 
-In Python, we can impose access restrictions on different data members and member functions. The restrictions are specified through access modifiers. Access modifiers are tags we can associate with each member to define which parts of the program can access it directly.
+In Python, we can impose access restrictions on different data members and member functions. The restrictions are specified through **access modifiers.** Access modifiers are tags we can associate with each member to define which parts of the program can access it directly.
 
 There are two types of access modifiers in Python. Let’s take a look at them one by one.
 
@@ -23,20 +23,22 @@ There are two types of access modifiers in Python. Let’s take a look at them o
 Technically in Python, all methods and properties in a class are publicly available by default. If we want to suggest that a method should not be used publicly, we have to declare it as private explicitly.
 
 Below is an example to implement public attributes:
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
+```py
+class Employee:
+    def __init__(self, ID, salary):
+        # all properties are public
+        self.ID = ID
+        self.salary = salary
+
+    def displayID(self):
+        print("ID:", self.ID)
+
+
+Steve = Employee(3789, 2500)
+Steve.displayID()
+print(Steve.salary)
+
+```
 
 In the code above, the properties ID and salary and the method displayID() are public as they can be accessed in the class as well as outside the class.
 Class with public attributes

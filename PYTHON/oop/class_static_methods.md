@@ -80,7 +80,7 @@ class MyClass:
 ```
 Below is a code implementation for static methods:
 
-```js
+```py
 class Player:
     teamName = 'Liverpool'  # class variables
 
@@ -102,7 +102,7 @@ Player.demo()
 Static methods do not know anything about the state of the class, i.e., they cannot modify class attributes. The purpose of a static method is to use its parameters and produce a useful result.
 
 Suppose that there is a class, **BodyInfo**, containing information about the physical attributes of a person. We can make a static method for calculating the *BMI* of any given weight and height:
-```js
+```py
 class BodyInfo:
 
     @staticmethod
