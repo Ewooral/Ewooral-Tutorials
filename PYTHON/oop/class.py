@@ -1,3 +1,6 @@
+from unicodedata import name
+
+
 class Employee:
     ID = str(input("key in your ID: \n"))
     Age = str(input("Key in your Age: \n"))
@@ -36,11 +39,14 @@ class Player:
     @staticmethod
     def demo():
         print("I am a static method.")
+        play = Player("Jumah Sumaila")
+        print(play.name)
 
 
 p1 = Player('lol')
 p1.demo()
-# Player.demo()
+
+
 
     
 
