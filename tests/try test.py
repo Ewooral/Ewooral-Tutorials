@@ -1,4 +1,5 @@
 # BIGGEST NUMBER.................................
+from math import prod
 def biggestNumber(arr):
     biggestNum = arr[0]
     for index in range(1, len(arr)):
@@ -93,3 +94,19 @@ def factorial(n):
     else: return n * factorial(n-1)
 
 print("Factorial: ", factorial(1))
+
+# Array of Product again
+def arr_product(arr):
+    finalProduct = [1 for _ in range(len(arr))]
+    for i in range(len(arr)):
+        product = 1
+        for j in range(len(arr)):
+            if i == j:
+                continue
+            product = product * arr[j]
+            j = j + 1
+        finalProduct[i] = product
+        i = i + 1
+    return finalProduct
+
+print(arr_product([2, 5, 1, 4]))
