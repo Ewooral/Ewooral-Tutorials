@@ -43,7 +43,7 @@ class Soup(Food):
 
 
     def dinner(self):
-#          print(self.eat(), "and", self.soup)
+         print(self.eat(), "and", self.soup)
 
 # supper = Soup("Jollof rice", "Kenkey with Fish", "okro soup")
 # supper.dinner()
