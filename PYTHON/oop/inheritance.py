@@ -55,7 +55,7 @@ class Vehicle:  # defining the parent class
     fuelCap = 90
 
 
-# class Car(Vehicle):  # defining the child class
+class Car(Vehicle):  # defining the child class
 #     fuelCap = 50
 
 #     def display(self):
