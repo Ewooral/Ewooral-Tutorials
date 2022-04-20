@@ -35,7 +35,7 @@ class Food:
     def eat(self):
         return f"I will eat {self.kenkey}"
 
-# class Soup(Food):
+class Soup(Food):
 #     def __init__(self, jollof, kenkey, okro_soup):
 #         # calling the constructor from parent class
 #         Food.__init__(self, jollof, kenkey)
