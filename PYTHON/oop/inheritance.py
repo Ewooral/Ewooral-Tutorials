@@ -7,7 +7,7 @@ class Vehicle: # Parent Class
     def printDetails(self):
         print("Manufacturer:", self.make)
         print("Color:", self.color)
-#         print("Model:", self.model)
+        print("Model:", self.model)
 
 # # child class Car inheriting the parent class fields
 # class Car(Vehicle):
