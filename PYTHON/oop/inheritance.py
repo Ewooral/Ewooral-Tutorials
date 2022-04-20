@@ -93,7 +93,7 @@ print(".................................")
 
 class Vehicle:
     def __init__(self, make, color, model):
-#         self.make = make
+        self.make = make
 #         self.color = color
 #         self.model = model
 
