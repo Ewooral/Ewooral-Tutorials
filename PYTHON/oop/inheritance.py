@@ -73,7 +73,7 @@ print(".................................")
 
 class Vehicle:  # defining the parent class
     def display(self):  # defining display method in the parent class
-#         print("I am from the Vehicle Class")
+        print("I am from the Vehicle Class")
 
 
 # class Car(Vehicle):  # defining the child class
