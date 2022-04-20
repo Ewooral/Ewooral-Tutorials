@@ -56,7 +56,7 @@ class Vehicle:  # defining the parent class
 
 
 class Car(Vehicle):  # defining the child class
-#     fuelCap = 50
+    fuelCap = 50
 
 #     def display(self):
 #         # accessing fuelCap from the Vehicle class using super()
