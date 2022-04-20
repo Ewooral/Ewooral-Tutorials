@@ -100,7 +100,7 @@ class Vehicle:
     def printDetails(self):
         print("Manufacturer:", self.make)
         print("Color:", self.color)
-#         print("Model:", self.model)
+        print("Model:", self.model)
 
 
 # class Car(Vehicle):
