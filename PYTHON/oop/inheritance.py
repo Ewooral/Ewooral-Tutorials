@@ -69,9 +69,9 @@ newCar.display()
 
 
 print(".................................")
-# # calling parent class methods from child class
+# calling parent class methods from child class
 
-# class Vehicle:  # defining the parent class
+class Vehicle:  # defining the parent class
 #     def display(self):  # defining display method in the parent class
 #         print("I am from the Vehicle Class")
 
