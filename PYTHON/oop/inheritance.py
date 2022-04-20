@@ -33,7 +33,7 @@ class Food:
         self.jollof = jollof
 
     def eat(self):
-#         return f"I will eat {self.kenkey}"
+        return f"I will eat {self.kenkey}"
 
 # class Soup(Food):
 #     def __init__(self, jollof, kenkey, okro_soup):
