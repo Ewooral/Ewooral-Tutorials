@@ -14,7 +14,7 @@ class Car(Vehicle):
     def __init__(self, make, color, model, doors):
         # calling the constructor from parent class
         Vehicle.__init__(self, make, color, model)
-#         self.doors = doors
+        self.doors = doors
 
 #     def printCarDetails(self):
 #         self.printDetails()
