@@ -49,7 +49,7 @@ supper = Soup("Jollof rice", "Kenkey with Fish", "okro soup")
 supper.dinner()
 
 
-# print(".................................")
+print(".................................")
 # # using super() function
 # class Vehicle:  # defining the parent class
 #     fuelCap = 90
