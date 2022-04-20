@@ -64,7 +64,7 @@ class Car(Vehicle):  # defining the child class
 
         # accessing fuelCap from the Car class using self
         print("Fuel cap from the Car Class:", self.fuelCap)
-# newCar = Car()
+newCar = Car()
 # newCar.display()
 
 
