@@ -12,8 +12,8 @@ class Vehicle: # Parent Class
 # child class Car inheriting the parent class fields
 class Car(Vehicle):
     def __init__(self, make, color, model, doors):
-#         # calling the constructor from parent class
-#         Vehicle.__init__(self, make, color, model)
+        # calling the constructor from parent class
+        Vehicle.__init__(self, make, color, model)
 #         self.doors = doors
 
 #     def printCarDetails(self):
