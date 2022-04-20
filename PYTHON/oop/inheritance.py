@@ -21,7 +21,7 @@ class Car(Vehicle):
         print("Doors:", self.doors)
 
 
-# obj1 = Car("Suzuki", "Grey", "2015", 4)
+obj1 = Car("Suzuki", "Grey", "2015", 4)
 # obj1.printCarDetails()
 
 
