@@ -30,7 +30,7 @@ print(".................................")
 class Food:
     def __init__(self, jollof, kenkey):
         self.kenkey = kenkey
-#         self.jollof = jollof
+        self.jollof = jollof
 
 #     def eat(self):
 #         return f"I will eat {self.kenkey}"
