@@ -52,7 +52,7 @@ supper.dinner()
 print(".................................")
 # using super() function
 class Vehicle:  # defining the parent class
-#     fuelCap = 90
+    fuelCap = 90
 
 
 # class Car(Vehicle):  # defining the child class
