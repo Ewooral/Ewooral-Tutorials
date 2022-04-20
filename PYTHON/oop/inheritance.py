@@ -32,7 +32,7 @@ class Food:
         self.kenkey = kenkey
         self.jollof = jollof
 
-#     def eat(self):
+    def eat(self):
 #         return f"I will eat {self.kenkey}"
 
 # class Soup(Food):
