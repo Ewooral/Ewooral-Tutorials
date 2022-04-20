@@ -98,7 +98,7 @@ class Vehicle:
         self.model = model
 
     def printDetails(self):
-#         print("Manufacturer:", self.make)
+        print("Manufacturer:", self.make)
 #         print("Color:", self.color)
 #         print("Model:", self.model)
 
