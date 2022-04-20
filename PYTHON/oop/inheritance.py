@@ -103,50 +103,50 @@ class Vehicle:
         print("Model:", self.model)
 
 
-# class Car(Vehicle):
-#     def __init__(self, make, color, model, doors):
-#         super().__init__(make, color, model)
-#         self.doors = doors
+class Car(Vehicle):
+    def __init__(self, make, color, model, doors):
+        super().__init__(make, color, model)
+        self.doors = doors
 
-#     def printCarDetails(self):
-#         self.printDetails()
-#         print("Door:", self.doors)
-
-
-# obj1 = Car("Suzuki", "Grey", "2015", 4)
-# obj1.printCarDetails()
+    def printCarDetails(self):
+        self.printDetails()
+        print("Door:", self.doors)
 
 
-# print(".................................")
+obj1 = Car("Suzuki", "Grey", "2015", 4)
+obj1.printCarDetails()
+
+
+print(".................................")
 
 
 
-# '''Note: It is not necessary that the call to super()
-#   in a method or an initializer is made in the first line of the method.
-# '''
+'''Note: It is not necessary that the call to super()
+  in a method or an initializer is made in the first line of the method.
+'''
 
 
-# class Vehicle:
-#     def __init__(self, make, color, model):
-#         self.make = make
-#         self.color = color
-#         self.model = model
+class Vehicle:
+    def __init__(self, make, color, model):
+        self.make = make
+        self.color = color
+        self.model = model
 
-#     def printDetails(self):
-#         print("Manufacturer:", self.make)
-#         print("Color:", self.color)
-#         print("Model:", self.model)
-
-
-# class Car(Vehicle):
-#     def __init__(self, make, color, model, doors):
-#         self.doors = doors
-#         super().__init__(make, color, model)
-
-#     def printCarDetails(self):
-#         self.printDetails()
-#         print("Door:", self.doors)
+    def printDetails(self):
+        print("Manufacturer:", self.make)
+        print("Color:", self.color)
+        print("Model:", self.model)
 
 
-# obj1 = Car("Suzuki", "Grey", "2015", 4)
-# obj1.printCarDetails()
+class Car(Vehicle):
+    def __init__(self, make, color, model, doors):
+        self.doors = doors
+        super().__init__(make, color, model)
+
+    def printCarDetails(self):
+        self.printDetails()
+        print("Door:", self.doors)
+
+
+obj1 = Car("Suzuki", "Grey", "2015", 4)
+obj1.printCarDetails()
