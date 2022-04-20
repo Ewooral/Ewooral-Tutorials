@@ -80,7 +80,7 @@ class Car(Vehicle):  # defining the child class
     # defining display method in the child class
     def display(self):
         super().display()
-#         print("I am from the Car Class")
+        print("I am from the Car Class")
 
 
 # newCar = Car()
