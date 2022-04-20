@@ -2,7 +2,7 @@ class Vehicle: # Parent Class
     def __init__(self, make, color, model):
         self.make = make
         self.color = color
-#         self.model = model
+        self.model = model
 
 #     def printDetails(self):
 #         print("Manufacturer:", self.make)
