@@ -76,7 +76,7 @@ class Vehicle:  # defining the parent class
         print("I am from the Vehicle Class")
 
 
-# class Car(Vehicle):  # defining the child class
+class Car(Vehicle):  # defining the child class
 #     # defining display method in the child class
 #     def display(self):
 #         super().display()
