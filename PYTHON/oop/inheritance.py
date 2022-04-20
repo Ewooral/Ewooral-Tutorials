@@ -86,7 +86,7 @@ class Car(Vehicle):  # defining the child class
 newCar = Car()
 newCar.display()
 
-# print(".................................")
+print(".................................")
 
 # ### Using super() with initializers#
 
