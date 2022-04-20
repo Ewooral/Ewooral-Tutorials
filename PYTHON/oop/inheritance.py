@@ -25,7 +25,7 @@ obj1 = Car("Suzuki", "Grey", "2015", 4)
 obj1.printCarDetails()
 
 
-# print(".................................")
+print(".................................")
 # ### Example 2
 # class Food:
 #     def __init__(self, jollof, kenkey):
