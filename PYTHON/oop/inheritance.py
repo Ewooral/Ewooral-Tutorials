@@ -28,7 +28,7 @@ obj1.printCarDetails()
 print(".................................")
 ### Example 2
 class Food:
-#     def __init__(self, jollof, kenkey):
+    def __init__(self, jollof, kenkey):
 #         self.kenkey = kenkey
 #         self.jollof = jollof
 
