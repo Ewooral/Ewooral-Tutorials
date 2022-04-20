@@ -83,7 +83,7 @@ class Car(Vehicle):  # defining the child class
         print("I am from the Car Class")
 
 
-# newCar = Car()
+newCar = Car()
 # newCar.display()
 
 # print(".................................")
