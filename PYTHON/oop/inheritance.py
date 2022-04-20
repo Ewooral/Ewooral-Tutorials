@@ -22,7 +22,7 @@ class Car(Vehicle):
 
 
 obj1 = Car("Suzuki", "Grey", "2015", 4)
-# obj1.printCarDetails()
+obj1.printCarDetails()
 
 
 # print(".................................")
