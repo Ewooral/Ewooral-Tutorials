@@ -99,7 +99,7 @@ class Vehicle:
 
     def printDetails(self):
         print("Manufacturer:", self.make)
-#         print("Color:", self.color)
+        print("Color:", self.color)
 #         print("Model:", self.model)
 
 
