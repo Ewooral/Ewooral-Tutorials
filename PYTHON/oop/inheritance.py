@@ -1,5 +1,5 @@
 class Vehicle: # Parent Class
-#     def __init__(self, make, color, model):
+    def __init__(self, make, color, model):
 #         self.make = make
 #         self.color = color
 #         self.model = model
