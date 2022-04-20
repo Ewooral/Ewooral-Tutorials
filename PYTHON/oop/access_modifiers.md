@@ -77,29 +77,31 @@ Code explanation#
 
     To ensure that no one from the outside knows about this private property, the error does not reveal its identity.
 
-Class with private attributes
-Private methods#
+
+## Private methods#
 
 Let’s see a code example for implementing private methods:
 
     private_methods
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
+```py
+class Employee:
+    def __init__(self, ID, salary):
+        self.ID = ID
+        self.__salary = salary  # salary is a private property
+
+    def displaySalary(self):  # displaySalary is a public method
+        print("Salary:", self.__salary)
+
+    def __displayID(self):  # displayID is a private method
+        print("ID:", self.ID)
+
+
+Steve = Employee(3789, 2500)
+Steve.displaySalary()
+Steve.__displayID()  # this will generate an error
+
+```
 Code explanation#
 
     ID is a public property, so it can be accessed from outside and inside the class.
@@ -120,20 +122,22 @@ Class with private methods
 
     Note: Methods are usually public since they provide an interface for the class properties and the main code to interact with each other.
 
-Accessing private attributes in the main code#
+### Accessing private attributes in the main code#
 
 As discussed above, it is not common to have private variables in Python.
 
 Properties and methods with the __ prefix are usually present to make sure that the user does not carelessly access them. Python allows for free hand to the user to avoid any future complications in the code. If the user believes it is absolutely necessary to access a private property or a method, they can access it using the _<ClassName> prefix for the property or method. An example of this is shown below:
-1
-2
-3
-4
-5
-6
-7
-8
-9
+```py
+class Employee:
+    def __init__(self, ID, salary):
+        self.ID = ID
+        self.__salary = salary  # salary is a private property
+
+
+Steve = Employee(3789, 2500)
+print(Steve._Employee__salary)  # accessing a private property
+
+```
 Not so protected#
 
 Protected properties and methods in other languages can be accessed by classes and their subclasses, which will be discussed later in the course. As we have seen, Python does not have a strict rule for accessing properties and methods, so it does not have the protected access modifier.
