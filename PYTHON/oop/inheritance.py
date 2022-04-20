@@ -17,7 +17,7 @@ class Car(Vehicle):
         self.doors = doors
 
     def printCarDetails(self):
-#         self.printDetails()
+        self.printDetails()
 #         print("Doors:", self.doors)
 
 
