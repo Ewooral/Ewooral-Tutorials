@@ -16,7 +16,7 @@ class Car(Vehicle):
         Vehicle.__init__(self, make, color, model)
         self.doors = doors
 
-#     def printCarDetails(self):
+    def printCarDetails(self):
 #         self.printDetails()
 #         print("Doors:", self.doors)
 
