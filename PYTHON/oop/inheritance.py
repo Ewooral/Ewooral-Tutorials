@@ -84,7 +84,7 @@ class Car(Vehicle):  # defining the child class
 
 
 newCar = Car()
-# newCar.display()
+newCar.display()
 
 # print(".................................")
 
