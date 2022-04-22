@@ -39,7 +39,7 @@ Let’s implement the three classes illustrated above:
 
 In hierarchical inheritance, more than one class extends, as per the requirement of the design, from the same base class. The common attributes of these child classes are implemented inside the base class.
 
-Example:
+## Example:
 
     A Car IS A Vehicle
     A Truck IS A Vehicle
@@ -51,7 +51,7 @@ Below is a code example of hierarchical inheritance.
 
 When a class is derived from more than one base class, i.e., when a class has more than one immediate parent class, it is called multiple inheritance.
 
-Example:
+## Example:
 
     HybridEngine IS A ElectricEngine.
     HybridEngine IS A CombustionEngine as well.
