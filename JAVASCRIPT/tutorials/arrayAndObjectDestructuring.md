@@ -234,9 +234,10 @@ console.log(bb); // 5
 
 Unpacking properties from objects passed as a function parameter
 
-Objects passed into function parameters can also be unpacked into variables, which may then be accessed within the function body. As for object assignment, the destructuring syntax allows for the new variable to have the same name or a different name than the original property, and to assign default values for the case when the original object does not define the property.
+// Objects passed into function parameters can also be unpacked into variables, which may then be accessed within the function body. As for object assignment, the destructuring syntax allows for the new variable to have the same name or a different name than the original property, and to assign default values for the case when the original object does not define the property.
 
-Consider this object, which contains information about a user.
+// Consider this object, which contains information about a user.
+
 
 const user = {
   id: 42,

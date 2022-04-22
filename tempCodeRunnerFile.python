@@ -1,59 +1,28 @@
-class Node:
-    def __init__(self, value = None) -> None:
-        self.value = value;
-        self.next = None;
-    
-class SinglyLL:
-    def __init__(self) -> None:
-        self.head = None;
-        self.tail = None;
+import pandas as pd 
 
-    def __iter__(self):
-        node = self.head;
-        while node:
-            yield node;
-            node = node.next;
-    
-    def insertLL(self, value, location):
-        newNode = Node(value);
-        if self.head is None:
-            self.head = newNode;
-            self.tail = newNode;
-        else:
-            if location == 0:
-                newNode.next = self.head;
-                self.head = newNode;
-            elif location == 1:
-                    newNode.next = None;
-                    self.tail.next = newNode;
-                    self.tail = newNode;
-            else:
-                tempNode = self.head
-                index = 0;
-                while index < location - 1:
-                    tempNode = tempNode.next
-                    index += 1;
-                nextNode = tempNode.next;
-                tempNode.next = newNode;
-                newNode.next = nextNode;
-    def traverseSLL(self):
-        if self.head is None:
-            print("No head.Nothing to traverse!!")
-        else:
-            while self.head is not None:
-                print(self.head.value)
-                self.head = self.head.next
-                
+na = ['Elijah', 'Elisha', 'Mary', 'Emma', 'David']
+addr = ['London, UK', 'Canada', 'China', 'Germany, Hamburg', 'USA']
+cont = [+44555332384, +12300444833, +86747282993, +46729882939, +12283489304]
+occup = ["Software Engineer", "Executive Director", "Medical Practitioner", "Senior Engineer", "Engineer Manager" ]
+cmpny = ["Bloomberg", "Pure-Gold, Ca", "Huoung Medical Center", "Amazon", "Newmont Ltd."]
 
-newSinglyLL = SinglyLL();
-newSinglyLL.insertLL(45, 1);
-newSinglyLL.insertLL(50, 1);
-newSinglyLL.insertLL(70, 1);
-newSinglyLL.insertLL(100, 0);
-newSinglyLL.insertLL(10, 3); 
-newSinglyLL.insertLL(2, 2); 
+dic = {
+    "NAME": na,
+    "ADDRESS": addr,
+    "CONTACT": cont,
+    "COMPANY": cmpny,
+    "OCCUPATION": occup
+}
 
+newDic = pd.DataFrame(dic)
+print(newDic)
 
-print([node.value for node in newSinglyLL])
+"""
+ name           address      contact                company            occupation
+0  Elijah        London, UK  44555332384              Bloomberg     Software Engineer       
+1  Elisha            Canada  12300444833          Pure-Gold, Ca    Executive Director       
+2    Mary             China  86747282993  Huoung Medical Center  Medical Practitioner       
+3    Emma  Germany, Hamburg  46729882939                 Amazon       Senior Engineer       
+4   David               USA  12283489304           Newmont Ltd.      Engineer Manager    
+"""
 
-newSinglyLL.traverseSLL()
