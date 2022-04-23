@@ -4,7 +4,7 @@ class Account:
         self.balance = balance 
 
     def tit(self):
-        print(self.title,"\n", self.balance)
+        print(f"{self.title} \n {self.balance}")
 
 
 class SavingsAccount(Account):
@@ -13,7 +13,7 @@ class SavingsAccount(Account):
         self.interestRate = interestRate
 
     def intR(self):
-        print("Interest Rate: ", self.interestRate)
+        print(f"Interest Rate: {self.interestRate}")
 
     def Tit(self):
         return self.tit()
