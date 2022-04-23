@@ -9,7 +9,7 @@ Task 2#
 
 Implement a method, area(), in the Rectangle class that returns the product of length and width. See the formula below:
 
-Area=length×widthArea = length \times widthArea=length×width
+Area = length * width
 
 Sample properties
 
@@ -24,7 +24,7 @@ Task 3#
 
 Implement a method, perimeter(), in the Rectangle class that returns two times the sum of length and width. See the formula below:
 
-Perimeter=2×(length+width)Perimeter = 2\times (length + width)Perimeter=2×(length+width)
+Perimeter = 2 * (length + width)
 
 Sample properties
 
