@@ -110,16 +110,16 @@ class SavingsAccount(Account):
 
 
 # Acc = Account("Moses", 500)
-OpenNewSavingsAccout = SavingsAccount("Moses", 500, 5)
+newSavingsAccount = SavingsAccount("Moses", 500, 5,)
 
-OpenNewSavingsAccout.getBalance()
+newSavingsAccount.getBalance()
 
-OpenNewSavingsAccout.depositAmount(400)
+newSavingsAccount.depositAmount(400)
 
-OpenNewSavingsAccout.getBalance()
+newSavingsAccount.getBalance()
 
-OpenNewSavingsAccout.withdrawal(200)
+newSavingsAccount.withdrawal(200)
 
-OpenNewSavingsAccout.getBalance()
+newSavingsAccount.getBalance()
 
-OpenNewSavingsAccout.interestAmount()
+newSavingsAccount.interestAmount()
