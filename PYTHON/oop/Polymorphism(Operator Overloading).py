@@ -9,7 +9,7 @@ class Com:
 
     def __sub__(self, other):  # overloading the `-` operator
         temp = Com(self.real - other.real, self.imag - other.imag)
-#         return temp
+        return temp
 
 
 # obj1 = Com(3, 7)
