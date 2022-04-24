@@ -20,7 +20,7 @@ class Circle():
 
     # method to calculate Area
     def getArea(self):
-        return (self.radius * self.radius * 3.142)
+        # return (self.radius * self.radius * 3.142)
 
 
 shapes = [Rectangle(6, 10), Circle(7)]
