@@ -1,28 +1,10 @@
-import pandas as pd 
+# Do while Loops
 
-na = ['Elijah', 'Elisha', 'Mary', 'Emma', 'David']
-addr = ['London, UK', 'Canada', 'China', 'Germany, Hamburg', 'USA']
-cont = [+44555332384, +12300444833, +86747282993, +46729882939, +12283489304]
-occup = ["Software Engineer", "Executive Director", "Medical Practitioner", "Senior Engineer", "Engineer Manager" ]
-cmpny = ["Bloomberg", "Pure-Gold, Ca", "Huoung Medical Center", "Amazon", "Newmont Ltd."]
-
-dic = {
-    "NAME": na,
-    "ADDRESS": addr,
-    "CONTACT": cont,
-    "COMPANY": cmpny,
-    "OCCUPATION": occup
-}
-
-newDic = pd.DataFrame(dic)
-print(newDic)
-
-"""
- name           address      contact                company            occupation
-0  Elijah        London, UK  44555332384              Bloomberg     Software Engineer       
-1  Elisha            Canada  12300444833          Pure-Gold, Ca    Executive Director       
-2    Mary             China  86747282993  Huoung Medical Center  Medical Practitioner       
-3    Emma  Germany, Hamburg  46729882939                 Amazon       Senior Engineer       
-4   David               USA  12283489304           Newmont Ltd.      Engineer Manager    
-"""
-
+a = 2
+index = 40
+do: print("Starting...") 
+while a < 20:
+    if a > index:
+        break
+    a += 1
+    print(a)
