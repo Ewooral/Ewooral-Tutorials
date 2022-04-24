@@ -15,7 +15,7 @@ class Rectangle():
 class Circle():
     # initializer
     def __init__(self, radius=0):
-        self.radius = radius
+        # self.radius = radius
         self.sides = 0
 
     # method to calculate Area
