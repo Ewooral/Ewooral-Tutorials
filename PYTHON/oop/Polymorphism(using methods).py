@@ -8,7 +8,7 @@ class Rectangle():
         self.sides = 4
 
     # method to calculate Area
-    def getArea(self):
+    # def getArea(self):
         return (self.width * self.height)
 
 
