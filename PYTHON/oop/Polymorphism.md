@@ -118,8 +118,8 @@ This was one way of achieving polymorphism. In the next lesson, we will implemen
 
 
 
-Implement polymorphism using the OOP concepts.
-We'll cover the following
+# Implement polymorphism using the OOP concepts.
+    We'll cover the following
 
         Example
         Implementation
@@ -233,10 +233,59 @@ print("Area of rectangle is:", str(shapes[0].getArea()))
 print("Area of circle is:", str(shapes[1].getArea()))
 
 ```
-Explanation#
+# Explanation#
 
 In the main function, we have declared a list that has two objects in it. The first object is a Rectangle with width 6 and height 10. The second object is a Circle of radius 7.
 
 The getArea() method returns the area of the respective shape. This is Polymorphism: having specialized implementations of the same methods for each class.
 
 In the next lesson, we’ll be learning about the process of method overriding.
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ..............................................................METHOD OVERRIDING..............................................................
+
+# Method Overriding
+
+Learn about what method overriding is and how to achieve it in Python.
+We'll cover the following
+
+        A brief introduction
+        Advantages and key features of method overriding
+
+## A brief introduction#
+
+    Method overriding is the process of redefining a parent class’s method in a subclass.
+
+In other words, if a subclass provides a specific implementation of a method that had already been defined in one of its parent classes, it is known as method overriding.
+
+In the previous example, the Rectangle and Circle classes were overriding the getArea() method from the Shape class.
+
+In this case:
+
+    The method in the parent class is called the overridden method.
+    The methods in the child classes are called the overriding methods.
+
+We have already seen the implementation of the getArea() method in the previous lesson, which depicts the concept of overriding. The highlighted portions show where method overriding is happening.
+
+Let’s have a look!
+Advantages and key features of method overriding#
+
+    The derived classes can give their own specific implementations to inherited methods without modifying the parent class methods.
+
+    For any method, a child class can use the implementation in the parent class or make its own implementation.
+
+    Method overriding needs inheritance, and there should be at least one derived class to implement it.
+
+    The methods in the derived classes usually have a dissimilar implementation.
+
