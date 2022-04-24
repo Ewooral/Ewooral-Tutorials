@@ -27,3 +27,9 @@
 # don't forget to add 
     type="module" to your index.js script tag
     E.g. <script type="module" src="App.js"></script>
+
+# you can ignore import React from....
+
+# configure Eslint with JSX
+    npm install -D eslint-plugin-import@2.25.4 eslint-plugin-jsx-a11y@6.5.1 eslint-plugin-react@7.28.0
+  
