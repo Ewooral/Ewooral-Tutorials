@@ -133,89 +133,44 @@ So far, we have learned that we can add new data and methods to a class through 
 Example#
 
 Consider the example of a Shape class, which is the base class while many shapes like Rectangle and Circle extending from the base class are derived classes. These derived classes inherit the getArea() method and provide a shape-specific implementation, which calculates its area.
-Rectangle and circle inherit from shape
-Implementation#
+
+     Rectangle and circle inherit from shape
+
+## Implementation#
 
 We will be implementing the parent class first, and then the child classes.
-Shape class#
 
-The Shape class has only one public method called getArea().
+## Shape class#
+
+    The Shape class has only one public method called getArea().
 
 Let’s look at the implementation of the Shape class:
-1
-2
-3
-4
-5
-6
-7
-Rectangle class#
+```py
+
+```
+## Rectangle class#
 
 Let’s look at the implementation of the Rectangle class:
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
+```py
 
-The Rectangle class is extended from the Shape class. It inherits the sides property from the Shape class and defines new properties, width and height. The method getArea() returns the area of the rectangle.
-Circle class#
+```
+
+    The Rectangle class is extended from the Shape class. It inherits the sides property from the Shape 
+    class and defines new properties, width and height. The method getArea() returns the area of the rectangle.
+
+## Circle class#
 
 Let’s look at the implementation of the Circle class:
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
+```py
 
+```
 The Circle class is extended from the Shape class. It inherits the sides property from the Shapes class and defines only one new property, radius. The method getArea() returns the area of the circle.
 Complete program#
 
 See what happens, by merging all the classes and calling the getArea() method:
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
+```py
+
+```
 Explanation#
 
 In the main function, we have declared a list that has two objects in it. The first object is a Rectangle with width 6 and height 10. The second object is a Circle of radius 7.
