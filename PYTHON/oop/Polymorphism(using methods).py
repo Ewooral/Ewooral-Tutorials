@@ -14,7 +14,7 @@ class Rectangle():
 
 class Circle():
     # initializer
-    def __init__(self, radius=0):
+    # def __init__(self, radius=0):
         self.radius = radius
         self.sides = 0
 
