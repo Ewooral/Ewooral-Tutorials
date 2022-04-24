@@ -278,14 +278,14 @@ In this case:
 
 We have already seen the implementation of the getArea() method in the previous lesson, which depicts the concept of overriding. The highlighted portions show where method overriding is happening.
 
-Let’s have a look!
-Advantages and key features of method overriding#
 
-    The derived classes can give their own specific implementations to inherited methods without modifying the parent class methods.
+## Advantages and key features of method overriding#
 
-    For any method, a child class can use the implementation in the parent class or make its own implementation.
+    1. The derived classes can give their own specific implementations to inherited methods without modifying the parent class methods.
 
-    Method overriding needs inheritance, and there should be at least one derived class to implement it.
+    2. For any method, a child class can use the implementation in the parent class or make its own implementation.
+
+    3. Method overriding needs inheritance, and there should be at least one derived class to implement it.
 
     The methods in the derived classes usually have a dissimilar implementation.
 
