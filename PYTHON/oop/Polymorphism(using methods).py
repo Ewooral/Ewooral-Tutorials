@@ -5,7 +5,7 @@ class Rectangle():
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        # self.sides = 4
+        self.sides = 4
 
     # method to calculate Area
     def getArea(self):
