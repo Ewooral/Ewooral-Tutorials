@@ -12,7 +12,7 @@ class Com:
         return temp
 
 
-# obj1 = Com(3, 7)
+obj1 = Com(3, 7)
 # obj2 = Com(2, 5)
 
 # obj3 = obj1 + obj2
