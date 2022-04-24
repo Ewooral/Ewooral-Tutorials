@@ -267,7 +267,7 @@ We'll cover the following
 
     Method overriding is the process of redefining a parent class’s method in a subclass.
 
-In other words, if a subclass provides a specific implementation of a method that had already been defined in one of its parent classes, it is known as method overriding.
+In other words, if a subclass provides a specific implementation of a method that had already been defined in one of its parent classes, it is known as **method overriding**.
 
 In the previous example, the Rectangle and Circle classes were overriding the getArea() method from the Shape class.
 
