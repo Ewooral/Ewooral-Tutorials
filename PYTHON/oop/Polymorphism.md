@@ -41,7 +41,7 @@ In the next lesson, we will learn how to implement polymorphism in OOP.
 
 
 
-..............................................................Implementing Polymorphism Using Methods...............................................................
+# ..............................................................Implementing Polymorphism Using Methods...............................................................
 
 
 
@@ -98,8 +98,128 @@ Explanation#
 
     The first object is a Rectangle with width 6 and height 10, and the second object is a Circle of radius 7.
 
-    On lines 10 and 21, both the classes have the method getArea() but the execution of this method is different for each class.
+    On lines 72 and 83, both classes have the method getArea() but the execution of this method is different for each class.
 
-    Method calls on lines 27 and 30 look identical, but different methods are called. Thus, we have achieved polymorphism.
+    Method calls on lines 72 and 83 look identical, but different methods are called. Thus, we have achieved polymorphism.
 
 This was one way of achieving polymorphism. In the next lesson, we will implement polymorphism using a more efficient and commonly used approach: polymorphism using inheritance.
+
+
+
+
+
+
+
+
+
+
+
+# ..............................................................Implementing Polymorphism Using Inheritance..............................................................
+
+
+
+Implement polymorphism using the OOP concepts.
+We'll cover the following
+
+        Example
+        Implementation
+            Shape class
+            Rectangle class
+            Circle class
+        Complete program
+            Explanation
+
+So far, we have learned that we can add new data and methods to a class through inheritance. But what if we want our derived class to inherit a method from the base class and have a different implementation for it? That is when polymorphism, a fundamental concept in the OOP paradigm, comes into play.
+Example#
+
+Consider the example of a Shape class, which is the base class while many shapes like Rectangle and Circle extending from the base class are derived classes. These derived classes inherit the getArea() method and provide a shape-specific implementation, which calculates its area.
+Rectangle and circle inherit from shape
+Implementation#
+
+We will be implementing the parent class first, and then the child classes.
+Shape class#
+
+The Shape class has only one public method called getArea().
+
+Let’s look at the implementation of the Shape class:
+1
+2
+3
+4
+5
+6
+7
+Rectangle class#
+
+Let’s look at the implementation of the Rectangle class:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+The Rectangle class is extended from the Shape class. It inherits the sides property from the Shape class and defines new properties, width and height. The method getArea() returns the area of the rectangle.
+Circle class#
+
+Let’s look at the implementation of the Circle class:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+
+The Circle class is extended from the Shape class. It inherits the sides property from the Shapes class and defines only one new property, radius. The method getArea() returns the area of the circle.
+Complete program#
+
+See what happens, by merging all the classes and calling the getArea() method:
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+Explanation#
+
+In the main function, we have declared a list that has two objects in it. The first object is a Rectangle with width 6 and height 10. The second object is a Circle of radius 7.
+
+The getArea() method returns the area of the respective shape. This is Polymorphism: having specialized implementations of the same methods for each class.
+
+In the next lesson, we’ll be learning about the process of method overriding.
