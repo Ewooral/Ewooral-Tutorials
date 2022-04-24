@@ -4,8 +4,8 @@ class Com:
         self.imag = imag
 
     def __add__(self, other):  # overloading the `+` operator
-#         temp = Com(self.real + other.real, self.imag + other.imag)
-#         return temp
+        temp = Com(self.real + other.real, self.imag + other.imag)
+        return temp
 
 #     def __sub__(self, other):  # overloading the `-` operator
 #         temp = Com(self.real - other.real, self.imag - other.imag)
