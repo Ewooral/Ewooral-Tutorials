@@ -1,7 +1,7 @@
 class Com:
     def __init__(self, real=0, imag=0):
         self.real = real
-#         self.imag = imag
+        self.imag = imag
 
 #     def __add__(self, other):  # overloading the `+` operator
 #         temp = Com(self.real + other.real, self.imag + other.imag)
