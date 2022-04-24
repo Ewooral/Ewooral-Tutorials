@@ -3,6 +3,7 @@ class Shape:
     def __init__(self):  # initializing sides of all shapes to 0
         self.sides = 0
 
+    # overridden method
     def getArea(self):
         pass
 
@@ -14,7 +15,7 @@ class Rectangle(Shape):  # derived from Shape class
         self.height = height
         self.sides = 4
 
-    # method to calculate Area
+    # overriding method that calculates the area of a rectangle
     def getArea(self):
         return (self.width * self.height)
 
@@ -24,7 +25,7 @@ class Circle(Shape):  # derived from Shape class
     def __init__(self, radius=0):
         self.radius = radius
 
-    # method to calculate Area
+    #  overriding method to calculate Area of a circle
     def getArea(self):
         return (self.radius * self.radius * 3.142)
 
