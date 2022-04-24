@@ -1,5 +1,5 @@
 class Com:
-#     def __init__(self, real=0, imag=0):
+    def __init__(self, real=0, imag=0):
 #         self.real = real
 #         self.imag = imag
 
