@@ -9,7 +9,7 @@ class Rectangle():
 
     # method to calculate Area
     def getArea(self):
-        # return (self.width * self.height)
+        return (self.width * self.height)
 
 
 class Circle():
