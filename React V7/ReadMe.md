@@ -33,3 +33,6 @@
 # configure Eslint with JSX
     npm install -D eslint-plugin-import@2.25.4 eslint-plugin-jsx-a11y@6.5.1 eslint-plugin-react@7.28.0
   
+
+# Hooks
+    Do not put hooks inside if statement or loops
