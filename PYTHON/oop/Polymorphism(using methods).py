@@ -1,5 +1,5 @@
 # Implementing Polymorphism Using Methods
-class Rectangle():
+# class Rectangle():
 
     # initializer
     def __init__(self, width=0, height=0):
