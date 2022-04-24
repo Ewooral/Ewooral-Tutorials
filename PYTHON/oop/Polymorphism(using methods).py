@@ -27,5 +27,5 @@ shapes = [Rectangle(6, 10), Circle(7)]
 print("Sides of a rectangle are", str(shapes[0].sides))
 print("Area of rectangle is:", str(shapes[0].getArea()))
 
-# print("Sides of a circle are", str(shapes[1].sides))
+print("Sides of a circle are", str(shapes[1].sides))
 print("Area of circle is:", str(shapes[1].getArea()))
