@@ -2,14 +2,14 @@
     "extends": [
         "eslint:recommended",
         "plugin:import/errors",
-        "plugins:react/recommended",
+        "plugin:react/recommended",
         "plugin:jsx-a11y/recommended",
         "plugin:react-hooks/recommended",
         "prettier"
     ],
     "rules":{
         "react/prop-types": "off",
-        "react/react-in-jsx-scope": "off",
+        "react/react-in-jsx-scope": "off"
     },
     "plugins":["react","import", "jsx-a11y", "react-hooks"],
     "parserOptions": {
