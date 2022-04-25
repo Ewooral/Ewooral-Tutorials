@@ -17,9 +17,15 @@ const Name = () => {
         name="firstname" 
         id="firstname"
         value={firstname}
-        onChange={(e)=>updateFirstname(e.target.value)}
+        onChange={(e)=> updateFirstname(e.target.value)}
         >
-        
+        <option />
+        {Firstname.map((firstname) => (
+          <option key={firstname} value={firstname}> 
+           {firstname}
+          </option>
+        ))}
+
         </select>
       </label>
     </>
