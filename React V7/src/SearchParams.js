@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 
 
@@ -6,13 +6,29 @@ const SearchParams = () => {
 
     const ANIMALS = ["bird", "cat", "dog", "rabbit", "fish"];
     const [location, setLocation] = useState("")
-    const [Animal, setAnimal] = useState("")
+    const [animal, setAnimal] = useState("")
+    const [breed, setBreed]  = useState("")
+    const breeds = []
+    const [pets, setPets] = useState([])
+
+    useEffect(() => {
+      requestPets();
+    }, [])
+
+    async function requestPets() {
+      const res = await fetch(
+        `http://pets-v2.dev-apis.com/pets?animal=${animal}&breed=${breed}&location=${location}`
+        )
+        const json = await res.json();
+    }
  
     
 
   return (
     <div className="search-params">
         <form>
+
+            {/* ............................LOCATION....................... */}
             <label htmlFor="location">
                 Location
                 {/* {location} */}
@@ -23,6 +39,9 @@ const SearchParams = () => {
                 onChange={ e => setLocation(e.target.value)} 
                 />
             </label>
+
+
+            {/* ...........................ANIMAL.......................... */}
             <label htmlFor="animal">
               Animal 
               <select 
@@ -41,16 +60,42 @@ const SearchParams = () => {
               >
 
               <option />
-              {ANIMALS.map(animal =>{
-                return (
+              {ANIMALS.map(animal => (
                 <option key={animal} value={animal}>
                   {animal}
                 </option>
-                )
-                })}
+                ))}
 
               </select>
             </label>
+
+            {/* .......................BREED........................ */}
+            <label htmlFor="breed">
+              Breed 
+              <select 
+              name="breed" 
+              id="breed"
+              value={breed}
+              onChange={ e => {
+                setBreed(e.target.value)
+                }}
+
+              onBlur={ e => {
+                setAnimal(e.target.value)
+                }}
+              >
+
+              <option />
+              {breeds.map(allBreed => (
+                <option key={allBreed} value={allBreed}>
+                  {allBreed}
+                </option>
+                ))}
+
+              </select>
+            </label>
+
+             {/* .......................END LABEL........................ */}
             <button>Submit</button>
         </form>
     </div>
