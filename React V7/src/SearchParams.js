@@ -7,9 +7,10 @@ const Lastname = ['Boahen', 'Jackson', 'Dawson', 'Asante', 'Owusu', 'Ajapong', '
 
 const Name = () => {
   const [firstname, updateFirstname] = useState("")
-  const [lasttname, updateLastname] = useState("")
+  const [lastname, updateLastname] = useState("")
   return (
     <>
+    {/* ....................................FIRSTNAME................................... */}
       <label htmlFor="firstname">
         FIRSTNAME 
 
@@ -28,6 +29,27 @@ const Name = () => {
 
         </select>
       </label>
+
+    {/* ....................................LASTNAME................................... */}
+      <label htmlFor="lastname">
+        LASTNAME 
+
+        <select 
+        name="lastname" 
+        id="lastname"
+        value={lastname}
+        onChange={(e)=> updateLastname(e.target.value)}
+        >
+        <option />
+        {Lastname.map((lastname) => (
+          <option key={lastname} value={lastname}> 
+           {lastname}
+          </option>
+        ))}
+
+        </select>
+      </label>
+
     </>
   )
 }
