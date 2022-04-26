@@ -1,5 +1,5 @@
 //  Creating a custom Hook
-import {useState, useEffect} from "react"
+import {useState, useEffect, useDebugValue} from "react"
 
 const localCache = {}
 
@@ -7,6 +7,7 @@ const localCache = {}
 export default function useBreedList(animal){
     const [breedList, updateBreedList] = useState([])
     const [status, updateStatus ] = useState("unloaded")
+    useDebugValue(status)
 
     useEffect(() => {
         console.log(status)
