@@ -1,7 +1,8 @@
 // /* global React ReactDOM */
 // import React from "react";
-import {render} from "react-dom";
+import { render } from "react-dom";
 import SearchParams from "./SearchParams";
+import { StrictMode } from "react";
 
 // const App = () => {
 //   return React.createElement(
@@ -32,13 +33,15 @@ import SearchParams from "./SearchParams";
 
 const App = () => {
   return (
-    <div>
-      <h1 id="brand">Adopt Me!</h1>
-      {/* <Pet name="Luna" animal="Dog" breed="Havanese" />
+    <StrictMode>
+      <div>
+        <h1 id="brand">Adopt Me!</h1>
+        {/* <Pet name="Luna" animal="Dog" breed="Havanese" />
       <Pet name="Kuka" animal="Cat" breed="Barkohese" />
       <Pet name="Suaso" animal="Ant" breed="Soldier Ant" /> */}
-      <SearchParams />
-    </div>
+        <SearchParams />
+      </div>
+    </StrictMode>
   )
 }
 

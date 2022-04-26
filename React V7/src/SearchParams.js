@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useReducer } from "react"
 // import Pet from "./Pet";
 import Results from "./Results";
 import useBreedList from "./useBreedList";
@@ -7,47 +7,84 @@ import useBreedList from "./useBreedList";
 const Firstname = ["Elijah", "Elisha", "Mary", "Emmanuel", "David", "Moses", "John"]
 const Lastname = ['Boahen', 'Jackson', 'Dawson', 'Asante', 'Owusu', 'Ajapong', 'Tumu']
 
-const Name = () => {
+const Name = ({ login }) => {
   const [firstname, updateFirstname] = useState("")
   const [lastname, updateLastname] = useState("")
+  const [checked, toggle] = useReducer(
+    (checked) => !checked,
+    false
+  )
+  const [data, updateData] = useState(null)
+
+
+  useEffect(() => {
+    fetch(`https://api.github.com/users/${login}`)
+      .then((response) => response.json())
+      .then(updateData)
+  }, [])
+
+  if (data) {
+    return (<div>
+      <h1> {data.id}</h1>
+    </div>
+    )
+  }
+
   return (
     <>
-    {/* ....................................FIRSTNAME................................... */}
-      <label htmlFor="firstname">
-        FIRSTNAME 
+      <div>No Github user available</div>
+      <label htmlFor="check">
+        Check
+        <div>
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="checkbox"
+            value={checked}
+            onChange={toggle}
+          />
 
-        <select 
-        name="firstname" 
-        id="firstname"
-        value={firstname}
-        onChange={(e)=> updateFirstname(e.target.value)}
+          <h2>{checked ? "Checked!" : "Not Checked!"}</h2>
+        </div>
+
+      </label>
+      {/* ....................................FIRSTNAME................................... */}
+      <label htmlFor="firstname">
+        FIRSTNAME
+
+        <select
+          name="firstname"
+          id="firstname"
+          value={firstname}
+          onChange={(e) => updateFirstname(e.target.value)}
         >
-        <option />
-        {Firstname.map((firstname) => (
-          <option key={firstname} value={firstname}> 
-           {firstname}
-          </option>
-        ))}
+          <option />
+          {Firstname.map((firstname) => (
+            <option key={firstname} value={firstname}>
+              {firstname}
+            </option>
+          ))}
 
         </select>
+
       </label>
 
-    {/* ....................................LASTNAME................................... */}
+      {/* ....................................LASTNAME................................... */}
       <label htmlFor="lastname">
-        LASTNAME 
+        LASTNAME
 
-        <select 
-        name="lastname" 
-        id="lastname"
-        value={lastname}
-        onChange={(e)=> updateLastname(e.target.value)}
+        <select
+          name="lastname"
+          id="lastname"
+          value={lastname}
+          onChange={(e) => updateLastname(e.target.value)}
         >
-        <option />
-        {Lastname.map((lastname) => (
-          <option key={lastname} value={lastname}> 
-           {lastname}
-          </option>
-        ))}
+          <option />
+          {Lastname.map((lastname) => (
+            <option key={lastname} value={lastname}>
+              {lastname}
+            </option>
+          ))}
 
         </select>
       </label>
@@ -68,7 +105,7 @@ const SearchParams = () => {
 
   const [pets, setPets] = useState([])
 
-  useEffect(() => { 
+  useEffect(() => {
     requestPets();
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -87,11 +124,11 @@ const SearchParams = () => {
   return (
     <div className="search-params">
       <form
-      onSubmit={e => {
-        e.preventDefault();
-         requestPets();
-      }} 
-       >
+        onSubmit={e => {
+          e.preventDefault();
+          requestPets();
+        }}
+      >
 
         {/* ............................LOCATION....................... */}
         <label htmlFor="location">
@@ -159,9 +196,9 @@ const SearchParams = () => {
 
       </form>
       {/* ........................PETS................................. */}
-      
+
       <Results pets={pets} />
-      <h2><Name /></h2>
+      <h2><Name login="Ewooral" /></h2>
 
     </div>
   )
