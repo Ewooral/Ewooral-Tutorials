@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Pet from "./Pet";
+import useBreedList from "./useBreedList";
 
 
 const Firstname = ["Elijah", "Elisha", "Mary", "Emmanuel", "David", "Moses", "John"]
@@ -61,10 +62,12 @@ const SearchParams = () => {
   const [location, setLocation] = useState("")
   const [animal, setAnimal] = useState("")
   const [breed, setBreed] = useState("")
-  const breeds = []
+  const [breeds] = useBreedList(animal)
+
+
   const [pets, setPets] = useState([])
 
-  useEffect(() => {
+  useEffect(() => { 
     requestPets();
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -82,7 +85,12 @@ const SearchParams = () => {
 
   return (
     <div className="search-params">
-      <form>
+      <form
+      onSubmit={e => {
+        e.preventDefault();
+         requestPets();
+      }} 
+       >
 
         {/* ............................LOCATION....................... */}
         <label htmlFor="location">
