@@ -2,6 +2,9 @@ import { useState, useEffect, useReducer } from "react"
 // import Pet from "./Pet";
 import Results from "./Results";
 import useBreedList from "./useBreedList";
+// import React from "react"
+
+
 
 
 const Firstname = ["Elijah", "Elisha", "Mary", "Emmanuel", "David", "Moses", "John"]
@@ -25,7 +28,9 @@ const Name = ({ login }) => {
 
   if (data) {
     return (<div>
-      <h1> {data.id}</h1>
+      <h3> {data.name}</h3>
+      <h4> {data.location}</h4>
+      <img className="image-container" src={data.avatar_url} alt={data.login} />
     </div>
     )
   }
@@ -88,6 +93,8 @@ const Name = ({ login }) => {
 
         </select>
       </label>
+
+
 
     </>
   )
