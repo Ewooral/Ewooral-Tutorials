@@ -2,7 +2,8 @@
 import { render } from "react-dom";
 import SearchParams from "./SearchParams";
 import { StrictMode } from "react";
-
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Details from "./Details";
 // const App = () => {
 //   return React.createElement(
 //     "div",
@@ -32,14 +33,21 @@ import { StrictMode } from "react";
 const App = () => {
   return (
     <StrictMode>
-      <div>
+      <BrowserRouter>
+      <h1>Adopt Me!</h1>
+        <Routes>
+          <Route path="/" element={<SearchParams />} />
+          <Route path="/details/:id" element={<Details />} />
+        </Routes>
+      </BrowserRouter>
+      {/* <div>
         <h1 id="brand">Adopt Me!</h1>
-        {/* <Pet name="Luna" animal="Dog" breed="Havanese" />
+        <Pet name="Luna" animal="Dog" breed="Havanese" />
       <Pet name="Kuka" animal="Cat" breed="Barkohese" />
-      <Pet name="Suaso" animal="Ant" breed="Soldier Ant" /> */}
+      <Pet name="Suaso" animal="Ant" breed="Soldier Ant" />
         <SearchParams />
        
-      </div>
+      </div> */}
     </StrictMode>
   )
 }

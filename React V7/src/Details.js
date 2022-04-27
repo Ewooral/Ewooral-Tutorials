@@ -1,7 +1,7 @@
 const Details = () => {
     return (
         <div>
-            Details
+            Details Page
         </div>
     )
 }
