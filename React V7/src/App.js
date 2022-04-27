@@ -2,7 +2,7 @@
 import { render } from "react-dom";
 import SearchParams from "./SearchParams";
 import { StrictMode } from "react";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Details from "./Details";
 // const App = () => {
 //   return React.createElement(
@@ -34,7 +34,10 @@ const App = () => {
   return (
     <StrictMode>
       <BrowserRouter>
-      <h1>Adopt Me!</h1>
+        <header>
+          <Link to="/">Adopt Me!</Link>
+        </header>
+
         <Routes>
           <Route path="/" element={<SearchParams />} />
           <Route path="/details/:id" element={<Details />} />

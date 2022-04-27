@@ -9,7 +9,7 @@
 
 // export default Pet;
 
-import { Link } from "react-router-dom"; // instead of using a tag for internal links use the Link component from react-router-dom
+import { Link } from "react-router-dom"; // instead of using anchor tag for internal links use the Link component from react-router-dom
 
 
 const Pet = (props) => {
