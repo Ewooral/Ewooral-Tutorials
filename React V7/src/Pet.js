@@ -10,6 +10,7 @@
 
 // export default Pet;
 
+
 const Pet = (props) => {
   const { name, animal, breed, images, location, id } = props;
 

@@ -1,5 +1,4 @@
 // /* global React ReactDOM */
-// import React from "react";
 import { render } from "react-dom";
 import SearchParams from "./SearchParams";
 import { StrictMode } from "react";
@@ -30,7 +29,6 @@ import { StrictMode } from "react";
 // render(React.createElement(App), document.getElementById("root"));
 
 
-
 const App = () => {
   return (
     <StrictMode>
@@ -40,6 +38,7 @@ const App = () => {
       <Pet name="Kuka" animal="Cat" breed="Barkohese" />
       <Pet name="Suaso" animal="Ant" breed="Soldier Ant" /> */}
         <SearchParams />
+       
       </div>
     </StrictMode>
   )
