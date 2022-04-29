@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { Component } from "react";
 import Carousel from "./Carousel"
+import ErrorBoundary from "./ErrorBoundary";
 
 
 
@@ -34,7 +35,7 @@ class Details extends Component {
         const json = await res.json()
 
         // this.setState(Object.assign({loading: false}, json.pets[0]))
-        
+
         // OR
 
         // this.setState({
@@ -52,8 +53,10 @@ class Details extends Component {
         if (this.state.loading) {
             return <h2>Loading...</h2>
         }
+        
+        // throw new Error("Something went wrong")
 
-        const { animal, breed, city, state, description, name, images} = this.state
+        const { animal, breed, city, state, description, name, images } = this.state
 
         return (
             <div className="details">
@@ -69,9 +72,13 @@ class Details extends Component {
     }
 }
 
-const WrappedDetails =  () => {
+const WrappedDetails = () => {
     const params = useParams();
-    return <Details params={params} />
+    return (
+        <ErrorBoundary>
+    <Details params={params} />
+        </ErrorBoundary>
+    )
 }
 
 export default WrappedDetails
