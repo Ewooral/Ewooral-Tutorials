@@ -32,7 +32,7 @@ import ThemeContext from "./ThemeContext";
 
 
 const App = () => {
-  const theme = useState("darkblue");
+  const theme = useState("green");
   return (
     <StrictMode>
       <ThemeContext.Provider value={theme}>

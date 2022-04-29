@@ -1,7 +1,8 @@
-import { useState, useEffect, useReducer } from "react"
+import { useState, useEffect, useReducer, useContext } from "react"
 // import Pet from "./Pet";
 import Results from "./Results";
 import useBreedList from "./useBreedList";
+import ThemeContext from "./ThemeContext";
 // import React from "react"
 
 
@@ -18,7 +19,7 @@ const Name = ({ login }) => {
     false
   )
   const [data, updateData] = useState(null)
-
+ 
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${login}`)
@@ -108,6 +109,7 @@ const SearchParams = () => {
   const [animal, setAnimal] = useState("")
   const [breed, setBreed] = useState("")
   const [breeds] = useBreedList(animal)
+  const [theme] = useContext(ThemeContext)
 
 
   const [pets, setPets] = useState([])
@@ -199,7 +201,7 @@ const SearchParams = () => {
         </label>
 
         {/* .......................END LABEL........................ */}
-        <button>Submit</button>
+        <button style={{ backgroundColor: theme}}>Submit</button>
 
       </form>
       {/* ........................PETS................................. */}
