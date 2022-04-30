@@ -3,6 +3,7 @@ import { Component, useContext } from "react";
 import Carousel from "./Carousel"
 import ErrorBoundary from "./ErrorBoundary";
 import ThemeContext from "./ThemeContext";
+import Model from "./Model"
 
 
 
@@ -49,6 +50,14 @@ class Details extends Component {
         this.setState({ loading: false, ...json.pets[0] })
     }
 
+    //........................... MODAL ...........................
+    // A function to toggle the Modal.................................
+    toggleModal = () => {
+        this.setState({
+            showModal: !this.state.showModal
+        })
+    }
+
     render() {
 
         if (this.state.loading) {
@@ -57,7 +66,7 @@ class Details extends Component {
         
         // throw new Error("Something went wrong")
 
-        const { animal, breed, city, state, description, name, images } = this.state
+        const { animal, breed, city, state, description, name, images, showModal } = this.state
 
         return (
             <div className="details">
@@ -67,7 +76,7 @@ class Details extends Component {
                     <h2>{`${animal} — ${breed} — ${city}, ${state}`}</h2>
                     <ThemeContext.Consumer>
                         {([ theme ]) => (
-                            <button style={{ backgroundColor: theme}}>
+                            <button onClick={this.showModal} style={{ backgroundColor: theme}}>
                                Adopt {name}
                             </button>
                         )}
