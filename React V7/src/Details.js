@@ -72,7 +72,7 @@ class Details extends Component {
                             </button>
                         )}
                     </ThemeContext.Consumer>
-                    <button>Adopt {name}</button>
+                    {/* <button>Adopt {name}</button> */}
                     <p>{description}</p>
                 </div>
             </div>
