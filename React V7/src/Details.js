@@ -3,7 +3,7 @@ import { Component, useContext } from "react";
 import Carousel from "./Carousel"
 import ErrorBoundary from "./ErrorBoundary";
 import ThemeContext from "./ThemeContext";
-import Model from "./Model"
+import Modal from "./Modal"
 
 
 
@@ -63,7 +63,7 @@ class Details extends Component {
         if (this.state.loading) {
             return <h2>Loading...</h2>
         }
-        
+
         // throw new Error("Something went wrong")
 
         const { animal, breed, city, state, description, name, images, showModal } = this.state
@@ -75,14 +75,34 @@ class Details extends Component {
                     <h1>{name}</h1>
                     <h2>{`${animal} — ${breed} — ${city}, ${state}`}</h2>
                     <ThemeContext.Consumer>
-                        {([ theme ]) => (
-                            <button onClick={this.showModal} style={{ backgroundColor: theme}}>
-                               Adopt {name}
+                        {([theme]) => (
+                            <button onClick={this.toggleModal} style={{ backgroundColor: theme }}>
+                                Adopt {name}
                             </button>
                         )}
                     </ThemeContext.Consumer>
                     {/* <button>Adopt {name}</button> */}
                     <p>{description}</p>
+                    {
+                        showModal ? (
+                            <Modal>
+
+                                <div>
+                                    <h1>Would you like to adopt</h1>
+                                    <div className="buttons">
+                                        <a href="https://bit.ly/pet-adopt">Yes</a>
+                                        <button onClick={this.toggleModal}>No</button>
+
+
+                                    </div>
+                                </div>
+
+                            </Modal>
+
+
+                        ) : null
+
+                    }
                 </div>
             </div>
         )
@@ -94,7 +114,7 @@ const WrappedDetails = () => {
     const [theme] = useContext(ThemeContext)
     return (
         <ErrorBoundary>
-    <Details theme={theme} params={params} />
+            <Details theme={theme} params={params} />
         </ErrorBoundary>
     )
 }

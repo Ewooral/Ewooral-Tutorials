@@ -30,22 +30,21 @@ import ThemeContext from "./ThemeContext";
 
 // render(React.createElement(App), document.getElementById("root"));
 
-
 const App = () => {
   const theme = useState("green");
   return (
     <StrictMode>
       <ThemeContext.Provider value={theme}>
-      <BrowserRouter>
-        <header>
-          <Link to="/">Adopt Me!</Link>
-        </header>
+        <BrowserRouter>
+          <header>
+            <Link to="/">Adopt Me!</Link>
+          </header>
 
-        <Routes>
-          <Route path="/" element={<SearchParams />} />
-          <Route path="/details/:id" element={<Details />} />
-        </Routes>
-      </BrowserRouter>
+          <Routes>
+            <Route path="/" element={<SearchParams />} />
+            <Route path="/details/:id" element={<Details />} />
+          </Routes>
+        </BrowserRouter>
       </ThemeContext.Provider>
       {/* <div>
         <h1 id="brand">Adopt Me!</h1>
@@ -56,7 +55,7 @@ const App = () => {
        
       </div> */}
     </StrictMode>
-  )
-}
+  );
+};
 
 render(<App />, document.getElementById("root"));

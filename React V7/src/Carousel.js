@@ -1,6 +1,7 @@
 import { Component } from "react";
 
 class Carousel extends Component {
+
     state = {
         active: 0,
     };
@@ -10,6 +11,7 @@ class Carousel extends Component {
     };
 
     handleIndexClick = (event) => {
+
         this.setState({
             active: +event.target.dataset.index
         })
@@ -18,6 +20,8 @@ class Carousel extends Component {
 
     render() {
         const { active } = this.state;
+        console.log(active)
+
         const { images } = this.props;
         return (
             <div className="carousel">
