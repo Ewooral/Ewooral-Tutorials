@@ -11,7 +11,9 @@ We'll cover the following
 ## Definition#
 
     The word Polymorphism is a combination of two Greek words, Poly meaning many and Morph meaning forms.
-    In programming, POLYMORPHISM refers to the same object exhibiting different forms and behaviors.
+    In programming, 
+    
+    POLYMORPHISM refers to the same object exhibiting different forms and behaviors.
 
 For example, take the **Shape Class**. The exact shape you choose can be anything. *It can be a rectangle, a circle, a polygon, or a diamond*. While, these are all shapes, their properties are different. This is called polymorphism.
 
@@ -130,7 +132,9 @@ This was one way of achieving polymorphism. In the next lesson, we will implemen
             Explanation
 
 So far, we have learned that we can add new data and methods to a class through inheritance. But what if we want our derived class to inherit a method from the base class and have a different implementation for it? That is when polymorphism, a fundamental concept in the OOP paradigm, comes into play.
-Example#
+
+
+## Example#
 
 Consider the example of a Shape class, which is the base class while many shapes like Rectangle and Circle extending from the base class are derived classes. These derived classes inherit the getArea() method and provide a shape-specific implementation, which calculates its area.
 
@@ -276,7 +280,7 @@ In this case:
     The method in the parent class is called the overridden method.
     The methods in the child classes are called the overriding methods.
 
-We have already seen the implementation of the getArea() method in the previous lesson, which depicts the concept of overriding. The highlighted portions show where method overriding is happening.
+We have already seen the implementation of the getArea() method in the previous lesson, which depicts the concept of overriding. The highlighted portions show where method overriding is happening. 
 
 
 ## Advantages and key features of method overriding#
