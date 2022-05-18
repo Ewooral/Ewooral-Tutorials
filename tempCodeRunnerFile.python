@@ -1,10 +1,196 @@
-# Do while Loops
+# Binary Tree
 
-a = 2
-index = 40
-do: print("Starting...") 
-while a < 20:
-    if a > index:
-        break
-    a += 1
-    print(a)
+import queue_linked_list as qu
+import queue
+
+
+class BT:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+
+def preorder(rootNode):
+    if rootNode is None:
+        return
+    print(rootNode.value)
+    preorder(rootNode.left)
+    preorder(rootNode.right)
+
+def inorder(rootNode):
+    if rootNode is None:
+        return
+    inorder(rootNode.left)
+    print(rootNode.value)
+    inorder(rootNode.right)
+
+def postorder(rootNode):
+    if rootNode is None:
+        return
+    postorder(rootNode.left)
+    postorder(rootNode.right)
+    print(rootNode.value)
+
+def levelorder(rootNode):
+    if rootNode is None:
+        return 
+    else:
+        q = qu.Queue()
+        q.enqueue(rootNode)
+        while not q.empty():
+            root = q.dequeue()
+            print(root.value)
+            if root.left is not None:
+                q.put(root.left)
+            if root.right is not None:
+                q.put(root.right)
+
+def insert(rootNode, nodeValue):
+    if rootNode is None:
+        rootNode = nodeValue
+    else:
+        q = queue.Queue()
+        q.put(rootNode)
+        while not q.empty():
+            root = q.get()
+            if root.left is not None:
+                q.put(root.left)
+            else:
+                root.left = nodeValue
+                return
+            if root.right is not None:
+                q.put(root.right)
+            else:
+                root.right = nodeValue
+                return
+
+def search(rootNode, nodevalue):
+    if not rootNode:
+        return
+    else:
+        q = queue.Queue()
+        q.put(rootNode)
+        while not q.empty():
+            root = q.get()
+            if root.value == nodevalue:
+                return "Found"
+            if root.left is not None:
+                q.put(root.left)
+            if root.right is not None:
+                q.put(root.right)
+        return "not found"
+
+def getDeepestNode(rootNode):
+    if rootNode is None:
+        return 
+    else:
+        q = queue.Queue()
+        q.put(rootNode)
+        while not q.empty():
+            root = q.get()
+            if root.left is not None:
+                q.put(root.left)
+            if root.right is not None:
+                q.put(root.right)
+        
+        deepestNode = root.value
+        return deepestNode
+
+def deleteDNode(rootNode, dNode):
+    if rootNode is None:
+        return
+    else:
+        q = queue.Queue()
+        q.put(rootNode)
+        while not q.empty():
+            root = q.get()
+            if root.value is dNode:
+                root.value = None
+                
+            if root.left is not None:
+                if root.left is dNode:
+                    root.left = None
+                    
+                else:
+                    q.put(root.left)
+                  
+            if root.right is not None:
+                if root.right is dNode:
+                    root.right = None
+                    
+                else:
+                    q.put(root.right)
+                  
+
+def deleteAnyNode(rootNode, node):
+    if rootNode is None:
+        return
+    else:
+        q = queue.Queue()
+        q.put(rootNode)
+        
+        while not q.empty():
+            root = q.get()
+            if root.value is node:
+                deepNode = getDeepestNode(rootNode)
+                root.value = deepNode
+                deepNode = root.value
+                deleteDNode(rootNode, deepNode)
+                return
+            if root.left is not None:
+                q.put(root.left)
+            if root.right is not None:
+                q.put(root.right)
+            
+
+
+
+
+
+
+
+
+root = BT("Dickson")
+L = BT("Georgina")
+R = BT("Emmanuel")
+
+root.left = L
+root.right = R
+
+print("...preorder...")
+preorder(root)
+print("...inorder...")
+inorder(root)
+print("...postorder...")
+postorder(root)
+print("...levelorder...")
+levelorder(root)
+print("...insert...")
+Mary = BT("Mary")
+Elijah = BT("Elijah")
+Elisha = BT("Elisha")
+insert(root, Mary)
+insert(root, Elijah)
+insert(root, Elisha)
+levelorder(root)
+
+print("...search...")
+print(search(root, "Elisha"))
+
+print("...levelorder...")
+levelorder(root)
+
+print("...deepest node...")
+dNode = getDeepestNode(root)
+print(dNode)
+
+print("...delete deepest node...")
+# deleteDNode(root, getDeepestNode(root))
+levelorder(root)
+
+print("...delete any node...")
+deleteAnyNode(root, "Georgina")
+deleteAnyNode(root, "Mary")
+levelorder(root)
+

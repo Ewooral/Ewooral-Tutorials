@@ -4,7 +4,7 @@
         
         
         
-        
+
         
         
         
@@ -16,7 +16,9 @@
             "request": "launch",
             "mainClass": "HelloWorld",
             "projectName": "Ewooral-Tutorials_5ed76a4f"
+        
         },
+
         {
             "name": ".NET Core Launch (console)",
             "type": "coreclr",
@@ -33,5 +35,6 @@
             "type": "coreclr",
             "request": "attach"
         }
+       
     ]
 }

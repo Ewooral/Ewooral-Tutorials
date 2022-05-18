@@ -228,25 +228,10 @@ const SearchParams = () => {
 
       <Results pets={pets} />
       <h2><Name login="Ewooral" /></h2>
-      <h3><Clock /> </h3>
 
     </div>
   )
 }
 
-
-// useEffect .............................................
-const Clock = () => {
-  const [time, setTime] = useState(new Date() )
-
-  useEffect(()=>{
-    const timer = setTimeout(()=> setTime(new Date()), 1000)
-    return () => clearTimeout(timer)
-  }, [time])
-  return (
-    <h1>{time.toLocaleTimeString()}</h1>
-
-  )
-}
 
 export default SearchParams  
