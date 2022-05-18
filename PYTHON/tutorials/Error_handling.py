@@ -13,4 +13,4 @@ while True:
         print("Fuck!")
 
 
-raise NameError("Hi There!!")
+# raise NameError("Hi There!!")

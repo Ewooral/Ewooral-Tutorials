@@ -5,6 +5,7 @@ import { StrictMode, useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Details from "./Details";
 import ThemeContext from "./ThemeContext";
+import Clock from "./Clock";
 // const App = () => {
 //   return React.createElement(
 //     "div",
@@ -38,6 +39,7 @@ const App = () => {
         <BrowserRouter>
           <header>
             <Link to="/">Adopt Me!</Link>
+            <div><Clock /></div>
           </header>
 
           <Routes>

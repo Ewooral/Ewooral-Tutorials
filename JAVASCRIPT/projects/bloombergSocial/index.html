@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +11,23 @@
     <!-- iconscout cdn -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
     <link rel="stylesheet" href="./style.css">
+    <script>
+        function loadScript(src) {
+            // creates a <script> tag and append it to the page
+            // this causes the script with given src to start loading and run when complete
+            let script = document.createElement('script');
+            script.src = src;
+            document.head.append(script);
+        }
+        loadScript('./index.js');
+    </script>
+
 </head>
+
 <body>
-   <nav>
+    <nav>
         <div class="container">
-            
+
             <!-- App Logo -->
             <h2 class="logo">
                 Bloomberg-Social
@@ -34,186 +47,208 @@
                 </div>
             </div>
         </div>
-   </nav>
+    </nav>
 
 
     <!-- MAIN -->
-   <main>
+    <main>
         <div class="container">
 
             <!-- left column -->
 
-          <section class="left">
+            <section class="left">
 
-              <a class="profile">
-                  <div class="profile-photo">
-                      <img src="./images/elia.jpg" alt="profile-1">
-                  </div>
-
-                  <div class="handle">
-                      <h4>Diana Ayi</h4>
-                      <p class="text-muted">
-                          @dayi 
-                      </p>
-                  </div>
-              </a>
-
-              <!-- sidebar -->
-              <div class="sidebar">
-                  <a href="" class="menu-item active">
-                      <span> <i class="uil uil-home"></i> </span>
-                      <h3>Home</h3>
-                  </a>
-
-                  <a href="" class="menu-item">
-                    <span> <i class="uil uil-compass"></i> </span>
-                    <h3>Explore</h3>
-                  </a>
-
-                  <a href="" class="menu-item" id="notifications">
-                    <span> <i class="uil uil-bell"><small class="notification-count">9+</small></i> </span>
-                    <h3>Notification</h3>
-                    <!-- notification popup -->
-                    <div class="notifications-popup">
-                        <div>
-                            <div class="profile-photo">
-                                <img src="./images/profile-2.jpg" alt="profile-1">
-                            </div>
-                            <div class="notification-body">
-                                <b>Nimo Juliana</b> Accepted your friend request
-                                <small class="text-muted"> 2 DAYS AGO </small>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="profile-photo">
-                                <img src="./images/profile-3.jpg" alt="profile-1">
-                            </div>
-                            <div class="notification-body">
-                                <b>Jennifer Gyabeng</b> Just earned a law certificate
-                                <small class="text-muted"> 2 DAYS AGO </small>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="profile-photo">
-                                <img src="./images/profile-4.jpg" alt="profile-1">
-                            </div>
-                            <div class="notification-body">
-                                <b>Helena Asare</b> Just insulted you
-                                <small class="text-muted"> 2 DAYS AGO </small>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="profile-photo">
-                                <img src="./images/profile-5.jpg" alt="profile-1">
-                            </div>
-                            <div class="notification-body">
-                                <b>Patricia Teye</b> Married and Gave birth to twins
-                                <small class="text-muted"> 2 DAYS AGO </small>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="profile-photo">
-                                <img src="./images/profile-6.jpg" alt="profile-1">
-                            </div>
-                            <div class="notification-body">
-                                <b>Mercy Asamoah</b> Had a breast implant
-                                <small class="text-muted"> 2 DAYS AGO </small>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="profile-photo">
-                                <img src="./images/profile-7.jpg" alt="profile-1">
-                            </div>
-                            <div class="notification-body">
-                                <b>Comfort Teye</b> Sent you a friend request.
-                                <small class="text-muted"> 1 Hour AGO </small>
-                            </div>
-                        </div>
-                        
+                <a class="profile">
+                    <div class="profile-photo">
+                        <img src="./images/elia.jpg" alt="profile-1">
                     </div>
-                  </a>
-                  
-                  <!-- end notification popup -->
 
-                  <a href="" class="menu-item" id="messages-notifications">
-                    <span> <i class="uil uil-envelope-alt"> <small class="notification-count">6</small> </i> </span>
-                    <h3>Message</h3>
-                  </a>
+                    <div class="handle">
+                        <h4>Diana Ayi</h4>
+                        <p class="text-muted">
+                            @dayi
+                        </p>
+                    </div>
+                </a>
 
-                  <a href="" class="menu-item">
-                    <span> <i class="uil uil-bookmark"></i> </span>
-                    <h3>Bookmarks</h3>
-                  </a>
+                <!-- sidebar -->
+                <div class="sidebar">
+                    <a href="" class="menu-item active">
+                        <span> <i class="uil uil-home"></i> </span>
+                        <h3>Home</h3>
+                    </a>
 
-                  <a href="" class="menu-item">
-                    <span> <i class="uil uil-chart-line"></i> </span>
-                    <h3>Analytics</h3>
-                  </a>
-                  <a href="" class="menu-item">
-                    <span> <i class="uil uil-palette"></i> </span>
-                    <h3>Theme</h3>
-                  </a> 
+                    <a href="" class="menu-item">
+                        <span> <i class="uil uil-compass"></i> </span>
+                        <h3>Explore</h3>
+                    </a>
 
-                  <a href="" class="menu-item">
-                    <span> <i class="uil uil-setting"></i> </span>
-                    <h3>Settings</h3>
-                  </a>
+                    <a href="" class="menu-item" id="notifications">
+                        <span> <i class="uil uil-bell"><small class="notification-count">9+</small></i> </span>
+                        <h3>Notification</h3>
+                        <!-- notification popup -->
+                        <div class="notifications-popup">
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="./images/profile-2.jpg" alt="profile-1">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Nimo Juliana</b> Accepted your friend request
+                                    <small class="text-muted"> 2 DAYS AGO </small>
+                                </div>
+                            </div>
 
-                  <!-- button -->
-                  <label for="create-post" class="btn btn-primary">Create Post</label>
-                 
-              </div>
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="./images/profile-3.jpg" alt="profile-1">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Jennifer Gyabeng</b> Just earned a law certificate
+                                    <small class="text-muted"> 2 DAYS AGO </small>
+                                </div>
+                            </div>
 
-          </section>
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="./images/profile-4.jpg" alt="profile-1">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Helena Asare</b> Just insulted you
+                                    <small class="text-muted"> 2 DAYS AGO </small>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="./images/profile-5.jpg" alt="profile-1">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Patricia Teye</b> Married and Gave birth to twins
+                                    <small class="text-muted"> 2 DAYS AGO </small>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="./images/profile-6.jpg" alt="profile-1">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Mercy Asamoah</b> Had a breast implant
+                                    <small class="text-muted"> 2 DAYS AGO </small>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="./images/profile-7.jpg" alt="profile-1">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Comfort Teye</b> Sent you a friend request.
+                                    <small class="text-muted"> 1 Hour AGO </small>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <!-- end notification popup -->
+
+                    <a href="" class="menu-item" id="messages-notifications">
+                        <span> <i class="uil uil-envelope-alt"> <small class="notification-count">6</small> </i> </span>
+                        <h3>Message</h3>
+                    </a>
+
+                    <a href="" class="menu-item">
+                        <span> <i class="uil uil-bookmark"></i> </span>
+                        <h3>Bookmarks</h3>
+                    </a>
+
+                    <a href="" class="menu-item">
+                        <span> <i class="uil uil-chart-line"></i> </span>
+                        <h3>Analytics</h3>
+                    </a>
+                    <a href="" class="menu-item">
+                        <span> <i class="uil uil-palette"></i> </span>
+                        <h3>Theme</h3>
+                    </a>
+
+                    <a href="" class="menu-item">
+                        <span> <i class="uil uil-setting"></i> </span>
+                        <h3>Settings</h3>
+                    </a>
+
+                    <!-- button -->
+                    <label for="create-post" class="btn btn-primary">Create Post</label>
+
+                </div>
+
+            </section>
 
 
 
 
-          <!-- middle column -->
+            <!-- middle column -->
 
-          <section class="middle">
-              <!-- Lorem ipsum dolor sit amet consectetur adipisicing 
-              elit. Quae similique voluptatem dignissimos sed 
-              cupiditate asperiores facilis possimus obcaecati ab 
-              eligendi quis consequatur quasi veniam fugiat, ut 
-              repellendus cum ratione reiciendis veritatis. Tempore 
-              vel veniam cumque labore, natus libero, distinctio nemo similique eos
-              illo tempora ut architecto nesciunt praesentium obcaecati quos 
-              ea fugiat quas, earum minus recusandae fugit sed ducimus fuga.
-              Ipsum totam similique libero, quia, corporis ea eligendi consectetur 
-              aperiam atque, officiis obcaecati unde quae! At sunt nam ea aliquam, 
-              consequuntur quibusdam laboriosam neque, maxime ipsam suscipit similique 
-              dignissimos doloribus ratione, ipsum unde quod accusantium odit amet obcaecati itaque sint? -->
+            <section class="middle">
+                <label for="quota">Number of primes:</label>
+                <input type="text" id="quota" name="quota" value="1000000">
 
-          </section>
+                <button id="generate">Generate primes</button>
+                <button id="reload">Reload</button>
 
+                <div id="output"></div>
+
+                <button id="xhr">Click to start request</button>
+                <button id="reload">Reload</button>
+
+                <pre readonly class="event-log"></pre>
+            </section>
 
 
+            <style>
+                .kody {
+                    background: #6c373f;
+                    display: flex;
+                    justify-content: center;
+                }
 
-          <!-- right column -->
+                #alice-container {
+                    width: 90vh;
+                    display: grid;
+                    place-items: center;
+                    grid-template-areas:
+                        "a1 . ."
+                        ". a2 ."
+                        ". . a3";
+                }
 
-          <section class="right">
-            Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Quae similique voluptatem dignissimos sed
-            cupiditate asperiores facilis possimus obcaecati ab
-            eligendi quis consequatur quasi veniam fugiat, ut
-            repellendus cum ratione reiciendis veritatis. Tempore
-            vel veniam cumque labore, natus libero, distinctio nemo similique eos
-            illo tempora ut architecto nesciunt praesentium obcaecati quos
-            ea fugiat quas, earum minus recusandae fugit sed ducimus fuga.
-            Ipsum totam similique libero, quia, corporis ea eligendi consectetur
-            aperiam atque, officiis obcaecati unde quae! At sunt nam ea aliquam,
-            consequuntur quibusdam laboriosam neque, maxime ipsam suscipit similique
-            dignissimos doloribus ratione, ipsum unde quod accusantium odit amet obcaecati itaque sint?
+                #alice1 {
+                    grid-area: a1;
+                }
 
-          </section>
+                #alice2 {
+                    grid-area: a2;
+                }
+
+                #alice3 {
+                    grid-area: a3;
+                }
+            </style>
+
+            <!-- right column -->
+
+            <section class="right kody">
+                <div id="alice-container">
+                    <img id="alice1" src="alice.svg">
+                    <img id="alice2" src="alice.svg">
+                    <img id="alice3" src="alice.svg">
+                </div>
+            </section>
         </div>
 
-   </main>
+    </main>
+
 </body>
+
+
 </html>

@@ -101,6 +101,7 @@
     "python.testing.unittestEnabled": true,
     "python.analysis.extraPaths": [
         "./PYTHON/tutorials",
-        "./PYTHON/tutorials"
+        "./PYTHON/tutorials",
+        "./Technical Interview Questions and Answers/python/Queue"
     ]
 }

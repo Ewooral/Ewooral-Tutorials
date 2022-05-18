@@ -4,19 +4,19 @@
 
 var fun = 5;
 
-function funFunction(){
+function funFunction() {
     var fun = "Hellooo";
     console.log(1, fun);
 }
 
-function funerFunction(){
+function funerFunction() {
     var fun = "Byeee";
     console.log(2, fun);
 }
 console.log(fun);
 
-function funestFunction(){
-     fun = "AHHHHH!";
+function funestFunction() {
+    fun = "AHHHHH!";
     console.log(3, fun);
 }
 
@@ -32,7 +32,7 @@ funestFunction();
 // #1
 function q1() {
     var a = 5;
-    if(a > 1) {
+    if (a > 1) {
         a = 3;
     }
     console.log(a); //3
@@ -46,13 +46,17 @@ function q2() {
 }
 
 function q22() {
-    console.log(a); //5
+    console.log("new value: ", a); //5
 }
 
 // run in the console:
-// q22() -- 0
-// q2() -- undefined
-// q22() -- 5
+q1()
+console.log("a: ", a)
+q2()
+console.log("a: ", a)
+q22()
+q2()
+q22()
 
 //#3
 function q3() {
@@ -82,16 +86,17 @@ console.log(a); // 5
 
 
 
-function squareAndMultiply(num1, num2){
-
-    function square(x){
+function squareAndMultiply(num1, num2) {
+    
+    function square(x) {
         return x * x;
     }
 
-    function multiplyBy10(y){
-         return y * 10;
+    function multiplyBy10(y) {
+        return y * 10;
     }
     return square(num1) * multiplyBy10(num2);
 }
 
-console.log(squareAndMultiply(4, 4));
+console.log(squareAndMultiply(4, 2));
+
