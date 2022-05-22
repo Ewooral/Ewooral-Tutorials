@@ -1,196 +1,87 @@
-# Binary Tree
+import operator 
+import time
+import itertools
+from itertools import product
 
-import queue_linked_list as qu
-import queue
+print("....................................")
+L1 = [1, 2, 3]
+L2 = [2, 3, 4]
 
+t1 = time.time()
 
-class BT:
-    def __init__(self, value):
-        self.value = value
-        self.left = None
-        self.right = None
+a, b, c = map(operator.mul, L1, L2)
 
+t2 = time.time()
 
-def preorder(rootNode):
-    if rootNode is None:
-        return
-    print(rootNode.value)
-    preorder(rootNode.left)
-    preorder(rootNode.right)
+print("Result:", a, b, c)
+print("Time taken by map function: %.6f" %(t2 - t1))
 
-def inorder(rootNode):
-    if rootNode is None:
-        return
-    inorder(rootNode.left)
-    print(rootNode.value)
-    inorder(rootNode.right)
+print("......................")
+t3 = time.time()
+print("Result:", end = " ")
+for i in range(3):
+    print(L1[i] * L2[i], end = " ")
 
-def postorder(rootNode):
-    if rootNode is None:
-        return
-    postorder(rootNode.left)
-    postorder(rootNode.right)
-    print(rootNode.value)
+t4 = time.time()
+print("\nTime taken by for loop: %.6f" %(t4 - t3))
 
-def levelorder(rootNode):
-    if rootNode is None:
-        return 
+t5 = time.time()
+print("........Itertool.count()..........")
+for c in itertools.count(2, 2):
+    if c == 10:
+        break
+    print(c, end=" ")
+t6 = time.time()
+print("\nTime taken by for loop: %.6f" %(t6 - t5))
+
+print("....itertools.cycle()....")
+count = 0
+for i in itertools.cycle('abcd'):
+    if count >= 7:
+        ''' count > 7: break prints 8 
+                  times but count >= 7 prints 7 times'''
+        break
     else:
-        q = qu.Queue()
-        q.enqueue(rootNode)
-        while not q.empty():
-            root = q.dequeue()
-            print(root.value)
-            if root.left is not None:
-                q.put(root.left)
-            if root.right is not None:
-                q.put(root.right)
+        print(i, end="")
+        count += 1
 
-def insert(rootNode, nodeValue):
-    if rootNode is None:
-        rootNode = nodeValue
-    else:
-        q = queue.Queue()
-        q.put(rootNode)
-        while not q.empty():
-            root = q.get()
-            if root.left is not None:
-                q.put(root.left)
-            else:
-                root.left = nodeValue
-                return
-            if root.right is not None:
-                q.put(root.right)
-            else:
-                root.right = nodeValue
-                return
+print("\n....Next function...")
+l = ['Geeks', 'for', 'Geeks']
+r = [1, 3, 2, 9]
+iterators = itertools.cycle(l)
+iterators1 = itertools.cycle(r)
+for i in range(6):
+    # print(next(iterators), end=" ")
+    print(next(iterators1), end=" " )
+print("\n")
+for i in range(6):
+    print(next(iterators), end=" ")
 
-def search(rootNode, nodevalue):
-    if not rootNode:
-        return
-    else:
-        q = queue.Queue()
-        q.put(rootNode)
-        while not q.empty():
-            root = q.get()
-            if root.value == nodevalue:
-                return "Found"
-            if root.left is not None:
-                q.put(root.left)
-            if root.right is not None:
-                q.put(root.right)
-        return "not found"
+print("\n....repeat(val, num)....")
+print(list(itertools.repeat(25, 4)))
 
-def getDeepestNode(rootNode):
-    if rootNode is None:
-        return 
-    else:
-        q = queue.Queue()
-        q.put(rootNode)
-        while not q.empty():
-            root = q.get()
-            if root.left is not None:
-                q.put(root.left)
-            if root.right is not None:
-                q.put(root.right)
-        
-        deepestNode = root.value
-        return deepestNode
+arr = [2, 3, 1, 9]
 
-def deleteDNode(rootNode, dNode):
-    if rootNode is None:
-        return
-    else:
-        q = queue.Queue()
-        q.put(rootNode)
-        while not q.empty():
-            root = q.get()
-            if root.value is dNode:
-                root.value = None
-                
-            if root.left is not None:
-                if root.left is dNode:
-                    root.left = None
-                    
-                else:
-                    q.put(root.left)
-                  
-            if root.right is not None:
-                if root.right is dNode:
-                    root.right = None
-                    
-                else:
-                    q.put(root.right)
-                  
+print([None] * len(arr))
+newList = list(itertools.repeat(None, len(arr)))
+newList[1] = 300
+print(newList)
+print()
 
-def deleteAnyNode(rootNode, node):
-    if rootNode is None:
-        return
-    else:
-        q = queue.Queue()
-        q.put(rootNode)
-        
-        while not q.empty():
-            root = q.get()
-            if root.value is node:
-                deepNode = getDeepestNode(rootNode)
-                root.value = deepNode
-                deepNode = root.value
-                deleteDNode(rootNode, deepNode)
-                return
-            if root.left is not None:
-                q.put(root.left)
-            if root.right is not None:
-                q.put(root.right)
-            
+print("....combinatoric iterators....")
+print()
+'''
+In python, there are four of them
 
-
-
-
-
-
-
-
-root = BT("Dickson")
-L = BT("Georgina")
-R = BT("Emmanuel")
-
-root.left = L
-root.right = R
-
-print("...preorder...")
-preorder(root)
-print("...inorder...")
-inorder(root)
-print("...postorder...")
-postorder(root)
-print("...levelorder...")
-levelorder(root)
-print("...insert...")
-Mary = BT("Mary")
-Elijah = BT("Elijah")
-Elisha = BT("Elisha")
-insert(root, Mary)
-insert(root, Elijah)
-insert(root, Elisha)
-levelorder(root)
-
-print("...search...")
-print(search(root, "Elisha"))
-
-print("...levelorder...")
-levelorder(root)
-
-print("...deepest node...")
-dNode = getDeepestNode(root)
-print(dNode)
-
-print("...delete deepest node...")
-# deleteDNode(root, getDeepestNode(root))
-levelorder(root)
-
-print("...delete any node...")
-deleteAnyNode(root, "Georgina")
-deleteAnyNode(root, "Mary")
-levelorder(root)
-
+'''
+# 1. Product
+print("The cartesian product using repeat:")
+print(list(product([1, 2, 6], repeat = 1)))
+print()
+print("The cartesian product of the containers:")
+print(list(product(['geeks', 'for', 'geeks'], '2')))
+print()
+print(list(product('AB', [3, 4])))
+print()
+for key, value in enumerate(list(product('AB', [3, 4]))):
+    print(value[0], "|", value[1])
