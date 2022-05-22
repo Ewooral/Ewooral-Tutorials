@@ -1,3 +1,7 @@
+From:Boahen Owusu-Ewooral Elijah <boahen.cos@gmail.com>
+Date: Sun, 22 May 2022
+Subject: [PATCH] Create patch file
+
 diff --git a/client.py b/client.py
 index 40badcd..e8b44b1 100644
 --- a/client.py
