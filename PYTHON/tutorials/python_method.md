@@ -58,7 +58,7 @@
   **isdisjoint()**	Returns whether two sets have a intersection or not
   **issubset()**	Returns whether another set contains this set or not
   **issuperset()**	Returns whether this set contains another set or not
-  **pop()**	Removes an element from the set
+  **pop()**	Removes first element from the set
   **remove()**	Removes the specified element
   **symmetric_difference()**	Returns a set with the symmetric differences of two sets
   **symmetric_difference_update()**	inserts the symmetric differences from this set and another

@@ -162,4 +162,9 @@ strDict = {'animosity': 1, 'ani': 2, 'Ghana': 3, 'Nigeria': 4}
 print("Sorted: ", sorted(newDict, reverse=True))
 print(sorted(strDict, key=len))
 
-
+# merge dictionaries
+dic1 = {"name": "elijah", "age": 29}
+dic2 = {"address": "Tema", "Grade": "A"}
+# merge_dic = {**dic1, **dic2} OR
+merge_dic = dic1 | dic2
+print(merge_dic)

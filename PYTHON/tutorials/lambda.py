@@ -26,7 +26,7 @@ the following:
 
 
 """
-
+from functools import reduce
 # THIS 
 def sum(a, b):
     return a + b
@@ -89,7 +89,7 @@ print("These are the lists of talkertives: " ,name)
 
 
 """ 
-lambdas in map()
+lambdas in map(function, iterables)
 the map function is used to apply a particular operation to every element 
 in a sequence. Like filter(), it also takes 2 parameters:
 
@@ -108,5 +108,7 @@ Here, we define a list called sequences which contains some numbers.
 We declare a variable called filtered_result which will store the mapped values
 A lambda function which runs on each element of the list and returns the square of that number.
 Print the result returned by the map function. 
-
 """
+d = reduce(lambda x, y: x+y, map(lambda x: x+x,
+           filter(lambda x: (x >= 3), (1, 2, 3, 4))))
+print("reduce: ", d)
