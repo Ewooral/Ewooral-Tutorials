@@ -2,30 +2,34 @@ from dataclasses import dataclass
 
 
 @dataclass
-class Family:
-    name: str
-    age: int
-    address: chr
+class LongestList:
+    my_list: list
+    _another: int = 100
+
+    def find_longest_list(self):
+        word = None
+        max_length = 0
+        for s in self.my_list:
+            if len(s) > max_length:
+                word = s
+        print(word)
+
+    def find_longest_list_v2(self):
+        word = max(self.my_list, key=len, default=" ")
+        return word
+
+    # encapsulation
+    def calculus(self):
+        return self._another * 2
 
 
-@dataclass
-class InventoryItem:
-    """Class for keeping track of an item in inventory."""
-    name: str
-    unit_price: float
-    quantity_on_hand: int = 0
-
-    def total_cost(self) -> float:
-        return self.unit_price * self.quantity_on_hand
+def main():
+    # longest string
+    longest_string = LongestList(["I", "like", "Python", "Dictionary is it"])
+    longest_string.find_longest_list()
+    print(longest_string.find_longest_list_v2())
+    print(longest_string.calculus())
 
 
-'''
-will add, among other things, a __init__() that looks like:
-
-def __init__(self, name: str, unit_price: float, quantity_on_hand: int = 0):
-    self.name = name
-    self.unit_price = unit_price
-    self.quantity_on_hand = quantity_on_hand
-Note that this method is automatically added to the class: 
-it is not directly specified in the InventoryItem definition shown above.
-'''
+if __name__ == '__main__':
+    main()
