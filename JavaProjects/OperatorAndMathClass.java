@@ -5,7 +5,7 @@ public class OperatorAndMathClass{
         int intValue2 = 42;
 
         int result1 = intValue1 + intValue2;
-//         System.out.println("Addition: " + result1);
+        System.out.println("Addition: " + result1);
 
 //         int result2 = intValue1 - intValue2;
 //         System.out.println("Subtraction: " + result2);
