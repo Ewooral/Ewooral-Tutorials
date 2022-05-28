@@ -39,7 +39,7 @@ public class OperatorAndMathClass{
          */
         int intValue3 = 10;
         System.out.println(++ intValue3);
-//         System.out.println(intValue3 ++);
+        System.out.println(intValue3 ++);
 
 //         String s1 = "Hello";
 //         String s2 = "HellO";
