@@ -46,7 +46,7 @@ public class OperatorAndMathClass{
 
         if (s1.equals(s2)){
             System.out.println("Matched!!");
-//         }
+        }
 //         else{
 //             System.out.println("No match");
 //         }
