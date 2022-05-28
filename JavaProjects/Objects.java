@@ -14,7 +14,7 @@ public class Objects {
 //           Literal characters are wrapped in single quotes
 //         */
         char[] chars = {'H', 'e', 'l', 'l', 'o', '!'};
-//         String s = new String(chars);
+        String s = new String(chars);
 //         System.out.println(s);
 
 //         String s1 = "This is a string!";
