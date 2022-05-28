@@ -11,7 +11,7 @@ public class OperatorAndMathClass{
         System.out.println("Subtraction: " + result2);
 
         int result3 = intValue1 * intValue2;
-//         System.out.println("Multiplication: " + result3);
+        System.out.println("Multiplication: " + result3);
 
 //         double result4 = (double)intValue1 / intValue2;
 //         System.out.println("Division: " + result4);
