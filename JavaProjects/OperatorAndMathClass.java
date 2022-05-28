@@ -22,7 +22,7 @@ public class OperatorAndMathClass{
         // Math.round
         double doubleValue = -3.99999;
         long rounded = Math.round(doubleValue);
-//         System.out.println("Rounded: " + rounded);
+        System.out.println("Rounded: " + rounded);
 
 //         // Math.abs
 //         double absValue = Math.abs(doubleValue);
