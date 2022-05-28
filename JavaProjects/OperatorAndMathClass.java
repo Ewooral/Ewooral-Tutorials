@@ -13,7 +13,7 @@ public class OperatorAndMathClass{
         int result3 = intValue1 * intValue2;
         System.out.println("Multiplication: " + result3);
 
-//         double result4 = (double)intValue1 / intValue2;
+        double result4 = (double)intValue1 / intValue2;
 //         System.out.println("Division: " + result4);
 
 //         double result5 = (double)intValue1 % intValue2;
