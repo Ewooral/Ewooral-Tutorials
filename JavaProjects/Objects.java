@@ -29,7 +29,7 @@ public class Objects {
 
         char[] Greet = {'H', 'O', 'W', 'A', 'R', 'E', 'Y', 'O', 'U', '?'};
         String greetMe = new String(Greet);
-//         System.out.println(greetMe);
+        System.out.println(greetMe);
 
 //         char[] Greet2 = greetMe.toCharArray();
 //         for (char c : Greet2){
