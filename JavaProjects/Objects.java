@@ -13,7 +13,7 @@ public class Objects {
 //           A string in Java is not a primitive, but a complex object
 //           Literal characters are wrapped in single quotes
 //         */
-//         char[] chars = {'H', 'e', 'l', 'l', 'o', '!'};
+        char[] chars = {'H', 'e', 'l', 'l', 'o', '!'};
 //         String s = new String(chars);
 //         System.out.println(s);
 
