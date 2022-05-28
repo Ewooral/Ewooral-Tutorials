@@ -5,7 +5,7 @@ public class Objects {
     public static void main(String [] args){
         // creating an instance of the Objects class (Instantiation)
         Objects item = new Objects();
-//         item.type = "Hat";
+        item.type = "Hat";
 //         item.displayItem();
         
 
