@@ -27,7 +27,7 @@ public class Objects {
         String s5 = s3 + s4 +" Qty: " + 4 + "m";
         System.out.println(s5);
 
-//         char[] Greet = {'H', 'O', 'W', 'A', 'R', 'E', 'Y', 'O', 'U', '?'};
+        char[] Greet = {'H', 'O', 'W', 'A', 'R', 'E', 'Y', 'O', 'U', '?'};
 //         String greetMe = new String(Greet);
 //         System.out.println(greetMe);
 
