@@ -1,5 +1,5 @@
 public class OperatorAndMathClass{
-//     public static void main(String[] args){
+    public static void main(String[] args){
 
 //         int intValue1 = 56;
 //         int intValue2 = 42;
