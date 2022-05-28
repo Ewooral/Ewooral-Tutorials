@@ -41,7 +41,7 @@ public class OperatorAndMathClass{
         System.out.println(++ intValue3);
         System.out.println(intValue3 ++);
 
-//         String s1 = "Hello";
+        String s1 = "Hello";
 //         String s2 = "HellO";
 
 //         if (s1.equals(s2)){
