@@ -38,7 +38,7 @@ public class OperatorAndMathClass{
                       New value: 11 
          */
         int intValue3 = 10;
-//         System.out.println(++ intValue3);
+        System.out.println(++ intValue3);
 //         System.out.println(intValue3 ++);
 
 //         String s1 = "Hello";
