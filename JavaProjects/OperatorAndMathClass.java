@@ -24,8 +24,8 @@ public class OperatorAndMathClass{
         long rounded = Math.round(doubleValue);
         System.out.println("Rounded: " + rounded);
 
-//         // Math.abs
-//         double absValue = Math.abs(doubleValue);
+        // Math.abs
+        double absValue = Math.abs(doubleValue);
 //         System.out.println("Rounded: " + absValue);
 
 //         /* postfix and prefix incrementing
