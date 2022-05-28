@@ -19,7 +19,7 @@ public class Objects {
 
         String s1 = "This is a string!";
         String s2 = new String("This is also a string!");
-//         System.out.println(s1);
+        System.out.println(s1);
 //         System.out.println(s2);
 
 //         String s3 = "Shirt size: ";
