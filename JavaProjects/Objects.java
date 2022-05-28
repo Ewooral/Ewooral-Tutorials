@@ -6,7 +6,7 @@ public class Objects {
         // creating an instance of the Objects class (Instantiation)
         Objects item = new Objects();
         item.type = "Hat";
-//         item.displayItem();
+        item.displayItem();
         
 
 //         /* STRING OBJECT 
