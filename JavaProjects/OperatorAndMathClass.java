@@ -2,7 +2,7 @@ public class OperatorAndMathClass{
     public static void main(String[] args){
 
         int intValue1 = 56;
-//         int intValue2 = 42;
+        int intValue2 = 42;
 
 //         int result1 = intValue1 + intValue2;
 //         System.out.println("Addition: " + result1);
