@@ -17,7 +17,7 @@ public class OperatorAndMathClass{
         System.out.println("Division: " + result4);
 
         double result5 = (double)intValue1 % intValue2;
-//         System.out.println("Remainder: " + result5);
+        System.out.println("Remainder: " + result5);
 
 //         // Math.round
 //         double doubleValue = -3.99999;
