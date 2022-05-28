@@ -23,7 +23,7 @@ public class Objects {
         System.out.println(s2);
 
         String s3 = "Shirt size: ";
-//         String s4 = "M,";
+        String s4 = "M,";
 //         String s5 = s3 + s4 +" Qty: " + 4 + "m";
 //         System.out.println(s5);
 
