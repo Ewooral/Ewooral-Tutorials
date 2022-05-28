@@ -28,7 +28,7 @@ public class Objects {
         System.out.println(s5);
 
         char[] Greet = {'H', 'O', 'W', 'A', 'R', 'E', 'Y', 'O', 'U', '?'};
-//         String greetMe = new String(Greet);
+        String greetMe = new String(Greet);
 //         System.out.println(greetMe);
 
 //         char[] Greet2 = greetMe.toCharArray();
