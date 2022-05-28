@@ -32,7 +32,7 @@ public class Objects {
         System.out.println(greetMe);
 
         char[] Greet2 = greetMe.toCharArray();
-//         for (char c : Greet2){
+        for (char c : Greet2){
 //             System.out.println(c);
 //         }
 
