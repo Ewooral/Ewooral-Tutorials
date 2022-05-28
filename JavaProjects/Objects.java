@@ -31,7 +31,7 @@ public class Objects {
         String greetMe = new String(Greet);
         System.out.println(greetMe);
 
-//         char[] Greet2 = greetMe.toCharArray();
+        char[] Greet2 = greetMe.toCharArray();
 //         for (char c : Greet2){
 //             System.out.println(c);
 //         }
