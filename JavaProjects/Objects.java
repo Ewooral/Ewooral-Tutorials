@@ -1,7 +1,7 @@
 public class Objects {
 
-//     // instance variable (no static keyword)
-//     public String type;
+    // instance variable (no static keyword)
+    public String type;
 //     public static void main(String [] args){
 //         // creating an instance of the Objects class (Instantiation)
 //         Objects item = new Objects();
