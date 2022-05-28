@@ -24,7 +24,7 @@ public class Objects {
 
         String s3 = "Shirt size: ";
         String s4 = "M,";
-//         String s5 = s3 + s4 +" Qty: " + 4 + "m";
+        String s5 = s3 + s4 +" Qty: " + 4 + "m";
 //         System.out.println(s5);
 
 //         char[] Greet = {'H', 'O', 'W', 'A', 'R', 'E', 'Y', 'O', 'U', '?'};
