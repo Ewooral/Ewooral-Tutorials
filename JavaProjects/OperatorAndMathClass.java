@@ -26,7 +26,7 @@ public class OperatorAndMathClass{
 
         // Math.abs
         double absValue = Math.abs(doubleValue);
-//         System.out.println("Rounded: " + absValue);
+        System.out.println("Rounded: " + absValue);
 
 //         /* postfix and prefix incrementing
 //            postfix output the value of 10 and reset it to 11
