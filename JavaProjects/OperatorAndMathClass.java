@@ -28,15 +28,15 @@ public class OperatorAndMathClass{
         double absValue = Math.abs(doubleValue);
         System.out.println("Rounded: " + absValue);
 
-//         /* postfix and prefix incrementing
-//            postfix output the value of 10 and reset it to 11
-//                     = Output: 10
-//                       New value: 11
+        /* postfix and prefix incrementing
+           postfix output the value of 10 and reset it to 11
+                    = Output: 10
+                      New value: 11
 
-//            Prefix executes the math and evaluates the value
-//                     = Output: 11
-//                       New value: 11 
-//          */
+           Prefix executes the math and evaluates the value
+                    = Output: 11
+                      New value: 11 
+         */
 //         int intValue3 = 10;
 //         System.out.println(++ intValue3);
 //         System.out.println(intValue3 ++);
