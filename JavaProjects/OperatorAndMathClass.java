@@ -44,7 +44,7 @@ public class OperatorAndMathClass{
         String s1 = "Hello";
         String s2 = "HellO";
 
-//         if (s1.equals(s2)){
+        if (s1.equals(s2)){
 //             System.out.println("Matched!!");
 //         }
 //         else{
