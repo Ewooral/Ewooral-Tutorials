@@ -37,7 +37,7 @@ public class Objects {
         }
 
         
-//     }
+    }
 
 //     // instance method (no static keyword)
 //     private void displayItem(){
