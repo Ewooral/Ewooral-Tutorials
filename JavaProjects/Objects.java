@@ -15,7 +15,7 @@ public class Objects {
 //         */
         char[] chars = {'H', 'e', 'l', 'l', 'o', '!'};
         String s = new String(chars);
-//         System.out.println(s);
+        System.out.println(s);
 
 //         String s1 = "This is a string!";
 //         String s2 = new String("This is also a string!");
