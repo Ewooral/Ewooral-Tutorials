@@ -42,6 +42,6 @@ public class Objects {
     // instance method (no static keyword)
     private void displayItem(){
         System.out.println("This is a " + this.type);
-//     }
+    }
 
-// }
+}
