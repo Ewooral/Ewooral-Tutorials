@@ -45,7 +45,7 @@ public class OperatorAndMathClass{
         String s2 = "HellO";
 
         if (s1.equals(s2)){
-//             System.out.println("Matched!!");
+            System.out.println("Matched!!");
 //         }
 //         else{
 //             System.out.println("No match");
