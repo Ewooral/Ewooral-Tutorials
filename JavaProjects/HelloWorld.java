@@ -1,11 +1,10 @@
-package JavaProjects.HelloWorld.java;
 import java.lang.Math;
 
 
     public class HelloWorld{
         public static void main(String[] args) {
             // FLOATS
-           float ab = 0.0f; 
+        //    float ab = 0.0f; 
            int a = 4;
            int b = 5;
            float sum = (float)a + b;   // it is imperative that you cast one of the operands to
@@ -15,12 +14,12 @@ import java.lang.Math;
           System.out.println("Hey, " + num);
 
             // DOUBLES 
-            double c = 0.0;
+            // double c = 0.0;
             String name = "Elijah";
-            float j = 3.3f;
-            double d = 4.0;
-            double e = 5.0;
-            float Sum2 = (float)(c + d + e);
+            // float j = 3.3f;
+            // double d = 4.0;
+            // double e = 5.0;
+            // float Sum2 = (float)(c + d + e);
 
          
          System.out.println( sum);

@@ -27,7 +27,7 @@
          int         Integer
          long        Long
          float       Float
-         Double      Double
+         double      Double 
     
     Each helper class is a member of a java package called **Java.lang**
     ``` Java
@@ -51,7 +51,7 @@
 
     ```
 
-  ## Sometimes, there are inconsistencies in adding double values. For example
+  ### Sometimes, there are inconsistencies in adding double values. For example
   ```Java 
   public static void main(String[] args){
       double value = 0.012;
@@ -63,7 +63,7 @@
  **BigDecimals** is used to solve this inconsistency problem
   
   
-  ## OPERATORS
+  ### OPERATORS
 
   ### Incrementing and decrementing
 
@@ -117,7 +117,7 @@
     String string1 = new String("Hello");
     String string2 = "Hello"
 ```
-    NB!!!
+    NB!!
 *    A String is an array of characters in a particular object.
 *    A String Object is immutable.
 *    Resetting the value of a String creates a new object

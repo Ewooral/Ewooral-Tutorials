@@ -1,4 +1,3 @@
-package JavaProjects.primitiveVariables.java;
 public class primitiveVariables {
 
     public static void main(String[] args){
@@ -14,20 +13,37 @@ public class primitiveVariables {
         System.out.println("Float:" + f);
         System.out.println("Double:" + d);
         System.out.println("Long:" + l);
+        System.out.println("............");
 
         double doubleValue = 128.0d;
         Double doubleObj =  Double.valueOf(doubleValue); // instance of the Double helper class
 
+        /**
+         * to convert one data type to another, create an instance of the data type
+         * E.g. double doubleValue = 128.0d;
+         * Double doubleObj = Double.valueOf(doubleValue);
+         * Now convert it to another datatype like this:
+         * byte byteValue = doubleObj.byteValue();
+         * 
+         */
+        int singleNumber = 120;
+        Integer singleObj = Integer.valueOf(singleNumber);
+        float floatObj = singleObj.floatValue();
+        byte byteObj = singleObj.byteValue();
+        System.out.println("Byte Value: " + byteObj);
+        System.out.println("float Value:  " + floatObj);
+        System.out.println("Single Obj: " + singleObj);
+
         byte byteValue = doubleObj.byteValue(); 
         int intValue = doubleObj.intValue();
-        float floatValue = doubleObj.floatValue();
+        // float floatValue = doubleObj.floatValue();
         short shortValue = doubleObj.shortValue();
-        long longValue = doubleObj.longValue();
+        // long longValue = doubleObj.longValue();
         String stringValue = doubleObj.toString();
 
-//       if(doubleValue < Byte.MAX_VALUE){
-//             byteValue++;
-//         }
+      if(doubleValue < Byte.MAX_VALUE){
+            byteValue++;
+        }
         System.out.println("byte value first:" + byteValue);
 
         System.out.println("byte value:" + byteValue);
