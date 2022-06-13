@@ -6,7 +6,7 @@ from itertools import (product, combinations, accumulate,
                       chain, count
 )                   
 
-# class Itertool(pydantic.BaseModel):
+class Itertool(pydantic.BaseModel):
     results: Optional [int] 
     group: Optional[List]
     
