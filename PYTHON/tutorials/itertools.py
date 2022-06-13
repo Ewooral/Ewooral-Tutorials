@@ -1,4 +1,4 @@
-# import operator
+import operator
 import time
 from typing import List, Optional
 import pydantic
