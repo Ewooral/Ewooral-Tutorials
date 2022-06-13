@@ -8,6 +8,7 @@ class LongestList:
     _max_length: int = 0
     _index: int = 0
     _word: str = None
+    ratio: float = _index + _max_length
 
     # O(1) T, O(1) S
     def find_longest_list_v2(self) -> str:
@@ -20,7 +21,7 @@ class LongestList:
         max_length = 0
         for s in self.my_list:
             if len(s) > max_length:
-                word = s
+                word = s 
         return word
 
     # helper function
@@ -43,7 +44,7 @@ class LongestList:
 def main():
     # longest string
     longest_string = LongestList(["I", "like", "Python", " And Dictionary as well"])
-
+    print(longest_string.ratio)
     print("Approach 1: ", longest_string.find_longest_list())
     print("Approach 2: ", longest_string.find_longest_list_v2())
     print("Approach 3: ", longest_string.longestString())
@@ -57,4 +58,4 @@ if __name__ == '__main__':
 Approach 1:   And Dictionary as well
 Approach 2:   And Dictionary as well
 Approach 3:   And Dictionary as well
-'''
+''' 

@@ -1,7 +1,79 @@
-import operator
+# import operator
 import time
-import itertools
-from itertools import product
+from typing import List, Optional
+import pydantic
+from itertools import (product, combinations, accumulate,
+                      chain, count
+)                   
+
+class Itertool(pydantic.BaseModel):
+    results: Optional [int] 
+    group: Optional[List]
+    
+
+
+    def add_on(cls):
+        group = [1, 2, 3, 4, 5]
+        a = accumulate(group)
+        return list(a)
+
+    def chains(cls):
+        co = chain('ABC', 'DEF')
+        return list(co)
+
+    def ImCounting(cls):
+        for c in count(2, 1):
+            if c == 10:
+                break
+            print(c, end=" ")
+
+    def combine(cls):
+        a = combinations("abc", 2)
+        return list(a)
+
+
+        
+        
+
+def main():
+    # accumulate
+    print("...accumulate()...")
+    iterr = Itertool()
+    print(iterr.add_on())
+
+    # chain
+    print("...chain()...")
+    re = iterr.chains()
+    print(*re)
+
+    # count()
+    print("...count()...")
+    iterr.ImCounting()
+
+    # combinations
+    print("...combinations...")
+    print(*iterr.combine())
+
+
+
+
+
+if __name__ == '__main__':
+    main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
 
 print("....................................")
 L1 = [1, 2, 3]
@@ -38,8 +110,8 @@ print("....itertools.cycle()....")
 count = 0
 for i in itertools.cycle('abcd'):
     if count >= 7:
-        ''' count > 7: break prints 8 
-                  times but count >= 7 prints 7 times'''
+    count > 7: break prints 8
+times but count >= 7 prints 7 times
         break
     else:
         print(i, end="")
@@ -70,10 +142,10 @@ print()
 
 print("....combinatoric iterators....")
 print()
-'''
+
 In python, there are four of them
 
-'''
+
 # 1. Product
 print("The cartesian product using repeat:")
 print(list(product([1, 2, 6], repeat=1)))
@@ -85,3 +157,5 @@ print(list(product('AB', [3, 4])))
 print()
 for key, value in enumerate(list(product('AB', [3, 4]))):
     print(value[0], "|", value[1])
+
+'''

@@ -168,3 +168,10 @@ dic2 = {"address": "Tema", "Grade": "A"}
 # merge_dic = {**dic1, **dic2} OR
 merge_dic = dic1 | dic2
 print(merge_dic)
+
+# loop over two dictionaries concurrently
+for i, v in zip(dic1.values(), dic2.values()):
+    print(i, "|", v)
+print()
+for i, v in enumerate(merge_dic.values()):
+    print(i, "|", v)
