@@ -15,7 +15,9 @@ test = np.array([[1, 2],
                  [3, 4], 
                  [5, 6]])
 print(test);
+print("...........")
 print(test[:, 0]);
+print("..............")
 
 # Create a 2D numpy array from baseball: np_baseball
 np_baseball = np.array(baseball);
