@@ -17,7 +17,7 @@ class Itertool(pydantic.BaseModel):
         a = accumulate(group)
         return list(a)
 
-    def chains(cls):
+    # def chains(cls):
         co = chain('ABC', 'DEF')
         return list(co)
 

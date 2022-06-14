@@ -1,24 +1,34 @@
 {
     "version": "0.2.0",
     "configurations": [
-        
-        
-        
-
-        
-        
-        
-    
-    {"name":"Python: Current File","type":"python","request":"launch","program":"${file}","console":"integratedTerminal"},
+        {
+            "type": "java",
+            "name": "Launch FunctionOverload",
+            "request": "launch",
+            "mainClass": "fundamentals.FunctionOverload",
+            "projectName": "Ewooral-Tutorials_5ed76a4f"
+        },
+        {
+            "type": "java",
+            "name": "Launch SwitchStatement",
+            "request": "launch",
+            "mainClass": "fundamentals.SwitchStatement",
+            "projectName": "Ewooral-Tutorials_5ed76a4f"
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
         {
             "type": "java",
             "name": "Launch HelloWorld",
             "request": "launch",
             "mainClass": "HelloWorld",
             "projectName": "Ewooral-Tutorials_5ed76a4f"
-        
         },
-
         {
             "name": ".NET Core Launch (console)",
             "type": "coreclr",
@@ -35,6 +45,5 @@
             "type": "coreclr",
             "request": "attach"
         }
-       
     ]
 }

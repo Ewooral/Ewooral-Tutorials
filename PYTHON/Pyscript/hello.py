@@ -1,4 +1,5 @@
-print("Let's compute π:")
+# from dataclasses import dataclass
+print("Let's computer π:")
 
 
 def compute_pi(n):
@@ -11,3 +12,4 @@ def compute_pi(n):
 pi = compute_pi(100000)
 s = f"π is approximately {pi:.3f}"
 print(s)
+print(67)
