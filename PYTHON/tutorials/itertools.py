@@ -14,7 +14,7 @@ class Itertool(pydantic.BaseModel):
 
     def add_on(cls):
         group = [1, 2, 3, 4, 5]
-        # a = accumulate(group)
+        a = accumulate(group)
         return list(a)
 
     def chains(cls):
