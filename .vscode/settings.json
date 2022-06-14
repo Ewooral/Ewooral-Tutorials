@@ -1,5 +1,5 @@
 {
-    "liveServer.settings.port": 5501,
+    "liveServer.settings.port": 5557,
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "*.html": "html",
@@ -88,7 +88,8 @@
         "syncstream": "cpp",
         "thread": "cpp",
         "valarray": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "stdlib.h": "c"
     },
     "python.testing.unittestArgs": [
         "-v",
@@ -103,5 +104,24 @@
         "./PYTHON/tutorials",
         "./PYTHON/tutorials",
         "./Technical Interview Questions and Answers/python/Queue"
+    ],
+    "java.project.sourcePaths": [
+        "Technical Interview Questions and Answers\\java",
+        "JavaProjects"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "MyFirstSQLConnection",
+            "username": "admin",
+            "database": "ewooral",
+            "password": ""
+        }
     ]
 }
