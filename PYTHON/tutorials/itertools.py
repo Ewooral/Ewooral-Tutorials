@@ -8,7 +8,7 @@ from itertools import (product, combinations, accumulate,
 
 class Itertool(pydantic.BaseModel):
     results: Optional [int] 
-    # group: Optional[List]
+    group: Optional[List]
     
 
 
