@@ -1,5 +1,5 @@
 # BIGGEST NUMBER.................................
-from math import prod
+
 def biggestNumber(arr):
     biggestNum = arr[0]
     for index in range(1, len(arr)):
@@ -9,6 +9,7 @@ def biggestNumber(arr):
 
 
 print("Biggest element:", biggestNumber([2, 5, -2, 0, 30]))
+print("Biggest item: ", max([2, 5, -2, 0, 30]))
 
 
 # # ........................................................
@@ -23,23 +24,27 @@ print("MAX NUMREC:", findMaxNumRec([2, -3, -2, 0, 30], 3))
 
 # # ARRAY OF PRODUCTS ........................................................
 def array_of_product(array):
+    hash_t = {}
     totalProduct = [1] * len(array)
     totalProduct = [1 for _ in range(len(array))]
     for i in range(len(array)):
         currentProduct = 1
         for j in range(len(array)):
-            if i != j:
-                currentProduct *= array[j]
-                totalProduct[i] = currentProduct
+            if array[j] not in hash_t:
+                if i != j:
+                    currentProduct *= array[j]
+                    totalProduct[i] = currentProduct
+            else:
+                hash_t[j] = array[j]
 
-    return totalProduct
+    return hash_t
 
 
 print("array of Products 1:", array_of_product([5, 1, 4, 2]))
 
 
 # # O(n) Time | O(n) space
-def arrayOfProduct(arr):
+def arrayOfProduct1(arr):
     finalProduct,  cp_r, cp_l = [1] * len(arr), [1] * len(arr), [1] * len(arr)
 #    # [5, 1, 4, 2]
     cp = 1
@@ -63,7 +68,7 @@ def arrayOfProduct(arr):
     return finalProduct
 
 
-print("array of Products 2:", array_of_product([5, 1, 4, 2]))
+print("array of Products 2:", arrayOfProduct1([5, 1, 4, 2]))
 
 
 # # O(n) Time | O(n) space (OPTIMIZED)
