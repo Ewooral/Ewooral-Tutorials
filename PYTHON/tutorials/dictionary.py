@@ -165,13 +165,44 @@ print(sorted(strDict, key=len))
 # merge dictionaries
 dic1 = {"name": "elijah", "age": 29}
 dic2 = {"address": "Tema", "Grade": "A"}
-# merge_dic = {**dic1, **dic2} OR
-merge_dic = dic1 | dic2
+
+merge_dic = {**dic1, **dic2} 
+# merge_dic = dic1 | dic2
 print(merge_dic)
 
+print()
 # loop over two dictionaries concurrently
 for i, v in zip(dic1.values(), dic2.values()):
     print(i, "|", v)
 print()
-for i, v in enumerate(merge_dic.values()):
+for i, v in enumerate(merge_dic.items()):
     print(i, "|", v)
+
+print()
+# convert tupte to dictionary
+L = [("Jan", 1), ("Feb", 2), ("Mar", 3), ("April", 4), ("May", 5)]
+print("List of tuples: ", L)
+
+print()
+convertTupleToAHashTableOrDictionary = dict(iter(L, ))
+print(convertTupleToAHashTableOrDictionary)
+print()
+for key, value in convertTupleToAHashTableOrDictionary.items():
+    print(key, value)
+
+
+# CONVERT TWO LISTS INTO A DICTIONARY
+years = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+durations = [103, 101, 99, 100, 100, 95, 95, 96, 93, 90]
+
+
+print("........")
+res = {years[i]: durations[i] for i in range(len(years))}
+
+print("........")
+print(res)
+
+# OR
+print("........")
+res1 = dict(zip(years, durations))
+print(res1)
