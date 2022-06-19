@@ -17,4 +17,3 @@ def test_3():
     title = "Jenkins is CI server"
     assert name is not title, "Title does not match"
 
-# pytest -r A gives info about all test cases
