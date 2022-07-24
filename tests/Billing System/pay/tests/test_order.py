@@ -1,6 +1,7 @@
 from pay.order import LineItem, Order
 
 
+
 def test_empty_order_total() -> None:
     order = Order()
     assert order.total == 0

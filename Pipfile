@@ -11,6 +11,8 @@ matplotlib = "*"
 gunicorn = "*"
 pydantic = "*"
 bpython = "*"
+pytest-cov = "*"
+pytest-html = "*"
 
 [dev-packages]
 autopep8 = "*"
