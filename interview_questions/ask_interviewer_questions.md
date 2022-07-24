@@ -13,11 +13,18 @@
 13. What are THEY looking for in a person?
 14. Next steps?
 15. Do you have any hesitations around my ability to be successful in this role?
-16.  What happened to the predecessor in this role? Should tell you if you're entering a burning building, inheriting a healthy program, etc.
+16. What happened to the predecessor in this role? Should tell you if you're entering a burning building, inheriting a healthy program, etc.
 
-17.  What is the average tenure of your senior leaders? In addition to giving a hint about the culture, some answers may imply friction vs. opportunity.
+17. What is the average tenure of your senior leaders? In addition to giving a hint about the culture, some answers may imply friction vs. opportunity.
 18. Is there any reason you wouldn't hire me?
 19. Do you LIKE me, personally?
 20. Am I STILL a good fit for this position, and how do I compare to your other candidates?
 21. Were you to offer me the job today, how much would you pay?
 22. What is YOUR ideal work environment? Describe, please.
+
+bloomberg
+23. How do new hires pick teams?
+24. What is your on-boarding process like?
+
+bloomberg philanthropist
+Ensuring better, longer lives for the greatest number of people

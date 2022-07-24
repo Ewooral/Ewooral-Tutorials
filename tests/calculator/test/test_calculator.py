@@ -1,6 +1,5 @@
-from Calculator import square, hello
 import pytest
-
+from calculator.Calculator import square
 
 def test_positive():
     assert square(2) == 4
@@ -23,6 +22,3 @@ def test_str():
         square("cat")
 
 
-def test_hello():
-    assert hello("Elijah") == "hello, Elijah"
-    assert hello() == "hello, world"
