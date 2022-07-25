@@ -102,7 +102,7 @@ print(ware_house.insert_in("NJ7006246135"))
 print(ware_house.insert_in("NJ7003346199"))
 
 print("Ship 1")
-# print(performWareHouseQuery(ware_house))
+print(performWareHouseQuery(ware_house))
 
 # insert
 print(ware_house.insert_in("NJ8994446200"))
