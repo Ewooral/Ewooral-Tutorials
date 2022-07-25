@@ -122,6 +122,6 @@ print(performWareHouseQuery(ware_house))
 print(ware_house.insert_in("AG8994446900"))
 
 print("Ship 2")
-print(performWareHouseQuery(ware_house))
+# print(performWareHouseQuery(ware_house))
 
 print(ware_house.queue)
