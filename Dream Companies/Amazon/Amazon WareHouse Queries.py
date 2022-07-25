@@ -113,7 +113,7 @@ print(performWareHouseQuery(ware_house))
 print("....Group 3....")
 # insert
 print(ware_house.insert_in("BF7006246000"))
-print(ware_house.insert_in("KU7003346455"))
+# print(ware_house.insert_in("KU7003346455"))
 
 print("Ship 2")
 print(performWareHouseQuery(ware_house))
