@@ -63,3 +63,13 @@ SELECT *
 FROM eurovis
 WHERE Place > 25
 ORDER BY Place DESC;
+
+INSERT INTO eurovis VALUES (501, 2022, 'Ghana', 'NA', 'NA', 335, 20, 'Home', 'Away', 0, null, 3 );
+
+SELECT * FROM eurovis WHERE Country='Ghana';
+
+UPDATE eurovis SET Points = 145 WHERE ID=467;
+
+UPDATE eurovis SET Gender = 'Male' WHERE ID=467;
+
+Select ID, country, EventYear from eurovis;

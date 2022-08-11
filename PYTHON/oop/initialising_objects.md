@@ -9,14 +9,18 @@ We'll cover the following
 
 ## What is an initializer?#
 
-As the name suggests, the initializer is used to initialize an object of a class. It’s a special method that outlines the steps that are performed when an object of a class is created in the program. *It’s used to define and assign values to instance variables*. We will discuss the concept of instance variables in the next lesson. For now, just focus on the syntax.
+As the name suggests, the initializer is used to initialize an object of a class.
+It’s a special method that outlines the steps that are performed when an object of a
+class is created in the program. *It’s used to define and assign values to instance variables*. 
+We will discuss the concept of instance variables in the next lesson. For now, just focus on the syntax.
 
 The initialization method is similar to other methods but has a pre-defined name, __init__.
 
     The double underscores mean this is a special method that the Python interpreter will treat as a special case.
 
-The initializer is a special method because it does not have a return type. The first parameter of __init__ is self, which is a way to refer to the object being initialized. We will discuss this later.
-
+The initializer is a special method because it does not have a return type. The first parameter of 
+__init__ is self, which is a way to refer to the object being initialized. We will discuss this later.
+ 
 *It is always a good practice to define it as the first member method in the class definition.*
 
 ### Defining initializers#
