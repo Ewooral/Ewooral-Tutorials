@@ -1,3 +1,10 @@
 #!/usr/bin/bash
 
-echo 'Hello script! This is my first Scripting language!'
+echo 'sayHi()'
+
+# Redirect to file
+echo 'What is your name?' > file.txt
+
+#cat >> file.txt
+
+cat >> hello.py
