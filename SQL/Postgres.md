@@ -44,7 +44,8 @@
             man psql
 
  * Connect to the Database:
-
+            
+            quit psql shell
             psql 'database' 'user'
 
 
