@@ -684,28 +684,9 @@ General Options:
                               functionality, that
                               will be removed in
                               the future.
+
 (my-projects-env) fspoo@ewooral:~$ pip3 install pipenv
 
-Collecting pipenv
-  Downloading pipenv-2022.9.8-py2.py3-none-any.whl (3.3 MB)
-     ━━━━━━━━━━━━━ 3.3/3.3 MB 368.3 kB/s eta 0:00:00Requirement already satisfied: setuptools>=36.2.1 in ./my-projects-env/lib/python3.10/site-packages (from pipenv) (59.6.0)
-Collecting virtualenv-clone>=0.2.5
-  Downloading virtualenv_clone-0.5.7-py3-none-any.whl (6.6 kB)
-Collecting certifi
-  Downloading certifi-2022.6.15.1-py3-none-any.whl (160 kB)
-     ━━━━━━━━━━━━ 160.4/160.4 316.1 kB/s eta 0:00:00                  KB
-Collecting virtualenv
-  Downloading virtualenv-20.16.5-py3-none-any.whl (8.8 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 396.6 kB/s eta 0:00:00
-Collecting distlib<1,>=0.3.5
-  Downloading distlib-0.3.6-py2.py3-none-any.whl (468 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 468.5/468.5 KB 422.4 kB/s eta 0:00:00
-Collecting filelock<4,>=3.4.1
-  Downloading filelock-3.8.0-py3-none-any.whl (10 kB)
-Collecting platformdirs<3,>=2.4
-  Downloading platformdirs-2.5.2-py3-none-any.whl (14 kB)
-Installing collected packages: distlib, virtualenv-clone, platformdirs, filelock, certifi, virtualenv, pipenv
-Successfully installed certifi-2022.6.15.1 distlib-0.3.6 filelock-3.8.0 pipenv-2022.9.8 platformdirs-2.5.2 virtualenv-20.16.5 virtualenv-clone-0.5.7
 (my-projects-env) fspoo@ewooral:~$
 (my-projects-env) fspoo@ewooral:~$ dir
 library.csv  my-projects-env
@@ -836,121 +817,8 @@ dj4e-samples  django  library.csv  my-projects-env
 dj4e-samples  django  library.csv  my-projects-env
 (my-projects-env) fspoo@ewooral:~$ cd dj4e-samples/
 (my-projects-env) fspoo@ewooral:~/dj4e-samples$ pip install -r requirements.txt
-Collecting Django==3.2.5
-  Downloading Django-3.2.5-py3-none-any.whl (7.9 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.9/7.9 MB 461.0 kB/s eta 0:00:00Collecting django-crispy-forms==1.8.1
-  Downloading django_crispy_forms-1.8.1-py2.py3-none-any.whl (108 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 108.2/108.2 KB 465.5 kB/s eta 0:00:00Collecting django-filter==2.2.0
-  Downloading django_filter-2.2.0-py3-none-any.whl (69 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 KB 534.2 kB/s eta 0:00:00Collecting djangorestframework==3.11.2
-  Downloading djangorestframework-3.11.2-py3-none-any.whl (911 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 911.2/911.2 KB 460.1 kB/s eta 0:00:00Collecting Markdown==3.1.1
-  Downloading Markdown-3.1.1-py2.py3-none-any.whl (87 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.8/87.8 KB 499.2 kB/s eta 0:00:00Collecting social-auth-app-django==3.1.0
-  Downloading social_auth_app_django-3.1.0-py3-none-any.whl (23 kB)
-Collecting social-auth-core==3.3.3
-  Downloading social_auth_core-3.3.3-py3-none-any.whl (326 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 326.0/326.0 KB 459.0 kB/s eta 0:00:00Collecting django-extensions==2.2.5
-  Downloading django_extensions-2.2.5-py2.py3-none-any.whl (223 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 223.3/223.3 KB 387.1 kB/s eta 0:00:00Collecting django-taggit==1.3.0
-  Downloading django_taggit-1.3.0-py3-none-any.whl (45 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.7/45.7 KB 435.3 kB/s eta 0:00:00Collecting six==1.16.0
-  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
-Collecting pytz
-  Downloading pytz-2022.2.1-py2.py3-none-any.whl (500 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 500.6/500.6 KB 420.1 kB/s eta 0:00:00Requirement already satisfied: asgiref<4,>=3.3.2 in /home/fspoo/my-projects-env/lib/python3.10/site-packages (from Django==3.2.5->-r requirements.txt (line 8)) (3.5.2)
-Requirement already satisfied: sqlparse>=0.2.2 in /home/fspoo/my-projects-env/lib/python3.10/site-packages (from Django==3.2.5->-r requirements.txt (line 8)) (0.4.2)
-Requirement already satisfied: setuptools>=36 in /home/fspoo/my-projects-env/lib/python3.10/site-packages (from Markdown==3.1.1->-r requirements.txt (line 12)) (59.6.0)
-Collecting python3-openid>=3.0.10
-  Downloading python3_openid-3.2.0-py3-none-any.whl (133 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.7/133.7 KB 592.2 kB/s eta 0:00:00Collecting PyJWT>=1.4.0
-  Downloading PyJWT-2.4.0-py3-none-any.whl (18 kB)
-Collecting cryptography>=1.4
-  Downloading cryptography-38.0.1-cp36-abi3-manylinux_2_28_x86_64.whl (4.2 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 438.2 kB/s eta 0:00:00Collecting requests>=2.9.1
-  Downloading requests-2.28.1-py3-none-any.whl (62 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 KB 514.4 kB/s eta 0:00:00Collecting defusedxml>=0.5.0rc1
-  Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
-Collecting oauthlib>=1.0.3
-  Downloading oauthlib-3.2.1-py3-none-any.whl (151 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.7/151.7 KB 240.4 kB/s eta 0:00:00Collecting requests-oauthlib>=0.6.1
-  Downloading requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
-Collecting cffi>=1.12
-  Downloading cffi-1.15.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (441 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 441.8/441.8 KB 342.8 kB/s eta 0:00:00Collecting urllib3<1.27,>=1.21.1
-  Downloading urllib3-1.26.12-py2.py3-none-any.whl (140 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.4/140.4 KB 515.0 kB/s eta 0:00:00Requirement already satisfied: certifi>=2017.4.17 in /home/fspoo/my-projects-env/lib/python3.10/site-packages (from requests>=2.9.1->social-auth-core==3.3.3->-r requirements.txt (line 14)) (2022.6.15.1)
-Collecting idna<4,>=2.5
-  Downloading idna-3.3-py3-none-any.whl (61 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.2/61.2 KB 713.1 kB/s eta 0:00:00Collecting charset-normalizer<3,>=2
-  Downloading charset_normalizer-2.1.1-py3-none-any.whl (39 kB)
-Collecting pycparser
-  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.7/118.7 KB 188.6 kB/s eta 0:00:00Installing collected packages: pytz, django-crispy-forms, urllib3, six, PyJWT, pycparser, oauthlib, Markdown, idna, Django, defusedxml, charset-normalizer, requests, python3-openid, djangorestframework, django-taggit, django-filter, django-extensions, cffi, requests-oauthlib, cryptography, social-auth-core, social-auth-app-django
-  Attempting uninstall: Django
-    Found existing installation: Django 4.1.1
-    Uninstalling Django-4.1.1:
-      Successfully uninstalled Django-4.1.1
-Successfully installed Django-3.2.5 Markdown-3.1.1 PyJWT-2.4.0 cffi-1.15.1 charset-normalizer-2.1.1 cryptography-38.0.1 defusedxml-0.7.1 django-crispy-forms-1.8.1 django-extensions-2.2.5 django-filter-2.2.0 django-taggit-1.3.0 djangorestframework-3.11.2 idna-3.3 oauthlib-3.2.1 pycparser-2.21 python3-openid-3.2.0 pytz-2022.2.1 requests-2.28.1 requests-oauthlib-1.3.1 six-1.16.0 social-auth-app-django-3.1.0 social-auth-core-3.3.3 urllib3-1.26.12
-(my-projects-env) fspoo@ewooral:~/dj4e-samples$ python3 manage.py check
-When you want to use social login, please see dj4e-samples/github_settings-dist.py
-Using registration/login.html as the login template
-System check identified no issues (0 silenced).
-(my-projects-env) fspoo@ewooral:~/dj4e-samples$ python3 manage.py migrateWhen you want to use social login, please see dj4e-samples/github_settings-dist.py
-Using registration/login.html as the login template
-Operations to perform:
-  Apply all migrations: admin, auth, autos, bookmany, bookone, cats, chat, contenttypes, favs, favsql, form, forums, gview, many, myarts, pics, rest, sessions, social_django, taggit, tagme, tracks, users, well
-Running migrations:
-  Applying contenttypes.0001_initial... OK
   Applying auth.0001_initial... OK
-  Applying admin.0001_initial... OK
-  Applying admin.0002_logentry_remove_auto_add... OK
-  Applying admin.0003_logentry_add_action_flag_choices... OK
-  Applying contenttypes.0002_remove_content_type_name... OK
-  Applying auth.0002_alter_permission_name_max_length... OK
-  Applying auth.0003_alter_user_email_max_length... OK
-  Applying auth.0004_alter_user_username_opts... OK
-  Applying auth.0005_alter_user_last_login_null... OK
-  Applying auth.0006_require_contenttypes_0002... OK
-  Applying auth.0007_alter_validators_add_error_messages... OK
-  Applying auth.0008_alter_user_username_max_length... OK
-  Applying auth.0009_alter_user_last_name_max_length... OK
-  Applying auth.0010_alter_group_name_max_length... OK
-  Applying auth.0011_update_proxy_permissions... OK
-  Applying auth.0012_alter_user_first_name_max_length... OK
-  Applying autos.0001_initial... OK
-  Applying bookmany.0001_initial... OK
-  Applying bookone.0001_initial... OK
-  Applying cats.0001_initial... OK
-  Applying chat.0001_initial... OK
-  Applying favs.0001_initial... OK
-  Applying favsql.0001_initial... OK
-  Applying form.0001_initial... OK
-  Applying forums.0001_initial... OK
-  Applying gview.0001_initial... OK
-  Applying many.0001_initial... OK
-  Applying myarts.0001_initial... OK
-  Applying pics.0001_initial... OK
-  Applying pics.0002_auto_20200321_1239... OK
-  Applying rest.0001_initial... OK
-  Applying sessions.0001_initial... OK
-  Applying social_django.0001_initial... OK
-  Applying social_django.0002_add_related_name... OK
-  Applying social_django.0003_alter_email_max_length... OK
-  Applying social_django.0004_auto_20160423_0400... OK
-  Applying social_django.0005_auto_20160727_2333... OK
-  Applying social_django.0006_partial... OK
-  Applying social_django.0007_code_timestamp... OK
-  Applying social_django.0008_partial_timestamp... OK
-  Applying taggit.0001_initial... OK
-  Applying taggit.0002_auto_20150616_2121... OK
-  Applying taggit.0003_taggeditem_add_unique_index... OK
-  Applying tagme.0001_initial... OK
-  Applying tagme.0002_forum_tags... OK
-  Applying tagme.0003_auto_20210410_0151... OK
-  Applying tracks.0001_initial... OK
-  Applying users.0001_initial... OK
-  Applying well.0001_initial... OK
+
 (my-projects-env) fspoo@ewooral:~/dj4e-samples$ cd ~
 (my-projects-env) fspoo@ewooral:~$ ls
 dj4e-samples  django  library.csv  my-projects-env
