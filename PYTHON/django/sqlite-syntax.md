@@ -56,9 +56,23 @@ Error: in prepare, near "BY": syntax error (1)
 * sqlite> select * from Users ORDER BY name DESC;
 3|Moses K.|ewooral.inc@elia.com
 2|Elijah|elijah@gmail.com
-sqlite>
 
+* sqlite> .mode column
 
+* sqlite> select * from Users;
+id  name      email
+--  --------  --------------------
+2   Elijah    elijah@gmail.com
+3   Moses K.  ewooral.inc@elia.com
+
+### update users table
+* sqlite> UPDATE Users SET name="Elijah O." where id = 2;
+
+* sqlite> select * from Users;
+id  name       email
+--  ---------  --------------------
+2   Elijah O.  elijah@gmail.com
+3   Moses K.   ewooral.inc@elia.com
 
 
 
