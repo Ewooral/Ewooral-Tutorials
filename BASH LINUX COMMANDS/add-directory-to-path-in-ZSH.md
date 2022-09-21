@@ -70,3 +70,14 @@ For example, to add the directory to the path in the .zshrc file, we can edit th
 
 	source ~/.zshrc
 	
+## ALTERNATIVE
+1. You can add your directory path to the `~/.bash_profile` file 
+	
+	PATH=/home/ewooral/.my-secret-bowl:$PATH OR
+	export="$HOME/.my-secret-bowl:$PATH"
+
+
+2. After that, load the path environment in the `~/.zshrc` file by adding it at the beginning of the file.
+	
+	source /home/ewooral/.bash_profile 
+
