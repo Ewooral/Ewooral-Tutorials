@@ -77,7 +77,7 @@ If you use the ls command with option -l on a file, you’ll see an output like 
 `-rwxrw-r-- 1 abhi itsfoss 457 Aug 10 11:55 agatha.txt`
 
 
-Linux file permission explained with ls command
+## Linux file permission explained with ls command
 Let me further explain the entire output in detail:
 
 [-] File type: Denotes the type of file. `d` means directory, `–` means regular file, `l` means a symbolic link.
@@ -90,30 +90,33 @@ Let me further explain the entire output in detail:
 [agatha.txt] Filename: Obviously, the name of the file or directory.
 
 
-Now that you have understood the ls -l command output, let’s focus on the file permission part.
+Now that you have understood the `ls -l` command output, let’s focus on the `file permission` part.
 
 In the above command, you see the file permission like this in the nine digit format:
 
-rwxrw-r--
+`rwxrw-r--`
 Each letter denotes a particular permission:
 
-r : Read permission
-w : Write permission
-x : Execute permission
-– : No permission set
-Permissions are always in the order of read, write and execute, i.e., rwx. And then these permissions are set for all three kind of owners (see the ownership section) in the order of User, Group and Other.
+	r : Read permission
+	w : Write permission
+	x : Execute permission
+	– : No permission set
+	
+Permissions are always in the order of `read, write and execute`, i.e., `rwx`. And then these permissions are set for all three kind of owners (see the ownership section) in the order of User, Group and Other.
 
-This picture will explain things better:
 
 Linux file permission explained
 So, if you look at the above picture now, you can say the following things about the file permissions:
 
-The file has read, write and execute permissions for the User owner. But who is this use owner of the file? You have this info in the output of ls -l (i.e. user abhi).
-The file has read and write permissions for the Group but not execute. Which group is it? You have the group info in the output of the command ls -l (i.e. group itsfoss).
-The file has only read permission for Other i.e. everyone that has access to the system. You don’t need to know which other is it because ‘other’ means all the users.
-Now if you see the entire ls -l command once again, you can read the file permissions and ownership together.
+	-rwxrw-r-- 1 abhi itsfoss 457 Aug 10 11:55 agatha.txt
 
--rwxrw-r-- 1 abhi itsfoss 457 Aug 10 11:55 agatha.txt
+* The file has read, write and execute permissions for the User owner. But who is this use owner of the file? You have this info in the output of ls -l (i.e. user abhi).
+* The file has read and write permissions for the Group but not execute. Which group is it? You have the group info in the output of the command ls -l (i.e. group itsfoss).
+* The file has only read permission for Other i.e. everyone that has access to the system. You don’t need to know which other is it because ‘other’ means all the users.
+* Now if you see the entire ls -l command once again, you can read the file permissions and ownership together.
+
+	-rwxrw-r-- 1 abhi itsfoss 457 Aug 10 11:55 agatha.txt
+
 The file agatha.txt is owned by user abhi and abhi has read, write and execute permission. All the members of group istfoss have read and write access to this file while everyone else has only read access to this file.
 
 Note: Root user has super powers and normally, it has read, write and execute permissions to all the files, even if you don’t see it in file permissions.
@@ -122,74 +125,84 @@ A single user may be the member of several groups but only the primary group of 
 
 Now that you know how to find out permissions on a file, let’s see how you can change the permission and ownership of a file.
 
-Change file permissions in Linux
-You can use chmod command for changing the permissions on a file in Linux.
+* Change file permissions in Linux
+You can use `chmod` command to change the permissions on a file in Linux.
 
 📚
-Permissions used to be called mode of access and hence chmod was the short form of change the mode of access.
-There are two ways to use the chmod command:
+Permissions used to be called `mode of access` and hence `chmod` was the short form of change the mode of access.
 
-Absolute mode
-Symbolic mode
+## There are two ways to use the chmod command:
+
+* Absolute mode
+* Symbolic mode
+
 chmod 777 or 755? Learn to use chmod Command with Examples
-This article will teach you how to change permissions in Linux with practical examples of chmod command.
 
-Linux Handbook
-Eric Simard
 
-Using chmod in absolute mode
+- [Using chmod in absolute mode]
 In the absolute mode, permissions are represented in numeric form (octal system to be precise). In this system, each file permission is represented by a number.
 
-r (read) = 4
-w (write) = 2
-x (execute) = 1
-– (no permission) = 0
+	r (read) = 4
+	w (write) = 2
+	x (execute) = 1
+	– (no permission) = 0
+	
 With these numeric values, you can combine them and thus one number can be used to represent the entire permission set.
 
-Number	Permission
-0	—
-1	–x
-2	-w-
-3 (i.e. 2+1)	-wx
-4	r–
-5 (i.e. 4+1)	r-x
-6 (i.e. 4+2)	rw-
-7 (i.e. 4+2+1)	rwx
-Can you guess the file permission in numbers on agatha.txt file in our example so far? That’s right, it’s 764.
+	Number	Permission
+	0	—
+	1	–x
+	2	-w-
+	3 (i.e. 2+1)	-wx
+	4	r–
+	5 (i.e. 4+1)	r-x
+	6 (i.e. 4+2)	rw-
+	7 (i.e. 4+2+1)	rwx
+	
+Can you guess the file permission in numbers on `agatha.txt` file in our example so far? That’s right, it’s `764`.
 
 Now that you know what number represents which permission, let’s see how to change file permission using this knowledge.
 
-Suppose you want to change the file permission on agatha.txt so that everyone can read and write but no one can execute it? In that case, you can use the chmod command like this:
+* Suppose you want to change the file permission on agatha.txt so that everyone can read and write but no one can execute it? In that case, you can use the chmod command like this:
 
-chmod 666 agatha.txt
+	chmod 666 agatha.txt
+	
 If you list agatha.txt now, you’ll see that the permission has been changed.
 
--rw-rw-rw- 1 abhishek abhishek 457 Aug 10 11:55 agatha.txt
-Using chmod in symbolic mode
+	-rw-rw-rw- 1 abhishek abhishek 457 Aug 10 11:55 agatha.txt
+	
+	
+- [Using chmod in symbolic mode]
 The problem with the absolute mode is that you should always provide three numbers for all the three owners even if you want to change the  permission set for just one owner.
 
 This is where you can use the symbolic mode with chmod command.
 
 In symbolic mode, owners are denoted with the following symbols:
 
-u = user owner
-g = group owner
-o = other
-a = all (user + group + other)
+	u = user owner
+	g = group owner
+	o = other
+	a = all (user + group + other)
+
 The symbolic mode uses mathematical operators to perform the permission changes:
 
-+ for adding permissions
-– for removing permissions
-= for overriding existing permissions with new value
+	+ for adding permissions
+	– for removing permissions
+	= for overriding existing permissions with new value
+
 Now that you know let’s see how to use chmod command in symbolic mode.
 
-In our previous example, if you want to add execute permission for group owner, you can use chmod command like this:
+* In our previous example, if you want to add execute permission for group owner, you can use chmod command like this:
 
-chmod g+x agatha.txt
+	chmod g+x agatha.txt
+	
 If you look at the permissions on this file now, you’ll see that execute permission has now been added:
 
--rw-rwxrw- 1 abhi itsfoss 457 Aug 10 11:55 agatha.txt
-You can also combine multiple permission changes in one command. Suppose you want to remove the read and write permission and add execute permissions for Other. You also want to add execute permission for the User owner. You can do all of it one single command:
+	-rw-rwxrw- 1 abhi itsfoss 457 Aug 10 11:55 agatha.txt
+	
+* You can also combine multiple permission changes in one command. 
+Suppose you want to `remove the read and write permission and add execute permissions` for Other. 
+You also want to add execute permission for the User owner. You can do all of it one single command:
 
 chmod o-rw+x,u+x agatha.txt
 The resulting permissions would be like this:
