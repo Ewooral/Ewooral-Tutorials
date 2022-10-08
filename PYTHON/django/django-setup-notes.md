@@ -197,3 +197,74 @@ class User(models.Model):
 
 
 		
+# DJANGO SHELL FOR DATABASE
+
+
+❯ python manage.py check                                                     ─╯
+When you want to use social login, please see dj4e-samples/github_settings-dist.py
+Using registration/login.html as the login template
+System check identified no issues (0 silenced).
+
+    ~/Dev/Ewooral-Tutorials/PY/dj/dj4e-samples  on   main 
+❯ python manage.py shell                                                     ─╯
+When you want to use social login, please see dj4e-samples/github_settings-dist.py
+Python 3.10.6 (main, Aug 10 2022, 11:40:04) [GCC 11.3.0]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.5.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: from tracks.models import Artist, Genre, Album, Track;
+
+In [2]: Artist.objects.values()
+Out[2]: <QuerySet [{'id': 1, 'name': 'Elijah Boahen'}, {'id': 2, 'name': 'Black Sherif'}, {'id': 3, 'name': 'Justin Bieber'}]>
+
+In [3]: Genre.objects.values()
+Out[3]: <QuerySet [{'id': 1, 'name': 'Rock'}, {'id': 2, 'name': 'Metal'}, {'id': 3, 'name': 'Pop'}]>
+
+In [4]: Album.objects.all().values()
+Out[4]: <QuerySet [{'id': 1, 'title': 'the villain i never was', 'artist_id': 2}, {'id': 2, 'title': 'Purpose', 'artist_id': 3}]>
+
+In [5]: album3 = Album(title='God chose you', artist=
+   ...: )
+  Cell In [5], line 2
+    )
+    ^
+SyntaxError: invalid syntax
+
+
+In [6]: album3 = Album(title='God chose you', artist=artist1)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In [6], line 1
+----> 1 album3 = Album(title='God chose you', artist=artist1)
+
+NameError: name 'artist1' is not defined
+
+In [7]: artist1 = Artist(name='Elijah Boahen')
+
+In [8]: artist1.save()
+
+In [9]: album3 = Album(title='God chose you', artist=artist1)
+
+In [10]: album3.save()
+
+In [11]: Album.objects.all().values()
+Out[11]: <QuerySet [{'id': 1, 'title': 'the villain i never was', 'artist_id': 2}, {'id': 2, 'title': 'Purpose', 'artist_id': 3}, {'id': 3, 'title': 'God chose you', 'artist_id': 4}]>
+
+In [12]: Artist.objects.values()
+Out[12]: <QuerySet [{'id': 1, 'name': 'Elijah Boahen'}, {'id': 2, 'name': 'Black Sherif'}, {'id': 3, 'name': 'Justin Bieber'}, {'id': 4, 'name': 'Elijah Boahen'}]>
+
+In [13]: Artist.objects.filter(name='Elijah Boahen').update(name='Luke Martins')
+    ...: 
+Out[13]: 2
+
+In [14]: Artist.objects.values()
+Out[14]: <QuerySet [{'id': 1, 'name': 'Luke Martins'}, {'id': 2, 'name': 'Black Sherif'}, {'id': 3, 'name': 'Justin Bieber'}, {'id': 4, 'name': 'Luke Martins'}]>
+
+In [15]: Artist.objects.filter(id=1, name='Luke Martins').update(name='Elijah Bo
+    ...: ahen')
+Out[15]: 1
+
+In [16]: Artist.objects.values()
+Out[16]: <QuerySet [{'id': 1, 'name': 'Elijah Boahen'}, {'id': 2, 'name': 'Black Sherif'}, {'id': 3, 'name': 'Justin Bieber'}, {'id': 4, 'name': 'Luke Martins'}]>
+
+
