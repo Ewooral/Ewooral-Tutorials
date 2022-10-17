@@ -1,3 +1,5 @@
+* On the command line, navigate to the repository that contains the commit you want to amend. 
+  Type `git commit --amend` and press Enter. In your text editor, edit the commit message, and save the commit.
 
 * revert back to older or previous commits
 
