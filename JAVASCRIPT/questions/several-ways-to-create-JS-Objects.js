@@ -41,3 +41,26 @@ console.log(anotherObj.anothername)
 
 
 // ES6-CLASS SYNTAX
+console.log("6..................................")
+class Obj{
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+var onlyObj = new Obj("Mary Asante", 31);
+console.log(onlyObj)
+
+
+// SINGLETON PATTERN (object which can only be instantiated one time
+//Repeated calls to its constructor return the same instance and 
+//this way one can ensure that they don't accidentally create multiple instances.)
+console.log("7..................................")
+var newObj = new function(name, age){
+  this.name = name
+  this.age = age
+}
+newObj.name = "John Oduro Boahen";
+newObj.age = 17;
+console.log(newObj);
