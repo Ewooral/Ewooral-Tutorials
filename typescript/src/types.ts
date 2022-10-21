@@ -10,14 +10,16 @@ TypeScript also has a special type, any, that you can use whenever you don’t w
 When a value is of type any, you can access any properties of it (which will in turn be of type any), call it like a function, assign it to (or from) a value of
  any type, or pretty much anything else that’s syntactically legal:
  */
+let dd: { x:number, bar:number, kunfu:string } = {x: 0, bar:2, kunfu:"Bruce lee"};
 let obj: any = {x: 0};
 // obj.foo();
 show(obj.bar = 1);
 show(obj.baz = 'hello world');
 show(obj = 'Hey');
-const n: number = obj;
-
+const n: any = obj;
+show("show n please")
 show(obj.x, );
+show(dd)
 /*
 Type Annotations on Variables
 When you declare a variable using const, var, or let, you can optionally add a
@@ -50,7 +52,11 @@ names.forEach(function(s){
 // Object Types
 show("============")
 // You can use , or ; to separate the properties, and the last separator is optional either way.
-function printCoord(pt: {x: string; y: number}, sw: string, num: number, arr:Array<number>){
+function printCoord(pt: {x: string;
+                         y: number},
+                    sw: string,
+                    num: number,
+                    arr:Array<number>){
     show(`The coordinate's x value is ${pt.x}`);
     show(`The coordinate's y value is ${pt.y}`);
     show(sw)
@@ -102,4 +108,5 @@ show(typeof(x))
 })
 
 
+const authors: [ number, string ] = [ 46, "Frank"];
 

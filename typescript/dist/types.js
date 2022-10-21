@@ -1,7 +1,7 @@
 "use strict";
 const anExampleVariable = "Hello World";
 const show = console.log;
-console.log(anExampleVariable);
+show(anExampleVariable);
 /**
  * ANY type
 TypeScript also has a special type, any, that you can use whenever you don’t want a particular value to cause typechecking errors.
@@ -9,13 +9,16 @@ TypeScript also has a special type, any, that you can use whenever you don’t w
 When a value is of type any, you can access any properties of it (which will in turn be of type any), call it like a function, assign it to (or from) a value of
  any type, or pretty much anything else that’s syntactically legal:
  */
+let dd = { x: 0, bar: 2, kunfu: "Bruce lee" };
 let obj = { x: 0 };
 // obj.foo();
 show(obj.bar = 1);
 show(obj.baz = 'hello world');
 show(obj = 'Hey');
 const n = obj;
+show("show n please");
 show(obj.x);
+show(dd);
 /*
 Type Annotations on Variables
 When you declare a variable using const, var, or let, you can optionally add a
@@ -89,3 +92,4 @@ numbers.filter(Boolean).map((x) => {
     // show(x)
     show(typeof (x));
 });
+const authors = [46, "Frank"];
