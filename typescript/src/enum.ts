@@ -7,7 +7,7 @@ const IceCream = 2;
 // The above variables could be used anywhere in code but is still kinda ugly that way to a lot of developers
 // With enums in TypeScript, which you declare with the new enum keyword, you can do it more elegantly:
 
-enum Food { Pizza, FriedChicken = 500, IceCream}
-let myFavoriteFood: Food.FriedChicken
-// @ts-ignore
-console.log(myFavoriteFood)
+enum Food { Pizza, FriedChicken, IceCream}
+let myFavoriteFood = Food.FriedChicken
+
+alert(myFavoriteFood)
