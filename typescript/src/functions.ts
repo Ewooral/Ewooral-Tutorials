@@ -57,3 +57,12 @@ function simpleArraySum(ar: number[]):number {
 
 console.log(simpleArraySum([1, 2, 3, 4, 10, 11]));
 
+
+let myMathFunction: (num1: number, num2: number) => string;
+
+function _add(n1: number, n2: number): string {
+    return " " + n1 + n2;
+}
+myMathFunction = _add
+
+console.log(myMathFunction(2,  1))

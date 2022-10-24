@@ -1,4 +1,4 @@
-Defining Types
+# Defining Types
 
 You can use a wide variety of design patterns in JavaScript. 
 However, some design patterns make it difficult for types to be 
@@ -11,26 +11,30 @@ For example, to create an object with an inferred type which includes
 name: string and id: number, 
 you can write:
 
+```ts 
 const user = {
   name: "Hayes",
   id: 0,
 };
-
+```
 //You can explicitly describe this object’s shape using an interface declaration:
 
-interface User {
+```ts 
+ interface User {
   name: string;
   id: number;
 }
-
+```
 
 //You can then declare that a JavaScript object conforms to the shape of your new interface by using syntax like : TypeName after a variable declaration:
 
+```ts
 const user: User = {
   name: "Hayes",
   id: 0,
 };
-Try
+```
+
 
 // If you provide an object that doesn’t match the interface you have provided, TypeScript will warn you:
 
