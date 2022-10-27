@@ -6,6 +6,14 @@
 </head>
 <body>
 <h1>Hi, World!</h1>
+<blockquote>
+    Where two or three have
+    gathered, there <strong>He</strong> is!
+</blockquote>
 </body>
-<script src="../dist/es6.js"></script>
+<!-- [Fix] Uncaught ReferenceError: exports is not defined-->
+<script>var exports = {};</script>
+
+<!--<script src="bundle.js"></script>-->
+<script src="./dist/try.js"></script>
 </html>

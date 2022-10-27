@@ -1,4 +1,6 @@
-let a: number = 45;
-console.log(a)
-const b: number = 0o744;
+// import {paintShape} from "./object-types";
+import shoes = require ( "./object-types");
 
+
+
+console.log(shoes.footWearID)
