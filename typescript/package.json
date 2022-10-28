@@ -1,8 +1,8 @@
 {
-  "name": "typescript",
+  "name": "js-methods-typescript",
   "version": "1.0.0",
   "description": "",
-  "main": "ewooral.js",
+  "main": "arrayMethods.js",
   "scripts": {
     "me": "tsc --watch --preserveWatchOutput"
   },

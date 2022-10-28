@@ -1,1 +1,3 @@
-dist 
+typescript/dist
+node_modules
+.idea
