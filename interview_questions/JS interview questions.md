@@ -511,7 +511,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
       ```javascript
       function func {};
-
       new func(x, y, z);
       ```
 
@@ -785,8 +784,7 @@ You can download the PDF and Epub version of this repository from the latest run
 
     Currying is the process of taking a function with multiple arguments and turning it into a sequence of functions each with only a single argument. Currying is named after a mathematician **Haskell Curry**. By applying currying, a n-ary function turns it into a unary function. 
     
-    Let's take an example of n-ary function and how it turns into a currying function,
-
+    Let's take an example of n-ary function and how it turns into a currying function,   
     ```javascript
     const multiArgFunction = (a, b, c) => a + b + c;
     console.log(multiArgFunction(1,2,3));// 6

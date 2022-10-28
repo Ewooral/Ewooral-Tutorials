@@ -267,4 +267,59 @@ Out[15]: 1
 In [16]: Artist.objects.values()
 Out[16]: <QuerySet [{'id': 1, 'name': 'Elijah Boahen'}, {'id': 2, 'name': 'Black Sherif'}, {'id': 3, 'name': 'Justin Bieber'}, {'id': 4, 'name': 'Luke Martins'}]>
 
+In [17]: Genre.objects.values()
+Out[17]: <QuerySet [{'id': 1, 'name': 'Rock'}, {'id': 2, 'name': 'Metal'}, {'id': 3, 'name': 'Pop'}]>
+
+In [18]: Track.objects.values()
+Out[18]: <QuerySet [{'id': 1, 'title': 'What do you mean', 'rating': 9, 'length': 298, 'count': 9, 'album_id': 2, 'genre_id': 3}]>
+
+In [19]: track1 = Track.objects.get(pk=1)
+
+In [20]: print(track1)
+What do you mean
+
+In [21]: print(track1.id)
+1
+
+In [22]: track1.id
+Out[22]: 1
+
+In [23]: track1.count
+Out[23]: 9
+
+In [24]: track1.rating
+Out[24]: 9
+
+In [25]: track1.album
+Out[25]: <Album: Purpose>
+
+In [26]: track1.genre
+Out[26]: <Genre: Pop>
+
+In [27]: track1.title
+Out[27]: 'What do you mean'
+
+In [28]: track1.genre.clean
+Out[28]: <bound method Model.clean of <Genre: Pop>>
+
+In [29]: track1.genre
+Out[29]: <Genre: Pop>
+
+In [30]: track1.genre.name
+Out[30]: 'Pop'
+
+In [31]: Genre.objects.values()
+Out[31]: <QuerySet [{'id': 1, 'name': 'Rock'}, {'id': 2, 'name': 'Metal'}, {'id': 3, 'name': 'Pop'}]>
+
+In [32]: Album.objects.all().values()
+Out[32]: <QuerySet [{'id': 1, 'title': 'the villain i never was', 'artist_id': 2}, {'id': 2, 'title': 'Purpose', 'artist_id': 3}, {'id': 3, 'title': 'God chose you', 'artist_id': 4}]>
+
+In [33]: track1.album.title
+Out[33]: 'Purpose'
+
+In [34]: track1.album.artist_id
+Out[34]: 3
+
+In [35]: Artist.objects.values()
+Out[35]: <QuerySet [{'id': 1, 'name': 'Elijah Boahen'}, {'id': 2, 'name': 'Black Sherif'}, {'id': 3, 'name': 'Justin Bieber'}, {'id': 4, 'name': 'Luke Martins'}]>
 
