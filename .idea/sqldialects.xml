@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/9e6b45a4-dc62-41a4-bd25-722b218977dc/console.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL/basics.sql" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/Walmart-Software-Engineering-Internship-2022/Data Munging/db.py" dialect="GenericSQL" />
     <file url="PROJECT" dialect="MySQL" />
   </component>
 </project>
