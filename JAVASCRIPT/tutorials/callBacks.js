@@ -54,7 +54,7 @@ function stringify(num) {
 
 // Call update with each callback function
 console.log(update(add10)) // returns [11, 12, 13]
-console.log(update(multiplyBy20) )// returns [20, 40, 60]
+console.log(update(multiplyBy20) )// returns [44, 40, 60]
 console.log(update(stringify) )// returns [‘1’, ‘2’, ‘3’]
 
 /**
