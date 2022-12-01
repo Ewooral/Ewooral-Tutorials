@@ -30,26 +30,28 @@
          double      Double 
     
     Each helper class is a member of a java package called **Java.lang**
-    ``` Java
-    double doubleValue = 134.4d;
-    Double doubleObj = new Double(doubleValue); // instance of the Double helper class
+    
+``` Java
+double doubleValue = 134.4d;
+Double doubleObj = new Double(doubleValue); // instance of the Double helper class
 
-    byte byteValue = doubleObj.byteValue(); 
-    int intValue = doubleObj.intValue();
-    float floatValue = doubleObj.floatValue();
-    short shortValue = doubleObj.shortValue();
-    long longValue = doubleObj.longValue();
-    String stringValue = doubleObj.toString();
+byte byteValue = doubleObj.byteValue(); 
+int intValue = doubleObj.intValue();
+float floatValue = doubleObj.floatValue();
+short shortValue = doubleObj.shortValue();
+long longValue = doubleObj.longValue();
+String stringValue = doubleObj.toString();
 
-    ```
+```
 
     primitive numeric variables default to 0.
 
-    ```Java 
-    int myInt;
-    System.out.println(myInt); // returns 0
+```Java 
 
-    ```
+int myInt;
+System.out.println(myInt); // returns 0
+
+```
 
   ### Sometimes, there are inconsistencies in adding double values. For example
   ```Java 
@@ -237,17 +239,20 @@ System.out.println("Element 2 at index 1: " + anArray[1]);
 System.out.println("Element 3 at index 2: " + anArray[2]);
 Alternatively, you can use the shortcut syntax to create and initialize an array:
 
-int[] anArray = { 
+```java 
+    int[] anArray = { 
     100, 200, 300,
     400, 500, 600, 
     700, 800, 900, 1000
 };
+```
 Here the length of the array is determined by the number of values provided between braces and separated by commas.
 
 You can also declare an array of arrays (also known as a multidimensional array) by using two or more sets of brackets, such as String[][] names. Each element, therefore, must be accessed by a corresponding number of index values.
 
 In the Java programming language, a multidimensional array is an array whose components are themselves arrays. This is unlike arrays in C or Fortran. A consequence of this is that the rows are allowed to vary in length, as shown in the following MultiDimArrayDemo program:
 
+```java
 class MultiDimArrayDemo {
     public static void main(String[] args) {
         String[][] names = {
@@ -260,6 +265,7 @@ class MultiDimArrayDemo {
         System.out.println(names[0][2] + names[1][1]);
     }
 }
+```
 The output from this program is:
 
 Mr. Smith
@@ -277,7 +283,7 @@ The System class has an arraycopy method that you can use to efficiently copy da
 
 The following program, ArrayCopyDemo, declares an array of String elements. It uses the System.arraycopy method to copy a subsequence of array components into a second array:
 
- 
+``` java
 class ArrayCopyDemo {
     public static void main(String[] args) {
         String[] copyFrom = {
@@ -292,15 +298,20 @@ class ArrayCopyDemo {
         }
     }
 }
+```
+
 The output from this program is:
 
 Cappuccino Corretto Cortado Doppio Espresso Frappucino Freddo 
-Array Manipulations
+
+
+# Array Manipulations
 Arrays are a powerful and useful concept used in programming. Java SE provides methods to perform some of the most common manipulations related to arrays. For instance, the ArrayCopyDemo example uses the arraycopy method of the System class instead of manually iterating through the elements of the source array and placing each one into the destination array. This is performed behind the scenes, enabling the developer to use just one line of code to call the method.
 
 For your convenience, Java SE provides several methods for performing array manipulations (common tasks, such as copying, sorting and searching arrays) in the java.util.Arrays class. For instance, the previous example can be modified to use the copyOfRange method of the java.util.Arrays class, as you can see in the ArrayCopyOfDemo example. The difference is that using the copyOfRange method does not require you to create the destination array before calling the method, because the destination array is returned by the method:
 
 
+``` java
 class ArrayCopyOfDemo {
     public static void main(String[] args) {
         String[] copyFrom = {
@@ -313,7 +324,7 @@ class ArrayCopyOfDemo {
             System.out.print(coffee + " ");           
         }            
     }
-}
+}```
 As you can see, the output from this program is the same, although it requires fewer lines of code. Note that the second parameter of the copyOfRange method is the initial index of the range to be copied, inclusively, while the third parameter is the final index of the range to be copied, exclusively. In this example, the range to be copied does not include the array element at index 9 (which contains the string Lungo).
 
 Some other useful operations provided by methods in the java.util.Arrays class are:
