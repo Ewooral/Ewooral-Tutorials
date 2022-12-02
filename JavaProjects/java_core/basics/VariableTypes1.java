@@ -10,8 +10,14 @@ public class VariableTypes1 {
 
     public static void main(String[] args) {
         int data = 50; // instance variable
+
+        // Constant variable
+        final String CAT = "Pepper spray in your eyes!";
+
         System.out.println("Please print Data" + data);
         System.out.println(m);
+        System.out.println(CAT);
         method();
+
     }
 }
