@@ -2,7 +2,7 @@ package basics;
 
 public class TernaryOperator {
     public static void main(String[] args) {
-        System.out.println(sayHello("AM"));
+        System.out.println(sayHello("CM"));
     }
 
     static String sayHello(String args) {
