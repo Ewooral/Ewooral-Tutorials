@@ -24,8 +24,9 @@ public class FunctionOverload {
     // a method to get user input
     static String getInput(String prompt) {
         System.out.println(prompt);
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextLine();
+        try (Scanner scanner = new Scanner(System.in)) {
+            return scanner.nextLine();
+        }
     }
 
     // a method to add user inputs
