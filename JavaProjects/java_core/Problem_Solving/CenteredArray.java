@@ -56,7 +56,7 @@ public class CenteredArray {
         System.out.println(centeredArr(numbers4));
     }
 
-    static int middleElemen(int[] arr) {
+    public static int middleElemen(int[] arr) {
         int midIdx = (int) arr.length / 2;
         if (arr.length <= 0) {
             return 0;

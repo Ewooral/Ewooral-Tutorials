@@ -5,6 +5,41 @@
     static variable
 
 
+## Local Variable
+A variable declared inside the body of the method is called local variable. You can use this variable only within that method and the other methods in the class aren't even aware that the variable exists.
+
+A local variable cannot be defined with "static" keyword.
+
+
+## Instance Variable
+A variable declared inside the class but outside the body of the method, is called an instance variable. It is not declared as static.
+
+It is called an instance variable because its value is instance-specific and is not shared among instances.
+
+
+## Static variable
+A variable that is declared as static is called a static variable. It cannot be local. You can create a single copy of the static variable and share it among all the instances of the class. Memory allocation for static variables happens only once when the class is loaded in the memory.
+
+``` java
+
+public class VariableTypes1 {
+    static int m = 100;// static variable 
+
+    static void method() {
+        int num = 90; // local variable
+        System.out.println(num);
+    }
+
+    public static void main(String[] args) {
+        int data = 50; // instance variable
+        System.out.println(data);
+        System.out.println(m);
+        method();
+    }
+}
+
+```
+
 
 # There are two major classes of variables or data types in Java.
   
@@ -145,7 +180,7 @@ he length of an array is established when the array is created. After creation, 
 
 The following program, ArrayDemo, creates an array of integers, puts some values in the array, and prints each value to standard output.
 
-
+```java
 class ArrayDemo {
     public static void main(String[] args) {
         // declares an array of integers
@@ -190,48 +225,56 @@ class ArrayDemo {
                            + anArray[9]);
     }
 } 
+```
 The output from this program is:
 
-Element at index 0: 100
-Element at index 1: 200
-Element at index 2: 300
-Element at index 3: 400
-Element at index 4: 500
-Element at index 5: 600
-Element at index 6: 700
-Element at index 7: 800
-Element at index 8: 900
-Element at index 9: 1000
-In a real-world programming situation, you would probably use one of the supported looping constructs to iterate through each element of the array, rather than write each line individually as in the preceding example. However, the example clearly illustrates the array syntax. You will learn about the various looping constructs (for, while, and do-while) in the Control Flow section.
+    Element at index 0: 100
+    Element at index 1: 200
+    Element at index 2: 300
+    Element at index 3: 400
+    Element at index 4: 500
+    Element at index 5: 600
+    Element at index 6: 700
+    Element at index 7: 800
+    Element at index 8: 900
+    Element at index 9: 1000
 
-Declaring a Variable to Refer to an Array
+
+In a real-world programming situation, you would probably use one of the supported looping constructs to iterate through each element of the array, rather than write each line individually as in the preceding example. However, the example clearly illustrates the array syntax. You will learn about the various looping constructs `(for, while, and do-while)` in the Control Flow section.
+
+# Declaring a Variable to Refer to an Array
 The preceding program declares an array (named anArray) with the following line of code:
 
-// declares an array of integers
-int[] anArray;
+### declares an array of integers
+    int[] anArray;
+
 Like declarations for variables of other types, an array declaration has two components: the array's type and the array's name. An array's type is written as type[], where type is the data type of the contained elements; the brackets are special symbols indicating that this variable holds an array. The size of the array is not part of its type (which is why the brackets are empty). An array's name can be anything you want, provided that it follows the rules and conventions as previously discussed in the naming section. As with variables of other types, the declaration does not actually create an array; it simply tells the compiler that this variable will hold an array of the specified type.
 
 Similarly, you can declare arrays of other types:
 
-byte[] anArrayOfBytes;
-short[] anArrayOfShorts;
-long[] anArrayOfLongs;
-float[] anArrayOfFloats;
-double[] anArrayOfDoubles;
-boolean[] anArrayOfBooleans;
-char[] anArrayOfChars;
-String[] anArrayOfStrings;
+    byte[] anArrayOfBytes;
+    short[] anArrayOfShorts;
+    long[] anArrayOfLongs;
+    float[] anArrayOfFloats;
+    double[] anArrayOfDoubles;
+    boolean[] anArrayOfBooleans;
+    char[] anArrayOfChars;
+    String[] anArrayOfStrings;
+
 You can also place the brackets after the array's name:
 
-// this form is discouraged
-float anArrayOfFloats[];
+### this form is discouraged
+    float anArrayOfFloats[];
+
 However, convention discourages this form; the brackets identify the array type and should appear with the type designation.
 
 Creating, Initializing, and Accessing an Array
 One way to create an array is with the new operator. The next statement in the ArrayDemo program allocates an array with enough memory for 10 integer elements and assigns the array to the anArray variable.
 
-// create an array of integers
-anArray = new int[10];
+# create an array of integers
+    anArray = new int[10];
+
+
 If this statement is missing, then the compiler prints an error like the following, and compilation fails:
 
 ArrayDemo.java:4: Variable anArray may not have been initialized.
@@ -332,7 +375,9 @@ class ArrayCopyOfDemo {
             System.out.print(coffee + " ");           
         }            
     }
-}```
+}
+
+```
 As you can see, the output from this program is the same, although it requires fewer lines of code. Note that the second parameter of the copyOfRange method is the initial index of the range to be copied, inclusively, while the third parameter is the final index of the range to be copied, exclusively. In this example, the range to be copied does not include the array element at index 9 (which contains the string Lungo).
 
 Some other useful operations provided by methods in the java.util.Arrays class are:
@@ -348,6 +393,7 @@ Sorting an array into ascending order. This can be done either sequentially, usi
 Creating a stream that uses an array as its source (the stream method). For example, the following statement prints the contents of the copyTo array in the same way as in the previous example:
 
 java.util.Arrays.stream(copyTo).map(coffee -> coffee + " ").forEach(System.out::print);  
+
 See Aggregate Operations for more information about streams.
 
 Converting an array to a string. The toString method converts each element of the array to a string, separates them with commas, then surrounds them with brackets. For example, the following statement converts the copyTo array to a string and prints it:

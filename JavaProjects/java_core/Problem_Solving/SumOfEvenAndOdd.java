@@ -40,7 +40,6 @@ public class SumOfEvenAndOdd {
     public static int x = 0;
 
     static int sumOfEvenAndOdd(List<Integer> nums) {
-
         for (int num : nums) {
             if (num % 2 != 0) {
                 x += num;
