@@ -1,3 +1,11 @@
+# There are three types of variables in Java:
+
+    local variable
+    instance variable
+    static variable
+
+
+
 # There are two major classes of variables or data types in Java.
   
   ## Primitive types ( Numbers, Characters, boolean values ) 

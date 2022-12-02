@@ -61,8 +61,9 @@ public class SimpleCalculator {
 
     public static String getInput(String prompt) {
         System.out.print(prompt);
-        Scanner sc = new Scanner(System.in);
-        return sc.nextLine();
+        try (Scanner sc = new Scanner(System.in)) {
+            return sc.nextLine();
+        }
 
     }
 
