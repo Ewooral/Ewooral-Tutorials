@@ -1,6 +1,9 @@
 package Problem_Solving;
 
+import java.util.ArrayList;
 import java.util.Hashtable;
+
+import java.util.List;
 
 public class HasNValues {
     /*
@@ -62,6 +65,7 @@ public class HasNValues {
 
 class SetUpObj {
     Hashtable<Integer, String> dict = new Hashtable<Integer, String>();
+    List<Integer> ins = new ArrayList<>();
 
     void addSet(int n, String o) {
 
