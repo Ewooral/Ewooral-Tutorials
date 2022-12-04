@@ -449,12 +449,12 @@ What is a framework in Java
     It represents a set of classes and interfaces.
     It is optional.
 
-What is Collection framework
+# What is Collection framework
 
 The Collection framework represents a unified architecture for storing and manipulating a group of objects. It has:
 
-    Interfaces and its implementations, i.e., classes
-    Algorithm
+    1. Interfaces and its implementations, i.e., classes
+    2. Algorithm
 
 
 
