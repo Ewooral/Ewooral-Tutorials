@@ -1,10 +1,5 @@
 package Problem_Solving;
 
-import java.util.ArrayList;
-import java.util.Hashtable;
-
-import java.util.List;
-
 public class HasNValues {
     /*
      * 1 Write a function named hasNValues which takes an array and an
@@ -52,30 +47,7 @@ public class HasNValues {
      * .............................................................................
      */
     public static void main(String[] args) {
-        SetUpObj newSet = new SetUpObj();
-        newSet.addSet(0, "Elijah");
-        newSet.addSet(1, "KB");
-        newSet.addSet(2, "Emma");
-        newSet.addSet(3, "Mary");
-        System.out.println(newSet.showSet());
-        System.out.println(newSet.showSet().get(3));
+
     }
 
-}
-
-class SetUpObj {
-    Hashtable<Integer, String> dict = new Hashtable<Integer, String>();
-    List<Integer> ins = new ArrayList<>();
-
-    void addSet(int n, String o) {
-
-        // Set<Integer> seen = new HashSet<>();
-
-        dict.put(n, o);
-    }
-
-    Hashtable<Integer, String> showSet() {
-
-        return dict;
-    }
 }
