@@ -29,7 +29,8 @@ public class DictOrMap {
 
         // Get a set of the entries
         Set<Entry<String, Double>> set = map.entrySet();
-
+        System.out.print("\nThis is a set: ");
+        System.out.println(set);
         // Get an iterator
         // Iterator i = set.iterator();
 
@@ -62,6 +63,6 @@ public class DictOrMap {
 
         // Object two maps for equality
         System.out.println(map.equals(map2));
-
     }
+
 }
