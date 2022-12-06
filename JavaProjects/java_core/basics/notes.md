@@ -41,7 +41,7 @@ public class VariableTypes1 {
 ```
 
 
-# There are two major classes of variables or data types in Java.
+# There are two major classes of variables or data types in Java. Primitive type and Objects
   
   ## Primitive types ( Numbers, Characters, boolean values ) 
     They are stored in the fastest available memory for quick access
@@ -106,8 +106,46 @@ System.out.println(myInt); // returns 0
   ```
 
  **BigDecimals** is used to solve this inconsistency problem
-  
-  
+
+
+
+
+### Conversion between types
+
+1. Some types can be converted implicitly
+
+```java
+int x = 3;
+double d = x;  // implicit conversion
+
+```
+
+2. Some types require an explicit cast
+
+```java
+double d = 3.14;
+int x = (int)d;
+
+```
+
+3. Othes require method calls
+
+```java
+String s = "3";
+int x = Integer.parseInt(s);
+double y = Double.
+
+```
+
+
+
+
+
+
+
+
+
+
   ### OPERATORS
 
   ### Incrementing and decrementing
@@ -406,14 +444,94 @@ This statement prints the following:
 
 
 
+# CLASS
+
+A class is a template that specifies how to make an object.
+
+```java
+ public class Point {
+
+ }
+
+```
+
+## Field/Instance variable
+
+    A variable named inside an object
+
+    eg. private int x;
+
+    private means only code inside the object can directly manipulate the field.
+
+### Constructor 
+
+A constructor specifies how to create objects of this class. The `constructor` has no `return` type. It is `named` the same as the `class`
+
+```java
+public void Point(int startx, int starty) {
+    x = startx;
+    y = starty;
+ }
+ 
+```
+`Public` infront the `constructor` means any code can use the
+consructor to create a `Point`.
 
 
+### Methods
+
+Methods are functions inside a class
+
+``` java
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public double distance(Point otherpt) {
+        int dx = x - otherpt.getX();
+        int dy = y - otherpt.getY();
+
+        return Math.sqrt(dx * dy + dy * dy);
+    }
+
+```
+
+### Static methods
+
+They don't act on any particular instance of a class. They
+belong to the class in general.
 
 
+### static void main()
 
+Code execution start inside of the `main` method
 
+```java
+public static void main(String[] args) {
+        // instance of the class
+        Point p1 = new Point(3, 4);
+        Point p2 = new Point(6, 8);
 
+        System.out.println("..............");
+        System.out.println(p1.distance(p2));
+    }
+```
 
+Here we create an instance of the class and assign to a variable.
+When we create a `new` object off of a class and assign the object to a variable
+the `arguments` passed as `parameters` into the new object are stored in a `heap`
+note that any time `new keyword` is `invoked`, `data` is created in the `heap`
+
+    Data in the heap does not disappear when the function returns destroying its frame.
+
+After the variable p1, p2, we call the `constructor` method to initialize this `Point`. 
+As with any call, we setup a `frame` and pass in `parameters`
+
+constructors and methods take in an additional implicit paramter (`this`) which tells them which object they are operating on.
 
 
 
