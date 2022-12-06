@@ -8,6 +8,7 @@ import java.util.Map.Entry;
 
 public class DictOrMap {
     public static void main(String[] args) {
+
         System.out.println("...........................");
         // This takes any Type of data
         Map<Object, Object> map1 = new HashMap<>();
