@@ -1,9 +1,8 @@
-package basics;
 
 import java.text.NumberFormat;
 import java.util.Locale;
 
-public class BuildStrings {
+public class Strings {
     public static void main(String[] args) {
         String str1 = "Hello";
         String str2 = "World";
@@ -87,5 +86,20 @@ public class BuildStrings {
         System.out.println("Length of raw string identifier: " + length1);
         String myS3 = myS2.trim();
         System.out.println("Length of string identifier after trimming: " + myS3.length());
+
+    }
+
+    public static String findDnaString(String s) {
+        // start codon is 'ATG'
+        // stop codon is 'TAA'
+        String result = "";
+
+        return result;
+    }
+
+    public static void testFindDnaString() {
+        System.out.println("..........String methods..........");
+        System.out.println(findDnaString("dukeprogramming"));
+
     }
 }

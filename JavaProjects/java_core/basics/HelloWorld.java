@@ -1,4 +1,3 @@
-package basics;
 
 import java.lang.Math;
 

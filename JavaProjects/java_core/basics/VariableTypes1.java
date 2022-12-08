@@ -1,4 +1,3 @@
-package basics;
 
 public class VariableTypes1 {
     static int m = 100;// static variable 

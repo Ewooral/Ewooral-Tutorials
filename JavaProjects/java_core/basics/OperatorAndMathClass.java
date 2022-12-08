@@ -1,4 +1,3 @@
-package basics;
 
 public class OperatorAndMathClass {
     public static void main(String[] args) {
