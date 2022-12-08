@@ -1,4 +1,3 @@
-package basics;
 
 public class ShiftOperator {
     public static void main(String[] args) {

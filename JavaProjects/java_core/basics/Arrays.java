@@ -1,4 +1,3 @@
-package basics;
 
 /**
  * An array is a container object that holds a fixed number of values of a

@@ -1,4 +1,3 @@
-package basics;
 
 public class FunctionsOrMethods {
     static String[] months = { "January", "February", "March",

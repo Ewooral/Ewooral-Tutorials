@@ -1,5 +1,3 @@
-package basics;
-// Overloading methods with different signatures
 
 import java.util.Scanner;
 
