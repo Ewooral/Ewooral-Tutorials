@@ -87,19 +87,16 @@ public class Strings {
         String myS3 = myS2.trim();
         System.out.println("Length of string identifier after trimming: " + myS3.length());
 
+        System.out.println("..........String methods..........");
+        System.out.println(findDnaString("dukeprogramming"));
     }
 
     public static String findDnaString(String s) {
-        // start codon is 'ATG'
-        // stop codon is 'TAA'
-        String result = "";
-
-        return result;
-    }
-
-    public static void testFindDnaString() {
-        System.out.println("..........String methods..........");
-        System.out.println(findDnaString("dukeprogramming"));
-
+        System.out.println(s.indexOf("g"));
+        System.out.println(s.indexOf("g", 8));
+        System.out.println(s.startsWith("duke", 1)); // false because start of search is from index 1
+        System.out.println(s.endsWith("g"));
+        System.out.println(s.equalsIgnoreCase("DUKEPROGRAMMING"));
+        return s.substring(0, 2);
     }
 }
