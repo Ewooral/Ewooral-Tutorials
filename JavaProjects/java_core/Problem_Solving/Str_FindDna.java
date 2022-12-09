@@ -1,7 +1,9 @@
 package Problem_Solving;
 
 public class Str_FindDna {
+
     public static void main(String[] args) {
+
         testFindDnaString();
     }
 
@@ -21,6 +23,31 @@ public class Str_FindDna {
         return result;
     }
 
+    public static String findDNA(String s) {
+        // String[] str = s.split("c");
+        String ch = "";
+
+        int i = 0;
+        int j = 0;
+
+        String sub2 = s.substring(s.length() - 2, s.length());
+        String sub3 = s.substring(s.length() - 3, s.length());
+        System.out.println(sub3);
+        while (i < s.length()) {
+            String sub = s.substring(i, j + 2);
+            System.out.println(sub.equals(sub2));
+            if (sub.equals(sub2)) {
+                ch += sub2;
+                break;
+            }
+
+            System.out.println(sub);
+            i += 2;
+            j += 2;
+        }
+        return ch;
+    }
+
     public static void testFindDnaString() {
         System.out.println(".......Find Genes......");
 
@@ -32,6 +59,9 @@ public class Str_FindDna {
 
         String dna2 = "";
         System.out.println(findDnaString(dna2));
+
+        String s = "abcefgicjklmncopqrsctuvwcxyz";
+        System.out.println(findDNA(s));
 
     }
 }
