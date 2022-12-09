@@ -4,6 +4,11 @@ import java.util.Locale;
 
 public class Strings {
     public static void main(String[] args) {
+        stringTutorials();
+    }
+
+    // Maninpulate Strings
+    public static void stringTutorials() {
         String str1 = "Hello";
         String str2 = "World";
         String str3 = str1 + ", " + str2 + "! ";
@@ -88,15 +93,27 @@ public class Strings {
         System.out.println("Length of string identifier after trimming: " + myS3.length());
 
         System.out.println("..........String methods..........");
-        System.out.println(findDnaString("dukeprogramming"));
-    }
-
-    public static String findDnaString(String s) {
+        String s = "dukeprogramming";
         System.out.println(s.indexOf("g"));
         System.out.println(s.indexOf("g", 8));
         System.out.println(s.startsWith("duke", 1)); // false because start of search is from index 1
         System.out.println(s.endsWith("g"));
         System.out.println(s.equalsIgnoreCase("DUKEPROGRAMMING"));
-        return s.substring(0, 2);
+
+        // first three substrings in a string
+        System.out.println("......first three substrings......");
+        firstThreeSubString(s);
+    }
+
+    public static void firstThreeSubString(String s) {
+        int i = 0;
+        int j = 0;
+
+        String sub3 = s.substring(i, j + 3);
+        System.out.println(sub3);
+    }
+
+    public static void threeSub(String s) {
+
     }
 }
