@@ -7,61 +7,29 @@ public class Str_FindDna {
         testFindDnaString();
     }
 
-    public static String findDnaString(String dna) {
-        // start codon is 'ATG'
-        // stop codon is 'TAA'
-        String result = "";
-        int startIdx = dna.indexOf("ATG");
-        if (startIdx == -1) {
-            return "";
-        }
-        int stopIdx = dna.indexOf("TAA", startIdx + 3);
-        if (stopIdx == -1) {
-            return "";
-        }
-        result = dna.substring(startIdx, stopIdx + 3);
-        return result;
-    }
-
-    public static String findDNA(String s) {
-        // String[] str = s.split("c");
-        String ch = "";
-
-        int i = 0;
-        int j = 0;
-
-        String sub2 = s.substring(s.length() - 2, s.length());
-        String sub3 = s.substring(s.length() - 3, s.length());
-        System.out.println(sub3);
-        while (i < s.length()) {
-            String sub = s.substring(i, j + 2);
-            System.out.println(sub.equals(sub2));
-            if (sub.equals(sub2)) {
-                ch += sub2;
-                break;
+    public static String findDNA(String DNA) {
+        int startIdx = DNA.indexOf("ATG");
+        int currIdx = DNA.indexOf("TAA", startIdx + 3);
+        while (currIdx != -1) {
+            if ((currIdx - startIdx) % 3 == 0) {
+                return DNA.substring(startIdx, currIdx + 3);
+            } else {
+                currIdx = DNA.indexOf("TAA", currIdx + 1);
             }
-
-            System.out.println(sub);
-            i += 2;
-            j += 2;
         }
-        return ch;
+        return "";
     }
 
     public static void testFindDnaString() {
-        System.out.println(".......Find Genes......");
+        System.out.println(".......Find DNA Genes......");
 
-        String dna = "AATGCTAGGGTAATATGGT";
-        System.out.println(findDnaString(dna));
+        String s = "AATGCGTAATTAATCG";
+        System.out.println("DNA 1: " + findDNA(s));
 
-        String[] arrOfStr = dna.split("G");
-        System.out.println(arrOfStr[0]);
+        String s1 = "CGATGGTTGATAAGCCTAAGCTATAA";
+        System.out.println("DNA 2: " + findDNA(s1));
 
-        String dna2 = "";
-        System.out.println(findDnaString(dna2));
-
-        String s = "abcefgicjklmncopqrsctuvwcxyz";
-        System.out.println(findDNA(s));
-
+        String s2 = "CGATGGTTGATAAGCCTAAGCTAAA";
+        System.out.println("DNA 3: " + findDNA(s2));
     }
 }
