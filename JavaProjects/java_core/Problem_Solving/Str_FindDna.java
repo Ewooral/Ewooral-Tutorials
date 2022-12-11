@@ -31,5 +31,8 @@ public class Str_FindDna {
 
         String s2 = "CGATGGTTGATAAGCCTAAGCTAAA";
         System.out.println("DNA 3: " + findDNA(s2));
+
+        String s3 = "AAATGCCCTAACTAGATTAAGAAACC";
+        System.out.println("DNA 4: " + findDNA(s3));
     }
 }
