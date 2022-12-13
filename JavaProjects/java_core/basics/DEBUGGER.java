@@ -1,28 +1,17 @@
 
 public class DEBUGGER {
     public static void main(String[] args) {
-
-        System.out.println(is123Array(new int[] { 1, 2, 3, 3, 2, 1 }));
-        System.out.println(is123Array(new int[] { 0, 1, 2, 3, 1, 2, 3 }));
-        System.out.println(is123Array(new int[] { 1, 2, 3, 3, 2, 1, 1, 2, 3 }));
-        System.out.println(is123Array(new int[] { 1, 2, 3 }));
-        System.out.println(is123Array(new int[] {}));
+        is123Array(2);
     }
 
-    static int is123Array(int[] a) {
-        // If the length of the array is 0 or not a multiple of 3, then
-        // you know it isn't a solution.
-        if (a.length == 0 || a.length % 3 != 0) {
-            return 0;
-        }
+    static void is123Array(int k) {
+        StringBuilder sb = new StringBuilder();
+        String alph = "abcdefgh";
+        sb.append(alph);
+        char f = sb.charAt(k);
+        String b = alph.substring(k) + alph.substring(0, k);
+        System.out.println(b + f);
 
-        for (int i = 0; i < a.length; i += 3) {
-            if (a[i] != 1 || a[i + 1] != 2 || a[i + 2] != 3) {
-                return 0;
-            }
-        }
-
-        return 1;
     }
 
 }

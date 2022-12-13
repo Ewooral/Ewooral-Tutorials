@@ -9,8 +9,8 @@ public class Strings {
 
     // Maninpulate Strings
     public static void stringTutorials() {
-        String str1 = "Hello";
-        String str2 = "World";
+        String str1 = "Coders";
+        String str2 = "abode";
         String str3 = str1 + ", " + str2 + "! ";
 
         System.out.println(str3);
@@ -26,7 +26,10 @@ public class Strings {
         sb.append(", ");
         sb.append("World");
         sb.append("! ");
+        sb.reverse();
+        System.out.println("character at 0: " + sb.charAt(0));
 
+        System.out.println(sb);
         // or
         StringBuilder newSb = new StringBuilder("Mango")
                 .append("is ")
@@ -103,6 +106,7 @@ public class Strings {
         // first three substrings in a string
         System.out.println("......first three substrings......");
         firstThreeSubString(s);
+        reverseStr("God is King Forever!");
     }
 
     public static void firstThreeSubString(String s) {
@@ -113,7 +117,16 @@ public class Strings {
         System.out.println(sub3);
     }
 
-    public static void threeSub(String s) {
+    public static void reverseStr(String s) {
+        StringBuilder sb = new StringBuilder();
+        StringBuilder sa = new StringBuilder();
+        sb.append(s);
+        sb.reverse();
+        System.out.println(sb);
 
+        for (int i = s.length() - 1; i > -1; i--) {
+            sa.append(s.charAt(i));
+        }
+        System.out.println(sa);
     }
 }
