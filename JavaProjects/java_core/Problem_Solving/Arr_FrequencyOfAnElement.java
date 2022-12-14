@@ -32,6 +32,9 @@ public class Arr_FrequencyOfAnElement {
     public static void testFrequency() {
         String message = "when was heew ";
         frequency(message);
+
+        // CaesarCipher CC = new CaesarCipher();
+        // System.out.println(CC.encrypt(message, 5));
     }
 
 }
