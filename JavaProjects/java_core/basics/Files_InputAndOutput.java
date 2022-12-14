@@ -30,7 +30,7 @@ public class Files_InputAndOutput {
             BufferedReader Reader = new BufferedReader(new FileReader("basics/OUTPUT.txt"));
 
             System.out.println("....Read From File....");
-            System.out.println(Reader.readLine()); // only reads the first line of the file
+            System.out.println(Reader.readLine().length()); // only reads the first line of the file
 
             String line;
             while ((line = Reader.readLine()) != null) {
@@ -40,6 +40,35 @@ public class Files_InputAndOutput {
             Reader.close();
 
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            BufferedWriter csvFileWriter = new BufferedWriter(new FileWriter("basics/OUTPUT.csv"));
+            String[] names = { "elijah", "moses", "david", "elisha", "emma", "mary", "john" };
+            String[] address = { "USA", "UK", "UK", "GERMANY", "USA", "USA", "SPAIN" };
+            int[] age = { 29, 23, 25, 27, 31, 31, 17 };
+            int num = 1;
+
+            csvFileWriter.write("ID\t" + "NAME\t\t" + "AGE\t\t" + "ADDRESS\t\t\n");
+            csvFileWriter.write("..........................................................\n");
+
+            for (int i = 0; i < names.length; i++) {
+                csvFileWriter.write(num + "\t" + names[i] + "\t\t" + age[i] + "\t\t" + address[i] + "\t\t\n");
+                num += 1;
+            }
+            csvFileWriter.close();
+
+            BufferedReader csvFileRead = new BufferedReader(new FileReader("basics/OUTPUT.csv"));
+
+            String line;
+            while ((line = csvFileRead.readLine()) != null) {
+                System.out.println(line);
+            }
+            csvFileRead.close();
+
+        } catch (IOException e) {
+
             e.printStackTrace();
         }
 
