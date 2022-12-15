@@ -10,7 +10,7 @@ import java.util.HashMap;
  * 
  */
 
-public class Str_CountWords {
+public class Str_WordFrequency {
 
     // fields or instance variables
     private String filePath = "Problem_Solving/countWords.txt";
@@ -21,11 +21,13 @@ public class Str_CountWords {
         testCode();
     }
 
-    public Str_CountWords(int n, int m) {
+    // constructor
+    public Str_WordFrequency(int n, int m) {
         this.n = n;
         this.m = m;
     }
 
+    // instance method
     public int addNum() {
         return this.n + this.m;
     }
@@ -78,7 +80,7 @@ public class Str_CountWords {
     }
 
     public static void testCode() {
-        Str_CountWords hm = new Str_CountWords(10, 10);
+        Str_WordFrequency hm = new Str_WordFrequency(10, 10);
         System.out.println(hm.m);
         System.out.println(hm.addNum());
         hm.countWords();
