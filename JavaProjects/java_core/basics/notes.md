@@ -576,17 +576,9 @@ The Collection framework represents a unified architecture for storing and manip
 
 
 
+## Hierarachy of the collection framework
 
-
-
-
-
-
-
-
-
-
-
+The `java.util` package contains all the `classes` and `interfaces` for the Collection framework.
 
 
 # Methods of Collection interface
@@ -635,21 +627,84 @@ The Collection framework represents a unified architecture for storing and manip
 
 
 
+# Iterator interface
+Iterator interface provides the facility of iterating the elements in a forward direction only.
+
+# Methods of Iterator interface
+
+There are only three methods in the Iterator interface. They are:
+
+# No.	Method	Description
+1.	public boolean `hasNext()`	It returns true if the iterator has more elements otherwise it returns false.
+2.	public Object `next()`	It returns the element and moves the cursor pointer to the next element.
+3.	public void  `remove()`	It removes the last elements returned by the iterator. It is less used.
+
+
+# Iterable Interface
+
+    The Iterable interface is the root interface for all the collection classes. 
+
+    The Collection interface extends the Iterable interface and therefore all the 
+    subclasses of Collection interface also implement the Iterable interface.
+
+It contains only one abstract method. i.e.,
+
+    Iterator<T> iterator()  
+
+It returns the iterator over the elements of type T.
+
+``` java
+public class _ArrayList {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<Integer>();
+        al.add(1);
+        al.add(-12);
+        al.add(3);
+        al.add(78);
+
+        // using iterator
+        Iterator<Integer> i = al.iterator();
+         while (i.hasNext()) {
+            System.out.println(i.next());
+        }
+    }
+}
+
+```
 
 
 
 
 
 
+# List Interface
+
+List interface is the child interface of Collection interface. It inhibits a list type data structure in which we can store the ordered collection of objects. It can have duplicate values.
+
+List interface is implemented by the classes ArrayList, LinkedList, Vector, and Stack.
+
+To instantiate the List interface, we must use :
+
+    List <data-type> list1= new ArrayList();  
+    List <data-type> list2 = new LinkedList();  
+    List <data-type> list3 = new Vector();  
+    List <data-type> list4 = new Stack();  
 
 
 
+
+
+
+...................................................................................................................
 # OBJECT ORIENTED PROGRAMMING
 
 # Encapsulation
-     is one of the four fundamental OOP concepts. The other three are inheritance, polymorphism, and abstraction.
-
-    Encapsulation in Java is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit. In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class. Therefore, it is also known as data hiding.
+     
+    Is one of the four fundamental OOP concepts. The other three are inheritance, polymorphism, and abstraction.
+    Encapsulation in Java is a mechanism of wrapping the data (variables) and code acting on the 
+    data (methods) together as a single unit. In encapsulation, the variables of a class will be hidden
+    from other classes, and can be accessed only through the methods of their current class. 
+    Therefore, it is also known as data hiding.
 
 ## To achieve encapsulation in Java 
 
@@ -692,12 +747,16 @@ public class EncapTest {
    }
 }
 ```
-The public `setXXX()` and `getXXX()` methods are the access points of the instance variables of the EncapTest class. Normally, these methods are referred as getters and setters. Therefore, any class that wants to access the variables should access them through these getters and setters.
+The public `setXXX()` and `getXXX()` methods are the access points of the 
+instance variables of the EncapTest class. Normally, these methods are referred as 
+`getters` and `setters`. Therefore, any class that wants to access the variables should ...............
+access them through these getters and setters.
 
 The variables of the EncapTest class can be accessed using the following program −
 
-/* File name : RunEncap.java */
+
 ```java
+/* File name : RunEncap.java */
 public class RunEncap {
 
    public static void main(String args[]) {
