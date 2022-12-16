@@ -535,11 +535,41 @@ constructors and methods take in an additional implicit paramter (`this`) which 
 
 
 
+# Interface
+    An interface in Java is a blueprint of a class. It has static constants and abstract methods.
+
+The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body. It is used to achieve abstraction and multiple inheritance in Java.
 
 
+# The relationship between classes and interfaces
 
+ A `class` `extends` another `class`, an `interface` `extends` another `interface`, but a `class` `implements`
+ an interface.
 
+```java
 
+   public class Interface {
+        interface Drawable{  
+                void draw();  
+                default void msg(){
+                    System.out.println("default method");
+                }  
+            }  
+        class Rectangle implements Drawable{  
+            public void draw(){
+                System.out.println("drawing rectangle");
+            }  
+        }  
+        class TestInterfaceDefault{  
+            public static void main(String args[]){  
+                Drawable d=new Rectangle();  
+                d.draw();  
+                d.msg();  
+            }
+        } 
+
+   } 
+```
 
 
 
