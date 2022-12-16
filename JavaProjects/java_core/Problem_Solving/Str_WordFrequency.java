@@ -13,7 +13,7 @@ import java.util.HashMap;
 public class Str_WordFrequency {
 
     // fields or instance variables
-    private String filePath = "Problem_Solving/countWords.txt";
+    public static String filePath = "Problem_Solving/countWords.txt";
     private int n;
     private int m;
 
@@ -32,11 +32,36 @@ public class Str_WordFrequency {
         return this.n + this.m;
     }
 
+    public static void testCode() {
+        Peep p = new Peep(1, 2, 9);
+        System.out.println(p.addNum());
+        p.countWords();
+
+    }
+
+}
+
+// Class Inheritance
+class Peep extends Str_WordFrequency {
+
+    private int w;
+
+    public Peep(int n, int m, int w) {
+        super(n, m);
+        this.w = w;
+
+    }
+
+    @Override
+    public int addNum() {
+        return this.w;
+    }
+
     public void countWords() {
 
         try {
             // write to file
-            BufferedWriter wf = new BufferedWriter(new FileWriter(filePath));
+            BufferedWriter wf = new BufferedWriter(new FileWriter(Str_WordFrequency.filePath));
             wf.write("who has the final say? \nI bet you that it is Jesus \nwho has the final say\n" +
                     "has the blokes whom we \nspared been able to init the \nvalues in their final sayings?");
             wf.close();
@@ -49,7 +74,7 @@ public class Str_WordFrequency {
         try {
             HashMap<String, Integer> map = new HashMap<String, Integer>();
             // read from file and convert it to an array of strings
-            BufferedReader rf = new BufferedReader(new FileReader(filePath));
+            BufferedReader rf = new BufferedReader(new FileReader(Str_WordFrequency.filePath));
             String line;
             while ((line = rf.readLine()) != null) {
                 String[] eachLine = line.split(" ");
@@ -78,12 +103,4 @@ public class Str_WordFrequency {
         }
 
     }
-
-    public static void testCode() {
-        Str_WordFrequency hm = new Str_WordFrequency(10, 10);
-        System.out.println(hm.m);
-        System.out.println(hm.addNum());
-        hm.countWords();
-    }
-
 }

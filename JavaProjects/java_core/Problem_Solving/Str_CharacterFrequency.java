@@ -1,6 +1,6 @@
 package Problem_Solving;
 
-public class Arr_FrequencyOfAnElement {
+public class Str_CharacterFrequency {
     public static void main(String[] args) {
         testFrequency();
     }
