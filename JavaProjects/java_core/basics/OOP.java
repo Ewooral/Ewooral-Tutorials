@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.logging.Logger;
+import java.lang.Object;
 
 public class OOP {
 
@@ -6,6 +8,8 @@ public class OOP {
     private int dollar;
     private int cedi;
     ArrayList<String> food = new ArrayList<String>();
+
+    Logger l = Logger.getLogger("newlogger");
 
     // constructor with parameters
     // method overloading
@@ -58,6 +62,7 @@ public class OOP {
 
 class Tester {
     public static void main(String[] args) {
+
         // instance of the class
         OOP oop = new OOP(100, 800);
 
@@ -86,5 +91,70 @@ class Tester {
 
         }
 
+        testPerson();
+
     }
+
+    @Test
+    public static void testPerson() {
+
+        Person p = new Person("Joe Q Author", 42, 173, 82, "Brown", "MALE");
+
+        Logger l = Logger.getLogger(Person.class.getName());
+        l.info("Created Person object named: " + p.getName());
+
+        assertEquals("Joe Q Author", p.getName());
+        assertEquals(42, p.getAge());
+        assertEquals(174, p.getHeight());
+        assertEquals(80, p.getWeight());
+        assertEquals("Brown", p.getEyeColor());
+        assertEquals("MALE", p.getGender());
+    }
+
+    private static void assertEquals(Object message, Object message2) {
+        if (message2.equals(message)) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+    }
+}
+
+class Person {
+    private String name, gender, eyeColor;
+    private int age, weight, height;
+
+    public Person(String name, int age, int height, int weight, String eyeColor, String gender) {
+        this.name = name;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+        this.eyeColor = eyeColor;
+        this.gender = gender;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public int getHeight() {
+        return this.height;
+    }
+
+    public String getEyeColor() {
+        return this.eyeColor;
+    }
+
+    public int getWeight() {
+        return this.weight;
+    }
+
+    public String getGender() {
+        return this.gender;
+    }
+
 }
