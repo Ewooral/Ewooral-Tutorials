@@ -91,10 +91,19 @@ The `SQL DML commands` provide the ability to `query`, delete and update data in
 
 ## Insert into table
     
-    INSERT INTO table_name
-    (column_one, column_two,
-    column_three, ...)
-    VALUES(value1, value2, value3, ...);
+    INSERT INTO table_name (column_one, column_two, column_three, ...)
+        VALUES(value1, value2, value3, ...);
+
+    INSERT INTO weather VALUES('San Francisco', 46, 50, 0.25, '1994-11-27');
+
+    INSERT INTO weather(city, temp_lo, temp_hi, prcp, date) 
+        VALUES('Accra', 20, 28, 0.2, '2022-12-18');
+
+You can list the columns in a different order if you wish or even omit some columns.
+
+    INSERT INTO weather (date, city, temp_hi, temp_lo)
+        VALUES('2020-09-31', 'Tema', 32, 09);
+
 
 
 ## Update a field in a table
@@ -103,12 +112,41 @@ The `SQL DML commands` provide the ability to `query`, delete and update data in
     SET column_name = ""
     WHERE ID = 02;
 
+## Alter a record
 
-## Query data with a table
+    ALTER TABLE table_name ADD (city VARCHAR(80), temp_lo INT, temp_hi INT, prcp REAL, date DATE);
 
-    SELECT * FROM table_name;
-    SELECT column1, column2, ... FROM table_name;
+    ALTER TABLE table_name DROP city;
+
+    ALTER TABLE weather ADD presidents VARCHAR(50); adds new column to the table
+
+
+
+## Query data within a table
+
+    SELECT * FROM weather;
+
+        city      | temp_lo | temp_hi | prcp |    date    | presidents 
+    ---------------+---------+---------+------+------------+------------
+    San Francisco |      46 |      50 | 0.25 | 1994-11-27 | 
+    Accra         |      20 |      28 |  0.2 | 2022-12-18 | 
+    Tema          |       9 |      32 | 0.01 | 2020-09-01 | 
+    (3 rows)
+
+    SELECT city, date FROM weather;
+
+        city      |    date    
+    ---------------+------------
+    San Francisco | 1994-11-27
+    Accra         | 2022-12-18
+    Tema          | 2020-09-01
+    (3 rows)
+    
     SELECT column1, column2, ... FROM table_name WHERE id = '02';
+    
+
+## Insert data from a Source Table to a Target Table
+
 
 ## Delete table
 
