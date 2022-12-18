@@ -1,4 +1,5 @@
 # Check ubuntu's version
-* lbs_release -a
+* lsb_release -a
+
 
 

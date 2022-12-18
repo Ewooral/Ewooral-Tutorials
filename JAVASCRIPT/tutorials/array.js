@@ -1,33 +1,33 @@
 
 
 
-class MyArray{
-    constructor(){
+class MyArray {
+    constructor() {
         this.length = 0;
         this.data = {};
     }
 
-    get(index){
+    get(index) {
         return this.data[index];
     }
 
-    push(item){
+    push(item) {
         // console.log("Here: ",this)
-        this.data[this.length+1] = item;
+        this.data[this.length + 1] = item;
         this.length++;
         return this.length;
     }
-    pop(){
-        const lastItem = this.data[this.length-1];
-        delete this.data[this.length-1]; 
+    pop() {
+        const lastItem = this.data[this.length - 1];
+        delete this.data[this.length - 1];
         this.length--;
         return lastItem;
     }
-    delete(index){
+    delete(index) {
         const item = this.data[index];
         this.shiftItems(index);
     }
-    shiftItems(index){
+    shiftItems(index) {
 
     }
 }
@@ -86,7 +86,7 @@ console.log(collection);
 // SLICE METHOD returns a new array with the elements from the original array
 // slice(start index, end index)
 collection.slice(1, 3);
-console.log( " Here: " + collection);   
+console.log(" Here: " + collection);
 // SORT METHOD sorts the elements of the array
 collection.sort();
 console.log(collection);
@@ -101,7 +101,7 @@ console.log(newCollection);
 // split(separator, limit)
 const string = "Hello, World!";
 const splitString = string.split("");
-console.log('splitted string:',splitString);
+console.log('splitted string:', splitString);
 // INDEXOF METHOD returns the index of the first occurrence of a specified value in an array
 // indexOf(searchElement, fromIndex)
 const index = collection.indexOf("Doggy");
@@ -112,89 +112,89 @@ const lastIndex = collection.lastIndexOf("Doggy");
 console.log(lastIndex);
 // EVERY METHOD tests whether all elements in the array pass the test implemented by the provided function
 // every(callback, thisArg)
-const every = collection.every(function(value, index, array) {
+const every = collection.every(function (value, index, array) {
     return typeof value === "string";
 }
 );
 console.log(every);
 // SOME METHOD tests whether some element in the array passes the test implemented by the provided function
 // some(callback, thisArg)
-const some = collection.some(function(value, index, array) {
+const some = collection.some(function (value, index, array) {
     return typeof value === "number";
 }
 );
 console.log(some);
 // FILTER METHOD creates a new array with all elements that pass the test implemented by the provided function
 // filter(callback, thisArg)
-const filter = collection.filter(function(value, index, array) {
+const filter = collection.filter(function (value, index, array) {
     return typeof value === "string";
 }
 );
 console.log(filter);
 // MAP METHOD creates a new array with the results of calling a provided function on every element in this array
 // map(callback, thisArg)
-const map = collection.map(function(value, index, array) {
+const map = collection.map(function (value, index, array) {
     return value + " is a string";
 }
 );
 console.log(map);
 // REDUCE METHOD applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value
 // reduce(callback, initialValue)
-const reduce = collection.reduce(function(accumulator, currentValue, currentIndex, array) {
+const reduce = collection.reduce(function (accumulator, currentValue, currentIndex, array) {
     return accumulator + currentValue;
 }
-, 0);
+    , 0);
 console.log(reduce);
 // REDUCE RIGHT METHOD applies a function against an accumulator and each element in the array (from right to left) to reduce it to a single value
 // reduceRight(callback, initialValue)
-const reduceRight = collection.reduceRight(function(accumulator, currentValue, currentIndex, array) {
+const reduceRight = collection.reduceRight(function (accumulator, currentValue, currentIndex, array) {
     return accumulator + currentValue;
 }
-, 0);
+    , 0);
 console.log(reduceRight);
 // FOREACH METHOD calls a function for each element in the array
 // forEach(callback, thisArg)
-collection.forEach(function(value, index, array) {
+collection.forEach(function (value, index, array) {
     console.log(value);
 }
 );
 
 const users = [
     {
-        name:'elijah',
-        state:'CO',
-    }, 
-    {
-        name:'lisha',
-        state:'CO',
+        name: 'elijah',
+        state: 'CO',
     },
     {
-        name:'moses',
-        state:'kibi',
+        name: 'lisha',
+        state: 'CO',
     },
     {
-        name:'Karl Andrew',
-        state:'MN',
+        name: 'moses',
+        state: 'kibi',
+    },
+    {
+        name: 'Karl Andrew',
+        state: 'MN',
     }
 ]
 
-for(let i=0; i<users.length; i++){
+for (let i = 0; i < users.length; i++) {
     let user = users[i];
     console.log(user);
 }
 
-var answers = {'a': 3,'b': 2,'c': 3, 'd': 1};
+var answers = { 'a': 3, 'b': 2, 'c': 3, 'd': 1 };
 var keys = Object.keys(answers);
 var duplicate = false;
 
-for(var i=0;i<keys.length;i++){
- for(var j=i+1;j<keys.length;j++){
-   if(answers[keys[i]] === answers[keys[j]]){
-     duplicate = true;
-     break;
-   }
- }
- if(duplicate){ console.log("dupe value is there.."); break; }
+for (var i = 0; i < keys.length; i++) {
+    for (var j = i + 1; j < keys.length; j++) {
+        if (answers[keys[i]] === answers[keys[j]]) {
+            duplicate = true;
+            break;
+        }
+    }
+    if (duplicate) { console.log("dupe value is there.."); break; }
 }
 
 /**
@@ -218,7 +218,9 @@ console.log(a); // 10
 console.log(b); // 20
 
 // Stage 4(finished) proposal
-({a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40});
+({ a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 });
 console.log(a); // 10
 console.log(b); // 20
 console.log(rest); // {c: 30, d: 40}
+
+debugger;
