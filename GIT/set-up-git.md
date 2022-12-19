@@ -16,6 +16,8 @@
 * Check to make sure that Git is installed and available on the command line, by typing the
   following at the command prompt:
 
+* Shares people and places.
+
          git --version
 
 * To configure your user name to be used by Git, type the following at the prompt:
