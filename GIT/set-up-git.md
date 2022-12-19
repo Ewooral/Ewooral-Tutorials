@@ -26,6 +26,11 @@
  
          git config --global user.email <your email address>
 
+
+         git config --global user.email "boahen.cos@gmail.com"
+        
+         git config --global user.name "Ewooral"
+
 * You can check your default Git global configuration, you can type the following at the prompt:
 	
 	 git config --list
