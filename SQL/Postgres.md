@@ -298,3 +298,9 @@ Let’s take the example of a database that contains two tables: student and dep
 
 
     https://www.ibm.com/docs/en/control-desk/7.6.0?topic=design-relational-database-structure 
+
+
+
+
+
+# Sql operators(+, -, *, %)
