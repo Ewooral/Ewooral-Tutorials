@@ -62,7 +62,8 @@
  * Connect to the Database:
             
             quit psql shell
-            psql 'database' 'user'
+            psql 'database' 'user' OR
+            psql 'database'
 
 
 ## Show tables:
