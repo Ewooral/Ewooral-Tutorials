@@ -1,8 +1,12 @@
 ## Setup postgres on linux:
  * command: 
 
+           sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+
+           wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
            sudo apt-get update
-           sudo apt-get install postgresql
+           sudo apt-get -y install postgresql
+
 
  * status of posgres:
 
@@ -146,7 +150,22 @@ You can list the columns in a different order if you wish or even omit some colu
     
 
 ## Insert data from a Source Table to a Target Table
+* INSERT INTO SELECT: inserts a field from one table to another table
+* INSERT INTO destination_table(column_name)
+  SELECT column_name
+  FROM source_table;
 
+        INSERT INTO grades(name) SELECT name FROM info;
+
+
+## Delete a record from a Table
+
+    DELETE FROM table_name
+    WHERE record_name = "";
+
+## Delete all records from a Table
+
+    DELETE FROM table_name;
 
 ## Delete table
 
