@@ -303,4 +303,10 @@ Let’s take the example of a database that contains two tables: student and dep
 
 
 
-# Sql operators(+, -, *, %)
+# SQL operators(+, -, *, %)
+
+    SELECT salary + allowance FROM employee;
+
+    SELECT age + id AS sum FROM info;
+
+    SELECT * FROM employee WHERE salary + allowance = 25000;
