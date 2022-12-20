@@ -36,6 +36,7 @@ To add a directory to the $PATH variable, we can use the export command. For exa
 	You can do:
 	`export PATH="/custom/bin:$PATH"`
 	
+	
 Using the export command, we export the modified variable to the shell child process environments.
 	
 	
