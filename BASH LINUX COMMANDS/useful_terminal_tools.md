@@ -3,4 +3,3 @@
 3. neofetch
 4. trash-list
 5. trash-empty
-6. pushIt
