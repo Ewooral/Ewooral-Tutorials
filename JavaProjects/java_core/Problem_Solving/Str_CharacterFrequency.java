@@ -1,7 +1,7 @@
 
 public class Str_CharacterFrequency {
-    // public static void main(String[] args) {
-    testFrequency();
+    public static void main(String[] args) {
+        testFrequency();
 
     }
 
