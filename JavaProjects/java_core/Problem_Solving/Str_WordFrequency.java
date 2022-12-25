@@ -1,4 +1,3 @@
-package Problem_Solving;
 
 import java.io.*;
 import java.util.HashMap;

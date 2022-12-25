@@ -1,4 +1,3 @@
-package Problem_Solving;
 
 public class Str_ConvertArrayOfStringsToStrings {
     public static void main(String[] args) {
