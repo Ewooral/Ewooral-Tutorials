@@ -22,7 +22,7 @@ public class Arr_ReverseAnArray {
             int lastElem = arr[i];
             reversed.add(lastElem);
         }
-        // return reversed;
+        return reversed;
 
     }
 
