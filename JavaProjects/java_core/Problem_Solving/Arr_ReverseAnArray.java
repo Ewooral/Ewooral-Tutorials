@@ -27,11 +27,12 @@ public class Arr_ReverseAnArray {
     }
 
     // using Collection.reverse()
-    // public void reverse(Integer a[]) {
+    public void reverse(Integer a[]) {
         Collections.reverse(Arrays.asList(a));
         System.out.println(Arrays.asList(a));
 
-    }}
+    }
+}
 
 class Test {
     public static void main(String[] args) {
