@@ -15,14 +15,15 @@ public class Arr_ReverseAnArray {
      * Output : 40, 30, 20, 10
      */
 
-    // ArrayList<Integer> reversed = new ArrayList<Integer>();
+    ArrayList<Integer> reversed = new ArrayList<Integer>();
 
-    public ArrayList<Integer> reverseArray(Integer[] arr) {
-        for (int i = arr.length - 1; i != -1; i--) {
-            int lastElem = arr[i];
-            reversed.add(lastElem);
-        }
-        return reversed;
+    // public ArrayList<Integer> reverseArray(Integer[] arr) {
+    for(
+    int i = arr.length - 1;i!=-1;i--)
+    {
+        int lastElem = arr[i];
+        reversed.add(lastElem);
+    }return reversed;
     }
 
     // using Collection.reverse()
