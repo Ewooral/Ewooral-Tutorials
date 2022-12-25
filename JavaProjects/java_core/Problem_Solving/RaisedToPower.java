@@ -10,6 +10,6 @@ public class RaisedToPower {
         for (int expo = pow; expo != 0; expo--) {
             res *= base;
         }
-        return res > 0 ? res : 4;
+        return res;
     }
 }
