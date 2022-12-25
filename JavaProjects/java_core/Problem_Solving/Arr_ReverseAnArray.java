@@ -18,11 +18,11 @@ public class Arr_ReverseAnArray {
     ArrayList<Integer> reversed = new ArrayList<Integer>();
 
     public ArrayList<Integer> reverseArray(Integer[] arr) {
-        for (int i = arr.length - 1; i != -1; i--) {
-            int lastElem = arr[i];
-            reversed.add(lastElem);
-        }
-        return reversed;
+        // for (int i = arr.length - 1; i != -1; i--) {
+        int lastElem = arr[i];
+        reversed.add(lastElem);
+    }return reversed;
+
     }
 
     // using Collection.reverse()
