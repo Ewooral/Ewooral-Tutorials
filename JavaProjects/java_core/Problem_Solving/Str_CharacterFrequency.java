@@ -7,7 +7,7 @@ public class Str_CharacterFrequency {
 
     public static void frequency(String message) {
         int[] arr = new int[30];
-        // String visited = "";
+        String visited = "";
         for (int i = 0; i < message.length(); i++) {
             String current = message.substring(i, i + 1);
             if (visited.contains(current) || current.equals(" ")) {
