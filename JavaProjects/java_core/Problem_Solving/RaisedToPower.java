@@ -6,7 +6,7 @@ public class RaisedToPower {
     }
 
     public static int powOf(int base, int pow) {
-        int res = 1;
+        // int res = 1;
         int expo;
         for (expo = pow; expo != 0; expo--) {
             res *= base;
