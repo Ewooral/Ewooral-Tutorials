@@ -1,4 +1,3 @@
-package Problem_Solving;
 
 public class RaisedToPower {
     public static void main(String[] args) {

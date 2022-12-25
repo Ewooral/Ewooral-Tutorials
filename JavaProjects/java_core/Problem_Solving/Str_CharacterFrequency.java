@@ -1,4 +1,3 @@
-package Problem_Solving;
 
 public class Str_CharacterFrequency {
     public static void main(String[] args) {

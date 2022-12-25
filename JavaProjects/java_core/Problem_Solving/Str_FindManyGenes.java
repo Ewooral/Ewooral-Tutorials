@@ -128,7 +128,6 @@
  * each. You should create several examples with different numbers of genes to
  * test your code.
  */
-package Problem_Solving;
 
 public class Str_FindManyGenes {
 
