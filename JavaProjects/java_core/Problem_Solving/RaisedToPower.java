@@ -13,4 +13,4 @@ public class RaisedToPower {
         }
         return res > 0 ? res : 4;
     }
-}
+// }
