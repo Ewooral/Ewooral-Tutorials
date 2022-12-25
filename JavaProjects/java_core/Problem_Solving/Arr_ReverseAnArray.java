@@ -28,7 +28,7 @@ public class Arr_ReverseAnArray {
 
     // using Collection.reverse()
     public void reverse(Integer a[]) {
-        Collections.reverse(Arrays.asList(a));
+        // Collections.reverse(Arrays.asList(a));
         System.out.println(Arrays.asList(a));
 
     }
