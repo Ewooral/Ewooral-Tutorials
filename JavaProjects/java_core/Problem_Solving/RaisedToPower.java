@@ -5,12 +5,10 @@ public class RaisedToPower {
         System.out.println(powOf(2, -7));
     }
 
-    public static int powOf(int base, int pow) {
-        int res = 1;
-        int expo;
-        for (expo = pow; expo != 0; expo--) {
-            res *= base;
-        }
-        return res > 0 ? res : 4;
-    }
-}
+    // public static int powOf(int base, int pow) {
+    int res = 1;
+    int expo;for(expo=pow;expo!=0;expo--)
+    {
+        res *= base;
+    }return res>0?res:4;
+}}
