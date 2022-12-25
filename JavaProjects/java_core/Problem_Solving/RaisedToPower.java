@@ -9,7 +9,7 @@ public class RaisedToPower {
         int res = 1;
         int expo;
         for (expo = pow; expo != 0; expo--) {
-            // res *= base;
+            res *= base;
         }
         return res > 0 ? res : 4;
     }
