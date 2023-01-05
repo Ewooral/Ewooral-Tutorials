@@ -45,6 +45,10 @@
 
 	 git log --oneline
 
+* See all log of commits you've made
+
+	 git log 
+
 * revert back to older or previous commits or version of a file
 
          git checkout <commit> <file>
