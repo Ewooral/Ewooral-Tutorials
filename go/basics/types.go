@@ -6,6 +6,8 @@ import "fmt"
 // outside the scope of this module
 var Test string = "Scope in GoLang"
 
+const NAME_OF_LANGUAGE = "GOLANG"
+
 func name() int {
 	var name string = "Elijah"
 	var age int

@@ -12,7 +12,11 @@ func main() {
 	fmt.Println(quote.Glass())
 	fmt.Println(len("Hello World"))
 	fmt.Println("Hello World"[1])
+
 	name()
+
 	scope()
+
+	fmt.Print(NAME_OF_LANGUAGE)
 
 }
