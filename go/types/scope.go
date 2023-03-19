@@ -9,5 +9,6 @@ func scope() {
 	var y int = 8
 
 	fmt.Println(x + y)
+	fmt.Println(Test)
 
 }
