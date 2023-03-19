@@ -6,6 +6,8 @@ var x int = 5
 
 func scope() {
 	x = 7
-	fmt.Println(x)
+	var y int = 8
+
+	fmt.Println(x + y)
 
 }
