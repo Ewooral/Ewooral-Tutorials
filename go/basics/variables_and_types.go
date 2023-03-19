@@ -25,6 +25,7 @@ func name() {
 	fmt.Println("I am", Age, "years old!")
 	fmt.Println(`Hey people `)
 
+	// simple way of declaring a variable
 	v := "Hello, World"
 	fmt.Println(v, a, b, c)
 }
