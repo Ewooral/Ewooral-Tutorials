@@ -15,8 +15,10 @@ func main() {
 
 	name()
 
+	age()
+
 	scope()
 
-	fmt.Print(NAME_OF_LANGUAGE)
+	fmt.Println(NAME_OF_LANGUAGE)
 
 }
