@@ -17,7 +17,7 @@ var (
 	c = 7
 )
 
-func name() {
+func variable() {
 	var name string = "Elijah"
 
 	Age = 30
@@ -33,4 +33,13 @@ func name() {
 func age() {
 	Age = 80
 	fmt.Println("AGE:", Age)
+}
+
+func input() {
+	fmt.Println("Enter a number: ")
+	var _input float64
+	fmt.Scan("%f", _input)
+	output := _input * 2
+
+	fmt.Println(output)
 }
