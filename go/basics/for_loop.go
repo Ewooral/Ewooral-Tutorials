@@ -18,3 +18,15 @@ func forLoop2() {
 		fmt.Println(i)
 	}
 }
+
+func if_else() {
+	j := 4
+	for j <= 10 {
+		if j%2 == 0 {
+			fmt.Println(j)
+		} else {
+			fmt.Println("N/A")
+		}
+		j += 1
+	}
+}

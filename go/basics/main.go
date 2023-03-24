@@ -26,4 +26,12 @@ func main() {
 
 	forLoop2()
 
+	fmt.Println("...................")
+
+	if_else()
+
+	fmt.Println("...................")
+
+	switchStatement()
+
 }
