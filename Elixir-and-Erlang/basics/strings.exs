@@ -12,3 +12,5 @@ IO.puts("Definition of a noun: #{noun}")
 age = 30
 address = "Ashaiman"
 IO.puts("Age: #{30} and Address: #{address}")
+
+IO.puts(String.bag_distance(String.at(firstname, 0), String.at(lastname, 3)))
