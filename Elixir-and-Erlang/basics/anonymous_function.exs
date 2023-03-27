@@ -29,4 +29,6 @@ defmodule Anonymous_Function do
   IO.puts(x)
 
   IO.puts(length([2, 3, 6]))
+
+  IO.puts((fn r -> r + 23 end).(100))
 end
