@@ -43,3 +43,5 @@ func input() {
 
 	fmt.Println(output)
 }
+
+func output(){}
