@@ -12,3 +12,10 @@ iex> [1, true, 2, false, 3, true] -- [true, false]
         We say that `Elixir data structures are immutable`. One advantage of immutability is
         that it leads to clearer code. You can freely pass the data around with 
         the guarantee no one will mutate it in memory - only transform it.
+
+
+* Note: Keep in mind 'single-quoted' and 
+"double-quoted" representations are not equivalent in Elixir as they are represented by different types:
+
+        iex> 'hello' == "hello"
+              false
