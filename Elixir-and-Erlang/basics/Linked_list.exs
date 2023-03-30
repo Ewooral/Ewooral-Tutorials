@@ -4,4 +4,5 @@ IO.puts(concatenatate)
 head = [4, 5, 6]
 tail = [1, 2, 3]
 IO.puts(hd(head))
-tl(tail)
+IO.puts(tl(tail))
+IO.puts('hello')
