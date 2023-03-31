@@ -1,20 +1,34 @@
 # What is Design Patterns?
 A practical proven solution to a recurring design problem
 
-        It allows you to use previously outlined
+        - It allows you to use previously outlined
         solutions that expert developers have often used to solve a
         software problem, so you do not need to build a solution from
         the basics of object-oriented programming principles every
         time 
 
-        Design patterns may also be used to help fix `tangled`, structureless 
+        - Design patterns may also be used to help fix `tangled`, `structureless` 
         software code, also known as `spaghetti code.`
 
 
-        In other words, design patterns help software developers so that 
+        - In other words, design patterns help software developers so that 
         they have a guide to help them solve design problems the way an expert might, so
         not everything needs to be built from scratch.
 
+        - A strong advantage of design patterns is that they have already
+        been proven by experts. This means that you do not need to go
+        through the trials they have, and you go straight to creating
+        better-written software.
+
+        - Another advantage of design patterns is that they help create a
+        design vocabulary. This means that design patterns provide a
+        simplified means of discussing design solutions, so they do not
+        need to be explained over and over. 
+
+
+## Pattern Languages
+The patterns and solutions of the Gang of Four’s catalog serve
+a variety of different purposes.
         
 
 # Categories of Patterns
