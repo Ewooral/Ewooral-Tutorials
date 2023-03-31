@@ -1,10 +1,16 @@
 # What is Design Patterns?
 A practical proven solution to a recurring design problem
-It allows you to use previously outlined
-solutions that expert developers have often used to solve a
-software problem, so you do not need to build a solution from
-the basics of object-oriented programming principles every
-time 
+
+        It allows you to use previously outlined
+        solutions that expert developers have often used to solve a
+        software problem, so you do not need to build a solution from
+        the basics of object-oriented programming principles every
+        time 
+
+        Design patterns may also be used to help fix `tangled`, structureless 
+        software code, also known as `spaghetti code.`
+
+        
 
 # Categories of Patterns
 The Gang of Four’s pattern catalog contains 23 patterns. 
