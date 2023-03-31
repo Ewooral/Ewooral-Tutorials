@@ -10,6 +10,11 @@ A practical proven solution to a recurring design problem
         Design patterns may also be used to help fix `tangled`, structureless 
         software code, also known as `spaghetti code.`
 
+
+        In other words, design patterns help software developers so that 
+        they have a guide to help them solve design problems the way an expert might, so
+        not everything needs to be built from scratch.
+
         
 
 # Categories of Patterns
