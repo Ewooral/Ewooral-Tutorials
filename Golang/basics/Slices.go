@@ -19,11 +19,19 @@ func slices() {
 
 	/*
 		! If you want to create a slice you should use the built-in make function:
-		slice := make([] float64 2, 5)
+		? slice := make([] float64 2, 5)
 
 	*/
 
-	slice := make([]float64, 2, 5)
+	slice := make([]float64, 2)
 	fmt.Println(slice)
+
+	/*
+		* This creates a slice that is associated with an underlying float64 array of length 5.
+		* Slices are always associated with some array, and although they can never be longer
+		* than the array, they can be smaller. The make function also allows a 3rd parameter:
+
+		? slice := make([] float64, 2, 5)
+	*/
 
 }
