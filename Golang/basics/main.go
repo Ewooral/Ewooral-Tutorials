@@ -34,4 +34,8 @@ func main() {
 
 	switchStatement()
 
+	fmt.Println("...................")
+
+	Array()
+
 }
