@@ -10,8 +10,20 @@ func slices() {
 		* Unlike arrays this length is allowed to change. Here's an example of a slice:
 
 		? var x []float64
+		* The only difference between this and an array is the missing length between the brackets.
+		* In this case x has been created with a length of 0.
 	*/
 
 	var x []float64
 	fmt.Println(x)
+
+	/*
+		! If you want to create a slice you should use the built-in make function:
+		slice := make([] float64 2, 5)
+
+	*/
+
+	slice := make([]float64, 2, 5)
+	fmt.Println(slice)
+
 }
