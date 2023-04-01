@@ -38,4 +38,7 @@ func main() {
 
 	Array()
 
+	fmt.Println("...................")
+	slices()
+
 }
