@@ -38,10 +38,23 @@ func slices() {
 
 		arr := [5]float64{1,2,3,4,5}
 		x := arr[0:5]
+
+		* is the index of where to start the slice and high is the index where to end it (but not including the index itself).
+		* For example while arr[0:5] returns [1,2,3,4,5], arr[1:4] returns [2,3,4].
+
+		For convenience we are also allowed to omit low, high or even both low and high.
+		arr[0:] is the same as arr[0:len(arr)], arr[:5] is the same as arr[0:5] and arr[:] is the same as arr[0:len(arr)].
 	*/
 
 	arr := [5]float64{1, 2, 3, 4, 5}
 	slice_1 := arr[0:5]
 	fmt.Println(slice_1)
+	fmt.Println(arr[:5])
+	fmt.Println(arr[0:])
+	fmt.Println(arr[:])
+	fmt.Println(arr[3:])
+	fmt.Println(arr[:1])
+	fmt.Println(arr[:4])
+	fmt.Println(arr[2:3])
 
 }
