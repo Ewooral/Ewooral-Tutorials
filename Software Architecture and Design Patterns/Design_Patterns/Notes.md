@@ -27,18 +27,23 @@ A practical proven solution to a recurring design problem
 
 
 ## Pattern Languages
-The patterns and solutions of the Gang of Four’s catalog serve
-a variety of different purposes.
+A pattern language is a collection of patterns that are
+related to a certain problem space. 
+
+    For example, the pattern
+    language you select for designing accounting software would
+    be different from those you select for designing gaming
+    software. A pattern language for accounting software would
+    include double-entry bookkeeping, while a pattern language for
+    gaming software would include design words such as
+    encounters, quests, and players.
         
 
 # Categories of Patterns
-The Gang of Four’s pattern catalog contains 23 patterns. 
-These patterns can be sorted into three different categories:
-creational patterns, structural patterns, and behavioral
-patterns. Some patterns might have elements that allow them
-to span all of the categories – it is not always clear cut which
-categories a pattern falls under. These categories were used to
-simply organize and characterize the patterns in their book.
+
+        - Creational patterns
+        - Behavioral patterns
+        - Structural patterns
 
 ### Creational Patterns
 Creational patterns tackle how you handle creating or
