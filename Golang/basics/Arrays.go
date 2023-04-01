@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func Array() {
-
-	// var keyword followed by a variable, square bracket representing the array length, and a type
+	//? ARRAY CREATION
+	//* var keyword followed by a variable, square bracket representing the array length, and a type
 	var x [2]float64
 	x[0] = 1
 	x[1] = 2
@@ -20,12 +20,16 @@ func Array() {
 	fmt.Println(x, y, names)
 	fmt.Println()
 
-	// Loop over an array
+	//? NORMAL LOOP
 	for i := 0; i < len(y); i++ {
 		fmt.Println(y[i])
 	}
 
-	// Special for loop
+	/*
+		@param total, value
+	*/
+
+	//? SPECIAL ARRAY LOOP
 	var total float64 = 0
 	// for i, value := range x{
 	// since i is declared but never used, we want to replace it with an underscore
@@ -36,6 +40,9 @@ func Array() {
 	}
 	fmt.Println(total / float64(len(x)))
 
-	// Shorter syntax forcreating arrrays
+	//? SHORTER ARRAY SYNTAX
+	//
+	arr := [5]float64{1, 2, 3, 4, 5}
+	fmt.Println(arr)
 
 }
