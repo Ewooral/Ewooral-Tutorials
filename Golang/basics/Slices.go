@@ -32,6 +32,16 @@ func slices() {
 		* than the array, they can be smaller. The make function also allows a 3rd parameter:
 
 		? slice := make([] float64, 2, 5)
+
+
+		! Another way to create slices is to use the [low : high] expression:
+
+		arr := [5]float64{1,2,3,4,5}
+		x := arr[0:5]
 	*/
+
+	arr := [5]float64{1, 2, 3, 4, 5}
+	slice_1 := arr[0:5]
+	fmt.Println(slice_1)
 
 }
