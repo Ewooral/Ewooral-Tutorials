@@ -29,6 +29,8 @@ func Array() {
 	// since i is declared but never used, we want to replace it with an underscore
 	for _, value := range x {
 		total += value
+		// i or _ represent current index position
+		// value represent current value
 	}
 	fmt.Println(total / float64(len(x)))
 }
