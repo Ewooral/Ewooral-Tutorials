@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 func Array() {
+
+	// var keyword followed by a variable, square bracket representing the array length, and a type
 	var x [2]float64
 	x[0] = 1
 	x[1] = 2
@@ -33,4 +35,7 @@ func Array() {
 		// value represent current value
 	}
 	fmt.Println(total / float64(len(x)))
+
+	// Shorter syntax forcreating arrrays
+
 }
