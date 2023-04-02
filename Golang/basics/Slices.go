@@ -56,5 +56,6 @@ func slices() {
 	fmt.Println(arr[:1])
 	fmt.Println(arr[:4])
 	fmt.Println(arr[2:3])
+	fmt.Println(arr[:3])
 
 }
