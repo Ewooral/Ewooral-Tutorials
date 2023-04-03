@@ -58,4 +58,16 @@ func slices() {
 	fmt.Println(arr[2:3])
 	fmt.Println(arr[:3])
 
+	/*
+
+		! Slice Functions
+		* Go includes two built-in functions to assist with slices: append and copy. Here is an example of append:
+
+		func main() {
+		  slice1 := []int{1,2,3}
+		  slice2 := append(slice1, 4, 5)
+		  fmt.Println(slice1, slice2)
+		}
+	*/
+
 }
