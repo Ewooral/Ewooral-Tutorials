@@ -41,4 +41,7 @@ func main() {
 	fmt.Println("...................")
 	slices()
 
+	fmt.Println("...................")
+	maps()
+
 }
