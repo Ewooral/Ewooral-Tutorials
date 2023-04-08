@@ -9,6 +9,6 @@ func maps() {
 
 	x := make(map[string]int)
 	x["key"] = 10
-	fmt.Println(x["key"])
+	// fmt.Println(x["key"])
 
 }
