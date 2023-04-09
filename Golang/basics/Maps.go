@@ -7,7 +7,7 @@ func maps() {
 	// x["key"] = 10
 	// fmt.Println(x["key"])
 
-	x := make(map[string]int)
+	// x := make(map[string]int)
 	x["key"] = 10
 	fmt.Println(x["key"])
 
