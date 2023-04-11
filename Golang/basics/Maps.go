@@ -27,10 +27,29 @@ func useMap() {
 	elements["F"] = "Fluorine"
 	elements["Ne"] = "Neon"
 
+	m := map[string]int{
+		"a": 1,
+		"b": 2,
+		"c": 3,
+	}
+
 	for k, v := range elements {
 		fmt.Println(k, ": ", v)
 	}
 
 	fmt.Println(elements["Lo"])
 	fmt.Println(elements)
+
+	type keyValue struct {
+		key   string
+		value int
+	}
+
+	s := make([]keyValue, 0, len(m))
+	for k, v := range m {
+		s = append(s, keyValue{k, v})
+
+	}
+	fmt.Println(s)
+
 }
