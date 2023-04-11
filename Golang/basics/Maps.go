@@ -27,6 +27,6 @@ func useMap() {
 	elements["F"] = "Fluorine"
 	elements["Ne"] = "Neon"
 
-	fmt.Println(elements["Li"])
+	fmt.Println(elements["Lo"])
 	fmt.Println(elements)
 }
