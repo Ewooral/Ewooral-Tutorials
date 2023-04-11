@@ -27,6 +27,10 @@ func useMap() {
 	elements["F"] = "Fluorine"
 	elements["Ne"] = "Neon"
 
+	for k, v := range elements {
+		fmt.Println(k, "-->", v)
+	}
+
 	fmt.Println(elements["Lo"])
 	fmt.Println(elements)
 }
