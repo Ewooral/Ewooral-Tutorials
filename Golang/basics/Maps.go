@@ -45,7 +45,7 @@ func useMap() {
 		value int
 	}
 
-	s := make([]keyValue, 0, len(m))
+	// s := make([]keyValue, 0, len(m))
 	for k, v := range m {
 		s = append(s, keyValue{k, v})
 
