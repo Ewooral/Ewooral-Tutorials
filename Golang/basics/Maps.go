@@ -50,6 +50,6 @@ func useMap() {
 		s = append(s, keyValue{k, v})
 
 	}
-	// fmt.Println(s)
+	fmt.Println(s)
 
 }
