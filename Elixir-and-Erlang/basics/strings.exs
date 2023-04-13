@@ -12,3 +12,5 @@ IO.puts("Definition of a noun: #{noun}")
 age = 30
 address = "Ashaiman"
 IO.puts("Age: #{30} and Address: #{address}")
+
+IO.puts("Hey \nFriend! ")
