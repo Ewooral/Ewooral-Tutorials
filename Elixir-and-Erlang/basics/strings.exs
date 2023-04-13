@@ -13,4 +13,4 @@ age = 30
 address = "Ashaiman"
 IO.puts("Age: #{30} and Address: #{address}")
 
-IO.puts("Hey \nFriend! ")
+IO.puts("Hey \nFriend! " <> "How are you?")
