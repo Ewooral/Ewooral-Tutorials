@@ -7,7 +7,7 @@ func Array() {
 	//* var keyword followed by a variable, square bracket representing the array length, and a type
 	var x [2]float64
 	x[0] = 1
-// 	x[1] = 2
+	x[1] = 2
 
 	var y [4]int
 	y[3] = -2
