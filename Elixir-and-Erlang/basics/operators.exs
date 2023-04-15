@@ -21,7 +21,7 @@ defmodule Operators do
   IO.puts(not false)
   IO.puts(not true)
 
-  IO.puts(".... &&, ||, ! ....")
+  IO.puts(".... &&, ||, !, ===,  ....")
 
   IO.puts("results" && 12)
   IO.puts(false && 12)
@@ -37,4 +37,6 @@ defmodule Operators do
   IO.puts(!false)
   IO.puts(!nil)
   IO.puts(!true)
+  IO.puts(1 === 1)
+  IO.puts(1 == 1)
 end
