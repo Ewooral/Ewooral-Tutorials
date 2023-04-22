@@ -36,37 +36,59 @@
 
 # code review - 
 
-        systematic reviews of written code done by the development team. Not only to find mistakes, but to get developers using the same conventions, constructs, design principles, etc.
+        systematic reviews of written code done by the development team. Not only to find mistakes, but to get 
+        developers using the same conventions, constructs, design principles, etc.
 
 # cohesion - 
 
-        describing the complexity within a module, e.g. a class or a method. high cohesion describes a module that has a clear purpose and is no more complex than it needs to be. low cohesion describes a module which has an unclear purpose or which is overly complex.
+        describing the complexity within a module, e.g. a class or a method. high cohesion describes a module that has a 
+        clear purpose and is no more complex than it needs to be. low cohesion describes a module which has an unclear purpose or which is overly complex.
 
 # component - 
 
-        a discrete part that has a particular role or function, called a responsibility. From a design perspective, a component will eventually be turned into an object, function, or group of subcomponents
+        a discrete part that has a particular role or function, called a responsibility. From a design perspective, 
+        a component will eventually be turned into an object, function, or group of subcomponents
 
 # conceptual integrity - 
 
         the consistency of software. Software with conceptual integrity will seem like it is programmed by one developer, even if it was programmed by a team
 
-concern - a general term, referring to some action or role that is part of the solution to the problem.
+# concern - 
+        
+        a general term, referring to some action or role that is part of the solution to the problem.
 
-control object - an object whose role is to manage other objects or control their interactions
+# control object - 
 
-counterexamples - during model checking, counterexamples are instances wherein the system did not behave as expected
+        an object whose role is to manage other objects or control their interactions
 
-coupling - describing of the complexity of connections between modules. tightly coupled modules are highly dependent on each other and difficult to reuse in other contexts. loosely coupled modules are less dependent and easier to reuse.
+# counterexamples - 
 
-CRC - stands for class responsibility collaborator: a technique for summarizing and mapping objects in an object-oriented design.
+        during model checking, counterexamples are instances wherein the system did not behave as expected
 
-deadlock - a situation in which the system can never continue because subprocesses need other subprocesses to act before they can continue
+# coupling - 
 
-decomposition - breaking an entity into parts that can be implemented separately
+        describing of the complexity of connections between modules. tightly coupled modules are highly dependent on each other 
+        and difficult to reuse in other contexts. loosely coupled modules are less dependent and easier to reuse.
 
-degree - when talking about coupling, degree is the number of connections between the two modules of interest. This is one dimension of how coupled these modules are.
+# CRC - 
 
-design - the process of planning a software solution, taking the requirements and constraints into account. Divided into higher-level conceptual design and more specific technical design.
+        stands for class responsibility collaborator: a technique for summarizing and mapping objects in an object-oriented design.
+
+# deadlock - 
+
+        a situation in which the system can never continue because subprocesses need other subprocesses to act before they can continue
+
+# decomposition - 
+
+        breaking an entity into parts that can be implemented separately
+
+# degree - 
+        
+        when talking about coupling, degree is the number of connections between the two modules of interest. This is one dimension of how coupled these modules are.
+
+# design - 
+
+        the process of planning a software solution, taking the requirements and constraints into account. Divided into higher-level conceptual design and more specific technical design.
 
 design patterns - established solutions to common coding problems. Characterized by their general form and function rather than by specific code
 
