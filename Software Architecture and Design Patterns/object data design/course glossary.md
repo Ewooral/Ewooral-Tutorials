@@ -1,26 +1,54 @@
-# abstract - in object-oriented design, a class that cannot be instantiated directly, but must be subclassed
+# abstract - 
+    
+        in object-oriented design, a class that cannot be instantiated directly, but must be subclassed
 
-abstract data types - data types that are defined by the their behaviour as opposed to their structure. Defined by the developer rather than the programming language
+# abstract data types - 
+        
+        data types that are defined by the their behaviour as opposed to their structure. 
+        Defined by the developer rather than the programming language
 
-access modifiers - keywords that control which other classes can access a variable or method in a class. In Java these include public, protected, private, and no keyword, sometimes called default.
+# access modifiers - 
+        
+        keywords that control which other classes can access a variable or method in a class. In Java these 
+        include public, protected, private, and no keyword, sometimes called default.
 
-abstraction - the act of simplifying a concept in context. In object-oriented design, it is the simplification of the real world entity into its most important attributes and behaviours for the purpose of the software.
+# abstraction - 
 
-attribute - a property that object of a class must have, even though their values may be different. For example, two student objects each have a grade attribute, even though one has an 'A' and the other has a 'B.'
+        the act of simplifying a concept in context. In object-oriented design, it is the simplification 
+        of the real world entity into its most important attributes and behaviours for the purpose of the software.
 
-behaviours - the actions that an object can take
+# attribute - 
 
-boundary object - an object whose role is to interface with an external component, such as a user or an adjacent system
+        a property that object of a class must have, even though their values may be different. For example, 
+        two student objects each have a grade attribute, even though one has an 'A' and the other has a 'B.'
 
-class diagram - a UML diagram for showing the behaviours, attributes, inheritance, and connections of classes
+# behaviours - 
 
-code review - systematic reviews of written code done by the development team. Not only to find mistakes, but to get developers using the same conventions, constructs, design principles, etc.
+        the actions that an object can take
 
-cohesion - describing the complexity within a module, e.g. a class or a method. high cohesion describes a module that has a clear purpose and is no more complex than it needs to be. low cohesion describes a module which has an unclear purpose or which is overly complex.
+# boundary object - 
 
-component - a discrete part that has a particular role or function, called a responsibility. From a design perspective, a component will eventually be turned into an object, function, or group of subcomponents
+        an object whose role is to interface with an external component, such as a user or an adjacent system
 
-conceptual integrity - the consistency of software. Software with conceptual integrity will seem like it is programmed by one developer, even if it was programmed by a team
+# class diagram - 
+
+        a UML diagram for showing the behaviours, attributes, inheritance, and connections of classes
+
+# code review - 
+
+        systematic reviews of written code done by the development team. Not only to find mistakes, but to get developers using the same conventions, constructs, design principles, etc.
+
+# cohesion - 
+
+        describing the complexity within a module, e.g. a class or a method. high cohesion describes a module that has a clear purpose and is no more complex than it needs to be. low cohesion describes a module which has an unclear purpose or which is overly complex.
+
+# component - 
+
+        a discrete part that has a particular role or function, called a responsibility. From a design perspective, a component will eventually be turned into an object, function, or group of subcomponents
+
+# conceptual integrity - 
+
+        the consistency of software. Software with conceptual integrity will seem like it is programmed by one developer, even if it was programmed by a team
 
 concern - a general term, referring to some action or role that is part of the solution to the problem.
 
