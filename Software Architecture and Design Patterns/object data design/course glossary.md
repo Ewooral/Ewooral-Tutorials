@@ -90,86 +90,170 @@
 
         the process of planning a software solution, taking the requirements and constraints into account. Divided into higher-level conceptual design and more specific technical design.
 
-design patterns - established solutions to common coding problems. Characterized by their general form and function rather than by specific code
+# design patterns - 
 
-ease - when talking about coupling, ease is how obvious connections are between modules. This is one dimension of how coupled these modules are.
+        established solutions to common coding problems. Characterized by their general form and function rather than by specific code
 
-encapsulation - bundling attributes and behaviours into an object, exposing features of that object to other objects as necessary, and restricting the remaining features
+# ease - 
 
-entity - the role or behaviour that is being represented by a software object or process
+        when talking about coupling, ease is how obvious connections are between modules. This is one dimension of how coupled these modules are.
 
-flexibility - when talking about coupling, flexibility is how easily a module can be swapped for a different module. This is one dimension of coupling.
+# encapsulation - 
 
-getter - a method for getting the value of a class variable which is not directly accessible
+        bundling attributes and behaviours into an object, exposing features of that object to other objects as necessary, and restricting the remaining features
 
-generalization - factoring out common features of classes or functions that can be reused in other places. Allows for more code reuse
+# entity - 
 
-global variable - a variable that is accessible by any subroutine or subcomponent
+        the role or behaviour that is being represented by a software object or process
 
-flexibility - the ability of a design to adapt to changes or be adapted to different purposes
+# flexibility - 
 
-implementation  - the process of creating a working program from the design
+        when talking about coupling, flexibility is how easily a module can be swapped for a different module. This is one dimension of coupling.
 
-information hiding - designing classes so that the information that other classes do not need is hidden away from them.
+# getter - 
 
-inheritance - attributes or behaviours that subclasses inherit from a superclass or implement through an interface
+        a method for getting the value of a class variable which is not directly accessible
 
-instantiate - to create an object of a class
+# generalization - 
 
-interface inheritance - a method of inheritance wherein if a class implements an interface, it must define all the methods specified in the interface
+        factoring out common features of classes or functions that can be reused in other places. Allows for more code reuse
 
-Liskov substitution principle - a principle stating that a superclass should be able to be replaced by its subclass without changing behaviour significantly
+# global variable - 
 
-local variable - a variable accessible only to one class or subroutine
+        a variable that is accessible by any subroutine or subcomponent
 
-maintenance - modifying software after delivery to fix, improve, or change features
+# flexibility - 
 
-maintainable - the ability of code to be changed
+        the ability of a design to adapt to changes or be adapted to different purposes
 
-model - an abstract representation of the key concepts and relationships that make up a software solution
+# implementation  - 
 
-model checking - a systematic check of all of the system's states. Consists of several steps: modeling phase, running phase, and analysis phase
+        the process of creating a working program from the design
 
-module - general term to refer to a programming unit, like a class or a method.
+# information hiding - 
 
-namespace - an abstract container for a group of related modules, given a unique identifier.
+        designing classes so that the information that other classes do not need is hidden away from them.
 
-object-oriented modelling - modelling a software solution using concepts from object-oriented languages such as Java. Characterized by representing key concepts with software objects.
+# inheritance - 
 
-override - a subclass may have a method that is already in the superclass, in which case the subclass' method will be used instead.
+        attributes or behaviours that subclasses inherit from a superclass or implement through an interface
 
-package - a means of organizing related classes into the same namespace.
+# instantiate - 
 
-polymorphism - the ability to interact with objects of different types in the same way. Usually achieved through inheritance or through interfaces in Java
+        to create an object of a class
 
-programming paradigm - the style or way in which programming achieves its objectives, which can vary by language and toolset
+# interface inheritance - 
 
-quality attributes - properties of a software system that indicate its quality
+        a method of inheritance wherein if a class implements an interface, it must define all the methods specified in the interface
 
-requirements - the requirements that the software will be designed to fulfill. These could be functional requirements such as providing some result, or business requirements such as being user-friendly, or meeting budgetary restrictions
+# Liskov substitution principle - 
 
-responsibility - the purpose or function of a component of the software
+        a principle stating that a superclass should be able to be replaced by its subclass without changing behaviour significantly
 
-reusable - the ability of code to be reused in different contexts
+# local variable - 
 
-rule of least astonishment - a design principle dictating that a component should behave as one would expect it to behave
+        a variable accessible only to one class or subroutine
 
-separation of concerns - a principle dictating that different concerns should be in different modules
+# maintenance - 
 
-service-oriented architecture - a type of architecture characterized by providing services to external clients. The clients do not know how these services are provided.
+        modifying software after delivery to fix, improve, or change features
 
-sequence diagram - a UML diagram that shows the sequence of actions that form one process
+# maintainable - 
 
-setter - a method for setting the value of a class variable which is not directly accessible. Allows for gatekeeping e.g. restricting the values to which the variable can be set
+        the ability of code to be changed
 
-software architecture - the higher-level structure of a software system; how various components are arranged into a coherent and functional whole
+# model - 
 
-state diagram - a UML diagram that shows the different states of a system
+        an abstract representation of the key concepts and relationships that make up a software solution
 
-tradeoff - a decision between alternatives that each provide benefits and downsides
+# model checking - 
 
-Unified Modelling Language - a visual design language encompassing many different diagrams that depict software in different ways
+        a systematic check of all of the system's states. Consists of several steps: modeling phase, running phase, and analysis phase
 
-verification - confirming that the software solution meets the requirements
+# module - 
+
+        general term to refer to a programming unit, like a class or a method.
+
+# namespace - 
+
+        an abstract container for a group of related modules, given a unique identifier.
+
+# object-oriented modelling - 
+
+        modelling a software solution using concepts from object-oriented languages such as Java. Characterized by representing key concepts with software objects.
+
+# override - 
+
+        a subclass may have a method that is already in the superclass, in which case the subclass' method will be used instead.
+
+# package - 
+
+        a means of organizing related classes into the same namespace.
+
+# polymorphism - 
+
+        the ability to interact with objects of different types in the same way. Usually achieved through inheritance or through interfaces in Java
+
+# programming paradigm - 
+
+        the style or way in which programming achieves its objectives, which can vary by language and toolset
+
+# quality attributes - 
+
+        properties of a software system that indicate its quality
+
+# requirements - 
+
+        the requirements that the software will be designed to fulfill. These could be functional requirements such 
+        as providing some result, or business requirements such as being user-friendly, or meeting budgetary restrictions
+
+# responsibility - 
+
+        the purpose or function of a component of the software
+
+# reusable - 
+
+        the ability of code to be reused in different contexts
+
+# rule of least astonishment - 
+
+        a design principle dictating that a component should behave as one would expect it to behave
+
+# separation of concerns - 
+
+        a principle dictating that different concerns should be in different modules
+
+# service-oriented architecture - 
+
+        a type of architecture characterized by providing services to external clients. The clients do not know how these services are provided.
+
+# sequence diagram - 
+
+        a UML diagram that shows the sequence of actions that form one process
+
+# setter - 
+
+        a method for setting the value of a class variable which is not directly accessible. Allows for gatekeeping 
+        e.g. restricting the values to which the variable can be set
+
+# software architecture - 
+
+        the higher-level structure of a software system; how various components are arranged into a coherent and functional whole
+
+# state diagram - 
+
+        a UML diagram that shows the different states of a system
+
+# tradeoff - 
+
+        a decision between alternatives that each provide benefits and downsides
+
+# Unified Modelling Language - 
+
+        a visual design language encompassing many different diagrams that depict software in different ways
+
+# verification - 
+
+        confirming that the software solution meets the requirements
 
 
