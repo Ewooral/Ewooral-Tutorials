@@ -15,4 +15,5 @@
 - `Requirements` and `design` activities help you to understand 
 what assumptions you need so that you create the right product.
 
-`Requirements` are conditions or capabilities
+`Requirements` are conditions or capabilities that must be 
+implemented in a product,
