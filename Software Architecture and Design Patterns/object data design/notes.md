@@ -16,4 +16,4 @@
 what assumptions you need so that you create the right product.
 
 `Requirements` are conditions or capabilities that must be 
-implemented in a product,
+implemented in a product, based on client or user request.
