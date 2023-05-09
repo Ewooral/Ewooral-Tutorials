@@ -1,5 +1,4 @@
 ## DESIGN IN THE SOFTWARE PROCESS
-
 - Software development goes through a `process`
 - `A process` takes a problem and creates a solution that involves software.
 - A process is `iterative`
@@ -16,4 +15,5 @@
 what assumptions you need so that you create the right product.
 
 `Requirements` are conditions or capabilities that must be 
-implemented in a product, based on client or user request. They are the starting point of a project- you must understand what your client wants.
+<!-- implemented in a product, based on client or user request. They -->
+are the starting point of a project- you must understand what your client wants.
