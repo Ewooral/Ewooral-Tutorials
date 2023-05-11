@@ -7,7 +7,7 @@
     identified problem(s) and using them to create `conceptual design`
     mock-ups and `technical design` diagrams, which can then be used
     to create a working software `implementation`, which must also pass
-    `testing`. This process is repeated for each set of requirements,
+    <!-- `testing`. This process is repeated for each set of requirements, -->
     eventually creating a complete solution for the project.
 
 
