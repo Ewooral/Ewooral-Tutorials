@@ -14,6 +14,6 @@
 - `Requirements` and `design` activities help you to understand 
 what assumptions you need so that you create the right product.
 
-<!-- `Requirements` are conditions or capabilities that must be  -->
+`Requirements` are conditions or capabilities that must be 
 implemented in a product, based on client or user request. They
 are the starting point of a project- you must understand what your client wants.
