@@ -19,4 +19,4 @@ implemented in a product, based on client or user request. They
 are the starting point of a project- you must understand what your client wants.
 
 
-<!-- ## CATEGORIES OF OBJECTS IN DESIGN -->
+## CATEGORIES OF OBJECTS IN DESIGN
