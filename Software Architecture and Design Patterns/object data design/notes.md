@@ -9,7 +9,7 @@
     to create a working software `implementation`, which must also pass
     `testing`. This process is repeated for each set of requirements,
     eventually creating a complete solution for the project.
-
+Ok
 
 - `Requirements` and `design` activities help you to understand 
 what assumptions you need so that you create the right product.
