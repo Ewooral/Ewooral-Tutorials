@@ -9,7 +9,7 @@
     to create a working software `implementation`, which must also pass
     `testing`. This process is repeated for each set of requirements,
     eventually creating a complete solution for the project.
-
+Ok
 
 - `Requirements` and `design` activities help you to understand 
 what assumptions you need so that you create the right product.
@@ -19,4 +19,4 @@ implemented in a product, based on client or user request. They
 are the starting point of a project- you must understand what your client wants.
 
 
-## CATEGORIES OF OBJECTS IN DESIGN
+## CATEGORIES OF OBJECTS IN DESIGNll
