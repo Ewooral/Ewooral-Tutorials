@@ -1,7 +1,7 @@
 ## DESIGN IN THE SOFTWARE PROCESS
 - Software development goes through a `process`
 - `A process` takes a problem and creates a solution that involves software.
-- A process is `iterative`
+<!-- - A process is `iterative` -->
    
     These iterations consist of taking a set of requirements based on the
     identified problem(s) and using them to create `conceptual design`
