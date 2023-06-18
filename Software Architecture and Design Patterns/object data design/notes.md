@@ -8,7 +8,7 @@
     mock-ups and `technical design` diagrams, which can then be used
     to create a working software `implementation`, which must also pass
     `testing`. This process is repeated for each set of requirements,
-    eventually creating a complete solution for the project.
+    <!-- eventually creating a complete solution for the project. -->
 Ok
 
 - `Requirements` and `design` activities help you to understand 
