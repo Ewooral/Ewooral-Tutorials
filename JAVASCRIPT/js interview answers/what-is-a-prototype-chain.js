@@ -1,4 +1,4 @@
-/* Prototype chaining is a method used to
+/* Prototype chaining is a method used to chain
  new types of object out of an already defined object
 it is analogous to inheritance in oop
 
