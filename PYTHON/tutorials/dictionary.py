@@ -32,18 +32,16 @@ print("================================")
 names.pop("age")
 names.popitem()
 print("Delete: ", names)
-print("================================")
 
-# check if a key is inside a dictionary
+print("================================")
+# CHECK THE EXISTENCE OF A KEY
 if "name" in names:
-    print(names["name"])
+    print("Key Exists?: ", names["name"])
+    print("Key Exists?: ", names.get("address", "Doesn't exist!"))
 else:
     print("Name is not in the dictionary")
-try:
-    print("Yes! the name, ", names["akwesi"], " is in the dictionary")
-except:
-    print("item is not in our dictionary!")
 
+print("================================")
 # loop over keys
 for key in names:
     print('key: ', key)  # Or
@@ -72,7 +70,6 @@ for key, value in names.items():
     if value == False:
         print("Key of value False: ", key)
 
-
 print("================================")
 
 # copy dictionary
@@ -83,7 +80,6 @@ myCopy["name"] = "Abigail"
 print(myCopy)
 print(names)
 
-
 print("================================")
 
 # update a dictionary
@@ -91,34 +87,29 @@ print(names)  # initial keys and values in our dictionary
 names.update(myCopy)
 print(names)  # current updated keys and values in our dictionary
 
-
 print("================================")
 
 # fromkeys() takes two parameters, keys and a value
-newDict = {0:"mary", 1:1, 2:2}
+newDict = {0: "mary", 1: 1, 2: 2}
 newCopy = {}.fromkeys([1, 2, 3], 0)  # {1: 0, 2: 0, 3: 0};
 newCopy1 = {}.fromkeys([1, 2, 3], )  # {1: None, 2: None, 3: None}
-print(newCopy)  
-print(newCopy1)  
-
+print(newCopy)
+print(newCopy1)
 
 print("================================")
 
 # keys()
 print(newDict.keys());
 
-
 print("================================")
 
 # values()
 print(newDict.values())
 
-
 print("================================")
 
 # popitem()
 print(newDict.popitem())
-
 
 print("================================")
 
@@ -126,43 +117,37 @@ print("================================")
 print("set default: ", newDict.setdefault(4, "Emmanuel"))
 print(newDict)
 
-
 print("================================")
 
 # update()
 newDict.update(newCopy);
 print(sorted(newDict.items()))
 
-
 print("================================")
 
 # OPERATIONS  
-#the in operator takes time complexity of O(1)
-print('mary' in newDict.values()) # prints out value
-print('mary' in newDict) # prints out only key
+# the in operator takes time complexity of O(1)
+print('mary' in newDict.values())  # prints out value
+print('mary' in newDict)  # prints out only key
 
 isAvailable = 'mary' in newDict.values()
 print("available: ", isAvailable);
-
 
 print("================================")
 
 # traverse
 for key in newDict:
-    print(key, newDict[key]) # O(N)
-
+    print(key, newDict[key])  # O(N)
 
 print("================================")
 
 # all() 
-print(all(newDict)) # False
-
+print(all(newDict))  # False
 
 print("================================")
 
 # any() 
-print(any(newDict)) # True  
-
+print(any(newDict))  # True
 
 print("================================")
 
@@ -175,7 +160,7 @@ print(sorted(strDict, key=len))
 dic1 = {"name": "elijah", "age": 29}
 dic2 = {"address": "Tema", "Grade": "A"}
 
-merge_dic = {**dic1, **dic2} 
+merge_dic = {**dic1, **dic2}
 # merge_dic = dic1 | dic2
 print(merge_dic)
 
@@ -199,11 +184,9 @@ print()
 for key, value in convertTupleToAHashTableOrDictionary.items():
     print(key, value)
 
-
 # CONVERT TWO LISTS INTO A DICTIONARY
 years = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
 durations = [103, 101, 99, 100, 100, 95, 95, 96, 93, 90]
-
 
 print("........")
 res = {years[i]: durations[i] for i in range(len(years))}
@@ -215,4 +198,3 @@ print(res)
 print("........")
 res1 = dict(zip(years, durations))
 print(res1)
- 
