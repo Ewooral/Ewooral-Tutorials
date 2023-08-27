@@ -3,26 +3,35 @@ names = {"name": "elijah",
          "isTrue": False,
          "address": "Ashaiman"
          }
-# print the names dic object
-print(names)
-# Accessing a value
-print(names.get("name", "Not found"))
+places = dict({"Accra": "GA"})
 
-# Update
-updateMe= names["address"] = "Mampong"
-print(" changed name is: ", updateMe)
-
-another = names.items()
-print(type(another))
-print("copied items: ", another)
 print("================================")
+# PRINT THE NAMES DICT OBJECT
 print(names)
+print(places)
+
+print("================================")
+# ACCESSING A VALUE
+print("Access a value: ", names.get("name", "Not found"))
+print("Access a value: ", names.get("height", "Not found"))
+print(names["age"])
+
+print("================================")
+# UPDATE
+names["address"] = "Mampong"
+print("Updated: ", names)
+
+print("================================")
+# INSERT NEW ITEM
 names["isFat"] = True
-print(names["isFat"])
+names.update({"haveAJob": "No!"})
+print("Inserted: ", names)
+
 print("================================")
-# delete items
-names.pop('age')
-print(names)
+# DELETE
+names.pop("age")
+names.popitem()
+print("Delete: ", names)
 print("================================")
 
 # check if a key is inside a dictionary
