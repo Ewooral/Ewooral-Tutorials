@@ -3,16 +3,19 @@ public class JavaTest {
         System.out.println("Hello");
         int[] arr = { 2, 1, 4, 5, 2, 2, 4 };
         int[] arr1 = { 4, 1, 2, 2, 2, 3, 2, 2 };
-        System.out.println(moveToEnd(arr, 2));
+        int[] arr2 = { 4, 1, 2, 2, 2, 3, 2, 2 };
+        moveToEnd(arr, 2);
         System.out.println("...........");
-        System.out.println(moveToEnd(arr1, 2));
+        moveToEnd(arr1, 2);
+        System.out.println("............");
+        System.out.println(LinearSearch(arr2, 3));
     }
 
     public JavaTest(String a, int b) {
 
     }
 
-    static int[] moveToEnd(int[] arr, int target) {
+    static void moveToEnd(int[] arr, int target) {
         // [2, 1, 4, 5, 2, 2, 4]
         int i = 0;
         int j = arr.length - 1;
@@ -27,12 +30,15 @@ public class JavaTest {
             }
             i += 1;
         }
+    }
 
-        for (int k = 0; k < arr.length; k++) {
-            System.out.println(arr[k]);
+    static int LinearSearch(int[] ar, int value) {
+        for (int i = 0; i < ar.length; i++) {
+            if (ar[i] == value) {
+                return i;
+            }
         }
-
-        return arr;
+        return -1;
     }
 
 }
