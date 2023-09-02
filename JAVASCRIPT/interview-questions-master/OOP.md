@@ -101,7 +101,7 @@ premium question
 Answer:
 
 24.
-How could you defineAbstraction in OOP?
+How could you define Abstraction in OOP?
 premium question
 Answer:
 
