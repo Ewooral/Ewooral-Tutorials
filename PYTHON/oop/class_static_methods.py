@@ -3,11 +3,10 @@ class Player:
 
     def __init__(self, name):
         self.name = name  # creating instance variables
-    
+
     @classmethod
     def getTeamName(cls):
         return cls.teamName
-
 
     @staticmethod
     def demo():
@@ -19,4 +18,5 @@ class Player:
 print(Player.getTeamName())
 p1 = Player('lol')
 p1.demo()
-
+Player.demo()
+print(p1.getTeamName())

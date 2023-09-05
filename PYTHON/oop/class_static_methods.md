@@ -71,6 +71,10 @@ Static methods are methods that are usually limited to class only and not their 
 
 To declare a method as a static method, we use the decorator @staticmethod. It does not use a reference to the object or class, so we do not have to use self or cls. We can pass as many arguments as we want and use this method to perform any function without interfering with the instance or class variables.
 
+## Difference b/n static and class methods
+
+A class method takes `cls` as the first parameter while a static method needs no specific parameters. A class method can access or modify the class state while a static method can't access or modify it. In general, static methods know nothing about the class state
+
 ```py
 class MyClass:
 
@@ -99,7 +103,9 @@ Player.demo()
 
 ```
 
-Static methods do not know anything about the state of the class, i.e., they cannot modify class attributes. The purpose of a static method is to use its parameters and produce a useful result.
+`Static` methods do not know anything about the state of the class, i.e., they cannot modify class attributes. 
+    
+    The purpose of a static method is to use its parameters and produce a useful result.
 
 Suppose that there is a class, **BodyInfo**, containing information about the physical attributes of a person. We can make a static method for calculating the *BMI* of any given weight and height:
 ```py

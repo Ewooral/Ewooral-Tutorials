@@ -111,8 +111,8 @@ Properties of Steve
     Note: The property, title, will only be added to Steve and all other future objects will only have the properties which are declared in the class.
 
     ```python
-    class Employee:
-    # defining the properties and assigning them None
+class Employee:
+# defining the properties and assigning them None
     ID = None
     salary = None
     department = None
