@@ -81,10 +81,10 @@ age = 30
    - Decrement:  --  
  
 2. Comparison Operators: 
-   - Equal to:  ==  
+   - Equal to:  -eq 
    - Not equal to:  !=  
-   - Greater than:  >  
-   - Less than:  <  
+   - Greater than:  -gt  
+   - Less than: -lt  
    - Greater than or equal to:  -ge  
    - Less than or equal to:  -le  
  
@@ -177,7 +177,8 @@ fi
 
 ## CONDITIONAL STATEMENTS
     executes a statement based on some conditions
- The if statement structure
+ 
+ 1. IF SYNTAX.......................................................
 
     if [ condition ]; then
         # code to be executed if condition is true
@@ -207,5 +208,29 @@ then
 fi
 ```
 
+2. WHILE SYNTAX........................................................
+
+    while [ condition ]
+    do
+        # code to be executed
+    done
+
+- The  while  keyword marks the start of the while loop. 
+- The condition is enclosed within square brackets  [ ] . It can be a command, an expression, or a comparison. 
+- The  do  keyword marks the start of the code block to be executed as long as the condition is true. 
+- The code block to be executed is written after the  do  keyword and before the  done  keyword. 
+- The  done  keyword marks the end of the while loop. 
+
+```bash
+#!/bin/bash
+
+count=0
+limit=8
+
+while [ $count -lt $limit ]; do
+    echo $count
+    ((count++))
+done
+```
 
 
