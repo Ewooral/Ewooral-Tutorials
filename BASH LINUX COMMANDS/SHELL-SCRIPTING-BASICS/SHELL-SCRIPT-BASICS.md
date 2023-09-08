@@ -29,6 +29,9 @@ its contents will be overwritten
 ## change permission of a file
     chmod
 
+## open a pdf file 
+    evince 'filename.pdf'
+make sure terminal path points to the location of the file
 
 ## COMMENTS
 oneline comments
