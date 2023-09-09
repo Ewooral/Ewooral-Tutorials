@@ -65,3 +65,31 @@ want to assign all of them? We can use an _ in place of a variable name.
 my_nums = [1, 3, 4, 5]
 a, b, _, d = my_nums
 print(a, b, d)
+print(".....")
+
+
+for _ in range(3):
+    print("Elijah")
+print(".....")
+
+"""
+Using * to Collect Values
+
+In Python, we can use the * operator to collect leftover values
+when performing a destructuring assignment. 
+"""
+
+head, *tail = [8, 0, 3, 4, 9, 23]
+print(head, tail)
+print(".....")
+
+head, *middle, tail = [8, 0, 3, 4, 9, 23]
+print(head)
+print(middle)
+print(tail)
+print(".....")
+
+
+first, second, third, *rest = [1, 2, 3, 4, 5]
+print(first)
+print(rest)

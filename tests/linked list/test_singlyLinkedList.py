@@ -23,60 +23,56 @@ SLL:
 """
 # [30, 1, 2, 9, 3, 4]
 
-from tkinter.messagebox import NO
-
 
 class Node:
-    def __init__(self, value = None) -> None:
-        self.value = value;
-        self.next = None;
+    def __init__(self, value=None) -> None:
+        self.value = value
+        self.next = None
+
 
 class SinglyLL:
     def __init__(self) -> None:
-        self.head = None;
-        self.tail = None;
-    
+        self.head = None
+        self.tail = None
+
     def __iter__(self):
-        node = self.head;
+        node = self.head
         while node:
-            yield node 
-            node = node.next;
-    
-    
+            yield node
+            node = node.next
+
     def insertSLL(self, value, location):
-        newNode = Node(value);
+        newNode = Node(value)
         if self.head is None:
-            self.head = newNode;
-            self.tail = newNode;
+            self.head = newNode
+            self.tail = newNode
         else:
             if location == 0:
-                newNode.next = self.head;
+                newNode.next = self.head
                 self.head = newNode
             elif location == 1:
-                newNode.next = None;
+                newNode.next = None
                 self.tail.next = newNode
                 self.tail = newNode
-            
+
             else:
                 # insert at/in the middle
-                index = 0;
+                index = 0
                 prevNode = self.head
                 while index < location - 1:
                     currentNode = prevNode.next
-                    index += 1;
+                    index += 1
                 nextNode = currentNode.next
                 newNode.next = nextNode
                 currentNode.next = newNode
 
-
     def traverseSLL(self):
         if self.head is None:
-            return;
+            return
         node = self.head
         while node is not None:
             print(node.value)
             node = node.next
-    
 
     def searchSLL(self, nodeValue):
         if self.head is None:
@@ -87,8 +83,7 @@ class SinglyLL:
                 if node.value == nodeValue:
                     print(node.head.value)
                 node = node.next
-            return "node value not found";
-    
+            return "node value not found"
 
     def deleteSLL(self, location):
         if self.head is None:
@@ -101,7 +96,7 @@ class SinglyLL:
                     self.tail = None
                 else:
                     self.head = self.head.next
-            elif location == 1: # the end of list
+            elif location == 1:  # the end of list
                 if self.head == self.tail:
                     self.head = None
                     self.tail = None
@@ -109,34 +104,14 @@ class SinglyLL:
                     prevNode = self.head
                     while prevNode is not None:
                         if prevNode.next == self.tail:
-                            break;
+                            break
                         prevNode = prevNode.next
-                    prevNode.next = None;
+                    prevNode.next = None
                     self.tail = prevNode
             else:
                 tempNode = self.head
                 index = 0
                 while index < location - 1:
                     tempNode = prevNode.next
-                    index += 1;
+                    index += 1
                 nextNode = tempNode.next
-                
-
-                
-                
-
-
-
-
-                    
-                    
-
-
-
-
-
-
-       
-                
-
-
