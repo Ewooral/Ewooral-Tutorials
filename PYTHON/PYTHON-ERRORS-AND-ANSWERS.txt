@@ -1,0 +1,5 @@
+1. ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/home/god/devops/venv/lib/python3.11/site-packages/webencodings'
+Check the permissions.
+        This means change the permission of your
+	virtual environment for it is write protected	
+	=> sudo chmod -R a+rwx devops/venv 

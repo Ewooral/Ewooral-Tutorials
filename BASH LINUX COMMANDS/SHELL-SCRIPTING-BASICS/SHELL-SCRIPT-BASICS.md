@@ -31,6 +31,7 @@ its contents will be overwritten
 
 ## open a pdf file 
     evince 'filename.pdf'
+    xdg-open 'filename.pdf'
 make sure terminal path points to the location of the file
 
 ## COMMENTS

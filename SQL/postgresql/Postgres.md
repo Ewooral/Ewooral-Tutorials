@@ -311,3 +311,161 @@ Let’s take the example of a database that contains two tables: student and dep
     SELECT age + id AS sum FROM info;
 
     SELECT * FROM employee WHERE salary + allowance = 25000;
+
+
+
+
+
+
+## ACID TRANSACTION
+* A SQL DB must use `ACID` transaction
+
+    `ACID` transactions ensure data integrity, reliability, and consistency in database systems. 
+    They are widely used in various applications where accurate and reliable data processing is crucial, 
+    such as banking systems, e-commerce platforms, and inventory management systems.
+
+    This is a transaction (operation) in the DB that has four properties
+    - A => atomicity
+    If a transaction consist of multiple sub-operation, a cononical example 
+    (A canonical example refers to a typical or standard example that represents a concept or situation) is making a 
+    db transaction to transfer funds from one bank account to another account. That transaction will involve two operations. 
+        * Deductions funds from one bank account
+        * Increasing funds to another bank account
+    
+    The `atomicity of a transaction` dictates that if multiple operations are being performed as described in the canonical 
+    concept above, the sub-operations will be considered a unit and they will either all succeed or fail.
+    If there is an issue in the DB or a network problem that causes one or more of these suboperations to fail, the 
+    entire transaction fails, and opposite for if they all succeed
+
+         Imagine you have a toy building set. Atomicity means that when you start building something, 
+         you either finish building it completely or don't start at all. There are no half-built structures allowed! 
+
+
+    - C = consistency
+    Means that any transaction in the DB is going to conform to and abide by all rules in the DB.
+    Again any future transaction in the DB is going to take into account any past transaction in the DB.
+
+        Think of a puzzle. Consistency means that all the puzzle pieces fit together perfectly and make a 
+        complete picture. In a database, consistency means that everything is organized and follows the rules, 
+        just like a completed puzzle. 
+
+
+    - I => Isolation
+     `Isolation` ensures that concurrent transactions do not interfere with each other. Each transaction operates
+     independently, as if it were the only transaction executing on the database. Isolation prevents issues like dirty 
+     reads, non-repeatable reads, and phantom reads. 
+
+         Imagine you and your friend are playing with your own sets of toys. Isolation means that 
+         you both can play with your toys separately, without interfering with each other. In a database, 
+         isolation ensures that different actions happening at the same time won't mess up each other's work. 
+
+         
+    - D = Durability
+     `Durability` guarantees that once a transaction is committed, its changes are permanent and will survive
+     any subsequent failures, such as power outages or system crashes. The committed data is stored in a durable 
+     manner and can be retrieved even in the event of a failure.
+
+        Picture a notebook where you write down important things. Durability means that 
+        even if you accidentally spill water on the notebook, the writing won't disappear. 
+        In a database, durability guarantees that once something is saved, it stays saved 
+        even if there's a power outage or a computer crash.  
+
+    
+## Database Index
+
+        DB Index is a data structure that improves the speed of data retrieval 
+        operations on a database table. It works like an index in a book, allowing you to quickly locate information 
+        without having to read the entire book. 
+ 
+An index is created on one or more columns of a table, and it stores a copy of the data in the indexed 
+columns in a separate data structure with a pointer to the original row in the table. This allows the 
+database to quickly search for and retrieve data based on the values in the indexed columns. 
+ 
+Indexes can significantly improve the performance of database queries, especially for large tables with 
+millions of rows. However, they also come with some overhead, as they require additional storage space and 
+can slow down data insertion and update operations. 
+ 
+Indexes can be created and managed using SQL commands in most database management systems. It's important to 
+carefully choose which columns to index and how to configure the index to optimize query performance while 
+minimizing the impact on data modification operations.
+
+
+
+
+
+
+
+
+
+
+
+
+### ..............................................................................
+
+
+## ORM
+
+Object-Relational Mapping (ORM) is a technique that lets you query and manipulate data from a database using an object-oriented paradigm. When talking about ORM, most people are referring to a library that implements the Object-Relational Mapping technique, hence the phrase "an ORM".
+
+An ORM library is a completely ordinary library written in your language of choice that encapsulates the code needed to manipulate the data, so you don't use SQL anymore; you interact directly with an object in the same language you're using.
+
+For example, here is a completely imaginary case with a pseudo language:
+
+You have a book class, you want to retrieve all the books of which the author is "Linus". Manually, you would do something like that:
+
+``` SQL
+book_list = new List();
+sql = "SELECT book FROM library WHERE author = 'Linus'";
+data = query(sql); // I over simplify ...
+while (row = data.next())
+{
+     book = new Book();
+     book.setAuthor(row.get('author');
+     book_list.add(book);
+}
+```
+
+With an ORM library, it would look like this:
+
+book_list = BookTable.query(author="Linus");
+
+The mechanical part is taken care of automatically via the ORM library.
+Pros and Cons
+
+Using ORM saves a lot of time because:
+
+    DRY: You write your data model in only one place, and it's easier to update, maintain, and reuse the code.
+    A lot of stuff is done automatically, from database handling to I18N.
+    It forces you to write MVC code, which, in the end, makes your code a little cleaner.
+    You don't have to write poorly-formed SQL (most Web programmers really suck at it, because SQL is treated like a "sub" language, when in reality it's a very powerful and complex one).
+    Sanitizing; using prepared statements or transactions are as easy as calling a method.
+
+Using an ORM library is more flexible because:
+
+    It fits in your natural way of coding (it's your language!).
+    It abstracts the DB system, so you can change it whenever you want.
+    The model is weakly bound to the rest of the application, so you can change it or use it anywhere else.
+    It lets you use OOP goodness like data inheritance without a headache.
+
+But ORM can be a pain:
+
+    You have to learn it, and ORM libraries are not lightweight tools;
+    You have to set it up. Same problem.
+    Performance is OK for usual queries, but a SQL master will always do better with his own SQL for big projects.
+    It abstracts the DB. While it's OK if you know what's happening behind the scene, it's a trap for new programmers that can write very greedy statements, like a heavy hit in a for loop.
+
+How to learn about ORM?
+
+Well, use one. Whichever ORM library you choose, they all use the same principles. There are a lot of ORM libraries around here:
+
+    Java: Hibernate.
+    PHP: Propel or Doctrine (I prefer the last one).
+    Python: the Django ORM or SQLAlchemy (My favorite ORM library ever).
+    C#: NHibernate or Entity Framework
+
+If you want to try an ORM library in Web programming, you'd be better off using an entire framework stack like:
+
+    Symfony (PHP, using Propel or Doctrine).
+    Django (Python, using a internal ORM).
+
+Do not try to write your own ORM, unless you are trying to learn something. This is a gigantic piece of work, and the old ones took a lot of time and work before they became reliable.
