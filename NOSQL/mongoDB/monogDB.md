@@ -218,3 +218,9 @@ hello\x00                  // field name
  \x00
 
 ```
+
+`MongoDB` stores data in `BSON` format both internally, and over the network, 
+but that doesn’t mean you can’t think of MongoDB as a JSON database. 
+Anything you can represent in JSON can be natively stored in MongoDB, and 
+retrieved just as easily in JSON.
+
