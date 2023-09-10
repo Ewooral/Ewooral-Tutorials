@@ -97,3 +97,10 @@ Remove MongoDB databases and log files.
 
     sudo rm -r /var/log/mongodb
     sudo rm -r /var/lib/mongodb
+
+
+
+# .....................................................................................................
+
+# MONGO DB TUTORIALS
+
