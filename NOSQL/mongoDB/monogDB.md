@@ -78,3 +78,22 @@ Start a mongosh session on the same host machine as the mongod. You can run mong
 without any command-line options to connect to a mongod that is running on your localhost with default port 27017.
 
     mongosh
+
+
+#### 10. Stop MongoDB.
+Stop the mongod process by issuing the following command:
+
+    sudo service mongod stop
+
+
+#### 11. Remove Packages.
+Remove any MongoDB packages that you had previously installed.
+
+    sudo apt-get purge mongodb-org*
+
+
+#### 12. Remove Data Directories.
+Remove MongoDB databases and log files.
+
+    sudo rm -r /var/log/mongodb
+    sudo rm -r /var/lib/mongodb
