@@ -102,10 +102,119 @@ Remove MongoDB databases and log files.
 
 # .....................................................................................................
 
-# MONGO DB TUTORIALS
+
+
+
+
+
+
+
+
+
+
+# MONGODB TUTORIALS
 
 #### Connect to your MongoDB deployment on Visual Studio Code
 Paste your connection string into the Command Palette.
     
     mongodb+srv://ewooral:<password>@cluster0.tua5o.mongodb.net/
     pass: OWusu123%40%23 OR OWusu123
+
+`MongoDB` is a NoSQL document database. This means data in MongoDB is stored in a document
+These documents are stored in COLLECTIONS
+
+
+`Document` is a way to organize and store data as a set of field-value pairs.
+E.g. {
+    <field> : <value>,
+    <field> : <value>,
+    "name" : "Elijah",
+    "age" : 30
+}
+
+`Field` is a unique  identifier(key) for a datapoint
+`value` is data related to a given identifier
+
+    NB. A collection contains many documents and a database contains multiple collections
+
+#### MongoDB Atlas
+
+Replica Set - a few connected machines that store the same data to ensure that if something happens to one of the machines the data will remain intact. Comes from the word replicate - to copy something.
+
+Instance - a single machine locally or in the cloud, running a certain software, in our case it is the MongoDB database.
+
+Cluster - group of servers that store your data.
+
+
+####  Create and Deploy an Atlas Cluster
+    https://university.mongodb.com/mercury/M001/2021_August_10/chapter/Chapter_1_What_is_MongoDB_/lesson/5f32deb504e9ffc01ac9586c/problem
+
+Instead of `tables`, a MongoDB database stores its data in `collections`. 
+A `collection` holds one or more BSON documents. Documents are analogous to 
+records or rows in a relational database table. Each document has one or more fields; 
+`fields` are similar to the columns in a relational database table.
+
+    table = collection
+    documents = row or records
+
+#### JSON
+JSON, or JavaScript Object Notation, is a human-readable data interchange format, 
+specified in the early 2000s. Even though JSON is based on a subset of the JavaScript 
+programming language standard, it’s completely language-independent.
+
+``` json
+{
+  "_id": 1,
+  "name": { "first" : "John", "last" : "Backus" },
+  "contribs": [ "Fortran", "ALGOL", "Backus-Naur Form", "FP" ],
+  "awards": [
+    {
+      "award": "W.W. McDowell Award",
+      "year": 1967,
+      "by": "IEEE Computer Society"
+    }, {
+      "award": "Draper Prize",
+      "year": 1993,
+      "by": "National Academy of Engineering"
+    }
+  ]
+}
+
+```
+
+* There are several issues that make `JSON` less than ideal for usage inside of a database.
+
+        JSON only supports a limited number of basic data types. Most notably, JSON lacks support 
+        for dates and binary data.
+
+        JSON objects and properties don’t have fixed length which makes traversal slower.
+
+In order to make `MongoDB` JSON-first, but still high performance and general purpose, BSON was invented to bridge the gap
+
+#### BSON
+BSON stands for “Binary JSON,” and that’s exactly what it was invented to be. 
+BSON’s binary structure encodes type and length information, which allows it 
+to be traversed much more quickly compared to JSON.
+
+BSON adds some non-JSON-native data types, like dates and binary data, 
+without which `MongoDB` would have been missing some valuable support.
+
+``` json
+{"hello": "world"} →
+\x16\x00\x00\x00           // total document size
+\x02                       // 0x02 = type String
+hello\x00                  // field name
+\x06\x00\x00\x00world\x00  // field value
+\x00                       // 0x00 = type EOO ('end of object')
+ 
+{"BSON": ["awesome", 5.05, 1986]} →
+\x31\x00\x00\x00
+ \x04BSON\x00
+ \x26\x00\x00\x00
+ \x02\x30\x00\x08\x00\x00\x00awesome\x00
+ \x01\x31\x00\x33\x33\x33\x33\x33\x33\x14\x40
+ \x10\x32\x00\xc2\x07\x00\x00
+ \x00
+ \x00
+
+```
