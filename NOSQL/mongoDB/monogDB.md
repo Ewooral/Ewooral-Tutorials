@@ -104,3 +104,8 @@ Remove MongoDB databases and log files.
 
 # MONGO DB TUTORIALS
 
+#### Connect to your MongoDB deployment on Visual Studio Code
+Paste your connection string into the Command Palette.
+    
+    mongodb+srv://ewooral:<password>@cluster0.tua5o.mongodb.net/
+    pass: OWusu123%40%23 OR OWusu123
