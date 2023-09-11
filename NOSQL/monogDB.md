@@ -139,7 +139,8 @@ E.g. {
 
 #### MongoDB Atlas
 
-Replica Set - a few connected machines that store the same data to ensure that if something happens to one of the machines the data will remain intact. Comes from the word replicate - to copy something.
+Replica Set - a few connected machines that store the same data to ensure that 
+if something happens to one of the machines the data will remain intact. Comes from the word replicate - to copy something.
 
 Instance - a single machine locally or in the cloud, running a certain software, in our case it is the MongoDB database.
 
@@ -224,3 +225,14 @@ but that doesn’t mean you can’t think of MongoDB as a JSON database.
 Anything you can represent in JSON can be natively stored in MongoDB, and 
 retrieved just as easily in JSON.
 
+#### Launch mongo shell
+	mongosh
+
+#### Show databases
+	show database
+
+#### switch to a database or Create a database
+	use 'database_name'
+This command switches to a database or creates one if it doesn't exist.
+
+#### 
