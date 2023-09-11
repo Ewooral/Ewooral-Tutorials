@@ -34,6 +34,9 @@ its contents will be overwritten
     xdg-open 'filename.pdf'
 make sure terminal path points to the location of the file
 
+## Create multiple folders(m1, m2, m3) with a subfolder(db) in them 
+    mkdir -p m{1,2,3}/db
+
 ## COMMENTS
 oneline comments
 E.g. #..............
@@ -217,7 +220,7 @@ fi
     while [ condition ]
     do
         # code to be executed
-    done
+    done 
 
 - The  while  keyword marks the start of the while loop. 
 - The condition is enclosed within square brackets  [ ] . It can be a command, an expression, or a comparison. 
