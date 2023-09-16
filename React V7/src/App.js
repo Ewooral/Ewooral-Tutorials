@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Details from "./Details";
 import ThemeContext from "./ThemeContext";
 import Clock from "./Clock";
+import { PracticeWhatYouHaveLearnt } from "./PracticeWhatYouHaveLearnt";
+
 // const App = () => {
 //   return React.createElement(
 //     "div",
@@ -44,6 +46,7 @@ const App = () => {
 
           <Routes>
             <Route path="/" element={<SearchParams />} />
+             <Route path="/practice" element={<PracticeWhatYouHaveLearnt />} />
             <Route path="/details/:id" element={<Details />} />
           </Routes>
         </BrowserRouter>

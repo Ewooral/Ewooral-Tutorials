@@ -42,3 +42,17 @@ To manipulate text using tailwind use the following
         grid = gap-property, grid-col, grid-row
 
 ### MEDIA QUERIES
+
+        - max-sm = min-width: 640px
+        - max-md = min-width: 768px
+        - max-lg = min-width: 1024px
+        - max-xl = min-width: 1280px
+
+        sm	640px	@media (min-width: 640px) { ... }
+        md	768px	@media (min-width: 768px) { ... }
+        lg	1024px	@media (min-width: 1024px) { ... }
+        xl	1280px	@media (min-width: 1280px) { ... }
+        2xl	1536px	@media (min-width: 1536px) { ... }
+
+<!-- Width of 16 by default, 32 on medium screens, and 48 on large screens -->
+<img class="w-16 md:w-32 lg:w-48" src="...">
