@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'newproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'NAME':'students',
         'USER': 'postgres',
