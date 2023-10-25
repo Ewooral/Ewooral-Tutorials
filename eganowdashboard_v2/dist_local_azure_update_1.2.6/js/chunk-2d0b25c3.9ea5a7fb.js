@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0b25c3"],{"247b":function(n,u,c){"use strict";c.r(u);var i=function(){var n=this;n._self._c;return n._m(0)},o=[function(){var n=this,u=n._self._c;return u("div",[u("h2",[n._v(" Join public group under construction")])])}],r={name:"JoinPublicGroup"},t=r,e=c("2877"),s=Object(e["a"])(t,i,o,!1,null,"654f2caf",null);u["default"]=s.exports}}]);
+//# sourceMappingURL=chunk-2d0b25c3.9ea5a7fb.js.map

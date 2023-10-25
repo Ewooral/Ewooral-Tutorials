@@ -1,0 +1,53 @@
+// fusv-disable
+$enable-ltr: false;
+$enable-rtl: true;
+// fusv-enable
+
+@import '@coreui/coreui-pro/scss/functions';
+@import '@coreui/coreui-pro/scss/variables';
+@import '@coreui/coreui-pro/scss/maps';
+@import '@coreui/coreui-pro/scss/mixins';
+@import '@coreui/coreui-pro/scss/utilities';
+
+// stylelint-disable selector-no-qualifying-type
+div[dir="rtl"] {
+  @import '@coreui/coreui-pro/scss/forms/form-control';
+  @import '@coreui/coreui-pro/scss/forms/input-group';
+  @import '@coreui/coreui-pro/scss/calendar';
+  @import '@coreui/coreui-pro/scss/picker';
+  @import '@coreui/coreui-pro/scss/date-picker';
+  @import '@coreui/coreui-pro/scss/time-picker';
+
+  .dropdown.picker {
+    .input-group > *:first-child {
+      border-right: $input-border-width solid var(--#{$prefix}input-border-color, $input-border-color) !important;
+      @include border-start-radius($input-border-radius !important);
+      @include border-end-radius(0 !important);
+    }
+
+    .input-group > *:last-child {
+      @include border-start-radius(0 !important);
+      @include border-end-radius($input-border-radius !important);
+    }
+  }
+
+  // .input-group > :not(:last-child),
+  // .input-group > :nth-last-child(n + 3) {
+  //   border-right: 0 !important;
+  //   @include border-end-radius($input-border-radius !important);
+  // }
+
+  // .input-group > :not(:first-child) {
+  //   @include border-start-radius($input-border-radius !important);
+  //   @include border-end-radius(0 !important);
+  // }
+
+  // .picker .input-group .form-control:first-child {
+  //   border-right: $input-border-width solid var(--#{$prefix}input-border-color, $input-border-color) !important;
+  // }
+
+  // .picker .input-group > * + *:not(:last-child) {
+  //   @include border-start-radius(0 !important);
+  // }
+}
+// stylelint-enable selector-no-qualifying-type

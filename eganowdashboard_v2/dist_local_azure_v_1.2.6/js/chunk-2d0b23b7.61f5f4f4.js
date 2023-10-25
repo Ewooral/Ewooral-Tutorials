@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0b23b7"],{"22de":function(t,e,i){"use strict";i.r(e);var n=function(){var t=this;t._self._c;return t._m(0)},r=[function(){var t=this,e=t._self._c;return e("div",[e("h1",[t._v(" Limit")])])}],s={components:{},data(){return{}},created(){this.$store.dispatch("setAppHeader",{title:"Limit",items:[{text:"Dashboard",href:"#"},{text:"Limit",href:"/merchant/limit"}]})}},a=s,c=i("2877"),d=Object(c["a"])(a,n,r,!1,null,"75bed421",null);e["default"]=d.exports}}]);
+//# sourceMappingURL=chunk-2d0b23b7.61f5f4f4.js.map

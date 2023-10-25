@@ -1,0 +1,149 @@
+{
+ "login":{
+       "title": "Enter your email address and password to access dashboard.",
+       "emailaddress" : "Email address",
+       "enter_emailaddress" : "Enter email address",
+       "password": "Password",
+       "enter_password" : "Enter password",
+       "remember_me" : "Remember me",
+        "login" : "Log In",
+       "forget_password" : "Forget your password ?",
+       "dont_have_account" : "Don't have an account ? ",
+       "sign_up" : "Sign up"
+    },
+  "setting" : {
+      "profile" : "Profile",
+      "adduser": "Add user",
+      "version": "Vers 1.2.7",
+      "viewuser" : "View user",
+      "change_password" : "Change password",
+      "log_out" : " Log out",
+      "reset_pin" : "Reset pin"
+    },
+  "profile" : {
+      "id_card_number" : " Enter id number"
+  },
+  "dashboard" : {
+    "manage_merchant_service" : "manage  merchant service",
+    "button-text": "Get started",
+    "biz_collect" : {
+      "name" : "Biz Collect",
+      "revenue": "22,923",
+      "employees": "47k",
+      "leftdata" :"Available balance",
+      "rightdata": "Actual balance",
+      "text":"The right payment solutions for your business"
+    },
+    "money_transfer" :  {
+      "name" : "Money Transfer",
+      "revenue": "26k",
+      "employees": "3.1k",
+      "leftdata" :"Total inflow amount GHS",
+      "rightdata": "Total outflow amount GHS",
+      "text" :"The reliable money transfer solution for businesses"
+    },
+    "groups" : {
+      "name" : "Groups",
+      "revenue" : "34K",
+      "employees": "3.1k",
+      "leftdata" :"Total inflow amount GHS",
+      "rightdata": "Total outflow amount GHS",
+      "text" :"Group contributions made easier & transparent"
+    }
+
+
+  },
+  "account_balance" : {
+     "view_statement": "View statement"
+  },
+  "money_transfer_menu": {
+     "navigation": "Navigation",
+     "main_dashboard": "Back to dashboard",
+     "send_money_main": "Send Money",
+     "money_transfer": "Money transfer",
+     "account_balance": "Account balances",
+     "send_money": "Send money",
+     "transaction_history": "Transaction history",
+     "beneficiaries": "Beneficiaries",
+     "payment_account": "Payment accounts",
+     "account_statement": "Account statements"
+  },
+  "biz_collect": {
+    "navigation": "Navigation",
+    "main_dashboard": "Back to dashboard",
+    "biz_collect_menu": "Biz Collect",
+    "transactions": "Transactions",
+    "account_balalnce": "Account balance",
+    "account_transaction": "Account transactions",
+    "account_to_account_trans": "Acct To Acct Trans",
+     "fund_transfer": "Fund transfer",
+     "fund_transfer_history": "Fund transfer history",
+     "merchant_customer" : "Merchant Customers",
+     "view_customer": "View customers",
+     "pending_customer" : "Pending customers",
+     "pin_reset_request": "Pin reset request",
+     "termination_request" : "Termination request",
+      "approve_term_request" : "Approve term. request"
+  },
+  "send_moeny_labels" : {
+     "send_money": "Send money",
+    "select_recipient_country": "Select recipient country",
+    "select_receipient_account_type": "Select recipient account type",
+    "select_recipient_account_provider": "Select recipient account provider",
+    "country_code": "Country code",
+     "mobile_number": "Mobile number",
+    "enter_account_number": "Enter account number",
+    "eganow_account_number" : "Eganow account number",
+    "recipient_account_name" : "Recipient account name",
+    "exchange_rate" : "Exchange rate",
+    "account_name" : "Account name",
+    "account_number" : "Account number",
+    "sending_currency" : "Sending Currency",
+    "sending_amount": "Sending amount",
+    "reference": "Reference",
+    "how_do_you_want_to_pay" : "How do you want to pay ?",
+    "add_new_payment_method": "Add new payment method",
+    "select_source_country" : "Select source country",
+    "select_account_provider": "Select account provider",
+    "mobile_money": "Mobile money",
+    "sending_from" : "Sending from",
+    "sending_money_to": "Sending money to ",
+    "senders_account_name": "Sender's account name",
+    "senders_account_number": "Sender's account number",
+    "transaction_fee" : "Transaction fee",
+    "total_amount" : "Total amount",
+    "recipient_name" : "Recipient name",
+    "recipient_account": "Recipient account",
+    "receiving_amount": "Receiving amount",
+    "add": "Add",
+    "taxamount" : "Tax amount",
+    "payment_card": "Payment Card",
+    "card_number": "Card number",
+    "card_name": "Card name",
+    "review_pay": "Review & Pay",
+    "pay_with" : "Pay with",
+    "receive_into": "Receive into",
+    "refresh": "Refresh",
+    "month" : "Month",
+    "months" : {
+       "jan" : "January",
+      "feb" : "February",
+      "mar" : "March",
+      "apr" : "April",
+      "may" : "May",
+      "jun" : "June",
+      "jul" : "July",
+      "aug" : "August",
+      "sep" : "September",
+      "oct" : "October",
+      "nov" : "November",
+      "dec" : "December"
+    },
+    "year" : "Year",
+    "cvv" : "Cvv"
+  },
+  "payment_link_labels" : {
+
+  }
+
+}

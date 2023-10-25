@@ -1,0 +1,87 @@
+---
+title: React Loading Button Component
+name: Loading Button
+description: Buttons with built-in loading indicators. Indicate the loading state of the button bridging the gap between action and feedback.
+menu: Components
+route: /components/loading-button
+other_frameworks: loading-button
+pro_component: true
+---
+
+import { useState } from 'react'
+
+import { CLoadingButton } from '@coreui/react-pro/src/index'
+
+## Example
+
+export const BasicExample = () => {
+  const [state, setState] = useState(false)
+  const [stateO, setStateO] = useState(false)
+  const [stateG, setStateG] = useState(false)
+  return (
+    <>
+      <CLoadingButton loading={state} onClick={() => setState(!state)}>
+        Submit
+      </CLoadingButton>
+      <CLoadingButton variant="outline" loading={stateO} onClick={() => setStateO(!stateO)}>
+        Submit
+      </CLoadingButton>
+      <CLoadingButton variant="ghost" loading={stateG} onClick={() => setStateG(!stateG)}>
+        Submit
+      </CLoadingButton>
+    </>
+  )
+}
+
+<Example>
+  <BasicExample />
+</Example>
+
+```jsx
+const [state, setState] = useState(false)
+const [stateO, setStateO] = useState(false)
+const [stateG, setStateG] = useState(false)
+return (
+  <>
+    <CLoadingButton loading={state} onClick={() => setState(!state)}>
+      Submit
+    </CLoadingButton>
+    <CLoadingButton variant="outline" loading={stateO} onClick={() => setStateO(!stateO)}>
+      Submit
+    </CLoadingButton>
+    <CLoadingButton variant="ghost" loading={stateG} onClick={() => setStateG(!stateG)}>
+      Submit
+    </CLoadingButton>
+  </>
+)
+```
+
+```jsx preview
+<CLoadingButton timeout={2000}>Submit</CLoadingButton>
+<CLoadingButton variant="outline" timeout={2000}>Submit</CLoadingButton>
+<CLoadingButton variant="ghost" timeout={2000}>Submit</CLoadingButton>
+```
+
+## Spinners
+
+### Border (Default)
+
+```jsx preview
+<CLoadingButton color="info" timeout={2000}>Submit</CLoadingButton>
+<CLoadingButton color="success" variant="outline" timeout={2000}>Submit</CLoadingButton>
+<CLoadingButton color="warning" variant="ghost" timeout={2000}>Submit</CLoadingButton>
+```
+
+### Grow
+
+```jsx preview
+<CLoadingButton color="info" spinnerType="grow" timeout={2000}>Submit</CLoadingButton>
+<CLoadingButton color="success" spinnerType="grow" variant="outline" timeout={2000}>Submit</CLoadingButton>
+<CLoadingButton color="warning" spinnerType="grow" variant="ghost" timeout={2000}>Submit</CLoadingButton>
+```
+
+## API
+
+### CLoadingButton
+
+`markdown:CLoadingButton.api.mdx`

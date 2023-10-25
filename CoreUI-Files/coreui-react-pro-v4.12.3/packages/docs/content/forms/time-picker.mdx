@@ -1,0 +1,202 @@
+---
+title: React Time Picker Component
+name: Time Picker
+description: Create consistent cross-browser and cross-device time picker
+menu: Forms
+route: /forms/time-picker
+other_frameworks: time-picker
+pro_component: true
+---
+
+import { CTimePicker } from '@coreui/react-pro/src/index'
+
+## Example
+
+<Example>
+  <div className="row">
+    <div className="col-lg-4">
+      <CTimePicker label="Time" locale="en-US" />
+    </div>
+    <div className="col-lg-4">
+      <CTimePicker label="Time" locale="en-US" time="02:17:35 PM" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CTimePicker label="Time" locale="en-US" />
+<CTimePicker label="Time" locale="en-US" time="02:17:35 PM" />
+```
+
+## Sizing
+
+Set heights using `size` property like `size="lg"` and `size="sm"`.
+
+<Example>
+  <div className="row mb-4">
+    <div className="col-lg-4">
+      <CTimePicker locale="en-US" size="lg" />
+    </div>
+  </div>
+  <div className="row">
+    <div className="col-lg-3">
+      <CTimePicker locale="en-US" size="sm" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CTimePicker locale="en-US" size="lg" />
+<CTimePicker locale="en-US" size="sm" />
+```
+
+## Disabled
+
+Add the `disabled` boolean attribute on an input to give it a grayed out appearance and remove pointer events.
+
+<Example>
+  <div className="row">
+    <div className="col-lg-4">
+      <CTimePicker disabled locale="en-US" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CTimePicker disabled locale="en-US" />
+```
+
+## Readonly
+
+Add the `inputReadOnly` boolean attribute to prevent modification of the input's value.
+
+<Example>
+  <div className="row">
+    <div className="col-lg-4">
+      <CTimePicker inputReadOnly locale="en-US" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CTimePicker inputReadOnly locale="en-US" />
+```
+
+## Non-english locale
+
+### Auto
+
+<Example>
+  <div className="row">
+    <div className="col-lg-4">
+      <CTimePicker />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CTimePicker />
+```
+
+### Chinese
+
+<Example>
+  <div className="row">
+    <div className="col-lg-4">
+      <CTimePicker placeholder="入住日期" locale="zh-CN" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CTimePicker placeholder="入住日期" locale="zh-CN" />
+```
+
+### Japanese
+
+<Example>
+  <div className="row">
+    <div className="col-lg-4">
+      <CTimePicker placeholder="日付を選択" locale="ja" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CTimePicker placeholder="日付を選択" locale="ja" />
+```
+
+### Korean
+
+<Example>
+  <div className="row">
+    <div className="col-lg-4">
+      <CTimePicker placeholder="날짜 선택" locale="ko" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CTimePicker placeholder="날짜 선택" locale="ko" />
+```
+
+## Right to left support
+
+RTL support is built-in and can be explicitly controlled through the `$enable-rtl` variables in scss.
+
+### Hebrew
+
+<Example>
+  <div className="row" dir="rtl">
+    <div className="col-lg-4">
+      <CTimePicker placeholder="בחר תאריך" locale="he-IL" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CTimePicker placeholder="בחר תאריך" locale="he-IL" />
+```
+
+### Persian
+
+<Example>
+  <div className="row" dir="rtl">
+    <div className="col-lg-4">
+      <CTimePicker placeholder="تاریخ شروع" locale="fa-IR" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CTimePicker placeholder="تاریخ شروع" locale="fa-IR" />
+```
+
+
+## Customizing
+
+### CSS variables
+
+React time pickers use local CSS variables on `.time-picker` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+<ScssDocs file="_time-picker.scss" capture="time-picker-css-vars"/>
+
+#### How to use CSS variables
+
+```jsx
+const vars = { 
+  '--my-css-var': 10,
+  '--my-another-css-var': "red" 
+}
+return <CTimePicker style={vars}>...</CTimePicker>
+```
+
+### SASS variables
+
+<ScssDocs file="_variables.scss" capture="time-picker-variables"/>
+
+## API
+
+### CTimePicker
+
+`markdown:CTimePicker.api.mdx`
