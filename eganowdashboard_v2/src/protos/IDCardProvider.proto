@@ -1,0 +1,203 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "EganowCustomerMTService";
+
+package IDCardProvider;
+
+// The greeting service definition.
+service IDCardProviderSvc {
+
+  ////---------------------------
+  ////    General Enpoints 
+  ////---------------------------
+
+
+  rpc IDCardProvidersPerCountry (CountryIdCardRequestMessage) returns (IDCardProvidersListResponseMessage);
+
+  ////---------------------------
+  ////    SumSub Enpoints 
+  ////---------------------------
+ 
+  rpc SumsubGetIDCardProviderAccessToken (IdCardCountryRequestMessage) returns (IdCardAccessTokenResponseMessage);
+
+  rpc SumsubGetIdCardProviderCred (IDCardProviderCredRequestMessage) returns (IDCardProviderCredResponseMessage);
+
+  rpc SumsubGetIdCardProcessingStatus (LanguageIdCardRequestMessage) returns (SuccessIDCardMessage);
+
+  rpc SumsubInitiateNewCustomerIdCardVerification (IDCardDataRequestMessage) returns (SuccessIDCardMessage);
+
+  rpc SumsubUpdateNewCustomerIdCardVerificationDataWithProviderRefNo (IDCardDataRequestMessage) returns (SuccessIDCardMessage);
+
+  rpc SumsubGetCustomerIdCardVerificationStatusOnEganow (LanguageIdCardRequestMessage) returns (CustomerIdCardVerifyStatusOnEganowResponseMessage);
+
+  rpc SumsubUpdateCustomerKycWithReviewdIdDataOnEganowFromProvider (IdCardReviewedDataMessage) returns (SuccessIDCardMessage);
+
+//getProfilePictureUploadCredentials
+  ////---------------------------
+  ////    Ghana Card 
+  ////---------------------------
+
+
+  rpc GhanacardSubmitCustomerData (GhanaCardCustomerDataRequestMessage) returns (SuccessIDCardMessage);
+
+
+
+
+
+
+}
+
+
+
+////---------------------------
+////    General messages 
+////---------------------------
+
+
+message LanguageIdCardRequestMessage {
+  string languageId = 51;
+}
+
+message SuccessIDCardMessage{
+	bool isSuccess = 1;
+	string messageSuccessfulOrFailed = 2;
+	string message = 3;
+	string registrationErrorCode = 4;
+}
+
+
+message CountryIdCardRequestMessage {
+  string countryCode = 1;
+  string languageId = 51;
+}
+
+
+
+
+
+////---------------------------
+////    SumSub messages 
+////---------------------------
+
+// The messages
+message EmptyIDCardProviderMessage {
+ 
+}
+
+
+ 
+
+
+message IDCardProvidersResponseMessage {
+  string iDVerifyProviderCode = 2;
+  string iDVerifyProviderName =3;
+  string sdkClientID = 4;
+  string sdkClientKey = 5;
+  string acceptableIdTypes = 6;
+  int32 providerTid =7;
+  string sdklevelName = 8;
+  string IDVerifyProviderEndpoint = 50;
+}
+
+message IDCardProvidersListResponseMessage {
+  repeated IDCardProvidersResponseMessage idCardProviderList = 1;
+}
+
+
+ 
+
+
+message IDCardProviderCredRequestMessage {
+  string IDVerifyProviderCode = 2;
+  string languageId = 50;
+}
+
+message IDCardProviderCredResponseMessage {
+  string iDVerifyProviderCode = 1;
+  string sdkClientID = 2;
+  string SdkClientKey = 3;
+  string sdklevelName = 4;
+}
+
+message IDCardDataRequestMessage {
+  string provideRefNoOrApplicantId = 1;
+  string eganowApiRequestID = 2;
+  string mobileOrWeb = 3;
+  string iDVerifyProviderCode = 4;
+  string languageId = 50;
+}
+
+
+ 
+
+
+message CustomerIdCardVerifyStatusOnEganowResponseMessage {
+  string kycVerifyStatus = 1;
+  string iDCardFullName = 2;
+  string iDCardType = 3;
+  string iDCardExpiryDate = 4;
+  string kycTypeName = 5;
+}
+
+message IdCardCountryRequestMessage {
+  string countryCode = 1;
+  string idVerifyProviderCode = 2;
+  string mobileOrWeb = 3;
+  string languageId = 51;
+}
+
+
+
+message IdCardAccessTokenResponseMessage {
+  bool isSuccess = 1;
+  string message = 2;
+  string countryCode = 3;
+  string EganowApiRequestId = 4;
+  string idVerifyProviderCode = 5;
+  string accessToken = 6;
+  string providerTransRefNumber = 7;
+  string languageId = 51;
+}
+
+message IdCardReviewedDataMessage {
+	string eganowIdReferenceId = 1;
+	string idApprovalStatusVerifiedReviewNeeded = 15;
+	string languageId = 51;
+}
+
+
+////---------------------------
+////    Ghana card messages 
+////---------------------------
+
+message GhanaCardCustomerDataRequestMessage {
+	string idProviderCode = 1;
+	string IdNumber = 2;
+	bytes selfieImageInBytes = 3;
+	string idImageTypePngOrJpegOrWSQ = 4;
+	string countryCode = 5;
+	string mobileOrWeb = 8;
+	string languageId = 51;
+}
+
+message GhanaCardCustomerDataResponseMessage {
+	bool IsSuccess = 1;
+    string idApprovalStatusVerifiedReviewNeeded = 2;
+    string dateOfBirthStr = 3;
+    string iDCardCountryCode = 4;
+    string iDCardFullName = 5;
+    string iDCardNo = 6;
+    string iDCardExpiryDateStr = 7;
+    string iDCardDeviceUsed = 8;
+    string iDCardImageUrl = 9;
+    string iDCardPlaceOfIssued = 10;
+    string iDCardType = 11;
+    string iDCardExpiredStatus = 12;
+    string gender = 13;
+    string iDCardSelfieUrl = 14;
+    string iDCardVideoUrl = 15;
+}
+
+
+
+ 

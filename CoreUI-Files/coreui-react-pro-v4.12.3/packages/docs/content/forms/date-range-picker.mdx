@@ -1,0 +1,368 @@
+---
+title: React Date Range Picker Component
+name: Date Range Picker
+description: Create consistent cross-browser and cross-device date range picker
+menu: Forms
+route: /forms/date-range-picker
+other_frameworks: date-range-picker
+pro_component: true
+---
+
+import { CDateRangePicker } from '@coreui/react-pro/src/index'
+
+## Example
+
+<Example>
+  <div className="row">
+    <div className="col-lg-5">
+      <CDateRangePicker label="Date range" locale="en-US" />
+    </div>
+    <div className="col-lg-5">
+      <CDateRangePicker startDate="2022/08/03" endDate="2022/08/17" label="Date range" locale="en-US" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CDateRangePicker label="Date range" locale="en-US" />
+<CDateRangePicker startDate="2022/08/03" endDate="2022/08/17" label="Date range" locale="en-US" />
+```
+
+### With footer
+
+<Example>
+  <div className="row">
+    <div className="col-lg-5">
+      <CDateRangePicker footer locale="en-US" />
+    </div>
+    <div className="col-lg-5">
+      <CDateRangePicker startDate="2022/08/03" endDate="2022/08/17" footer locale="en-US" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CDateRangePicker footer locale="en-US" />
+<CDateRangePicker startDate="2022/08/03" endDate="2022/08/17" footer locale="en-US" />
+```
+
+### With timepicker 
+
+<Example>
+  <div className="row">
+    <div className="col-lg-7 mb-4">
+      <CDateRangePicker locale="en-US" timepicker />
+    </div>
+    <div className="col-lg-7">
+      <CDateRangePicker startDate="2022/08/03 02:34:17 AM" endDate="2022/09/17 11:29:41 PM" locale="en-US" timepicker />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CDateRangePicker locale="en-US" timepicker />
+```
+
+## Sizing
+
+Set heights using `size` property like `size="lg"` and `size="sm"`.
+
+<Example>
+  <div className="row mb-4">
+    <div className="col-lg-6">
+      <CDateRangePicker locale="en-US" size="lg" />
+    </div>
+  </div>
+  <div className="row">
+    <div className="col-lg-5">
+      <CDateRangePicker locale="en-US" size="sm" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CDateRangePicker locale="en-US" size="lg" />
+<CDateRangePicker locale="en-US" size="sm" />
+```
+
+## Disabled
+
+Add the `disabled` boolean attribute on an input to give it a grayed out appearance and remove pointer events.
+
+<Example>
+  <div className="row">
+    <div className="col-lg-5">
+      <CDateRangePicker disabled locale="en-US" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CDateRangePicker disabled locale="en-US" />
+```
+
+## Readonly
+
+Add the `inputReadOnly` boolean attribute to prevent modification of the input's value.
+
+<Example>
+  <div className="row">
+    <div className="col-lg-5">
+      <CDateRangePicker inputReadOnly locale="en-US" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CDateRangePicker inputReadOnly locale="en-US" />
+```
+
+## Disabled dates
+
+export const DisabledDatesExample = () => {
+  const calendarDate = new Date(2022, 2, 1)
+  const disabledDates = [
+    [new Date(2022, 2, 4), new Date(2022, 2, 7)],
+    new Date(2022, 2, 16),
+    new Date(2022, 3, 16),
+    [new Date(2022, 4, 2), new Date(2022, 4, 8)],
+  ]
+  const maxDate = new Date(2022, 5, 0)
+  const minDate = new Date(2022, 1, 1)
+  return (
+    <div className="row">
+      <div className="col-lg-5">
+        <CDateRangePicker
+          calendarDate={calendarDate}
+          disabledDates={disabledDates}
+          locale="en-US"
+          maxDate={maxDate}
+          minDate={minDate}
+        />
+      </div>
+    </div>
+  )
+}
+
+<Example>
+  <DisabledDatesExample />
+</Example>
+
+```jsx
+const calendarDate = new Date(2022, 2, 1)
+const disabledDates = [
+  [new Date(2022, 2, 4), new Date(2022, 2, 7)], // range of dates that cannot be selected
+  new Date(2022, 2, 16), // single date that cannot be selected
+  new Date(2022, 3, 16), // single date that cannot be selected
+  [new Date(2022, 4, 2), new Date(2022, 4, 8)], // range of dates that cannot be selected
+]
+const maxDate = new Date(2022, 5, 0)
+const minDate = new Date(2022, 1, 1)
+return (
+  <div className="row">
+    <div className="col-lg-5">
+      <CDateRangePicker
+        calendarDate={calendarDate}
+        disabledDates={disabledDates}
+        locale="en-US"
+        maxDate={maxDate}
+        minDate={minDate}
+      />
+    </div>
+  </div>
+)
+```
+
+## Custom ranges
+
+export const CustomRangesExample = () => {
+  const customRanges = {
+    Today: [new Date(), new Date()],
+    Yesterday: [
+      new Date(new Date().setDate(new Date().getDate() - 1)),
+      new Date(new Date().setDate(new Date().getDate() - 1)),
+    ],
+    'Last 7 Days': [
+      new Date(new Date().setDate(new Date().getDate() - 6)),
+      new Date(new Date()),
+    ],
+    'Last 30 Days': [
+      new Date(new Date().setDate(new Date().getDate() - 29)),
+      new Date(new Date()),
+    ],
+    'This Month': [
+      new Date(new Date().setDate(1)),
+      new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0),
+    ],
+    'Last Month': [
+      new Date(new Date().getFullYear(), new Date().getMonth() - 1, 1),
+      new Date(new Date().getFullYear(), new Date().getMonth(), 0),
+    ],
+  }
+  return (
+    <div className="row">
+      <div className="col-lg-5">
+        <CDateRangePicker ranges={customRanges} />
+      </div>
+    </div>
+  )
+}
+
+<Example>
+  <CustomRangesExample />
+</Example>
+
+```jsx
+const customRanges = {
+  Today: [new Date(), new Date()],
+  Yesterday: [
+    new Date(new Date().setDate(new Date().getDate() - 1)),
+    new Date(new Date().setDate(new Date().getDate() - 1)),
+  ],
+  'Last 7 Days': [
+    new Date(new Date().setDate(new Date().getDate() - 6)),
+    new Date(new Date()),
+  ],
+  'Last 30 Days': [
+    new Date(new Date().setDate(new Date().getDate() - 29)),
+    new Date(new Date()),
+  ],
+  'This Month': [
+    new Date(new Date().setDate(1)),
+    new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0),
+  ],
+  'Last Month': [
+    new Date(new Date().getFullYear(), new Date().getMonth() - 1, 1),
+    new Date(new Date().getFullYear(), new Date().getMonth(), 0),
+  ],
+}
+return (
+  <div className="row">
+    <div className="col-lg-5">
+      <CDateRangePicker ranges={customRanges} />
+    </div>
+  </div>
+)
+```
+
+## Non-english locale
+
+### Auto
+
+<Example>
+  <div className="row">
+    <div className="col-lg-5">
+      <CDateRangePicker />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CDateRangePicker />
+```
+
+### Chinese
+
+<Example>
+  <div className="row">
+    <div className="col-lg-5">
+      <CDateRangePicker locale="zh-CN" placeholder={["入住日期", "退房日期"]} />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CDateRangePicker locale="zh-CN" placeholder={["入住日期", "退房日期"]} />
+```
+
+### Japanese
+
+<Example>
+  <div className="row">
+    <div className="col-lg-5">
+      <CDateRangePicker locale="ja" placeholder={["日付を選択", "終了日"]} />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CDateRangePicker locale="ja" placeholder={["日付を選択", "終了日"]} />
+```
+
+### Korean
+
+<Example>
+  <div className="row">
+    <div className="col-lg-5">
+      <CDateRangePicker locale="ko" placeholder={["날짜 선택", "종료일"]} />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CDateRangePicker locale="ko" placeholder={["날짜 선택", "종료일"]} />
+```
+
+## Right to left support
+
+RTL support is built-in and can be explicitly controlled through the `$enable-rtl` variables in scss.
+
+### Hebrew
+
+<Example>
+  <div className="row" dir="rtl">
+    <div className="col-lg-5">
+      <CDateRangePicker placeholder={["בחר תאריך", "תאריך סיום"]} locale="he-IL" />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CDateRangePicker placeholder={["בחר תאריך", "תאריך סיום"]} locale="he-IL" />
+```
+
+### Persian
+
+<Example>
+  <div className="row" dir="rtl">
+    <div className="col-lg-5">
+      <CDateRangePicker locale="fa-IR" placeholder={["تاریخ شروع", "تاریخ پایان"]} />
+    </div>
+  </div>
+</Example>
+
+```jsx
+<CDateRangePicker locale="fa-IR" placeholder={["تاریخ شروع", "تاریخ پایان"]} />
+```
+
+## Customizing
+
+### CSS variables
+
+React date range pickers use local CSS variables on `.date-picker` and `.calendar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+<ScssDocs file="_date-picker.scss" capture="date-picker-css-vars"/>
+
+<ScssDocs file="_calendar.scss" capture="calendar-css-vars"/>
+
+#### How to use CSS variables
+
+```jsx
+const vars = { 
+  '--my-css-var': 10,
+  '--my-another-css-var': "red" 
+}
+return <CDateRangePicker style={vars}>...</CDateRangePicker>
+```
+
+### SASS variables
+
+<ScssDocs file="_variables.scss" capture="date-picker-variables"/>
+
+<ScssDocs file="_variables.scss" capture="calendar-variables"/>
+
+## API
+
+### CDateRangePicker
+
+`markdown:CDateRangePicker.api.mdx`

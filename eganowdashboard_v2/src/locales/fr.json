@@ -1,0 +1,134 @@
+{
+  "login": {
+    "title": "Entrez votre adresse e-mail et votre mot de passe pour accéder au tableau de bord.",
+    "emailaddress": "Adresse e-mail",
+    "enter_emailaddress": "Entrer l'adresse e-mail",
+    "password": "Mot de passe",
+    "enter_password": "Entrer le mot de passe",
+    "remember_me": "Souviens-toi de moi",
+    "login": "Connexion",
+    "forget_password": "Mot de passe oublié ?",
+    "dont_have_account": "Ne pas avoir de compte ? ",
+    "sign_up": "S'inscrire"
+  },
+  "setting": {
+    "profile": "Profil",
+    "setting": "Réglages",
+    "change_password": "Changer le mot de passe",
+    "log_out": "Se déconnecter",
+    "reset_pin": "Broche de réinitialisation"
+  },
+  "profile" : {
+    "id_card_number" : " Enter id number"
+  },
+  "dashboard": {
+    "manage_merchant_service": "Gérer le service marchand",
+    "button-text": "Commencer",
+    "biz_collect": {
+      "name": "Collecte d'affaires",
+      "revenue": "22,923",
+      "employees": "47k",
+      "leftdata": "Solde disponible",
+      "rightdata": "Solde réel",
+      "text": "Les bonnes solutions de paiement pour votre entreprise"
+    },
+    "money_transfer": {
+      "name": "Transferts d'argent",
+      "revenue": "26k",
+      "employees": "3.1k",
+      "leftdata": "Montant total des entrées GHS",
+      "rightdata": "Montant total des sorties GHS",
+      "text": "La solution de transfert d'argent fiable pour les entreprises"
+    }
+  },
+  "account_balance" : {
+    "view_statement": "Afficher la déclaration"
+  },
+  "money_transfer_menu": {
+    "navigation": "La navigation",
+    "main_dashboard": "Retour au tableau de bord",
+    "send_money_main": "Envoyer de l'argent",
+    "money_transfer": "Transfert d'argent",
+    "account_balance": "Soldes des comptes",
+    "send_money": "Envoyer de l'argent",
+    "transaction_history": "Historique des transactions",
+    "beneficiaries": "Les bénéficiaires",
+    "payment_account": "Comptes de paiement",
+    "account_statement": "Relevés de compte"
+  },
+  "biz_collect": {
+    "navigation": "La navigation",
+    "main_dashboard": "Retour au tableau de bord",
+    "biz_collect_menu": "Collecte d'affaires",
+    "transactions": "Transactions",
+    "account_balalnce": "Solde du compte",
+    "account_transaction": "Opérations sur compte",
+    "account_to_account_trans": "Transfert de compte à compte",
+    "fund_transfer": "Transfert de fonds",
+    "merchant_customer" : "Clients commerçants",
+    "view_customer": "Voir les clients",
+    "pending_customer" : "Clients en attente",
+    "pin_reset_request": "Demande de réinitialisation du code PIN",
+    "termination_request" : "Demande de résiliation",
+    "approve_term_request" : "Approuver la demande de résiliation"
+  },
+  "send_moeny_labels" : {
+    "send_money": "Envoyer de l'argent",
+    "select_recipient_country": "Sélectionnez le pays destinataire",
+    "select_receipient_account_type": "Sélectionnez le type de compte du destinataire",
+    "select_recipient_account_provider": "Sélectionnez le fournisseur du compte du destinataire",
+    "country_code": "Code postal",
+    "mobile_number": "Numéro de portable",
+    "enter_account_number": "Entrez le numéro de compte",
+    "account_name" : "Nom du compte",
+    "account_number" : "Numéro de compte",
+    "eganow_account_number" : "Numéro de compte Eganow",
+    "recipient_account_name" : "Nom du compte du destinataire",
+    "exchange_rate" : "Taux de change",
+    "sending_currency" : "Devise d'envoi",
+    "sending_amount": "Montant d'envoi",
+    "taxamount" : "Montant de la taxe",
+    "reference": "Référence",
+    "how_do_you_want_to_pay" : "Comment voulez-vous payer ?",
+    "add_new_payment_method": "Ajouter un nouveau mode de paiement",
+    "select_source_country" : "Sélectionnez le pays d'origine",
+    "select_account_provider": "Sélectionnez le fournisseur de compte",
+    "mobile_money": "Argent mobile",
+    "sending_from" : "Envoi depuis",
+    "sending_money_to ": "Envoyer de l'argent à ",
+    "senders_account_name": "Nom du compte de l'expéditeur",
+    "senders_account_number": "Numéro de compte de l'expéditeur",
+    "transaction_fee" : "Frais de transaction",
+    "total_amount" : "Montant total",
+    "recipient_name" : "Nom du destinataire",
+    "recipient_account": "Compte destinataire",
+    "receiving_amount": "Montant reçu",
+    "add": "Ajouter",
+    "payment_card": "Carte de paiement",
+    "card_number": "Numéro de carte",
+    "card_name": "Nom de la carte",
+    "review_pay": "Réviser et payer",
+    "receive_into": "Recevez dans",
+    "refresh": "Rafraîchir",
+    "month" : "Mois",
+    "months" : {
+      "jan" : "Janvier",
+      "feb" : "Février",
+      "mar" : "Mars",
+      "apr" : "Avril",
+      "may" : "Mai",
+      "jun" : "Juin",
+      "jul" : "Juillet",
+      "aug" : "Août",
+      "sep" : "Septembre",
+      "oct" : "Octobre",
+      "nov" : "Novembre",
+      "dec" : "Décembre"
+    },
+    "year" : "An",
+    "cvv" : "Cvv"
+  }
+
+}
+
+

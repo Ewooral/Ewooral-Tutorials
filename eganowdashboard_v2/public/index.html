@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Quintessential&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <script src="https://web-button.getmati.com/button.js">
+    </script>
+
+
+    <!-- built files will be auto injected -->
+    <script id="authenticate-payer-script"> var e=document.getElementById("redirectTo3ds1Form"); if (e) { e.submit(); if (e.parentNode !== null) { e.parentNode.removeChild(e); } } </script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src = "https://static.sumsub.com/idensic/static/sns-websdk-builder.js"></script>
+
+    <!-- Head -->
+<!--    <script src="https://wchat.freshchat.com/js/widget.js"></script>-->
+    <!-- Head -->
+<!--    <script>-->
+<!--      window.fcWidget.init({-->
+<!--        token: "WEB_CHAT_TOKEN",-->
+<!--        host: "https://wchat.freshchat.com"-->
+<!--      });-->
+<!--    </script>-->
+<!--    <div id="sumsub-websdk-container"></div>-->
+
+  </body>
+</html>
