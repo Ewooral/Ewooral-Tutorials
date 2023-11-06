@@ -1,4 +1,5 @@
-Below there is a script (it is an extract from a personal script that I use to perform a general "spring cleaning" of the root partition) that reduces the overall size of snaps working in three directions:
+Below there is a script (it is an extract from a personal script that I use to 
+perform a general "spring cleaning" of the root partition) that reduces the overall size of snaps working in three directions:
 
 reduce the maximum numbers of revisions stored in your system (line snap set system refresh.retain=2 of the script)
 clean the oldest revisions when you have snap revisions that exceed the maximum number defined in the previous point (while loop in the script)
@@ -58,7 +59,11 @@ exit "${STATUS_OK}"
 Save the above code in a file, for example snap-cleanup.sh
 Put it in a folder defined in $PATH, for example $HOME/.local/bin
 Make it executable by chmod +x $HOME/.local/bin/snap-cleanup.sh
-Call it by sudo bash $HOME/.local/bin/snap-cleanup.sh
-As a general consideration, size is a weakeness of the snap format, because shared libraries/dependencies are "duplicated" inside every snap. What you can do, if this is really a problem for you, consists in using the .deb version of an application (from apt install) instead of the snap version.
+Call it by sudo bash `$HOME/.local/bin/snap-cleanup.sh`
+As a general consideration, size is a weakeness of the snap format, because shared 
+libraries/dependencies are "duplicated" inside every snap. What you can do, if this is 
+really a problem for you, consists in using the .deb version of an application (from apt install) instead of the snap version.
 
-You can also remove completely snapd, but consider that for the GNOME variant of Ubuntu the number of packages distributed as snap is increasing, and for some of them the decision has been taken not by Canonical but by the package distributor itself (for instance, Mozilla for firefox). In the future the removal of snapd may not be harmless.
+You can also remove completely snapd, but consider that for the GNOME variant of Ubuntu the number of 
+packages distributed as snap is increasing, and for some of them the decision has been taken not by 
+Canonical but by the package distributor itself (for instance, Mozilla for firefox). In the future the removal of snapd may not be harmless.

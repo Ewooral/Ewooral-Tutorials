@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Error: Invalid Program</h1>
+    <p>The selected program does not exist or is not available.</p>
+    <p>Please choose a valid program from the list.</p>
+    <a href="{% url 'school_selection' %}" class="btn btn-primary">Go Back to Selection</a>
+</div>
+{% endblock %}

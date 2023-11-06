@@ -7,13 +7,11 @@ We'll cover the following
         The IS A Relationship
         The Python Object class
 
-Now that you are familiar with the concepts of objects and classes, let’s discuss inheritance, which is another key concept in object-oriented programming.]
-
+Now that you are familiar with the concepts of objects and classes, let’s discuss inheritance, which is another key concept in object-oriented programming.
 
 ## OOP Definition#
 
 **Inheritance** provides a way to create a new class from an existing class. The new class is a specialized version of the existing class such that it inherits all the non-private fields (variables) and methods of the existing class. The existing class is used as a starting point or as a base to create the new class.
-
 
 ### The IS A Relationship#
 
@@ -28,7 +26,7 @@ After reading the above definition, the next question that comes to mind is this
 ### So, from the above descriptions of inheritance, we can conclude that we can build new classes by extending existing classes.
 
     EXISTING CLASS 	      |        DERIVED CLASS
-    
+
     Shape 	                       Square
     Programming Language 	       Python
     Vehicle 	                   Car
@@ -48,13 +46,9 @@ In Python, whenever we create a class, it is, by default, a subclass of the buil
 
 Let’s move to the next lesson where we will discuss the syntax and terminologies related to inheritance.
 
+................................................................NEXT LESSON............................................................
 
-
-
-
- ................................................................NEXT LESSON............................................................
-
- ## The Syntax and Terminologies
+## The Syntax and Terminologies
 
 Learn how to use inheritance syntactically and the terminologies related to it.
 We'll cover the following
@@ -68,10 +62,10 @@ We'll cover the following
 
 In inheritance, in order to create a new class based on an existing class, we use the following terminology:
 
-    1. Parent Class (Super Class or Base Class): 
+    1. Parent Class (Super Class or Base Class):
         This class allows the reuse of its public properties in another class.
 
-    2. Child Class (Sub Class or Derived Class): 
+    2. Child Class (Sub Class or Derived Class):
         This class inherits or extends the superclass.
 
     A child class has all public attributes of the parent class.
@@ -79,6 +73,7 @@ In inheritance, in order to create a new class based on an existing class, we us
 ### Syntax#
 
     In Python, to implement inheritance, the syntax is quite similar to the basic class definition. The syntax is given below:
+
 ```python
 
 class ParentClass:
@@ -94,8 +89,9 @@ The name of the parent class is written in brackets after the name of the child 
 
 #### Example#
 
-Let’s take an example of a **Vehicle** class as the parent class and implement a **Car** class that will extend from this Vehicle class. 
-Because a Car *IS A* vehicle, the implementation of inheritance relation between these classes will stand valid.
+Let’s take an example of a **Vehicle** class as the parent class and implement a **Car** class that will extend from this Vehicle class.
+Because a Car _IS A_ vehicle, the implementation of inheritance relation between these classes will stand valid.
+
 ```py
 class Vehicle:
     def __init__(self, make, color, model):
@@ -124,6 +120,7 @@ obj1 = Car("Suzuki", "Grey", "2015", 4)
 obj1.printCarDetails()
 
 ```
+
 Explanation#
 
     In the code above, we have defined a parent class, Vehicle, in line 1 and a child class, Car, in line 13.

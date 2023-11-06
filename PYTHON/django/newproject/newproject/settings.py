@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'school_Selection_System',
+    'testapp'
 ]
 
 MIDDLEWARE = [
