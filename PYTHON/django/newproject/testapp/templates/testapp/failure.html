@@ -1,0 +1,11 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Oops!</h1>
+    <p>Sorry, {{ student.surname }}.</p>
+    <p>There are no available slots for {{ student.chosen_program }} at the moment.</p>
+    <p>Please try again later or contact the admissions office for assistance.</p>
+</div>
+{% endblock %}

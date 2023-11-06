@@ -4,8 +4,8 @@
     Next
 
 In this article we'll explain what asynchronous programming is, why we need it, and briefly discuss some of the ways asynchronous functions have historically been implemented in JavaScript.
-Prerequisites: 	Basic computer literacy, a reasonable understanding of JavaScript fundamentals, including functions and event handlers.
-Objective: 	To gain familiarity with what asynchronous JavaScript is, how it differs from synchronous JavaScript, and why we need it.
+Prerequisites: Basic computer literacy, a reasonable understanding of JavaScript fundamentals, including functions and event handlers.
+Objective: To gain familiarity with what asynchronous JavaScript is, how it differs from synchronous JavaScript, and why we need it.
 
 ## Asynchronous programming
 
@@ -21,20 +21,17 @@ So even though you may not have to implement your own asynchronous functions ver
 
 In this article, we'll start by looking at the problem with long-running synchronous functions, which make asynchronous programming a necessity.
 
-
-
 ## Synchronous programming
 
- 
 Consider the following code:
 
 ```js
-
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = `Hello, my name is ${name}!`;
 console.log(greeting);
 // "Hello, my name is Miriam!"
- ```
+```
+
 This code:
 
     declares a string called name
@@ -44,15 +41,17 @@ This code:
 What we should note here is that the browser effectively steps through the program one line at a time, in the order we wrote it, and at each point it waits for the line to finish its work, before going on to the next line. It has to do this, because each line depends on the work that was done in the preceding lines.
 
 That makes this a synchronous program. It would still be synchronous if we called out to a separate function, like this:
+
 ```js
 function makeGreeting(name) {
   return `Hello, my name is ${name}!`;
 }
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = makeGreeting(name);
 console.log(greeting);
 // "Hello, my name is Miriam!"
 ```
+
 Here makeGreeting() is a synchronous function, because the caller has to wait for the function to finish its work before the function returns.
 
 ### A long-running synchronous function
@@ -71,12 +70,11 @@ This program generates a number of large prime numbers, using a very inefficient
 
 ```js
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -94,17 +92,19 @@ function generatePrimes(quota) {
   return primes;
 }
 
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
+  document.querySelector(
+    "#output"
+  ).textContent = `Finished generating ${quota} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.location.reload()
+document.querySelector("#reload").addEventListener("click", () => {
+  document.location.reload();
 });
-
 ```
+
 Try clicking "Generate primes". Depending on how fast your computer is, it will probably take a few seconds before the program displays the "Finished!" message.
 The trouble with long-running synchronous functions
 
@@ -135,41 +135,42 @@ After adding the event listener we send the request. Note that after this, we ca
 <pre readonly class="event-log"></pre>
 
 ```js
+const log = document.querySelector(".event-log");
 
-const log = document.querySelector('.event-log');
-
-document.querySelector('#xhr').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#xhr").addEventListener("click", () => {
+  log.textContent = "";
 
   const xhr = new XMLHttpRequest();
 
-  xhr.addEventListener('loadend', () => {
+  xhr.addEventListener("loaded", () => {
     log.textContent = `${log.textContent}Finished with status: ${xhr.status}`;
   });
 
-  xhr.open('GET', 'https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
+  xhr.open(
+    "GET",
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json"
+  );
   xhr.send();
-  log.textContent = `${log.textContent}Started XHR request\n`;});
-
-document.querySelector('#reload').addEventListener('click', () => {
-  log.textContent = '';
-  document.location.reload();
+  log.textContent = `${log.textContent}Started XHR request\n`;
 });
 
+document.querySelector("#reload").addEventListener("click", () => {
+  log.textContent = "";
+  document.location.reload();
+});
 ```
 
 This is just like the event handlers we've encountered in a previous module, except that instead of the event being a user action, like the user clicking a button, the event is a change in some object's state.
 
-
 ### Callbacks
 
-An event handler is a particular type of callback. 
+An event handler is a particular type of callback.
 
     A callback is just a function that's passed into another function, with the expectation that the callback will be called at the appropriate time. As we just saw: callbacks used to be the main way asynchronous functions were implemented in JavaScript.
 
 However, callback-based code can get hard to understand when the callback itself has to call functions that accept a callback. This is a common situation if you need to perform some operation that breaks down into a series of asynchronous functions. For example, consider the following:
 
-```py 
+```py
 function doStep1(init) {
   return init + 1;
 }
@@ -192,6 +193,7 @@ function doOperation() {
 
 doOperation();
 ```
+
 Here we have a single operation that's split into three steps, where each step depends on the last step. In our example the first step adds 1 to the input, the second adds 2, and the third adds 3. Starting with an input of 0, the end result is 6 (0 + 1 + 2 + 3). As synchronous code this is very straightforward. But what if we implemented the steps using callbacks?
 
 ```py
@@ -224,18 +226,13 @@ function doOperation() {
 doOperation();
 ```
 
-
     Because we have to call callbacks inside callbacks, we get a deeply nested doOperation() function, which is much harder to read and debug. This is sometimes called "callback hell" or the "pyramid of doom" (because the indentation looks like a pyramid on its side).
 
     When we nest callbacks like this, it can also get very hard to handle errors: often you have to handle errors at each level of the "pyramid", instead of having error handling once at the top level.
 
 For these reasons, most modern asynchronous APIs don't use callbacks. Instead, the foundation of asynchronous programming in JavaScript is the Promise, and that's the subject of the next article.
 
-
-
-
 # ..................................................................................................................................................
-
 
 # HOW TO USE PROMISES
 
@@ -272,7 +269,7 @@ const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/
 console.log(fetchPromise);
 
 fetchPromise.then( response => {
-  console.log(`Received response: ${response.status}`);
+console.log(`Received response: ${response.status}`);
 });
 
 console.log("Started request...");
@@ -302,10 +299,10 @@ Try this:
 const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 
 fetchPromise.then( response => {
-  const jsonPromise = response.json();
-  jsonPromise.then( json => {
-    console.log(json[0].name);
-  });
+const jsonPromise = response.json();
+jsonPromise.then( json => {
+console.log(json[0].name);
+});
 });
 
 In this example, as before, we add a then() handler to the promise returned by fetch(). But this time our handler calls response.json(), and then passes a new then() handler into the promise returned by response.json().
@@ -319,12 +316,12 @@ It is, of course. But the elegant feature of promises is that: then() itself ret
 const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 
 fetchPromise
-  .then( response => {
-    return response.json();
-  })
-  .then( json => {
-    console.log(json[0].name);
-  });
+.then( response => {
+return response.json();
+})
+.then( json => {
+console.log(json[0].name);
+});
 
 Instead of calling the second then() inside the handler for the first then(), we can return the promise returned by json(), and call the second then() on that return value. This is called promise chaining and means we can avoid ever-increasing levels of indentation when we need to make consecutive asynchronous function calls.
 
@@ -333,15 +330,15 @@ Before we move on to the next step, there's one more piece to add. We need to ch
 const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 
 fetchPromise
-  .then( response => {
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then( json => {
-    console.log(json[0].name);
-  });
+.then( response => {
+if (!response.ok) {
+throw new Error(`HTTP error: ${response.status}`);
+}
+return response.json();
+})
+.then( json => {
+console.log(json[0].name);
+});
 
 Catching errors
 
@@ -358,18 +355,18 @@ Try this version of our fetch() code. We've added an error handler using catch()
 const fetchPromise = fetch('bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 
 fetchPromise
-  .then( response => {
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then( json => {
-    console.log(json[0].name);
-  })
-  .catch( error => {
-    console.error(`Could not get products: ${error}`);
-  });
+.then( response => {
+if (!response.ok) {
+throw new Error(`HTTP error: ${response.status}`);
+}
+return response.json();
+})
+.then( json => {
+console.log(json[0].name);
+})
+.catch( error => {
+console.error(`Could not get products: ${error}`);
+});
 
 Try running this version: you should see the error logged by our catch() handler.
 Promise terminology
@@ -407,14 +404,14 @@ const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis
 const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
 
 Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then( responses => {
-    for (const response of responses) {
-      console.log(`${response.url}: ${response.status}`);
-    }
-  })
-  .catch( error => {
-    console.error(`Failed to fetch: ${error}`)
-  });
+.then( responses => {
+for (const response of responses) {
+console.log(`${response.url}: ${response.status}`);
+}
+})
+.catch( error => {
+console.error(`Failed to fetch: ${error}`)
+});
 
 Here we're making three fetch() requests to three different URLs. If they all succeed, we will log the response status of each one. If any of them fail, we're logging the failure.
 
@@ -431,14 +428,14 @@ const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis
 const fetchPromise3 = fetch('bad-scheme://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
 
 Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then( responses => {
-    for (const response of responses) {
-      console.log(`${response.url}: ${response.status}`);
-    }
-  })
-  .catch( error => {
-    console.error(`Failed to fetch: ${error}`)
-  });
+.then( responses => {
+for (const response of responses) {
+console.log(`${response.url}: ${response.status}`);
+}
+})
+.catch( error => {
+console.error(`Failed to fetch: ${error}`)
+});
 
 ...then we can expect the catch() handler to run, and we should see something like:
 
@@ -451,12 +448,12 @@ const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis
 const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
 
 Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then( response => {
-    console.log(`${response.url}: ${response.status}`);
-  })
-  .catch( error => {
-    console.error(`Failed to fetch: ${error}`)
-  });
+.then( response => {
+console.log(`${response.url}: ${response.status}`);
+})
+.catch( error => {
+console.error(`Failed to fetch: ${error}`)
+});
 
 Note that in this case we can't predict which fetch request will complete first.
 
@@ -466,7 +463,7 @@ async and await
 The async keyword gives you a simpler way to work with asynchronous promise-based code. Adding async at the start of a function makes it an async function:
 
 async function myFunction() {
-  // This is an async function
+// This is an async function
 }
 
 Inside an async function you can use the await keyword before a call to a function that returns a promise. This makes the code wait at that point until the promise is settled, at which point the fulfilled value of the promise is treated as a return value, or the rejected value is thrown.
@@ -474,21 +471,21 @@ Inside an async function you can use the await keyword before a call to a functi
 This enables you to write code that uses asynchronous functions but looks like synchronous code. For example, we could use it to rewrite our fetch example:
 
 async function fetchProducts() {
-  try {
-    // after this line, our function will wait for the `fetch()` call to be settled
-    // the `fetch()` call will either return a Response or throw an error
-    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    // after this line, our function will wait for the `response.json()` call to be settled
-    // the `response.json()` call will either return the JSON object or throw an error
-    const json = await response.json();
-    console.log(json[0].name);
-  }
-  catch(error) {
-    console.error(`Could not get products: ${error}`);
-  }
+try {
+// after this line, our function will wait for the `fetch()` call to be settled
+// the `fetch()` call will either return a Response or throw an error
+const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+if (!response.ok) {
+throw new Error(`HTTP error: ${response.status}`);
+}
+// after this line, our function will wait for the `response.json()` call to be settled
+// the `response.json()` call will either return the JSON object or throw an error
+const json = await response.json();
+console.log(json[0].name);
+}
+catch(error) {
+console.error(`Could not get products: ${error}`);
+}
 }
 
 fetchProducts();
@@ -500,36 +497,36 @@ We can even use a try...catch block for error handling, exactly as we would if t
 Note though that this magic only works inside the async function. Async functions always return a promise, so you can't do something like:
 
 async function fetchProducts() {
-  try {
-    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    const json = await response.json();
-    return json;
-  }
-  catch(error) {
-    console.error(`Could not get products: ${error}`);
-  }
+try {
+const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+if (!response.ok) {
+throw new Error(`HTTP error: ${response.status}`);
+}
+const json = await response.json();
+return json;
+}
+catch(error) {
+console.error(`Could not get products: ${error}`);
+}
 }
 
 const json = fetchProducts();
-console.log(json[0].name);   // json is a Promise object, so this will not work
+console.log(json[0].name); // json is a Promise object, so this will not work
 
 Instead, you'd need to do something like:
 
 async function fetchProducts() {
-  try {
-    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    const json = await response.json();
-    return json;
-  }
-  catch(error) {
-    console.error(`Could not get products: ${error}`);
-  }
+try {
+const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+if (!response.ok) {
+throw new Error(`HTTP error: ${response.status}`);
+}
+const json = await response.json();
+return json;
+}
+catch(error) {
+console.error(`Could not get products: ${error}`);
+}
 }
 
 const jsonPromise = fetchProducts();
@@ -548,16 +545,6 @@ Promises work in the latest versions of all modern browsers; the only place wher
 
 We didn't touch on all promise features in this article, just the most interesting and useful ones. As you start to learn more about promises, you'll come across more features and techniques.
 
-
-
-
-
-
-
-
-
-
-
 # ..........................................................................................................................................
 
 How to implement a promise-based API
@@ -567,8 +554,8 @@ How to implement a promise-based API
     Next
 
 In the last article we discussed how to use APIs that return promises. In this article we'll look at the other side — how to implement APIs that return promises. This is a much less common task than using promise-based APIs, but it's still worth knowing about.
-Prerequisites: 	Basic computer literacy, a reasonable understanding of JavaScript fundamentals, including event handling and the basics of promises.
-Objective: 	To understand how implement promise-based APIs.
+Prerequisites: Basic computer literacy, a reasonable understanding of JavaScript fundamentals, including event handling and the basics of promises.
+Objective: To understand how implement promise-based APIs.
 
 Generally, when you implement a promise-based API, you'll be wrapping an asynchronous operation, which might use events, or plain callbacks, or a message-passing model. You'll arrange for a Promise object to handle the success or failure of that operation properly.
 Implementing an alarm() API
@@ -581,15 +568,16 @@ We'll use the setTimeout() API to implement our alarm() function. The setTimeout
 In the example below, we call setTimeout() with a callback function and a delay of 1000 milliseconds:
 
 <button id="set-alarm">Set alarm</button>
+
 <div id="output"></div>
 
 const output = document.querySelector('#output');
 const button = document.querySelector('#set-alarm');
 
 function setAlarm() {
-  window.setTimeout(() => {
-    output.textContent = 'Wake up!';
-  }, 1000);
+window.setTimeout(() => {
+output.textContent = 'Wake up!';
+}, 1000);
 }
 
 button.addEventListener('click', setAlarm);
@@ -605,14 +593,14 @@ This executor function itself takes two arguments, which are both also functions
 So we can implement alarm() like this:
 
 function alarm(person, delay) {
-  return new Promise((resolve, reject) => {
-    if (delay < 0) {
-      throw new Error('Alarm delay must not be negative');
-    }
-    window.setTimeout(() => {
-      resolve(`Wake up, ${person}!`);
-    }, delay);
-  });
+return new Promise((resolve, reject) => {
+if (delay < 0) {
+throw new Error('Alarm delay must not be negative');
+}
+window.setTimeout(() => {
+resolve(`Wake up, ${person}!`);
+}, delay);
+});
 }
 
 This function creates and returns a new Promise. Inside the executor for the promise, we:
@@ -630,20 +618,20 @@ const button = document.querySelector('#set-alarm');
 const output = document.querySelector('#output');
 
 function alarm(person, delay) {
-  return new Promise((resolve, reject) => {
-    if (delay < 0) {
-      throw new Error('Alarm delay must not be negative');
-    }
-    window.setTimeout(() => {
-      resolve(`Wake up, ${person}!`);
-    }, delay);
-  });
+return new Promise((resolve, reject) => {
+if (delay < 0) {
+throw new Error('Alarm delay must not be negative');
+}
+window.setTimeout(() => {
+resolve(`Wake up, ${person}!`);
+}, delay);
+});
 }
 
 button.addEventListener('click', () => {
-  alarm(name.value, delay.value)
-    .then(message => output.textContent = message)
-    .catch(error => output.textContent = `Couldn't set alarm: ${error}`);
+alarm(name.value, delay.value)
+.then(message => output.textContent = message)
+.catch(error => output.textContent = `Couldn't set alarm: ${error}`);
 });
 
 Try setting different values for "Name" and "Delay". Try setting a negative value for "Delay".
@@ -657,51 +645,27 @@ const button = document.querySelector('#set-alarm');
 const output = document.querySelector('#output');
 
 function alarm(person, delay) {
-  return new Promise((resolve, reject) => {
-    if (delay < 0) {
-      throw new Error('Alarm delay must not be negative');
-    }
-    window.setTimeout(() => {
-      resolve(`Wake up, ${person}!`);
-    }, delay);
-  });
+return new Promise((resolve, reject) => {
+if (delay < 0) {
+throw new Error('Alarm delay must not be negative');
+}
+window.setTimeout(() => {
+resolve(`Wake up, ${person}!`);
+}, delay);
+});
 }
 
 button.addEventListener('click', async () => {
-  try {
-    const message = await alarm(name.value, delay.value);
-    output.textContent = message;
-  }
-  catch (error) {
-    output.textContent = `Couldn't set alarm: ${error}`;  
-  }
+try {
+const message = await alarm(name.value, delay.value);
+output.textContent = message;
+}
+catch (error) {
+output.textContent = `Couldn't set alarm: ${error}`;  
+ }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # ..........................................................................................................................................
-
 
 Introducing workers
 
@@ -710,8 +674,8 @@ Introducing workers
     Next
 
 In this final article in our "Asynchronous JavaScript" module, we'll introduce workers, which enable you to run some tasks in a separate thread of execution.
-Prerequisites: 	Basic computer literacy, a reasonable understanding of JavaScript fundamentals, including event handling.
-Objective: 	To understand how to use web workers.
+Prerequisites: Basic computer literacy, a reasonable understanding of JavaScript fundamentals, including event handling.
+Objective: To understand how to use web workers.
 
 In the first article of this module, we saw what happens when you have a long-running synchronous task in your program — the whole window becomes totally unresponsive. Fundamentally, the reason for this is that the program is single-threaded. A thread is a sequence of instructions that a program follows. Because the program consists of a single thread, it can only do one thing at a time: so if it is waiting for our long-running synchronous call to return, it can't do anything else.
 
@@ -737,37 +701,37 @@ Let's first take another look at the JavaScript in our previous example:
 
 function generatePrimes(quota) {
 
-  function isPrime(n) {
-    for (let c = 2; c <= Math.sqrt(n); ++c) {
-      if (n % c === 0) {
-          return false;
-       }
-    }
-    return true;
-  }
+function isPrime(n) {
+for (let c = 2; c <= Math.sqrt(n); ++c) {
+if (n % c === 0) {
+return false;
+}
+}
+return true;
+}
 
-  const primes = [];
-  const maximum = 1000000;
+const primes = [];
+const maximum = 1000000;
 
-  while (primes.length < quota) {
-    const candidate = Math.floor(Math.random() * (maximum + 1));
-    if (isPrime(candidate)) {
-      primes.push(candidate);
-    }
-  }
+while (primes.length < quota) {
+const candidate = Math.floor(Math.random() \* (maximum + 1));
+if (isPrime(candidate)) {
+primes.push(candidate);
+}
+}
 
-  return primes;
+return primes;
 }
 
 document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
-  const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
+const quota = document.querySelector('#quota').value;
+const primes = generatePrimes(quota);
+document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
 });
 
 document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
-  document.location.reload();
+document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+document.location.reload();
 });
 
 In this program, after we call generatePrimes(), the program becomes totally unresponsive.
@@ -807,8 +771,8 @@ The "index.html" file and the "style.css" files are already complete:
 </html>
 
 textarea {
-  display: block;
-  margin: 1rem 0;
+display: block;
+margin: 1rem 0;
 }
 
 The "main.js" and "generate.js" files are empty. We're going to add the main code to "main.js", and the worker code to "generate.js".
@@ -824,23 +788,23 @@ const worker = new Worker('./generate.js');
 // The message command is "generate", and the message also contains "quota",
 // which is the number of primes to generate.
 document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
-  worker.postMessage({
-    command: 'generate',
-    quota: quota
-  });
+const quota = document.querySelector('#quota').value;
+worker.postMessage({
+command: 'generate',
+quota: quota
+});
 });
 
 // When the worker sends a message back to the main thread,
 // update the output box with a message for the user, including the number of
 // primes that were generated, taken from the message data.
 worker.addEventListener('message', message => {
-  document.querySelector('#output').textContent = `Finished generating ${message.data} primes!`;
+document.querySelector('#output').textContent = `Finished generating ${message.data} primes!`;
 });
 
 document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
-  document.location.reload();
+document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+document.location.reload();
 });
 
     First, we're creating the worker using the Worker() constructor. We pass it a URL pointing to the worker script. As soon as the worker is created, the worker script is executed.
@@ -855,36 +819,36 @@ Now for the worker code. Copy the following code into "generate.js":
 // Listen for messages from the main thread.
 // If the message command is "generate", call `generatePrimes()`
 addEventListener("message", message => {
-  if (message.data.command === 'generate') {
-    generatePrimes(message.data.quota);
-  }
+if (message.data.command === 'generate') {
+generatePrimes(message.data.quota);
+}
 });
 
 // Generate primes (very inefficiently)
 function generatePrimes(quota) {
 
-  function isPrime(n) {
-    for (let c = 2; c <= Math.sqrt(n); ++c) {
-      if (n % c === 0) {
-          return false;
-       }
-    }
-    return true;
-  }
+function isPrime(n) {
+for (let c = 2; c <= Math.sqrt(n); ++c) {
+if (n % c === 0) {
+return false;
+}
+}
+return true;
+}
 
-  const primes = [];
-  const maximum = 1000000;
+const primes = [];
+const maximum = 1000000;
 
-  while (primes.length < quota) {
-    const candidate = Math.floor(Math.random() * (maximum + 1));
-    if (isPrime(candidate)) {
-      primes.push(candidate);
-    }
-  }
+while (primes.length < quota) {
+const candidate = Math.floor(Math.random() \* (maximum + 1));
+if (isPrime(candidate)) {
+primes.push(candidate);
+}
+}
 
-  // When we have finished, send a message to the main thread,
-  // including the number of primes we generated.
-  postMessage(primes.length);
+// When we have finished, send a message to the main thread,
+// including the number of primes we generated.
+postMessage(primes.length);
 }
 
 Remember that this runs as soon as the main script creates the worker.
@@ -927,3 +891,38 @@ In this module
     Implementing a promise-based API
     Introducing workers
     Assessment: sequencing animations
+
+## ......................................................................................
+
+In JavaScript, a promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It is a way to handle asynchronous operations such as fetching data from an API or reading a file, without blocking the main thread of execution.
+
+A promise has three states:
+
+- Pending: The initial state, meaning that the promise is neither fulfilled nor rejected.
+- Fulfilled: The operation completed successfully and the promise has a resulting value.
+- Rejected: The operation failed and the promise has a reason for the failure.
+
+Promises allow you to chain asynchronous operations together, making it easier to handle complex workflows. They also provide a way to handle errors in a more structured way, using the catch() method to handle any rejected promises.
+
+Here's an example of how to create a promise in JavaScript:
+
+```ts
+const promise = new Promise((resolve, reject) => {
+  // Do some asynchronous operation
+  if (/_ Operation successful _/) {
+    resolve("Resulting value");
+  } else {
+    reject("Reason for failure");
+  }
+});
+
+promise
+  .then((result) => {
+    // Do something with the resulting value
+  })
+  .catch((error) => {
+    // Handle the error
+  });
+```
+
+In this example, the promise is created with a function that takes two arguments: resolve and reject. These are functions that are used to either fulfill or reject the promise. Once the promise is created, you can use the then() method to handle the successful completion of the promise, and the catch() method to handle any errors.

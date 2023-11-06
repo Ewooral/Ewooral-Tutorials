@@ -1,0 +1,11 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Success!</h1>
+    <p>Congratulations, {{ student.student_name }}!</p>
+    <p>You have been assigned to {{ university.university_name }} for {{ student.chosen_program }}.</p>
+</div>
+{% endblock %}
+

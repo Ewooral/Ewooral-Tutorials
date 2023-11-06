@@ -51,7 +51,6 @@ Steve.login("steve", "6789")
 
 In the above coding example, we can observe that anyone can access, change, or print the password and userName fields directly from the main code. This is dangerous in the case of this User class because there is no encapsulation of the credentials of a user, which means anyone can access their account by manipulating the stored data. So, the above code does not follow good coding practices.
 
-
 ## A good example#
 
 Let’s move on to a better implementation of the User class.
@@ -60,7 +59,7 @@ In the code below, an AttributeError will be thrown because the code outside the
 
 ```PY
 class User:
-    def __init__(self, userName=None, password=None):
+    def __init__(self, userName=None, password=None) -> class:
         self.__userName = userName
         self.__password = password
 
@@ -85,7 +84,6 @@ Steve.login("steve", "6789")
 Steve.__password  # compilation error will occur due to this line
 
 ```
-
 
     If you comment out line 85, the program will work.
 

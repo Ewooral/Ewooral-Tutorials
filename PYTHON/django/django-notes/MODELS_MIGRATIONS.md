@@ -138,3 +138,73 @@ CREATE INDEX "myapp_subject_teacher_subject_id_e87c76e7" ON "myapp_subject_teach
 CREATE INDEX "myapp_subject_teacher_teacher_id_359f8cce" ON "myapp_subject_teacher" ("teacher_id");
 
 In this reading, you learned about the various types of relationships between models and how Django handles them.
+
+
+
+
+
+
+
+## ...............................................................
+
+
+
+##  | Django CRUD operation | Equivalent SQL CRUD operation |
+    |---|---|---|
+| Create | INSERT INTO |
+| Read | SELECT FROM |
+| Update | UPDATE |
+| Delete | DELETE FROM |
+
+For example, the following Django code to create a new student record is equivalent to the following SQL query:
+
+Python
+from myapp.models import Student
+
+student = Student(
+    first_name='Jane',
+    last_name='Doe',
+    email='jane.doe@example.com',
+    phone_number='123-456-7890'
+)
+
+student.save()
+Use code with caution. Learn more
+SQL
+INSERT INTO students (first_name, last_name, email, phone_number)
+VALUES ('Jane', 'Doe', 'jane.doe@example.com', '123-456-7890')
+Use code with caution. Learn more
+The following Django code to retrieve a student record is equivalent to the following SQL query:
+
+Python
+from myapp.models import Student
+
+student = Student.objects.get(pk=1)
+Use code with caution. Learn more
+SQL
+SELECT * FROM students WHERE id = 1
+Use code with caution. Learn more
+The following Django code to update a student record is equivalent to the following SQL query:
+
+Python
+from myapp.models import Student
+
+student = Student.objects.get(pk=1)
+student.first_name = 'John'
+student.save()
+Use code with caution. Learn more
+SQL
+UPDATE students SET first_name = 'John' WHERE id = 1
+Use code with caution. Learn more
+The following Django code to delete a student record is equivalent to the following SQL query:
+
+Python
+from myapp.models import Student
+
+student = Student.objects.get(pk=1)
+student.delete()
+Use code with caution. Learn more
+SQL
+DELETE FROM students WHERE id = 1
+Use code with caution. Learn more
+Django's ORM makes it easy to perform CRUD operations on models without having to write any SQL code. However, it is important to understand the equivalent SQL CRUD operations in order to troubleshoot problems and to write more efficient queries.
