@@ -3,6 +3,9 @@ var y = 2;
 var firstname = 'elijah';
 String lastname = 'boahen';
 
+const PLANET_EARTH = 'earth';
+final PI = 3.14;
+
 bool cow = true;
 var length = 23;
 var breadth = 2;
