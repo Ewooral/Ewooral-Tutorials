@@ -24,3 +24,8 @@ String variables() {
       'The value of y is $y' +
       'The value of cow is $cow');
 }
+
+Object pattern_variable_declaration() {
+  var (d, [e, f, g]) = ('str', [1, 2, 3]);
+  return {d, e, f, g};
+}
