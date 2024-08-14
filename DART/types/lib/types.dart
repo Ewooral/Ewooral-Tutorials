@@ -145,3 +145,19 @@ var list9 = [
 ];
 
 var list10 = ['#0', for (var i in list) '#$i'];
+
+// GENERICS
+// Generics are a way to make a class or method work for any data type.
+
+class Cache<T> {
+  final Map<String, T> _cache = {};
+  T? getByKey(String key) => _cache[key];
+  void setByKey(String key, T value) {
+    _cache[key] = value;
+  }
+}
+
+T first<T>(List<T> ts) {
+  T tmp = ts[0];
+  return tmp;
+}
