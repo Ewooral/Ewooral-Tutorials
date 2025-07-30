@@ -255,3 +255,30 @@ void main() {
 - It can introduce runtime errors that would otherwise be caught at compile time with static types.
 
 In general, prefer using specific types or `Object` when possible, and reserve `dynamic` for cases where type flexibility is essential.
+
+
+
+### .......................CASCADE NOTATION.......................
+The selected text in Dart uses the cascade notation `..` to perform multiple operations on the same object. Here's a breakdown of the code:
+
+```dart
+var alfa = A(i: 10)..nullableInstance = 40;
+```
+
+### Explanation
+1. **Object Creation**: `A(i: 10)`
+2. **Cascade Notation**: The cascade operator allows you to perform multiple operations on the same object without repeating the object reference.
+3. **Property Assignment**:
+
+### Equivalent Code Without Cascade Notation
+The above code is equivalent to:
+```dart
+var alfa = A(i: 10);
+alfa.nullableInstance = 40;
+```
+
+### Summary
+- `var alfa = A(i: 10)`.
+- `..nullableInstance = 40` sets the `nullableInstance`
+
+This makes the code more concise and readable when performing multiple operations on the same object.
