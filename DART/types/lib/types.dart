@@ -129,7 +129,7 @@ var list6 = [1, 2, ...list, 6, 7, 8, ...set4];
 
 // if the expression to the right of the spread operator might be null, you can use a
 // null-aware spread operator (...?):
-var list7 = [1, 2, ...?list, 6, 7, 8, ...?set4];
+var list7 = [1, 2, ...list, 6, 7, 8, ...set4];
 
 // Control-flow operators
 // collection if

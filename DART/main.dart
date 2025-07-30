@@ -3,7 +3,7 @@ import 'types/lib/types.dart' as types_func;
 // import 'input-output/lib/input-output.dart' as input_output_func;
 import 'patterns/lib/patterns.dart' as patterns_func;
 import 'error-handling/lib/error-handling.dart' as throw_error_func;
-import 'classes/lib/classes.dart' as classes_func;
+import 'classes/lib/classes.dart';
 
 main() {
   print('......VARIABLE........');
@@ -82,10 +82,14 @@ main() {
   throw_error_func.handle_error_partially();
 
   print('......CLASSES........');
-  var point = classes_func.Point(0, 0);
+  var point = Point(0.3, 3.89, 4);
   point.x = 4;
   point.y = 3;
   print('The point is at (${point.x}, ${point.y})');
-  print('The point is at (${classes_func.Point.i})');
- //  print('Instance variables: ${point.i}');
+
+  // point.f = 34; // 'f' can't be used as a setter because it's final. Try finding a different setter, or making 'f' non-final.
+    
+
+
+  //  print('Instance variables: ${point.i}');
 }
