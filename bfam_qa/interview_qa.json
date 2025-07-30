@@ -1,0 +1,155 @@
+{
+  "machine_learning_engineer": {
+    "technical": {
+      "algorithms": [
+        {
+          "question": "Explain the difference between supervised and unsupervised learning with examples.",
+          "answer": "Supervised learning involves training models with labeled data where the target variable is known (e.g., classification, regression). Examples include spam detection (classification) and house price prediction (regression). Unsupervised learning works with unlabeled data to find patterns or structures (e.g., clustering, dimensionality reduction). Examples include customer segmentation and anomaly detection.",
+          "follow_up_questions": [
+            "What are some common metrics for evaluating supervised learning models?",
+            "When would you choose unsupervised over supervised learning?"
+          ],
+          "code_example": "# Example of supervised vs unsupervised learning\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.cluster import KMeans\n\n# Supervised learning\nmodel = LinearRegression()\nmodel.fit(X_train, y_train)\n\n# Unsupervised learning\nkmeans = KMeans(n_clusters=3)\nkmeans.fit(X_data)"
+        },
+        {
+          "question": "What is the bias-variance tradeoff?",
+          "answer": "The bias-variance tradeoff is a fundamental concept in machine learning that describes the balance between model complexity and generalization. High bias models (underfitting) make strong assumptions and may miss relevant patterns. High variance models (overfitting) are sensitive to small changes in training data. The goal is to find the optimal balance that minimizes total error.",
+          "follow_up_questions": [
+            "How do you detect overfitting?",
+            "What techniques can you use to reduce variance?"
+          ]
+        }
+      ],
+      "deep_learning": [
+        {
+          "question": "Explain the concept of backpropagation in neural networks.",
+          "answer": "Backpropagation is the algorithm used to train neural networks by calculating gradients and updating weights. It works by propagating the error from the output layer back through the network, using the chain rule to compute partial derivatives. This allows the network to adjust its weights to minimize the loss function.",
+          "code_example": "# Simple backpropagation example\ndef backward_pass(network, loss):\n    gradients = {}\n    for layer in reversed(network.layers):\n        gradients[layer] = layer.backward(loss)\n    return gradients",
+          "follow_up_questions": [
+            "What is the vanishing gradient problem?",
+            "How do you initialize weights in neural networks?"
+          ]
+        },
+        {
+          "question": "What are the different types of neural network architectures?",
+          "answer": "Common neural network architectures include: 1) Feedforward Neural Networks (basic MLPs), 2) Convolutional Neural Networks (CNNs) for image processing, 3) Recurrent Neural Networks (RNNs) for sequential data, 4) Long Short-Term Memory (LSTM) networks for long sequences, 5) Transformer architectures for attention-based processing, 6) Generative Adversarial Networks (GANs) for generative tasks.",
+          "follow_up_questions": [
+            "When would you use a CNN vs an RNN?",
+            "What are the advantages of transformer architectures?"
+          ]
+        }
+      ],
+      "mathematics": [
+        {
+          "question": "Explain the role of linear algebra in machine learning.",
+          "answer": "Linear algebra is fundamental to ML: matrices represent data and transformations, eigenvalues/eigenvectors are used in PCA, matrix multiplication is core to neural networks, and optimization involves gradient calculations. Key concepts include matrix decomposition, vector spaces, and linear transformations.",
+          "follow_up_questions": [
+            "How is SVD used in dimensionality reduction?",
+            "What is the relationship between eigenvalues and variance in PCA?"
+          ]
+        }
+      ]
+    },
+    "system_design": [
+      {
+        "question": "Design a scalable machine learning pipeline for real-time prediction.",
+        "answer": "Components needed: 1. Data ingestion layer (Kafka/Kinesis), 2. Feature processing pipeline (Spark/Flink), 3. Model serving infrastructure (TensorFlow Serving/Seldon), 4. Monitoring system (Prometheus/Grafana), 5. Load balancer (NGINX/HAProxy), 6. Caching layer (Redis), 7. Database for logging (PostgreSQL/MongoDB)",
+        "architecture_diagram": "Data Source → Kafka → Feature Processing → Model Serving → Load Balancer → Cache → Response",
+        "follow_up_questions": [
+          "How would you handle model versioning?",
+          "What metrics would you monitor?"
+        ]
+      },
+      {
+        "question": "How would you design an A/B testing framework for ML models?",
+        "answer": "Design includes: 1. Traffic splitting mechanism, 2. Model registry for version control, 3. Experiment tracking system, 4. Statistical significance testing, 5. Automated rollback mechanisms, 6. Performance monitoring, 7. Feature flagging system for gradual rollouts.",
+        "follow_up_questions": [
+          "How do you determine statistical significance?",
+          "What safety measures would you implement?"
+        ]
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "Describe a challenging ML project you worked on and how you overcame obstacles.",
+        "answer": "Structure your answer using the STAR method (Situation, Task, Action, Result). Focus on technical challenges like data quality issues, model performance problems, or scaling difficulties. Emphasize problem-solving skills, collaboration, and learning from failures.",
+        "follow_up_questions": [
+          "What would you do differently next time?",
+          "How did you communicate technical concepts to non-technical stakeholders?"
+        ]
+      }
+    ]
+  },
+  "ai_integration_engineer": {
+    "technical": {
+      "api_design": [
+        {
+          "question": "How would you design an API that integrates multiple AI models?",
+          "answer": "The API design should include: 1. Model abstraction layer for unified interface, 2. Load balancing for distributing requests, 3. Caching strategy for frequently requested predictions, 4. Comprehensive error handling and retry mechanisms, 5. Monitoring and logging for observability, 6. Rate limiting to prevent abuse, 7. Authentication and authorization, 8. Model versioning and routing.",
+          "code_example": "from fastapi import FastAPI, HTTPException\nfrom typing import Dict, Any\n\napp = FastAPI()\n\nclass ModelHandler:\n    def __init__(self):\n        self.models = {}\n    \n    async def predict(self, model_name: str, data: Dict) -> Dict[str, Any]:\n        if model_name not in self.models:\n            raise HTTPException(404, 'Model not found')\n        return await self.models[model_name].predict(data)\n\n@app.post('/predict/{model_name}')\nasync def predict(model_name: str, data: Dict):\n    try:\n        result = await model_handler.predict(model_name, data)\n        return {'status': 'success', 'result': result}\n    except Exception as e:\n        raise HTTPException(500, str(e))",
+          "follow_up_questions": [
+            "How would you implement model versioning?",
+            "What caching strategies would you use?"
+          ]
+        },
+        {
+          "question": "Explain REST vs GraphQL for AI model APIs.",
+          "answer": "REST is simpler and widely adopted, good for straightforward CRUD operations and caching. GraphQL allows clients to request specific data fields, reducing over-fetching, and provides a single endpoint. For AI APIs, REST is often preferred for its simplicity and better caching support, while GraphQL is useful when clients need flexible data fetching from multiple models.",
+          "follow_up_questions": [
+            "When would you choose GraphQL over REST?",
+            "How do you handle real-time updates in both approaches?"
+          ]
+        }
+      ],
+      "vector_search": [
+        {
+          "question": "Explain how you would implement semantic search using FAISS.",
+          "answer": "Implementation steps: 1. Generate embeddings using pre-trained transformers, 2. Build FAISS index with appropriate distance metric, 3. Implement similarity search with configurable k-nearest neighbors, 4. Add batch processing for large datasets, 5. Optimize performance with GPU acceleration if available, 6. Implement index persistence and loading.",
+          "code_example": "import faiss\nimport numpy as np\nfrom sentence_transformers import SentenceTransformer\n\nclass SemanticSearch:\n    def __init__(self, model_name='all-MiniLM-L6-v2'):\n        self.model = SentenceTransformer(model_name)\n        self.index = None\n        self.texts = []\n    \n    def build_index(self, texts):\n        self.texts = texts\n        embeddings = self.model.encode(texts)\n        embeddings = np.array(embeddings).astype('float32')\n        \n        # Create FAISS index\n        self.index = faiss.IndexFlatL2(embeddings.shape[1])\n        self.index.add(embeddings)\n    \n    def search(self, query, k=5):\n        query_embedding = self.model.encode([query])\n        distances, indices = self.index.search(query_embedding, k)\n        return [(self.texts[i], distances[0][j]) for j, i in enumerate(indices[0])]",
+          "follow_up_questions": [
+            "How would you handle index updates in production?",
+            "What are the tradeoffs between different FAISS index types?"
+          ]
+        },
+        {
+          "question": "Compare different vector databases (Pinecone, Weaviate, Chroma).",
+          "answer": "Pinecone: Managed service, easy to use, good performance, costs can be high. Weaviate: Open-source, GraphQL API, supports hybrid search, requires more setup. Chroma: Lightweight, good for prototyping, embedded option available. Consider factors like scalability needs, budget, maintenance overhead, and specific features like hybrid search or filtering.",
+          "follow_up_questions": [
+            "When would you choose a managed vs self-hosted solution?",
+            "How do you evaluate vector database performance?"
+          ]
+        }
+      ],
+      "integration": [
+        {
+          "question": "How would you integrate a large language model into an existing application?",
+          "answer": "Integration approach: 1. API wrapper for model access, 2. Request/response handling with proper error management, 3. Caching for repeated queries, 4. Rate limiting and cost management, 5. Input validation and sanitization, 6. Output post-processing and formatting, 7. Monitoring and logging, 8. Fallback mechanisms for model failures.",
+          "follow_up_questions": [
+            "How do you handle model latency in user-facing applications?",
+            "What security considerations are important?"
+          ]
+        }
+      ]
+    },
+    "system_design": [
+      {
+        "question": "Design a system for processing and searching through millions of documents using AI.",
+        "answer": "Architecture components: 1. Document ingestion pipeline (batch/streaming), 2. Text extraction and preprocessing, 3. Embedding generation service, 4. Vector database for storage, 5. Search API with ranking, 6. Caching layer, 7. Load balancers, 8. Monitoring and alerting system. Consider scalability, cost optimization, and search latency requirements.",
+        "follow_up_questions": [
+          "How would you handle document updates?",
+          "What strategies would you use for cost optimization?"
+        ]
+      }
+    ],
+    "behavioral": [
+      {
+        "question": "How do you stay updated with the rapidly evolving AI landscape?",
+        "answer": "Stay current through: 1. Following key research papers and conferences (NeurIPS, ICML, ICLR), 2. Participating in AI communities and forums, 3. Hands-on experimentation with new models and tools, 4. Following industry leaders and researchers on social media, 5. Taking online courses and certifications, 6. Contributing to open-source projects, 7. Attending workshops and meetups.",
+        "follow_up_questions": [
+          "How do you evaluate which new technologies to adopt?",
+          "Can you share an example of how you applied a new AI technique?"
+        ]
+      }
+    ]
+  }
+}
